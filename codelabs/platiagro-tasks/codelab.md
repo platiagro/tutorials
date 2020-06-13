@@ -1,12 +1,12 @@
 author: Fabio Beranizo Fontes Lopes
-summary: Tarefas da PlatIAgro
+summary: Criação de Tarefas
 id: platiagro-tasks
-categories: iot,markdown
+categories: platiagro
 environments: Web
 status: Published
-feedback link: https://github.com/platiagro/platiagro
+feedback link: https://github.com/platiagro/tutorials
 
-# Tarefas da PlatIAgro
+# Criação de Tarefas
 
 ## Visão Geral
 Duration: 0:02:00

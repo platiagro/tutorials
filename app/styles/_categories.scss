@@ -43,6 +43,7 @@ $color-slurm-blue: #42afeb;
 $color-tensorflow-orange: #ed8e24;
 $color-unity-grey: #222c37;
 $color-weave-green: #0f9d58;
+$color-platiagro-green: #237804;
 
 /* Mixins */
 
@@ -199,3 +200,6 @@ $color-weave-green, 'weave.svg');
 
 @include codelab-card(['web'],
   $color-google-blue, 'web.svg');
+
+@include codelab-card(['platiagro'],
+  $color-platiagro-green, 'platiagro.svg');

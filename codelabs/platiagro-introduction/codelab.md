@@ -1,10 +1,10 @@
 author: Fabio Beranizo Fontes Lopes
 summary: Introdução à PlatIAgro
 id: platiagro-introduction
-categories: iot,markdown
+categories: platiagro
 environments: Web
 status: Published
-feedback link: https://github.com/platiagro/platiagro
+feedback link: https://github.com/platiagro/tutorials
 
 # Introdução à PlatIAgro
 
