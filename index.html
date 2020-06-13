@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta name="description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="generator" content="Codelabs">
-<meta name="application-name" content="Codelabs">
-<link rel="canonical" href="https://platiagro.github.io/platiagro/">
+<meta name="generator" content="Tutoriais da PlatIAgro">
+<meta name="application-name" content="Tutoriais da PlatIAgro">
+<link rel="canonical" href="https://platiagro.github.io/tutorials/">
 <link rel="preconnect" href="https://www.google-analytics.com">
 <script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
@@ -15,28 +15,28 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('send', 'pageview');
 </script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<title>Codelabs</title>
+<title>Tutoriais da PlatIAgro</title>
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="import" href="/elements/elements.html">
 <style is="custom-style">
 :root{--paper-tabs-selection-bar-color:currentcolor;--paper-input-container-underline:{display:none};--paper-input-container-underline-focus:{display:none};}.dropdown-filter{--paper-input-container:{padding:8px}} </style>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#455a64">
-<meta name="apple-mobile-web-app-title" content="Codelabs">
+<meta name="apple-mobile-web-app-status-bar-style" content="#3f6601">
+<meta name="apple-mobile-web-app-title" content="Tutoriais da PlatIAgro">
 <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="194x194" href="/images/favicons/favicon-194x194.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
 <link rel="manifest" href="site.webmanifest">
-<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#455a64">
-<meta name="msapplication-TileColor" content="#455a64">
+<link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#3f6601">
+<meta name="msapplication-TileColor" content="#3f6601">
 <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png">
-<meta name="theme-color" content="#455a64">
+<meta name="theme-color" content="#3f6601">
 <meta name="og:type" property="og:type" content="website">
-<meta name="og:title" property="og:title" content="Codelabs">
+<meta name="og:title" property="og:title" content="Tutoriais da PlatIAgro">
 <meta name="og:description" property="og:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
-<meta name="og:url" property="og:url" content="https://platiagro.github.io/platiagro/">
+<meta name="og:url" property="og:url" content="https://platiagro.github.io/tutorials/">
 <meta name="og:site_name" property="og:site_name" content="Codelabs">
 <meta name="og:determiner" property="og:determiner" content="the">
 <meta name="og:locale" property="og:locale" content="en_US">
@@ -47,10 +47,10 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 <meta name="og:image:height" property="og:image:height" content="1200">
 <meta name="og:image:alt" property="og:image:alt" content="Codelabs">
 <meta name="twitter:card" property="twitter:card" content="summary_large_image">
-<meta name="twitter:title" property="twitter:title" content="Codelabs">
+<meta name="twitter:title" property="twitter:title" content="Tutoriais da PlatIAgro">
 <meta name="twitter:description" property="twitter:description" content="Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.">
 <meta name="twitter:image" property="twitter:image" content="/images/og-image.png">
-<meta name="twitter:url" property="twitter:url" content="https://platiagro.github.io/platiagro/">
+<meta name="twitter:url" property="twitter:url" content="https://platiagro.github.io/tutorials/">
 </head>
 <body id="app" is="body-bind" class="loading fullbleed">
 <paper-header-panel id="main" mode="standard" main>
@@ -62,7 +62,7 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 <div id="searchbar">
 <paper-input-container no-label-float>
 <paper-icon-button prefix icon="search"></paper-icon-button>
-<label>Search</label>
+<label>Pesquisar</label>
 <input is="iron-input" bind-value="{{searchVal}}" on-keydown="onSearchKeyDown">
 </paper-input-container>
 </div>
@@ -70,12 +70,14 @@ window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 </div>
 <header id="banner" down$="[[_toBoolean(selectedFilter)]]">
 <div class="site-width">
-<h2 class="banner-title">Welcome to Codelabs!</h2>
+<h2 class="banner-title">Bem-vindo aos tutoriais da PlatIAgro!</h2>
 <div class="banner-description" data-filter-selected$="[[_toBoolean(selectedFilter)]]">
 <p class="banner-info">
-Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.
+Aqui estão todos os guias passo-a-passo de utilização da PlatIAgro. Todo tutorial está no formato de
+<a href="https://codelabs.developers.google.com/">Codelab</a> e possui diversos vídeos e detalhes para te ajudar.
 <br>
-<a href="https://github.com/googlecodelabs/tools">Codelab tools on GitHub</a>
+Se você não encontrou o que precisava aqui, consulte a
+<a href="https://platiagro.github.io/"> documentação completa no GitHub</a>.
 </p>
 </div>
 </div>
@@ -85,19 +87,12 @@ Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs w
 <div id="sortby">
 <paper-tabs selected="0" noink on-iron-activate="sortBy">
 <paper-tab>A-Z</paper-tab>
-<paper-tab>Recent</paper-tab>
-<paper-tab>Duration</paper-tab>
+<paper-tab>Recentes</paper-tab>
+<paper-tab>Duração</paper-tab>
 </paper-tabs>
-</div>
-<paper-dropdown-menu label="Choose an event" class="dropdown-filter" no-label-float noink no-animations>
-<paper-listbox id="eventList" slot="dropdown-content" class="dropdown-content"><a href="/vslive/" tabindex="-1">
-<paper-item>Visual Studio Live</paper-item>
-</a>
-</paper-listbox>
-</paper-dropdown-menu>
-</div>
+</div></div>
 <card-sorter id="cards" class="site-width">
-<a href="/codelabs/platiagro-introduction/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-iot" data-category="iot,markdown" data-title="Introdução à PlatIAgro" data-duration="29" data-updated="2020-06-13T02:43:04Z" data-tags="web" data-pin="">
+<a href="/codelabs/platiagro-introduction/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-iot" data-category="iot,markdown" data-title="Introdução à PlatIAgro" data-duration="29" data-updated="2020-06-13T03:37:26Z" data-tags="web" data-pin="">
 <div class="description">Introdução à PlatIAgro</div>
 <div class="card-duration">
 <span>29 min </span>
@@ -108,7 +103,7 @@ Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs w
 <paper-button class="iot-bg">Start</paper-button>
 </div>
 </a>
-<a href="/codelabs/platiagro-tasks/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-iot" data-category="iot,markdown" data-title="Tarefas da PlatIAgro" data-duration="2" data-updated="2020-06-13T02:43:04Z" data-tags="web" data-pin="">
+<a href="/codelabs/platiagro-tasks/index.html?index=..%2F..index" on-tap="navigate" class="codelab-card category-iot" data-category="iot,markdown" data-title="Tarefas da PlatIAgro" data-duration="2" data-updated="2020-06-13T03:37:26Z" data-tags="web" data-pin="">
 <div class="description">Tarefas da PlatIAgro</div>
 <div class="card-duration">
 <span>2 min </span>
@@ -121,46 +116,9 @@ Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs w
 </a>
 </card-sorter>
 <div id="loading-placeholder" class="site-width">
-Loading Codelabs, please wait...
+Carregando tutoriais, aguarde...
 </div>
 </main>
-<footer id="footer">
-<div class="footer-wrapper site-width">
-<div class="link-list">
-<label>Connect</label>
-<ul>
-<li><a href="https://www.example.com/">Example</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Programs</label>
-<ul>
-<li><a href="https://www.example.com/">Example</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Developer Consoles</label>
-<ul>
-<li><a href="https://www.example.com/">Example</a></li>
-</ul>
-</div>
-<div class="link-list">
-<label>Explore</label>
-<ul>
-<li><a href="https://www.example.com/">Example</a></li>
-</ul>
-</div>
-</div>
-</footer>
-<div class="footerbar">
-<div class="site-width layout horizontal center justified">
-<span>
-<a href="https://example.com">Terms</a>
-&nbsp; | &nbsp;
-<a href="https://example.com">Privacy</a>
-</span>
-</div>
-</div>
 </paper-header-panel>
 <script src="/scripts/main.js"></script>
 </body>
