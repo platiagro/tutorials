@@ -38,7 +38,7 @@ jobs:
     - name: Codelabs Site - Build 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
       run: |
         yarn
-        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/platiagro
+        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials
         rm dist/codelabs
         mkdir -p dist/codelabs
         mv platiagro-introduction dist/codelabs/
