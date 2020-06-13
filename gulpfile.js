@@ -672,13 +672,13 @@ const viewFuncs = {
   // page.
   codelabPrettyDate: () => {
     return (ts) => {
-      const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+      const monthNames = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
       const d = new Date(ts);
       const month = monthNames[d.getMonth()];
       const date = d.getUTCDate();
       const year = d.getFullYear();
 
-      return `${month} ${date}, ${year}`;
+      return ` ${date} ${month}, ${year}`;
     }
   },
 
