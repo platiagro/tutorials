@@ -3,23 +3,22 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-06-13T19:46:19Z",
+  "updated": "2020-06-13T20:04:13Z",
   "id": "platiagro-tasks",
   "duration": 2,
-  "title": "Tarefas da PlatIAgro",
-  "summary": "Tarefas da PlatIAgro",
+  "title": "Criação de Tarefas",
+  "summary": "Criação de Tarefas",
   "source": "codelabs/platiagro-tasks/codelab.md",
   "theme": "",
   "status": [
     "published"
   ],
   "category": [
-    "iot",
-    "markdown"
+    "platiagro"
   ],
   "tags": [
     "web"
   ],
-  "feedback": "https://github.com/platiagro/platiagro",
+  "feedback": "https://github.com/platiagro/tutorials",
   "url": "platiagro-tasks"
 }

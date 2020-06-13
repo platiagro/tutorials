@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-06-13T19:46:19Z",
+  "updated": "2020-06-13T20:04:13Z",
   "id": "platiagro-introduction",
   "duration": 29,
   "title": "Introdução à PlatIAgro",
@@ -14,8 +14,7 @@
     "published"
   ],
   "category": [
-    "iot",
-    "markdown"
+    "platiagro"
   ],
   "tags": [
     "web"
