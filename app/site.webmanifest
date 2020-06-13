@@ -1,8 +1,8 @@
 {
-  "name": "Google Codelabs",
-  "short_name": "Codelabs",
-  "theme_color": "#455a64",
-  "background_color": "#455a64",
+  "name": "Tutoriais da PlatIAgro",
+  "short_name": "Tutoriais",
+  "theme_color": "#3f6601",
+  "background_color": "#3f6601",
   "display": "standalone",
   "icons": [
     {

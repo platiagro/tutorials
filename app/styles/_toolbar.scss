@@ -20,7 +20,7 @@
   display: flex;
   align-items: center;
   height: $keyline * 8;
-  background-color: $blueGrey700;
+  background-color: $primary;
   color: #fff;
   padding: $keyline * 2;
 
@@ -64,13 +64,9 @@
 
 @media (min-width: $tablet-breakpoint-min) {
   #searchbar {
-    background-color: $blueGrey600;
+    background-color: rgba(255,255,255,.4);
     transition: background-color 400ms cubic-bezier(0,0,0.2,1);
     width: 100%;
-
-    &:hover {
-      background-color: $blueGrey400;
-    }
   }
   .logo-devs {
     margin: 5px $keyline*4 0 0;

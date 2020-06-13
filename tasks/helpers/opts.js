@@ -7,7 +7,7 @@ const cssnano = require('cssnano');
 
 exports.babel = () => {
   return {
-    presets: ['es2015'],
+    presets: ['@babel/preset-env'],
   };
 };
 
@@ -54,7 +54,7 @@ exports.postcss = () => {
         'bb >= 10',
       ],
     }),
-    cssdeclarationsorter({ order: 'alphabetically' }),
+    cssdeclarationsorter({ order: 'alphabetical' }),
     cssnano(),
   ];
 };
