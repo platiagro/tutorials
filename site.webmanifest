@@ -1,8 +1,8 @@
 {
   "name": "Tutoriais da PlatIAgro",
   "short_name": "Tutoriais",
-  "theme_color": "#3f6601",
-  "background_color": "#3f6601",
+  "theme_color": "#237804",
+  "background_color": "#237804",
   "display": "standalone",
   "icons": [
     {
