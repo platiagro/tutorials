@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2020-06-13T20:15:50Z",
+  "updated": "2020-06-13T20:17:28Z",
   "id": "platiagro-introduction",
   "duration": 29,
   "title": "Introdução à PlatIAgro",
@@ -19,6 +19,6 @@
   "tags": [
     "web"
   ],
-  "feedback": "https://github.com/platiagro/platiagro",
+  "feedback": "https://github.com/platiagro/tutorials",
   "url": "platiagro-introduction"
 }
