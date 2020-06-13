@@ -4012,6 +4012,14 @@ gulp-uglify@^3.0.1:
     uglify-js "^3.0.5"
     vinyl-sourcemaps-apply "^0.2.0"
 
+gulp-url-prefixer@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gulp-url-prefixer/-/gulp-url-prefixer-1.0.2.tgz#c776e0f07cd1cd2fb8b8447db6221b86dc12b1f6"
+  integrity sha512-InJQQzZOVzmON7N/+lhenQX6/RBK8JUtZtQSyaXtbluTNrOeOYZ1ILIU4WJMhW6o2Reb5M2xas3EW1PP3O/cvg==
+  dependencies:
+    gulp-util "^3.0.8"
+    through2 "^3.0.1"
+
 gulp-useref@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/gulp-useref/-/gulp-useref-4.0.1.tgz#8495c3c085c25587263a7722cd438092da057e85"
@@ -4041,7 +4049,7 @@ gulp-util@^2.2.19:
     through2 "^0.5.0"
     vinyl "^0.2.1"
 
-gulp-util@^3.0.7:
+gulp-util@^3.0.7, gulp-util@^3.0.8:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   integrity sha1-AFTh50RQLifATBh8PsxQXdVLu08=

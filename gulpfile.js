@@ -15,6 +15,7 @@ const postcss = require('gulp-html-postcss');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const through = require('through2');
+const urlPrefixer = require('gulp-url-prefixer');
 const useref = require('gulp-useref');
 const vulcanize = require('gulp-vulcanize');
 const watch = require('gulp-watch');
@@ -199,6 +200,9 @@ gulp.task('build:js', (callback) => {
     'app/bower_components/google-prettify/src/prettify.js',
   ];
   streams.push(gulp.src(bowerSrcs, { base: 'app/' })
+    .pipe(urlPrefixer.html({
+      prefix: BASE_URL
+    }))
     .pipe(gulpif('*.js', babel(opts.babel())))
     .pipe(gulp.dest('build'))
   );
@@ -254,6 +258,9 @@ gulp.task('minify:css', () => {
     '!dist/elements/codelab-elements/*.css',
   ]
   return gulp.src(srcs, { base: 'dist/' })
+    .pipe(urlPrefixer.css({
+      prefix: BASE_URL
+    }))
     .pipe(postcss(opts.postcss()))
     .pipe(gulp.dest('dist'));
 });
@@ -265,6 +272,9 @@ gulp.task('minify:html', () => {
     '!dist/codelabs/**/*',
   ]
   return gulp.src(srcs, { base: 'dist/' })
+    .pipe(urlPrefixer.html({
+      prefix: BASE_URL
+    }))
     .pipe(postcss(opts.postcss()))
     .pipe(htmlmin(opts.htmlmin()))
     .pipe(gulp.dest('dist'));
@@ -278,6 +288,9 @@ gulp.task('minify:js', () => {
     '!dist/elements/codelab-elements/*.js',
   ]
   return gulp.src(srcs, { base: 'dist/' })
+    .pipe(urlPrefixer.js({
+      prefix: BASE_URL
+    }))
     .pipe(uglify(opts.uglify()))
     .pipe(gulp.dest('dist'));
 });

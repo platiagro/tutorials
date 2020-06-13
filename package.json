@@ -27,6 +27,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
+    "gulp-url-prefixer": "^1.0.2",
     "gulp-useref": "^4.0.1",
     "gulp-vulcanize": "^8.0.0",
     "gulp-watch": "^5.0.1",
