@@ -34,6 +34,14 @@ jobs:
     - name: PlatIAgro Tasks - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
         claat export codelabs/platiagro-tasks/codelab.md
+        
+    - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
+      run: |
+        claat export codelabs/Tutorial-projeto-experimento/Projeto.md
+        
+    - name: PlatIAgro Tutorial Experimento - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
+      run: |
+        claat export codelabs/Tutorial-projeto-experimento/Experimento.md
 
     - name: Codelabs Site - Build 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
       run: |
@@ -44,6 +52,8 @@ jobs:
         mv platiagro-introduction dist/codelabs/
         mv machine-failure/build dist/machine-failure
         mv platiagro-tasks dist/codelabs/
+        mv projeto-tutorial-platiago dist/codelabs/
+        mv tutorial-experimento-platiagro dist/codelabs/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
