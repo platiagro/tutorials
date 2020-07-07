@@ -27,8 +27,39 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
-      <google-codelab-step label="Visão Geral" duration="2">
-        
+      <google-codelab-step label="Introdução" duration="1">
+        <p>Para criar uma tarefa, o usuário deverá clicar no menu Tarefas e depois no botão &#34;+ Nova Tarefa&#34;.</p>
+<p class="image-container"><img alt="Página Meus Projetos" src="img/c33fc9974da98e96.png"></p>
+<p><strong>Descrição:</strong> Na página &#34;Tarefas&#34;, será apresentada uma lista com todas as tarefas existentes. As informações das tarefas estarão divididas em quatro colunas: Nome da Tarefa, Descrição e Ação.<br>Nesta tela serão apresentadas as tarefas da plataforma e dos usuários.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Seleção da nova tarefa" duration="2">
+        <p>A plataforma oferece uma série de exemplos para iniciar nova tarefa. Ela também oferece uma opção em branco.</p>
+<p class="image-container"><img alt="Página Meus Projetos" src="img/e1dd357b03daef35.png"></p>
+<p><strong>Descrição:</strong> A janela &#34;Nova Tarefa&#34;, possui dois campos obrigatórios e um opcional.<br>O primeiro campo obrigatório é o tipo do exemplo ou &#34;template&#34; inicial. A plataforma oferece grande quantidade de exemplos envolvendo classificação, regressão, seleção de &#34;features&#34; e muitos outros.<br>O segundo campo obrigatório é o nome da tarefa. O nome da tarefa será mostrado junto com os outros nomes então escolha um nome que facilite encontrar sua tarefa no futuro.<br>O campo opcional é uma descrição de sua tarefa. Se não precisar descrever ou registrar algum detalhe importante pode ficar em branco.<br>O botão &#34;Cancelar&#34; fecha esta janela e volta para a anterior sem gravar nada.<br>O botão &#34;Criar Notebooks&#34; abre nova aba no seu navegador com três divisões que serão comentadas na próxima seção deste tutorial.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Criação de Tarefas em Branco" duration="0">
+        <p>Explicar ícones alto a esquerda<br>Explicar ícones barra lateral esquerda<br>Comentar sobre as abas dos notebooks e launcher</p>
+<p>Sugestões de pontos de melhorias e esclarecimentos para criação de novas tarefas em branco.</p>
+<p>1) Na criação de parâmetros (input) falta explicação ou advertência sobre regras para nome de variável no padrão Python.<br>2) Precisa deixar claro que o conjunto de dados (dataset) a ser usado precisa ter método &#34;read()&#34;, exemplo pandas.DataFrame<br>3) Recomendo esclarecer que precisa de CNTRL-ENTER para executar uma célula e que o triângulo no alto da tela (Run...) não faz nada.<br>4) Recomendo esclarecer que os inputs (parâmetros de entrada) são informados em janela lateral na plataforma<br>5) Recomendo esclarecer que se o código for grande é melhor criar classes e importar no componente com &#34;from file import classes, métodos&#34;<br>6) Para importar classes e métodos no componente precisa carregar o arquivo .py na pasta do componente<br>7) Passos que usei para levar arquivos até a pasta do componente:<br>   a) encontrar a URL do arquivo de origem no github ou equivalente<br>   b) encontrar pasta destino do arquivo de testes (!pwd no Notebbok)</p>
+<pre><code>  Obs:1: Jupyter Notebook mostra nomes das pastas em uma aba
+  Obs.2: Jupyter Notebook em outra aba abre terminal (tela preta)
+  Obs.3: Tem um ícone do alto da tela que parece um monte de discos empilhados que deveria fazer isso. Procurei os arqs que enviei mas não encontrei      
+</code></pre>
+<p>c) executar wget na pasta de destino no terminal. Exemplo:</p>
+<pre><code>  wget https://github.com/platiagro/GA/blob/master/large_harvest/large_harvest/large_harvest_5_com_15.csv   
+</code></pre>
+<p>8) Mostrar resultados em duas formas:<br>   a) em forma de tabela usando dataframe Pandas. Renderiza tabela com matplotlib<br>   b) ???</p>
+<p>8) Implantação (segundo Fábio, não é obrigatório)<br>   método predict() precisa de pelo menos 3 parâmetros (self, X: np.ndarray, feature_names: Iterable[str], meta: Dict = None)<br>   Pode deixar só o Experient<br>   mas não pode usar plt.show()<br>   Precisa terminar com:</p>
+<pre><code>  save_figure(figure=plt.gcf())
+  plt.clf()
+</code></pre>
+
 
       </google-codelab-step>
     
