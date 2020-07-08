@@ -46,9 +46,9 @@ Nesta aba também podem ser visualizados os artefatos da tarefa e a localizaçã
    Obs.2: a tesoura remove a célula selecionada
    Obs.3: o símbolo que parece com </> serve para inserir novo parâmetro ("dataset"). Um dataset deve ter o método read(), por exemplo, um dataframe Pandas.
 
-(./img/dataset.png)
+![Dataset](./img/dataset.png)
 
-(./img/nova_tarefa_input.png)
+![Input](./img/nova_tarefa_input.png)
 
 **Descrição:** A janela “Add Parameter”, possui alguns campos sobre o novo parâmetro.
 O campo "Variable name" deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.
