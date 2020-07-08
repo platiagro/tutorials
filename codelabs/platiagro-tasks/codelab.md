@@ -44,19 +44,20 @@ Esta aba é criada com as divisões Experiment.jpynb e Deployment.jpynb. Também
 Nesta aba também podem ser visualizados os artefatos da tarefa e a localização destes artefatos no servidor. 
    Obs.1: o sinal de adição no menu superior cria mais uma célula para seus códigos
    Obs.2: a tesoura remove a célula selecionada
-   Obs.3: o símbolo que parece com </> serve para inserir novo parâmetro ("dataset"). Um dataset deve ter o método read(), por exemplo, um dataframe Pandas.
+   Obs.3: o símbolo que parece com </> serve para inserir novo parâmetro ("input"). 
+   
+![Input](./img/nova_tarefa_input.png)
 
 ![Dataset](./img/dataset.png)
-
-![Input](./img/nova_tarefa_input.png)
+É importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.
 
 **Descrição:** A janela “Add Parameter”, possui alguns campos sobre o novo parâmetro.
 O campo "Variable name" deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.
 O campo "Label" deve ser preenchido com o nome que vai aparecer na área de parâmetros da plataforma que abre em uma aba lateral.
 
-(./img/input_experiment.png)
+![Experiment](./img/input_experiment.png)
 Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como "var_name" e aparece na aba lateral com a identificação "var_label". 
-(./img/input_aba_lateral.png)
+![Aba lateral](./img/input_aba_lateral.png)
 
 
 O ícone parecido com uma pasta branca na parte de baixo da lateral esquerda serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb
