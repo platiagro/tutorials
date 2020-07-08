@@ -81,10 +81,14 @@ Neste exemplo foram usados alguns comandos para verificar em que local do servid
 ## Mostrar Terminal de Comandos Unix/Linux
 Duration: 0:02:00
 
+![Página Nova Tarefa em Branco new launcher](./img/nova_tarefa_file_browser_new_launcher_terminal.png)
+
 O símbolo que parece uma pasta preta com sinal de adição serve para criar novas pastas na pasta atual.
 O símbolo que parece uma seta para cima sobre uma barra serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.
 A maneira de fazer com que os arquivos necessários sejam copiados automaticamente para esta pasta é via o comando wget.
 Exemplo "wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv"
+
+
 
 ## Importar Classes e Métodos
 Duration: 0:02:00
