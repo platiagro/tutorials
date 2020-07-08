@@ -37,7 +37,7 @@ Duration: 0:02:00
 
 Após selecionar e preencher os campos necessários a plataforma abre nova aba com as divisões Experiment.jpynb e Deployment.jpynb.
 
-![Página Nova Tarefa em Branco](./img/nova_tarefa_abas.png)
+![Nova Tarefa em Branco](./img/nova_tarefa_abas.png)
 
 **Descrição:** A aba “Nova Tarefa”, possui algumas divisões criadas para orientar a elaboração da tarefa que serão comentados em outra seção.
 Esta aba é criada com as divisões Experiment.jpynb e Deployment.jpynb. Também pode ser criada outra seção para Terminal onde podem ser executados comandos do Unix/Linux.
@@ -63,17 +63,17 @@ Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb c
 
 O ícone parecido com uma pasta branca na parte de baixo da lateral esquerda serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb
 
-![Página Nova Tarefa em Branco open tabs](./img/nova_tarefa_open_tabs.png)
+![open tabs](./img/nova_tarefa_open_tabs.png)
 
 
 O ícone parecido com uma pasta preta na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor
 
-![Página Nova Tarefa em Branco file browser](./img/nova_tarefa_file_browser.png)
+![file browser](./img/nova_tarefa_file_browser.png)
 
 
 O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o terminar e outras funcionalidades 
 
-![Página Nova Tarefa em Branco new launcher](./img/nova_tarefa_file_browser_new_launcher.png)
+![new launcher](./img/nova_tarefa_file_browser_new_launcher.png)
 
 
 Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.
@@ -81,7 +81,7 @@ Neste exemplo foram usados alguns comandos para verificar em que local do servid
 ## Mostrar Terminal de Comandos Unix/Linux
 Duration: 0:02:00
 
-![Página Nova Tarefa em Branco new launcher](./img/nova_tarefa_file_browser_new_launcher_terminal.png)
+![Terminal](./img/nova_tarefa_file_browser_new_launcher_terminal.png)
 
 O símbolo que parece uma pasta preta com sinal de adição serve para criar novas pastas na pasta atual.
 O símbolo que parece uma seta para cima sobre uma barra serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.
@@ -89,23 +89,30 @@ A maneira de fazer com que os arquivos necessários sejam copiados automaticamen
 Exemplo "wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv"
 
 
-
 ## Importar Classes e Métodos
 Duration: 0:02:00
 
-5) Se o código for grande é melhor criar classes e importar no componente com "from file import classes, métodos" 
-6) Para importar classes e métodos no componente primeiro precisa carregar o arquivo .py para a pasta do componente
-7) Passos para levar arquivos até a pasta do componente:
+Se o código for grande é melhor criar classes e importar no componente com "from file import classes, métodos" 
+Para importar classes e métodos no componente primeiro precisa carregar o arquivo .py para a pasta do componente
+
+Passos para levar arquivos até a pasta do componente:
    a) encontrar a URL do arquivo de origem no github ou equivalente
    b) executar wget em uma céula do Experiment. Exemplo:
       !wget https://github.com/platiagro/.../nome_arquivo.py
+
+![Importar classes](./img/importar_classes.png)
+
 	  
 ## Mostrar Resultados
 Duration: 0:02:00
 	  
-8) Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
+Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
    Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados
-   Precisa terminar com: 
-      save_figure(figure=plt.gcf())
-      plt.clf()
+          Precisa terminar com: 
+             save_figure(figure=plt.gcf())
+             plt.clf()
+
+![Mostrar resultados codigo](./img/mostrar_resultados_codigo.png)
+
+![Mostrar resultados aba lateral](./img/mostrar_resultados_aba_lateral.png)
 
