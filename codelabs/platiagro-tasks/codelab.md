@@ -46,7 +46,7 @@ Nesta aba também podem ser visualizados os artefatos da tarefa e a localizaçã
    Obs.2: a tesoura remove a célula selecionada
    Obs.3: o símbolo que parece uma tag HTML serve para inserir novos parâmetros chamados de "inputs"
    
-![Página Nova Tarefa inputs](.img/nova_tarefa_inputs.png)   
+![Página Nova Tarefa inputs](.img/nova_tarefa_input.png)   
 
 **Descrição:** A janela “Add Parameter”, possui alguns campos sobre o novo parâmetro.
 O campo "Variable name:" deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.
