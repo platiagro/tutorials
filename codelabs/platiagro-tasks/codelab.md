@@ -69,7 +69,7 @@ O sinal de adição no menu superior à direita da pasta preta serve para abrir 
 
 Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.
 
-![Página Nova Tarefa em Branco Terminal](./img/nova_tarefa_file_browser_new_launcher.png)
+![Página Nova Tarefa em Branco Terminal](./img/nova_tarefa_File_browser_New_launcher_Terminal.png)
 
 O símbolo que parece uma pasta preta com sinal de adição serve para criar novas pastas na pasta atual.
 O símbolo que parece uma seta para cima sobre uma barra serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.
