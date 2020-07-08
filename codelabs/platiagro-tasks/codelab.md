@@ -44,9 +44,9 @@ Esta aba é criada com as divisões Experiment.jpynb e Deployment.jpynb. Também
 Nesta aba também podem ser visualizados os artefatos da tarefa e a localização destes artefatos no servidor. 
    Obs.1: o sinal de adição no menu superior cria mais uma célula para seus códigos
    Obs.2: a tesoura remove a célula selecionada
-   Obs.3: o símbolo que parece uma tag HTML serve para inserir novos parâmetros chamados de "inputs"
-   
-![Página Nova Tarefa inputs](.img/nova_tarefa_inputs.png)   
+   Obs.3: o símbolo que parece uma tag HTML serve para inserir novo parâmetro ("input")
+
+![Página Nova Tarefa input](./img/nova_tarefa_input.png)
 
 **Descrição:** A janela “Add Parameter”, possui alguns campos sobre o novo parâmetro.
 O campo "Variable name:" deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.
@@ -54,22 +54,22 @@ O campos "Label:"
 
 O ícone parecido com uma pasta branca na parte de baixo da lateral esquerda serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb
 
-![Página Nova Tarefa em Branco abas](.img/nova_tarefa_open_tabs.png)
+![Página Nova Tarefa em Branco open tabs](./img/nova_tarefa_open_tabs.png)
 
 
 O ícone parecido com uma pasta preta na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor
 
-![Página Nova Tarefa em Branco file browser](.img/nova_tarefa_file_browser.png)
+![Página Nova Tarefa em Branco file browser](./img/nova_tarefa_file_browser.png)
 
 
 O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o terminar e outras funcionalidades 
 
-![Página Nova Tarefa em Branco file browser new launcher](.img/nova_tarefa_file_browser_new_launcher.png)
+![Página Nova Tarefa em Branco new launcher](./img/nova_tarefa_file_browser_new_launcher.png)
 
 
 Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.
 
-![Página Nova Tarefa em Branco file browser new launcher Terminal](.img/nova_tarefa_file_browser_new_launcher.png)
+![Página Nova Tarefa em Branco Terminal](./img/nova_tarefa_file_browser_new_launcher.png)
 
 O símbolo que parece uma pasta preta com sinal de adição serve para criar novas pastas na pasta atual.
 O símbolo que parece uma seta para cima sobre uma barra serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.
