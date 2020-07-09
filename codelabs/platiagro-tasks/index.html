@@ -30,7 +30,7 @@
       <google-codelab-step label="Introdução" duration="1">
         <p>Para criar uma tarefa, o usuário deverá clicar no menu Tarefas e depois no botão &#34;+ Nova Tarefa&#34;.</p>
 <p class="image-container"><img alt="Página Tarefas" src="img/cac0d90f969aa784.png"></p>
-<p><strong>Descrição:</strong> Na página &#34;Tarefas&#34;, será apresentada uma lista com todas as tarefas existentes. As informações das tarefas estarão divididas em quatro colunas: Nome da Tarefa, Descrição e Ação.<br>Nesta tela serão apresentadas as tarefas da plataforma e dos usuários.</p>
+<p><strong>Descrição:</strong> Na página &#34;Tarefas&#34;, será apresentada uma lista com todas as tarefas existentes. As informações das tarefas estarão divididas em três colunas: Nome da Tarefa, Descrição e Ação.<br>Nesta tela serão apresentadas as tarefas da plataforma e dos usuários.</p>
 
 
       </google-codelab-step>
@@ -43,32 +43,36 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Criação de Tarefas em Branco" duration="2">
+      <google-codelab-step label="Criação de Tarefas em Branco" duration="4">
         <p>Após selecionar e preencher os campos necessários a plataforma abre nova aba com as divisões Experiment.jpynb e Deployment.jpynb.</p>
 <p class="image-container"><img alt="Nova Tarefa em Branco" src="img/9f444d437d4293f5.png"></p>
 <p><strong>Descrição:</strong> A aba &#34;Nova Tarefa&#34;, possui algumas divisões criadas para orientar a elaboração da tarefa que serão comentados em outra seção.<br>Esta aba é criada com as divisões Experiment.jpynb e Deployment.jpynb. Também pode ser criada outra seção para Terminal onde podem ser executados comandos do Unix/Linux.<br>Nesta aba também podem ser visualizados os artefatos da tarefa e a localização destes artefatos no servidor.<br>   Obs.1: o sinal de adição no menu superior cria mais uma célula para seus códigos<br>   Obs.2: a tesoura remove a célula selecionada<br>   Obs.3: use CONTRL-ENTER para executar a célula selecionada porque o triângulo no alto da tela (Run...) não faz nada<br>   Obs.4: o símbolo que parece com &lt;/&gt; serve para inserir novo parâmetro (&#34;input&#34;)</p>
-<p><img alt="Input" src="img/368c76fe7e3cdcf.png"><strong>Descrição:</strong> A janela &#34;Add Parameter&#34;, possui alguns campos sobre o novo parâmetro.<br>O campo &#34;Variable name&#34; deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.<br>O campo &#34;Label&#34; deve ser preenchido com o nome que vai aparecer na área de parâmetros da plataforma que abre em uma aba lateral.</p>
-<p><img alt="Dataset" src="img/7a56943e8cb5ebb1.png"><br>É importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.</p>
-<p><img alt="Experiment" src="img/e1fae41096ee5770.png"><br>Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como &#34;var_name&#34; e aparece na aba lateral com a identificação &#34;var_label&#34;.<br><img alt="Aba lateral" src="img/2b451560454aa85b.png"></p>
+<p class="image-container"><img alt="Input" src="img/368c76fe7e3cdcf.png"></p>
+<p><strong>Descrição:</strong> A janela &#34;Add Parameter&#34;, possui alguns campos sobre o novo parâmetro.<br>O campo &#34;Variable name&#34; deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.<br>O campo &#34;Label&#34; deve ser preenchido com o nome que vai aparecer na área de parâmetros da plataforma que abre em uma aba lateral.</p>
+<p class="image-container"><img alt="Dataset" src="img/7a56943e8cb5ebb1.png"></p>
+<p>É importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.</p>
+<p class="image-container"><img alt="Experiment" src="img/e1fae41096ee5770.png"></p>
+<p>Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como &#34;var_name&#34; e aparece na aba lateral com a identificação &#34;var_label&#34;.</p>
+<p class="image-container"><img alt="Aba lateral" src="img/2b451560454aa85b.png"></p>
 <p>O ícone parecido com uma pasta branca na parte de baixo da lateral esquerda serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb</p>
 <p class="image-container"><img alt="open tabs" src="img/2c3a16bc0b1a20ac.png"></p>
 <p>O ícone parecido com uma pasta preta na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor</p>
 <p class="image-container"><img alt="file browser" src="img/4f0ebac426fe86ca.png"></p>
-<p>O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o terminar e outras funcionalidades</p>
+<p>O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o &#34;Terminal de comandos&#34; e outras funcionalidades</p>
 <p class="image-container"><img alt="new launcher" src="img/5e1bc11a0ada4a75.png"></p>
-<p>Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Mostrar Terminal de Comandos Unix/Linux" duration="2">
-        <p class="image-container"><img alt="Terminal" src="img/d2f4b81689a8992d.png"></p>
+      <google-codelab-step label="Mostrar Terminal de Comandos Unix/Linux" duration="1">
+        <p>Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.</p>
+<p class="image-container"><img alt="Terminal" src="img/d2f4b81689a8992d.png"></p>
 <p>O símbolo que parece uma pasta preta com sinal de adição serve para criar novas pastas na pasta atual.<br>O símbolo que parece uma seta para cima sobre uma barra serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.<br>A maneira de fazer com que os arquivos necessários sejam copiados automaticamente para esta pasta é via o comando wget.<br>Exemplo &#34;wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv&#34;</p>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Importar Classes e Métodos" duration="2">
+      <google-codelab-step label="Importar Classes e Métodos" duration="1">
         <p>Se o código for grande é melhor criar classes e importar no componente com &#34;from file import classes, métodos&#34;<br>Para importar classes e métodos no componente primeiro precisa carregar o arquivo .py para a pasta do componente</p>
 <p>Passos para levar arquivos até a pasta do componente:<br>   a) encontrar a URL do arquivo de origem no github ou equivalente<br>   b) executar wget em uma céula do Experiment. Exemplo:</p>
 <pre><code>  !wget https://github.com/platiagro/.../nome_arquivo.py
@@ -78,13 +82,14 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Mostrar Resultados" duration="2">
+      <google-codelab-step label="Mostrar Resultados" duration="1">
         <p>Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.<br>   Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados</p>
 <pre><code>      Precisa terminar com: 
          save_figure(figure=plt.gcf())
          plt.clf()
 </code></pre>
 <p class="image-container"><img alt="Mostrar resultados codigo" src="img/85622b779ace9f2.png"></p>
+<p>Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plataforma.</p>
 <p class="image-container"><img alt="Mostrar resultados aba lateral" src="img/4078c390c488b29c.png"></p>
 
 
