@@ -15,7 +15,7 @@ Para criar uma tarefa, o usuário deverá clicar no menu Tarefas e depois no bot
 
 ![Página Tarefas](./img/tarefas.png)
 
-**Descrição:** Na página "Tarefas”, será apresentada uma lista com todas as tarefas existentes. As informações das tarefas estarão divididas em quatro colunas: Nome da Tarefa, Descrição e Ação.
+**Descrição:** Na página "Tarefas”, será apresentada uma lista com todas as tarefas existentes. As informações das tarefas estarão divididas em três colunas: Nome da Tarefa, Descrição e Ação.
 Nesta tela serão apresentadas as tarefas da plataforma e dos usuários.
 
 ## Seleção da nova tarefa
@@ -33,7 +33,7 @@ O botão "Cancelar" fecha esta janela e volta para a anterior sem gravar nada.
 O botão "Criar Notebooks" abre nova aba no seu navegador com três divisões que serão comentadas na próxima seção deste tutorial. 
 
 ## Criação de Tarefas em Branco
-Duration: 0:02:00
+Duration: 0:04:00
 
 Após selecionar e preencher os campos necessários a plataforma abre nova aba com as divisões Experiment.jpynb e Deployment.jpynb.
 
@@ -48,16 +48,20 @@ Nesta aba também podem ser visualizados os artefatos da tarefa e a localizaçã
    Obs.4: o símbolo que parece com </> serve para inserir novo parâmetro ("input")
    
 ![Input](./img/nova_tarefa_input.png)
+
 **Descrição:** A janela “Add Parameter”, possui alguns campos sobre o novo parâmetro.
 O campo "Variable name" deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.
 O campo "Label" deve ser preenchido com o nome que vai aparecer na área de parâmetros da plataforma que abre em uma aba lateral.
 
 ![Dataset](./img/dataset.png)
+
 É importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.
 
 
 ![Experiment](./img/input_experiment.png)
+
 Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como "var_name" e aparece na aba lateral com a identificação "var_label". 
+
 ![Aba lateral](./img/input_aba_lateral.png)
 
 
@@ -71,15 +75,15 @@ O ícone parecido com uma pasta preta na parte de cima da lateral esquerda serve
 ![file browser](./img/nova_tarefa_file_browser.png)
 
 
-O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o terminar e outras funcionalidades 
+O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o "Terminal de comandos" e outras funcionalidades 
 
 ![new launcher](./img/nova_tarefa_file_browser_new_launcher.png)
 
 
-Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.
-
 ## Mostrar Terminal de Comandos Unix/Linux
-Duration: 0:02:00
+Duration: 0:01:00
+
+Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.
 
 ![Terminal](./img/nova_tarefa_file_browser_new_launcher_terminal.png)
 
@@ -90,7 +94,7 @@ Exemplo "wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv"
 
 
 ## Importar Classes e Métodos
-Duration: 0:02:00
+Duration: 0:01:00
 
 Se o código for grande é melhor criar classes e importar no componente com "from file import classes, métodos" 
 Para importar classes e métodos no componente primeiro precisa carregar o arquivo .py para a pasta do componente
@@ -104,7 +108,7 @@ Passos para levar arquivos até a pasta do componente:
 
 	  
 ## Mostrar Resultados
-Duration: 0:02:00
+Duration: 0:01:00
 	  
 Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
    Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados
@@ -113,6 +117,8 @@ Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matp
              plt.clf()
 
 ![Mostrar resultados codigo](./img/mostrar_resultados_codigo.png)
+
+Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plataforma.
 
 ![Mostrar resultados aba lateral](./img/mostrar_resultados_aba_lateral.png)
 
