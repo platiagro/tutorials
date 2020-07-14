@@ -107,7 +107,7 @@ Passos para levar arquivos até a pasta do componente:
 ![Importar classes](./img/importar_classes.png)
 
 	  
-## Mostrar Resultados
+## Mostrar Resultados Aba Lateral
 Duration: 0:01:00
 	  
 Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
@@ -121,4 +121,31 @@ Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matp
 Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plataforma.
 
 ![Mostrar resultados aba lateral](./img/mostrar_resultados_aba_lateral.png)
+
+## Aba Deployment
+Duration: 0:02:00
+
+![Identificar classe](./img/deployment_identif.png)
+
+![Declarar classe](./img/deployment_declarar_classe.png)
+
+![Teste Rest](./img/deployment_teste_rest.png)
+
+![teste json](./img/deployment_json_teste.png)
+
+![Teste Resultado](./img/deployment_teste_resultado.png)
+
+
+## Implantação e logs
+Duration: 0:02:00
+
+![Teste Resultado](./img/experimento_implantado.png)
+
+![Teste Resultado](./img/experimento_implantado_logs.png)
+
+![Teste Resultado](./img/experimento_implantado_testado.png)
+
+![Teste Resultado](./img/experimento_para_executar.png)
+
+![Teste Resultado](./img/experimento_para_implantar.png)
 
