@@ -125,13 +125,18 @@ Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plat
 ## Aba Deployment
 Duration: 0:02:00
 
+
 ![Identificar classe](./img/deployment_identif.png)
 
-![Declarar classe](./img/deployment_declarar_classe.png)
+
+![Declarar classe](./img/deployment_declarac_classe.png)
+
 
 ![Teste Rest](./img/deployment_teste_rest.png)
 
+
 ![teste json](./img/deployment_json_teste.png)
+
 
 ![Teste Resultado](./img/deployment_teste_resultado.png)
 
@@ -139,13 +144,16 @@ Duration: 0:02:00
 ## Implantação e logs
 Duration: 0:02:00
 
-![Teste Resultado](./img/experimento_implantado.png)
-
-![Teste Resultado](./img/experimento_implantado_logs.png)
-
-![Teste Resultado](./img/experimento_implantado_testado.png)
-
 ![Teste Resultado](./img/experimento_para_executar.png)
+
 
 ![Teste Resultado](./img/experimento_para_implantar.png)
 
+
+![Teste Resultado](./img/experimento_implantado.png)
+
+
+![Teste Resultado](./img/experimento_implantado_testado.png)
+
+
+![Teste Resultado](./img/experimento_implantado_logs.png)
