@@ -67,17 +67,17 @@ Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb c
 
 O ícone parecido com uma pasta branca na parte de baixo da lateral esquerda serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb
 
-![open tabs](./img/nova_tarefa_open_tabs.png)
+![Open tabs](./img/nova_tarefa_open_tabs.png)
 
 
 O ícone parecido com uma pasta preta na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor
 
-![file browser](./img/nova_tarefa_file_browser.png)
+![File browser](./img/nova_tarefa_file_browser.png)
 
 
 O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o "Terminal de comandos" e outras funcionalidades 
 
-![new launcher](./img/nova_tarefa_file_browser_new_launcher.png)
+![New launcher](./img/nova_tarefa_file_browser_new_launcher.png)
 
 
 ## Mostrar Terminal de Comandos Unix/Linux
@@ -125,18 +125,32 @@ Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plat
 ## Aba Deployment
 Duration: 0:02:00
 
+A aba **Deployment** armazena o código necessário para a plataforma executar o modelo no servidor. 
+O modelo deve ser importado e encapsulado na classe Model então esta classe precisa implementar o método "predict()".
+A primeira seção desta aba serve para **identificação** da atividade, do autor e de seus principais objetivos.
+Recomenda-se que sejam registrados o nome do autor e a data de criação.
 
 ![Identificar classe](./img/deployment_identif.png)
 
+A segunda seção **define a classe Model** que precisa implementar o método "predict()" para ser executado pelo servidor.
+Neste exemplo o método "predict()" apenas mostra o parâmetro recebido e retorna este parâmetro para a interface gráfica.
+As capturas de tela da interface gráfica serão mostradas no final deste tutorial porém a aba Deploymente também pode ser usada para conferir o resultado.
 
 ![Declarar classe](./img/deployment_declarac_classe.png)
 
+A seção **Teste do serviço REST** orienta como o pesquisador pode testar o resultado da execução de seu modelo.
+Ela ajuda a criar um arquivo com um objeto json (JavaScipt Object Notation) para ser enviado ao seu modelo via protocolo REST.
+É importante ressaltar que o valore enviado ao modelo será sorteado de um intervalo que deve ser especificado na área "range" do objeto json.
 
 ![Teste Rest](./img/deployment_teste_rest.png)
 
+**test_deployment("contact.json)**
+A última parte desta aba se encarrega de enviar o objeto json que foi gravado no arquivo contact.json usando o método test_deployment("contact.json")
 
-![teste json](./img/deployment_json_teste.png)
+![Teste json](./img/deployment_json_teste.png)
 
+**Resultado do teste na aba Deployment**
+O objeto json é exibido para o pesquisador conferir se os resultados estão de acordo com o esperado.
 
 ![Teste Resultado](./img/deployment_teste_resultado.png)
 
@@ -144,16 +158,35 @@ Duration: 0:02:00
 ## Implantação e logs
 Duration: 0:02:00
 
-![Teste Resultado](./img/experimento_para_executar.png)
+Cada projeto pode ter vários experimentos, porém apenas um deles será implantado.
+Espera-se que os experimentos sejam criados e explorados até que o pesquisador se decida pela implantação de um deles para execução em tempo real no servidor.
 
+![Experimento executar](./img/experimento_para_executar.png)
 
-![Teste Resultado](./img/experimento_para_implantar.png)
+Depois de criada a atividade desejada, ela deve ser **executada** para permitir sua implantação.
+Se ocorrer algum erro durante sua execução o botão de implantação fica bloqueado.
 
+![Experimento implantar](./img/experimento_para_implantar.png)
 
-![Teste Resultado](./img/experimento_implantado.png)
+O botão **Implantação** somente será liberado após uma execução completa da atividade sem nenhum erro.
+É importante lembrar que este botão será liberado somente uma vez para cada projeto.
+Caso dois ou mais experimentos apresentem bons resultados então o pesquisador deve considerar a possibilidade de criar novos projetos para eles.
 
+![Experimento implantado](./img/experimento_implantado.png)
 
-![Teste Resultado](./img/experimento_implantado_testado.png)
+A janela de **Experimentos Implantados** mostra os experimentos implantados pelo pesquisador.
+A coluna "Status" apresenta a situação atual do experimento. O experimento deve ter o status "Succeded" para poder ser executado.
+A coluna "Nome" apresenta o nome do experimento implantado. 
+   É importante ressaltar que este nome é composto pelo nome do projeto seguido pelo nome do experimento selecionado.
+A coluna "URL" contém a url do experimento implantado. Ela pode ser usada em um terminal de comando Unix/Linux.
+A coluna "Data de Criação" contém a data e a hora da implantação do experimento.
+A coluna "Ação" contém três opções:
+   **Deletar** (apagar) o experimento
+   **Testar Inferência"** para executar o experimento enviando um arquivo CSV para o modelo.
+   **Logs"** para visualizar a mensagens do modelo em execução.
+   
+![Experimento testado](./img/experimento_implantado_testado.png)
 
+Note que as mensagens mais recentes ficam no fim da lista.  
 
-![Teste Resultado](./img/experimento_implantado_logs.png)
+![Experimento log](./img/experimento_implantado_logs.png)
