@@ -125,7 +125,7 @@ Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plat
 ## Aba Deployment
 Duration: 0:02:00
 
-A aba **Deployment** armazena o código necessário para a plataforma executar o modelo no servidor. 
+A aba **Deployment** armazena o código necessário para a plataforma executar no servidor o modelo que foi criado na aba Experiment. 
 O modelo deve ser importado e encapsulado na classe Model então esta classe precisa implementar o método "predict()".
 A primeira seção desta aba serve para **identificação** da atividade, do autor e de seus principais objetivos.
 Recomenda-se que sejam registrados o nome do autor e a data de criação.
@@ -140,19 +140,20 @@ As capturas de tela da interface gráfica serão mostradas no final deste tutori
 
 A seção **Teste do serviço REST** orienta como o pesquisador pode testar o resultado da execução de seu modelo.
 Ela ajuda a criar um arquivo com um objeto json (JavaScipt Object Notation) para ser enviado ao seu modelo via protocolo REST.
-É importante ressaltar que o valore enviado ao modelo será sorteado de um intervalo que deve ser especificado na área "range" do objeto json.
 
 ![Teste Rest](./img/deployment_teste_rest.png)
 
-**test_deployment("contact.json)**
-A última parte desta aba se encarrega de enviar o objeto json que foi gravado no arquivo contact.json usando o método test_deployment("contact.json")
+É importante ressaltar que o valor enviado ao modelo será sorteado de um intervalo que deve ser especificado na área **"range"** do objeto json.
 
 ![Teste json](./img/deployment_json_teste.png)
 
-**Resultado do teste na aba Deployment**
-O objeto json é exibido para o pesquisador conferir se os resultados estão de acordo com o esperado.
+**test_deployment("contact.json")**
+A última parte desta aba se encarrega de enviar o objeto json que foi gravado no arquivo contact.json usando o método test_deployment("contact.json")
 
 ![Teste Resultado](./img/deployment_teste_resultado.png)
+
+**Resultado do teste na aba Deployment**
+O objeto json é exibido para o pesquisador conferir se os resultados estão de acordo com o esperado.
 
 
 ## Implantação e logs
@@ -175,18 +176,23 @@ Caso dois ou mais experimentos apresentem bons resultados então o pesquisador d
 ![Experimento implantado](./img/experimento_implantado.png)
 
 A janela de **Experimentos Implantados** mostra os experimentos implantados pelo pesquisador.
-A coluna "Status" apresenta a situação atual do experimento. O experimento deve ter o status "Succeded" para poder ser executado.
+A coluna "Status" apresenta a situação atual do experimento. O experimento deve ter o status "Succeeded" para poder ser executado.
 A coluna "Nome" apresenta o nome do experimento implantado. 
    É importante ressaltar que este nome é composto pelo nome do projeto seguido pelo nome do experimento selecionado.
-A coluna "URL" contém a url do experimento implantado. Ela pode ser usada em um terminal de comando Unix/Linux.
+A coluna "URL" contém a url do experimento implantado. Ela pode ser usada em um terminal de comandos Unix/Linux.
 A coluna "Data de Criação" contém a data e a hora da implantação do experimento.
 A coluna "Ação" contém três opções:
-   **Deletar** (apagar) o experimento
-   **Testar Inferência"** para executar o experimento enviando um arquivo CSV para o modelo.
-   **Logs"** para visualizar a mensagens do modelo em execução.
+   **"Deletar"** (apagar) o experimento
+   **"Testar Inferência"** para executar o experimento enviando um arquivo CSV para o modelo.
+   **"Logs"** para visualizar a mensagens do modelo em execução.
    
+A ação **Testar Inferência** apresenta em uma janela o resultado recebido da execução do modelo no servidor.
+O título desta janela é **Predições**
+
 ![Experimento testado](./img/experimento_implantado_testado.png)
 
+A ação **Logs** exibe uma janela para logs. 
+Como a quantidade de mensagens de log costuma ser grande esta janela possui paginação.
 Note que as mensagens mais recentes ficam no fim da lista.  
 
 ![Experimento log](./img/experimento_implantado_logs.png)
