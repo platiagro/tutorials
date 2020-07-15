@@ -96,16 +96,17 @@
       </google-codelab-step>
     
       <google-codelab-step label="Aba Deployment" duration="2">
-        <p>A aba <strong>Deployment</strong> armazena o código necessário para a plataforma executar o modelo no servidor.<br>O modelo deve ser importado e encapsulado na classe Model então esta classe precisa implementar o método &#34;predict()&#34;.<br>A primeira seção desta aba serve para <strong>identificação</strong> da atividade, do autor e de seus principais objetivos.<br>Recomenda-se que sejam registrados o nome do autor e a data de criação.</p>
+        <p>A aba <strong>Deployment</strong> armazena o código necessário para a plataforma executar no servidor o modelo que foi criado na aba Experiment.<br>O modelo deve ser importado e encapsulado na classe Model então esta classe precisa implementar o método &#34;predict()&#34;.<br>A primeira seção desta aba serve para <strong>identificação</strong> da atividade, do autor e de seus principais objetivos.<br>Recomenda-se que sejam registrados o nome do autor e a data de criação.</p>
 <p class="image-container"><img alt="Identificar classe" src="img/dd886589fc1c8190.png"></p>
 <p>A segunda seção <strong>define a classe Model</strong> que precisa implementar o método &#34;predict()&#34; para ser executado pelo servidor.<br>Neste exemplo o método &#34;predict()&#34; apenas mostra o parâmetro recebido e retorna este parâmetro para a interface gráfica.<br>As capturas de tela da interface gráfica serão mostradas no final deste tutorial porém a aba Deploymente também pode ser usada para conferir o resultado.</p>
 <p class="image-container"><img alt="Declarar classe" src="img/4eb870bb10265a30.png"></p>
-<p>A seção <strong>Teste do serviço REST</strong> orienta como o pesquisador pode testar o resultado da execução de seu modelo.<br>Ela ajuda a criar um arquivo com um objeto json (JavaScipt Object Notation) para ser enviado ao seu modelo via protocolo REST.<br>É importante ressaltar que o valore enviado ao modelo será sorteado de um intervalo que deve ser especificado na área &#34;range&#34; do objeto json.</p>
+<p>A seção <strong>Teste do serviço REST</strong> orienta como o pesquisador pode testar o resultado da execução de seu modelo.<br>Ela ajuda a criar um arquivo com um objeto json (JavaScipt Object Notation) para ser enviado ao seu modelo via protocolo REST.</p>
 <p class="image-container"><img alt="Teste Rest" src="img/3a7653d8e625a33b.png"></p>
-<p><strong>test_deployment(&#34;contact.json)</strong><br>A última parte desta aba se encarrega de enviar o objeto json que foi gravado no arquivo contact.json usando o método test_deployment(&#34;contact.json&#34;)</p>
+<p>É importante ressaltar que o valor enviado ao modelo será sorteado de um intervalo que deve ser especificado na área <strong>&#34;range&#34;</strong> do objeto json.</p>
 <p class="image-container"><img alt="Teste json" src="img/75cb0856382113b9.png"></p>
-<p><strong>Resultado do teste na aba Deployment</strong><br>O objeto json é exibido para o pesquisador conferir se os resultados estão de acordo com o esperado.</p>
+<p><strong>test_deployment(&#34;contact.json&#34;)</strong><br>A última parte desta aba se encarrega de enviar o objeto json que foi gravado no arquivo contact.json usando o método test_deployment(&#34;contact.json&#34;)</p>
 <p class="image-container"><img alt="Teste Resultado" src="img/69fcc9dda9b7e715.png"></p>
+<p><strong>Resultado do teste na aba Deployment</strong><br>O objeto json é exibido para o pesquisador conferir se os resultados estão de acordo com o esperado.</p>
 
 
       </google-codelab-step>
@@ -117,9 +118,10 @@
 <p class="image-container"><img alt="Experimento implantar" src="img/d4b06af2bf211c1e.png"></p>
 <p>O botão <strong>Implantação</strong> somente será liberado após uma execução completa da atividade sem nenhum erro.<br>É importante lembrar que este botão será liberado somente uma vez para cada projeto.<br>Caso dois ou mais experimentos apresentem bons resultados então o pesquisador deve considerar a possibilidade de criar novos projetos para eles.</p>
 <p class="image-container"><img alt="Experimento implantado" src="img/fae992b5b4e820d0.png"></p>
-<p>A janela de <strong>Experimentos Implantados</strong> mostra os experimentos implantados pelo pesquisador.<br>A coluna &#34;Status&#34; apresenta a situação atual do experimento. O experimento deve ter o status &#34;Succeded&#34; para poder ser executado.<br>A coluna &#34;Nome&#34; apresenta o nome do experimento implantado.<br>   É importante ressaltar que este nome é composto pelo nome do projeto seguido pelo nome do experimento selecionado.<br>A coluna &#34;URL&#34; contém a url do experimento implantado. Ela pode ser usada em um terminal de comando Unix/Linux.<br>A coluna &#34;Data de Criação&#34; contém a data e a hora da implantação do experimento.<br>A coluna &#34;Ação&#34; contém três opções:<br>   <strong>Deletar</strong> (apagar) o experimento<br>   <strong>Testar Inferência&#34;</strong> para executar o experimento enviando um arquivo CSV para o modelo.<br>   <strong>Logs&#34;</strong> para visualizar a mensagens do modelo em execução.</p>
+<p>A janela de <strong>Experimentos Implantados</strong> mostra os experimentos implantados pelo pesquisador.<br>A coluna &#34;Status&#34; apresenta a situação atual do experimento. O experimento deve ter o status &#34;Succeeded&#34; para poder ser executado.<br>A coluna &#34;Nome&#34; apresenta o nome do experimento implantado.<br>   É importante ressaltar que este nome é composto pelo nome do projeto seguido pelo nome do experimento selecionado.<br>A coluna &#34;URL&#34; contém a url do experimento implantado. Ela pode ser usada em um terminal de comandos Unix/Linux.<br>A coluna &#34;Data de Criação&#34; contém a data e a hora da implantação do experimento.<br>A coluna &#34;Ação&#34; contém três opções:<br>   <strong>&#34;Deletar&#34;</strong> (apagar) o experimento<br>   <strong>&#34;Testar Inferência&#34;</strong> para executar o experimento enviando um arquivo CSV para o modelo.<br>   <strong>&#34;Logs&#34;</strong> para visualizar a mensagens do modelo em execução.</p>
+<p>A ação <strong>Testar Inferência</strong> apresenta em uma janela o resultado recebido da execução do modelo no servidor.<br>O título desta janela é <strong>Predições</strong></p>
 <p class="image-container"><img alt="Experimento testado" src="img/a689a14897ca7cd5.png"></p>
-<p>Note que as mensagens mais recentes ficam no fim da lista.</p>
+<p>A ação <strong>Logs</strong> exibe uma janela para logs.<br>Como a quantidade de mensagens de log costuma ser grande esta janela possui paginação.<br>Note que as mensagens mais recentes ficam no fim da lista.</p>
 <p class="image-container"><img alt="Experimento log" src="img/3eee7215e7c7c2ba.png"></p>
 
 
