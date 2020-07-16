@@ -100,10 +100,14 @@
 <p class="image-container"><img alt="Identificar classe" src="img/dd886589fc1c8190.png"></p>
 <p>A segunda seção <strong>define a classe Model</strong> que precisa implementar o método &#34;predict()&#34; para ser executado pelo servidor.<br>Neste exemplo o método &#34;predict()&#34; apenas mostra o parâmetro recebido e retorna este parâmetro para a interface gráfica.<br>As capturas de tela da interface gráfica serão mostradas no final deste tutorial porém a aba Deploymente também pode ser usada para conferir o resultado.</p>
 <p class="image-container"><img alt="Declarar classe" src="img/4eb870bb10265a30.png"></p>
+<p>Note que a classe modelo deve retornar uma lista então talvez seja necessário acrescentar o método class_names().<br>Outro ajuste importante para modelos regressores é o retorno convertido para um array numpy.</p>
+<p class="image-container"><img alt="Definir predict" src="img/c726bb35dd2cb9eb.png"></p>
 <p>A seção <strong>Teste do serviço REST</strong> orienta como o pesquisador pode testar o resultado da execução de seu modelo.<br>Ela ajuda a criar um arquivo com um objeto json (JavaScipt Object Notation) para ser enviado ao seu modelo via protocolo REST.</p>
 <p class="image-container"><img alt="Teste Rest" src="img/3a7653d8e625a33b.png"></p>
 <p>É importante ressaltar que o valor enviado ao modelo será sorteado de um intervalo que deve ser especificado na área <strong>&#34;range&#34;</strong> do objeto json.</p>
 <p class="image-container"><img alt="Teste json" src="img/75cb0856382113b9.png"></p>
+<p>Se o modelo for do tipo Regressor então o arquivo json precisa ser ajustado.<br>Neste exemplo o modelo espera um arquio com duas colunas contendo valores numéricos.<br>Por isto a coluna &#34;p0&#34; tem o range [5.0, 5.0] e a coluna &#34;p1&#34; tem o range [6.0, 6.0], assim a plataforma vai sortear um valor entre 5 e 5 para a primeira coluna e um valor entre 6 e 6 para a segunda coluna.</p>
+<p class="image-container"><img alt="Arquivo json para teste de regressor" src="img/4163dd601dc2c9bc.png"></p>
 <p><strong>test_deployment(&#34;contact.json&#34;)</strong><br>A última parte desta aba se encarrega de enviar o objeto json que foi gravado no arquivo contact.json usando o método test_deployment(&#34;contact.json&#34;)</p>
 <p class="image-container"><img alt="Teste Resultado" src="img/69fcc9dda9b7e715.png"></p>
 <p><strong>Resultado do teste na aba Deployment</strong><br>O objeto json é exibido para o pesquisador conferir se os resultados estão de acordo com o esperado.</p>
