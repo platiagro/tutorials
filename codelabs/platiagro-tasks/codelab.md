@@ -138,6 +138,12 @@ As capturas de tela da interface gráfica serão mostradas no final deste tutori
 
 ![Declarar classe](./img/deployment_declarac_classe.png)
 
+Note que a classe modelo deve retornar uma lista então talvez seja necessário acrescentar o método class_names().
+Outro ajuste importante para modelos regressores é o retorno convertido para um array numpy.
+
+![Definir predict](./img/deployment_predict.png)
+
+
 A seção **Teste do serviço REST** orienta como o pesquisador pode testar o resultado da execução de seu modelo.
 Ela ajuda a criar um arquivo com um objeto json (JavaScipt Object Notation) para ser enviado ao seu modelo via protocolo REST.
 
@@ -146,6 +152,13 @@ Ela ajuda a criar um arquivo com um objeto json (JavaScipt Object Notation) para
 É importante ressaltar que o valor enviado ao modelo será sorteado de um intervalo que deve ser especificado na área **"range"** do objeto json.
 
 ![Teste json](./img/deployment_json_teste.png)
+
+Se o modelo for do tipo Regressor então o arquivo json precisa ser ajustado.
+Neste exemplo o modelo espera um arquio com duas colunas contendo valores numéricos.
+Por isto a coluna "p0" tem o range [5.0, 5.0] e a coluna "p1" tem o range [6.0, 6.0], assim a plataforma vai sortear um valor entre 5 e 5 para a primeira coluna e um valor entre 6 e 6 para a segunda coluna.
+
+![Arquivo json para teste de regressor](./img/deployment_json_exemplo.png)
+
 
 **test_deployment("contact.json")**
 A última parte desta aba se encarrega de enviar o objeto json que foi gravado no arquivo contact.json usando o método test_deployment("contact.json")
