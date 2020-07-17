@@ -55,7 +55,7 @@ O campo "Label" deve ser preenchido com o nome que vai aparecer na área de par�
 
 ![Dataset](./img/dataset.png)
 
-É importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.
+Na seção **Declaração de parâmetros e hiperparâmetros** é importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.
 
 
 ![Experiment](./img/input_experiment.png)
@@ -65,30 +65,30 @@ Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb c
 ![Aba lateral](./img/input_aba_lateral.png)
 
 
-O ícone parecido com uma pasta branca na parte de baixo da lateral esquerda serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb
+O ícone <img src="img/icone_experimento_pasta_branca.png" alt=" open tabs " /> na parte de baixo da lateral esquerda da tela serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb
 
 ![Open tabs](./img/nova_tarefa_open_tabs.png)
-
-
-O ícone parecido com uma pasta preta na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor
-
-![File browser](./img/nova_tarefa_file_browser.png)
-
-
-O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o "Terminal de comandos" e outras funcionalidades 
-
-![New launcher](./img/nova_tarefa_file_browser_new_launcher.png)
 
 
 ## Mostrar Terminal de Comandos Unix/Linux
 Duration: 0:01:00
 
+
+O ícone <img src="img/icone_experimento_pasta_preta.png" alt=" file browser " /> na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor
+
+![File browser](./img/nova_tarefa_file_browser.png)
+
+
+O ícone com sinal de adição <img src="img/icone_experimento_new_launcher.png" alt=" new launcher " /> no menu superior perto da pasta preta serve para abrir o ícone para o "Terminal de comandos" e outras funcionalidades 
+
+![New launcher](./img/nova_tarefa_file_browser_new_launcher.png)
+
 Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.
 
 ![Terminal](./img/nova_tarefa_file_browser_new_launcher_terminal.png)
 
-O símbolo que parece uma pasta preta com sinal de adição serve para criar novas pastas na pasta atual.
-O símbolo que parece uma seta para cima sobre uma barra serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.
+O ícone <img src="img/icone_experimento_pasta_preta_adicao.png" alt=" new folder " /> serve para criar novas pastas na pasta atual.
+O ícone <img src="img/icone_experimento_upload_files.png" alt=" upload files " />  serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.
 A maneira de fazer com que os arquivos necessários sejam copiados automaticamente para esta pasta é via o comando wget.
 Exemplo "wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv"
 
