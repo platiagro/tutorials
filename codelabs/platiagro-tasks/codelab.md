@@ -25,7 +25,7 @@ A plataforma oferece uma série de exemplos para iniciar nova tarefa. Ela també
 
 ![Página Nova Tarefa](./img/nova_tarefa.png)
 
-**Descrição:** A janela “Nova Tarefa”, possui dois campos obrigatórios e um opcional. 
+**Descrição:** A janela “Nova Tarefa”, possui dois campos obrigatórios (assinalados com asterisco) e um opcional. 
 O primeiro campo obrigatório é o tipo do exemplo ou "template" inicial. A plataforma oferece grande quantidade de exemplos envolvendo classificação, regressão, seleção de "features" e muitos outros.
 O segundo campo obrigatório é o nome da tarefa. O nome da tarefa será mostrado junto com os outros nomes então escolha um nome que facilite encontrar sua tarefa no futuro.
 O campo opcional é uma descrição de sua tarefa. Se não precisar descrever ou registrar algum detalhe importante pode ficar em branco.
@@ -42,10 +42,10 @@ Após selecionar e preencher os campos necessários a plataforma abre nova aba c
 **Descrição:** A aba “Nova Tarefa”, possui algumas divisões criadas para orientar a elaboração da tarefa que serão comentados em outra seção.
 Esta aba é criada com as divisões Experiment.jpynb e Deployment.jpynb. Também pode ser criada outra seção para Terminal onde podem ser executados comandos do Unix/Linux.
 Nesta aba também podem ser visualizados os artefatos da tarefa e a localização destes artefatos no servidor. 
-   Obs.1: o sinal de adição no menu superior cria mais uma célula para seus códigos
-   Obs.2: a tesoura remove a célula selecionada
+   Obs.1: o sinal de adição <img src="img/icone_experimento_adicao.png" alt=" insert a cell " /> no menu superior cria mais uma célula para seus códigos
+   Obs.2: o ícone com a tesoura <img src="img/icone_experimento_tesoura.png" alt=" cut a cell " /> remove a célula selecionada
    Obs.3: use CONTRL-ENTER para executar a célula selecionada porque o triângulo no alto da tela (Run...) não faz nada
-   Obs.4: o símbolo que parece com </> serve para inserir novo parâmetro ("input")
+   Obs.4: o ícone <img src="img/icone_experimento_input.png" alt=" add parameter " /> serve para inserir novo parâmetro ("input")
    
 ![Input](./img/nova_tarefa_input.png)
 
