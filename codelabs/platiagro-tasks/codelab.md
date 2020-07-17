@@ -11,7 +11,7 @@ feedback link: https://github.com/platiagro/tutorials
 ## Introdução
 Duration: 0:00:30
 
-Para criar uma tarefa, o usuário deverá clicar no menu Tarefas e depois no botão <img src="img/icone_nova_tarefa.png" alt=" + Nova Tarefa " />.
+Para criar uma tarefa, o usuário deverá clicar no menu Tarefas e depois no botão <img src="img/icone_nova_tarefa.png" alt=" + Nova Tarefa " />
 
 ![Página Tarefas](./img/tarefas.png)
 
