@@ -47,27 +47,27 @@
         <p>Após selecionar e preencher os campos necessários a plataforma abre nova aba com as divisões Experiment.jpynb e Deployment.jpynb.</p>
 <p class="image-container"><img alt="Nova Tarefa em Branco" src="img/9f444d437d4293f5.png"></p>
 <p><strong>Descrição:</strong> A aba &#34;Nova Tarefa&#34;, possui algumas divisões criadas para orientar a elaboração da tarefa que serão comentados em outra seção.<br>Esta aba é criada com as divisões Experiment.jpynb e Deployment.jpynb. Também pode ser criada outra seção para Terminal onde podem ser executados comandos do Unix/Linux.<br>Nesta aba também podem ser visualizados os artefatos da tarefa e a localização destes artefatos no servidor.<br>   Obs.1: o sinal de adição <img alt=" insert a cell " src="img/54744bd8322b702d.png"> no menu superior cria mais uma célula para seus códigos<br>   Obs.2: o ícone com a tesoura <img alt=" cut a cell " src="img/9478d2543a42c8a.png"> remove a célula selecionada<br>   Obs.3: use CONTRL-ENTER para executar a célula selecionada porque o triângulo no alto da tela (Run...) não faz nada<br>   Obs.4: o ícone <img alt=" add parameter " src="img/2bd9ed3eb3bbae78.png"> serve para inserir novo parâmetro (&#34;input&#34;)</p>
-<p class="image-container"><img alt="Input" src="img/368c76fe7e3cdcf.png"></p>
+<p class="image-container"><img alt="Input" src="img/60f705506bcbe5f2.png"></p>
 <p><strong>Descrição:</strong> A janela &#34;Add Parameter&#34;, possui alguns campos sobre o novo parâmetro.<br>O campo &#34;Variable name&#34; deve ser preenchido levando em consideração as regras para nomes de variáveis em Python.<br>O campo &#34;Label&#34; deve ser preenchido com o nome que vai aparecer na área de parâmetros da plataforma que abre em uma aba lateral.</p>
 <p class="image-container"><img alt="Dataset" src="img/7a56943e8cb5ebb1.png"></p>
-<p>É importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.</p>
+<p>Na seção <strong>Declaração de parâmetros e hiperparâmetros</strong> é importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.</p>
 <p class="image-container"><img alt="Experiment" src="img/e1fae41096ee5770.png"></p>
 <p>Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como &#34;var_name&#34; e aparece na aba lateral com a identificação &#34;var_label&#34;.</p>
 <p class="image-container"><img alt="Aba lateral" src="img/2b451560454aa85b.png"></p>
-<p>O ícone parecido com uma pasta branca na parte de baixo da lateral esquerda serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb</p>
+<p>O ícone <img alt=" open tabs " src="img/99cf36fbe5cd652f.png"> na parte de baixo da lateral esquerda da tela serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb</p>
 <p class="image-container"><img alt="Open tabs" src="img/2c3a16bc0b1a20ac.png"></p>
-<p>O ícone parecido com uma pasta preta na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor</p>
-<p class="image-container"><img alt="File browser" src="img/4f0ebac426fe86ca.png"></p>
-<p>O sinal de adição no menu superior à direita da pasta preta serve para abrir o ícone para o &#34;Terminal de comandos&#34; e outras funcionalidades</p>
-<p class="image-container"><img alt="New launcher" src="img/5e1bc11a0ada4a75.png"></p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Mostrar Terminal de Comandos Unix/Linux" duration="1">
-        <p>Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.</p>
+        <p>O ícone <img alt=" file browser " src="img/1b342485b445f18c.png"> na parte de cima da lateral esquerda serve para exibir um navegador de arquivos que mostra todos os artefatos da tarefa e sua localização no servidor</p>
+<p class="image-container"><img alt="File browser" src="img/4f0ebac426fe86ca.png"></p>
+<p>O ícone com sinal de adição <img alt=" new launcher " src="img/fceb02d2eda07fae.png"> no menu superior perto da pasta preta serve para abrir o ícone para o &#34;Terminal de comandos&#34; e outras funcionalidades</p>
+<p class="image-container"><img alt="New launcher" src="img/5e1bc11a0ada4a75.png"></p>
+<p>Neste exemplo foram usados alguns comandos para verificar em que local do servidor estão localizados os arquivos desta tarefa.</p>
 <p class="image-container"><img alt="Terminal" src="img/d2f4b81689a8992d.png"></p>
-<p>O símbolo que parece uma pasta preta com sinal de adição serve para criar novas pastas na pasta atual.<br>O símbolo que parece uma seta para cima sobre uma barra serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.<br>A maneira de fazer com que os arquivos necessários sejam copiados automaticamente para esta pasta é via o comando wget.<br>Exemplo &#34;wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv&#34;</p>
+<p>O ícone <img alt=" new folder " src="img/3f34a9dc9a5fb8a9.png"> serve para criar novas pastas na pasta atual.<br>O ícone <img alt=" upload files " src="img/530336f31ba355ff.png">  serve para fazer upload de arquivos da máquina do usuário para a pasta do projeto. É importante ressaltar que esta pasta é temporária e os arquivos carregados nesta pasta deverão ser carregados novamente para futuras pastas deta tarefa.<br>A maneira de fazer com que os arquivos necessários sejam copiados automaticamente para esta pasta é via o comando wget.<br>Exemplo &#34;wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv&#34;</p>
 
 
       </google-codelab-step>
