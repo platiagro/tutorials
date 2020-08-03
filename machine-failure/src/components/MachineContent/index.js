@@ -20,8 +20,8 @@ class MachineContent extends React.Component {
     this.state = {
       url: '',
       isModalVisible: false,
-      machine: 'Aquiles',
-      machineIndex: 0,
+      machine: 'Minerva',
+      machineIndex: 6,
       score: '',
       measuresData: {},
       failureData: {}
@@ -88,7 +88,7 @@ class MachineContent extends React.Component {
         i = 0;
         date = data[i]["Data"];
       }
-    }, 4000);
+    }, 2000);
   }
 
   handleMachineSelected = (machine) => {

@@ -17,6 +17,11 @@ const FailureChart = (props) => {
           animation: {
             duration: 0
           },
+          title: {
+            display: true,
+            text: ' ',
+            lineHeight: 2.5,
+          },
           maintainAspectRatio: false,
           legend: {
             display: false
