@@ -11,7 +11,7 @@ feedback link: https://github.com/platiagro/platiagro
 ## Introdução
 Duration: 0:01:00
 
-Para criar um novo projeto (ou experimento), clique no botão <img src="img/icone_menu_projetos.png" alt=" Projetos " />, no alto da página principal.
+Para criar um novo projeto, clique no botão <img src="img/icone_menu_projetos.png" alt=" + Projetos " />, no alto da página principal.
 Depois clique no botão <img src="img/icone_novo_projeto.png" alt=" + Novo Projeto " />, e preencha os campos como mostrado na ilustração a seguir.
 
 ![Página Tarefas](./img/novo_experimento.png)
@@ -26,11 +26,11 @@ Após criar um novo projeto, será apresentado ao usuário dois tipos de fluxo:
 ## Iniciando um Experimento
 Duration: 0:05:00
 
-Para iniciar um fluxo de Experimento, clicar no botão "Novo Fluxo" na página do projeto.
+Para iniciar um fluxo de Experimento, clicar no botão "Novo Fluxo" <img src="img/icone_novo_fluxo.png" alt=" Novo fluxo de experimento " /> na página do projeto.
 
 ### Criar um fluxo de Experimentação
 
-* Na tela do novo projeto, o usuário irá selecionar o botão “Novo fluxo”;
+* Na tela do novo projeto, o usuário irá selecionar o botão “Novo fluxo” <img src="img/icone_novo_fluxo.png" alt=" Novo fluxo de experimento " />;
 * E escolher a opção: Experimentação;
 * E selecionar uma tarefa no menu Armazém de Tarefas - Conjunto de Dados;
 * Essa tarefa será adicionada ao fluxo;
@@ -53,14 +53,14 @@ Ao voltar para o fluxo, selecionar uma tarefa em: Armazém de tarefas - Engenhar
 
 
 
-## Salvar Template do Expeimento
+## Salvar Template do Experimento
 Duration: 0:02:00
 
-Para salvar o template do fluxo de experimento criado, basta selecionar o botão "Salvar Template".
+Para salvar o template do fluxo de experimento criado, basta selecionar o botão "Salvar como template" <img src="img/icone_salvar_como_template.png" alt=" Salvar como template " />.
 
 ### Salvar Template
 
-* Após executar um fluxo de tarefa, quando o usuário selecionar o botão “Salvar Template”, um modal será aberto para nomear o template;
+* Após executar um fluxo de tarefa, quando o usuário selecionar o botão “Salvar como template” <img src="img/icone_salvar_como_template.png" alt=" Salvar como template " />, um modal será aberto para nomear o template;
 * Ao confirmar a operação, o template será salvo e poderá ser consultado em “Templates de Fluxos”;
 * A operação pode ser executada mesmo antes da execução do fluxo de tarefas
 
