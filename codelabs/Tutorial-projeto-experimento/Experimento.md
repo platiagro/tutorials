@@ -11,6 +11,11 @@ feedback link: https://github.com/platiagro/platiagro
 ## Introdução
 Duration: 0:01:00
 
+Para criar um novo projeto (ou experimento), clique no botão <img src="img/icone_menu_projetos.png" alt=" Projetos " />, no alto da página principal.
+Depois clique no botão <img src="img/icone_novo_projeto.png" alt=" + Novo Projeto " />, e preencha os campos como mostrado na ilustração a seguir.
+
+![Página Tarefas](./img/novo_experimento.png)
+
 Após criar um novo projeto, será apresentado ao usuário dois tipos de fluxo:
 
 * Experimentação: para o usuário experimentar fluxos de tarefas, seja para o treinamento de modelos ou visualização de resultados. Após experimentar vários fluxos é possível decidir quais deles seguirão para o módulo de pré-implantação.
