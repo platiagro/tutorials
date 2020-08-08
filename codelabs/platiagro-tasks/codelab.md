@@ -106,21 +106,30 @@ Passos para levar arquivos até a pasta do componente:
 
 ![Importar classes](./img/importar_classes.png)
 
+A tabela será redimensionada em função do tamanho do dataframe (df)
+
 	  
 ## Mostrar Resultados Aba Lateral
 Duration: 0:01:00
 	  
 Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
-   Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados
+*  Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados
           Precisa terminar com: 
              save_figure(figure=plt.gcf())
-             plt.clf()
 
-![Mostrar resultados codigo](./img/mostrar_resultados_codigo.png)
+![Mostrar resultados codigo](./img/gravar_resultado_exp_tabela_codigo.png)
 
-Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plataforma.
+Se tudo correu bem então a tabela renderizada aparece na aba lateral da plataforma.
+Após clicar no ícone <img src="img/icone_visualizar_resultados.png" alt=" Visualizar resultados " /> será aberta nova janela com a tabela de resultados.
 
 ![Mostrar resultados aba lateral](./img/mostrar_resultados_aba_lateral.png)
+
+A linha "fig, ax = plt.subplots(figsize=(col, 0.4\*lin))" dimensiona a tabela em função do tamanho do dataframe, ajustando o tamanho das linhas e das colunas.
+
+![Mostrar resultados aba lateral pequeno](./img/gravar_resultado_exp_tabela_pequena.png)
+
+![Mostrar resultados aba lateral grande](./img/gravar_resultado_exp_tabela_grande.png)
+
 
 ## Aba Deployment
 Duration: 0:02:00
