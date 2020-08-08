@@ -113,20 +113,23 @@ A tabela será redimensionada em função do tamanho do dataframe (df)
 Duration: 0:01:00
 	  
 Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
-*  Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados
+   Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados
           Precisa terminar com: 
              save_figure(figure=plt.gcf())
 
 ![Mostrar resultados codigo](./img/gravar_resultado_exp_tabela_codigo.png)
 
 Se tudo correu bem então a tabela renderizada aparece na aba lateral da plataforma.
-Após clicar no ícone <img src="img/icone_visualizar_resultados.png" alt=" Visualizar resultados " /> será aberta nova janela com a tabela de resultados.
 
 ![Mostrar resultados aba lateral](./img/mostrar_resultados_aba_lateral.png)
 
 A linha "fig, ax = plt.subplots(figsize=(col, 0.4\*lin))" dimensiona a tabela em função do tamanho do dataframe, ajustando o tamanho das linhas e das colunas.
+Após clicar no ícone <img src="img/icone_visualizar_resultados.png" alt=" Visualizar resultados " /> será aberta nova janela com a tabela de resultados.
+A figura a seguir mostra um exemplo de uma tabela com apenas 5 colunas.
 
 ![Mostrar resultados aba lateral pequeno](./img/gravar_resultado_exp_tabela_pequena.png)
+
+A figura a seguir mostra outra tabela com 17 colunas redimensionada para caber na tela.
 
 ![Mostrar resultados aba lateral grande](./img/gravar_resultado_exp_tabela_grande.png)
 
