@@ -78,19 +78,22 @@
 <pre><code>  !wget https://github.com/platiagro/.../nome_arquivo.py
 </code></pre>
 <p class="image-container"><img alt="Importar classes" src="img/5b7f49a8d55b0ed4.png"></p>
+<p>A tabela será redimensionada em função do tamanho do dataframe (df)</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Mostrar Resultados Aba Lateral" duration="1">
-        <p>Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.<br>   Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados</p>
-<pre><code>      Precisa terminar com: 
-         save_figure(figure=plt.gcf())
-         plt.clf()
-</code></pre>
-<p class="image-container"><img alt="Mostrar resultados codigo" src="img/85622b779ace9f2.png"></p>
-<p>Se tudo correu bem então a tabela renderizada aparece nesta aba lateral da plataforma.</p>
-<p class="image-container"><img alt="Mostrar resultados aba lateral" src="img/4078c390c488b29c.png"></p>
+        <p>Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.</p>
+<ul>
+<li>Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados<br>      Precisa terminar com:<br>         save_figure(figure=plt.gcf())</li>
+</ul>
+<p class="image-container"><img alt="Mostrar resultados codigo" src="img/9afff402729184b8.png"></p>
+<p>Se tudo correu bem então a tabela renderizada aparece na aba lateral da plataforma.<br>Após clicar no ícone <img alt=" Visualizar resultados " src="img/b7b8f70de2f1d188.png"> será aberta nova janela com a tabela de resultados.</p>
+<p class="image-container"><img alt="Mostrar resultados aba lateral" src="img/5fe0893d18304502.png"></p>
+<p>A linha &#34;fig, ax = plt.subplots(figsize=(col, 0.4*lin))&#34; dimensiona a tabela em função do tamanho do dataframe, ajustando o tamanho das linhas e das colunas.</p>
+<p class="image-container"><img alt="Mostrar resultados aba lateral pequeno" src="img/da00d7e3743fbd71.png"></p>
+<p class="image-container"><img alt="Mostrar resultados aba lateral grande" src="img/26052d8d7c7c1a40.png"></p>
 
 
       </google-codelab-step>
