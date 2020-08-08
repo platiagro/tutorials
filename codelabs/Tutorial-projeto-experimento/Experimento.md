@@ -11,8 +11,7 @@ feedback link: https://github.com/platiagro/platiagro
 ## Introdução
 Duration: 0:01:00
 
-Para criar um novo projeto, clique no botão <img src="img/icone_menu_projetos.png" alt=" + Projetos " />, no alto da página principal.
-Depois clique no botão <img src="img/icone_novo_projeto.png" alt=" + Novo Projeto " />, e preencha os campos como mostrado na ilustração a seguir.
+Para criar um novo projeto, clique no botão <img src="img/icone_novo_projeto.png" alt=" + Novo Projeto " />, e preencha os campos necessários.
 
 ![Página Tarefas](./img/novo_experimento.png)
 
