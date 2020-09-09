@@ -113,9 +113,9 @@ A tabela será redimensionada em função do tamanho do dataframe (df)
 Duration: 0:01:00
 	  
 Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
-   Obs.1: Não pode usar plt.show() porque ele limpa o objeto e depois não aparece nada na aba lateral de resultados
+   Obs.1: Não pode usar save_figure(figure=plt.gcf()). Deixa a linha com comentário, se precisar.
           Precisa terminar com: 
-             save_figure(figure=plt.gcf())
+             plt.show()
 
 ![Mostrar resultados codigo](./img/gravar_resultado_exp_tabela_codigo.png)
 
