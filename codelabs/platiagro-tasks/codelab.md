@@ -25,12 +25,12 @@ A plataforma oferece uma série de exemplos para iniciar nova tarefa. Ela també
 
 ![Página Nova Tarefa](./img/nova_tarefa.png)
 
-**Descrição:** A janela “Nova Tarefa”, possui dois campos obrigatórios (assinalados com asterisco) e um opcional. 
+**Descrição:** A janela “Nova Tarefa”, possui dois campos obrigatórios (assinalados com asterisco) e um opcional.
 O primeiro campo obrigatório é o tipo do exemplo ou "template" inicial. A plataforma oferece grande quantidade de exemplos envolvendo classificação, regressão, seleção de "features" e muitos outros.
 O segundo campo obrigatório é o nome da tarefa. O nome da tarefa será mostrado junto com os outros nomes então escolha um nome que facilite encontrar sua tarefa no futuro.
 O campo opcional é uma descrição de sua tarefa. Se não precisar descrever ou registrar algum detalhe importante pode ficar em branco.
 O botão "Cancelar" fecha esta janela e volta para a anterior sem gravar nada.
-O botão "Criar Notebooks" abre nova aba no seu navegador com três divisões que serão comentadas na próxima seção deste tutorial. 
+O botão "Criar Notebooks" abre nova aba no seu navegador com três divisões que serão comentadas na próxima seção deste tutorial.
 
 ## Criação de Tarefas em Branco
 Duration: 0:04:00
@@ -41,12 +41,12 @@ Após selecionar e preencher os campos necessários a plataforma abre nova aba c
 
 **Descrição:** A aba “Nova Tarefa”, possui algumas divisões criadas para orientar a elaboração da tarefa que serão comentados em outra seção.
 Esta aba é criada com as divisões Experiment.jpynb e Deployment.jpynb. Também pode ser criada outra seção para Terminal onde podem ser executados comandos do Unix/Linux.
-Nesta aba também podem ser visualizados os artefatos da tarefa e a localização destes artefatos no servidor. 
+Nesta aba também podem ser visualizados os artefatos da tarefa e a localização destes artefatos no servidor.
    Obs.1: o sinal de adição <img src="img/icone_experimento_adicao.png" alt=" insert a cell " /> no menu superior cria mais uma célula para seus códigos
    Obs.2: o ícone com a tesoura <img src="img/icone_experimento_tesoura.png" alt=" cut a cell " /> remove a célula selecionada
    Obs.3: use CONTRL-ENTER para executar a célula selecionada porque o triângulo no alto da tela (Run...) não faz nada
    Obs.4: o ícone <img src="img/icone_experimento_input.png" alt=" add parameter " /> serve para inserir novo parâmetro ("input")
-   
+
 ![Input](./img/nova_tarefa_input.png)
 
 **Descrição:** A janela “Add Parameter”, possui alguns campos sobre o novo parâmetro.
@@ -60,7 +60,7 @@ Na seção **Declaração de parâmetros e hiperparâmetros** é importante ress
 
 ![Experiment](./img/input_experiment.png)
 
-Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como "var_name" e aparece na aba lateral com a identificação "var_label". 
+Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como "var_name" e aparece na aba lateral com a identificação "var_label".
 
 ![Aba lateral](./img/input_aba_lateral.png)
 
@@ -79,7 +79,7 @@ O ícone <img src="img/icone_experimento_pasta_preta.png" alt=" file browser " /
 ![File browser](./img/nova_tarefa_file_browser.png)
 
 
-O ícone com sinal de adição <img src="img/icone_experimento_new_launcher.png" alt=" new launcher " /> no menu superior perto da pasta preta serve para abrir o ícone para o "Terminal de comandos" e outras funcionalidades 
+O ícone com sinal de adição <img src="img/icone_experimento_new_launcher.png" alt=" new launcher " /> no menu superior perto da pasta preta serve para abrir o ícone para o "Terminal de comandos" e outras funcionalidades
 
 ![New launcher](./img/nova_tarefa_file_browser_new_launcher.png)
 
@@ -96,7 +96,7 @@ Exemplo "wget https://raw.githubusercontent.com/platiagro/.../nome_arquivo.csv"
 ## Importar Classes e Métodos
 Duration: 0:01:00
 
-Se o código for grande é melhor criar classes e importar no componente com "from file import classes, métodos" 
+Se o código for grande é melhor criar classes e importar no componente com "from file import classes, métodos"
 Para importar classes e métodos no componente primeiro precisa carregar o arquivo .py para a pasta do componente
 
 Passos para levar arquivos até a pasta do componente:
@@ -108,22 +108,18 @@ Passos para levar arquivos até a pasta do componente:
 
 A tabela será redimensionada em função do tamanho do dataframe (df)
 
-	  
+
 ## Mostrar Resultados Aba Lateral
 Duration: 0:01:00
-	  
-Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.
-   Obs.1: Não pode usar save_figure(figure=plt.gcf()). Deixa a linha com comentário, se precisar.
-          Precisa terminar com: 
-             plt.show()
+
+Mostrar resultados em forma de gráfico e tabela usando dataframe Pandas e Matplotlib.
 
 ![Mostrar resultados codigo](./img/gravar_resultado_exp_tabela_codigo.png)
 
-Se tudo correu bem então a tabela renderizada aparece na aba lateral da plataforma.
+Se tudo correu bem então o botão "Visualizar resultados" aparece na aba lateral da plataforma.
 
 ![Mostrar resultados aba lateral](./img/mostrar_resultados_aba_lateral.png)
 
-A linha "fig, ax = plt.subplots(figsize=(col, 0.4\*lin))" dimensiona a tabela em função do tamanho do dataframe, ajustando o tamanho das linhas e das colunas.
 Após clicar no ícone <img src="img/icone_visualizar_resultados.png" alt=" Visualizar resultados " /> será aberta nova janela com a tabela de resultados.
 A figura a seguir mostra um exemplo de uma tabela com apenas 5 colunas.
 
@@ -137,7 +133,7 @@ A figura a seguir mostra outra tabela com 17 colunas redimensionada para caber n
 ## Aba Deployment
 Duration: 0:02:00
 
-A aba **Deployment** armazena o código necessário para a plataforma executar no servidor o modelo que foi criado na aba Experiment. 
+A aba **Deployment** armazena o código necessário para a plataforma executar no servidor o modelo que foi criado na aba Experiment.
 O modelo deve ser importado e encapsulado na classe Model então esta classe precisa implementar o método "predict()".
 A primeira seção desta aba serve para **identificação** da atividade, do autor e de seus principais objetivos.
 Recomenda-se que sejam registrados o nome do autor e a data de criação.
@@ -200,9 +196,9 @@ Caso dois ou mais experimentos apresentem bons resultados então o pesquisador d
 
 ![Experimento implantado](./img/experimento_implantado.png)
 
-A janela de **Experimentos Implantados** mostra os experimentos implantados pelo pesquisador.
+A janela de **Fluxos Implantados** mostra os fluxos implantados pelo pesquisador.
 A coluna "Status" apresenta a situação atual do experimento. O experimento deve ter o status "Succeeded" para poder ser executado.
-A coluna "Nome" apresenta o nome do experimento implantado. 
+A coluna "Nome" apresenta o nome do experimento implantado.
    É importante ressaltar que este nome é composto pelo nome do projeto seguido pelo nome do experimento selecionado.
 A coluna "URL" contém a url do experimento implantado. Ela pode ser usada em um terminal de comandos Unix/Linux.
 A coluna "Data de Criação" contém a data e a hora da implantação do experimento.
@@ -210,14 +206,14 @@ A coluna "Ação" contém três opções:
    **"Deletar"** (apagar) o experimento
    **"Testar Inferência"** para executar o experimento enviando um arquivo CSV para o modelo.
    **"Logs"** para visualizar a mensagens do modelo em execução.
-   
+
 A ação **Testar Inferência** apresenta em uma janela o resultado recebido da execução do modelo no servidor.
-O título desta janela é **Predições**
+O título desta janela é **Visualizar resultados**
 
 ![Experimento testado](./img/experimento_implantado_testado.png)
 
-A ação **Logs** exibe uma janela para logs. 
+A ação **Logs** exibe uma janela para logs.
 Como a quantidade de mensagens de log costuma ser grande esta janela possui paginação.
-Note que as mensagens mais recentes ficam no fim da lista.  
+Note que as mensagens mais recentes ficam no fim da lista.
 
 ![Experimento log](./img/experimento_implantado_logs.png)
