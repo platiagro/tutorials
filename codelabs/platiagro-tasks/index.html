@@ -28,8 +28,8 @@
                   feedback-link="https://github.com/platiagro/tutorials">
     
       <google-codelab-step label="Introdução" duration="1">
-        <p>Para criar uma tarefa, o usuário deverá clicar no menu Tarefas e depois no botão <img alt=" + Nova Tarefa " src="img/451cd0f2d19fca7.png"></p>
-<p class="image-container"><img alt="Página Tarefas" src="img/ea25285492bfb5e1.png"></p>
+        <p>Para criar uma tarefa, o usuário deverá clicar no menu Tarefas e depois no botão <img alt=" + Nova Tarefa " src="img/9da33d763717cb97.png"></p>
+<p class="image-container"><img alt="Página Tarefas" src="img/7a6bf4a4deaeb3ab.png"></p>
 <p><strong>Descrição:</strong> Na página &#34;Tarefas&#34;, será apresentada uma lista com todas as tarefas existentes. As informações das tarefas estarão divididas em três colunas: Nome da Tarefa, Descrição e Ação.<br>Nesta tela serão apresentadas as tarefas da plataforma e dos usuários.</p>
 
 
@@ -53,7 +53,7 @@
 <p>Na seção <strong>Declaração de parâmetros e hiperparâmetros</strong> é importante ressaltar que um dataset deve ter o método read(), como um dataframe Pandas.</p>
 <p class="image-container"><img alt="Experiment" src="img/e1fae41096ee5770.png"></p>
 <p>Neste exemplo foi criado um parâmetro (input) que aparece no Experiment.jpynb como &#34;var_name&#34; e aparece na aba lateral com a identificação &#34;var_label&#34;.</p>
-<p class="image-container"><img alt="Aba lateral" src="img/b28912f3818401f3.png"></p>
+<p class="image-container"><img alt="Aba lateral" src="img/1657850a9e11a330.png"></p>
 <p>O ícone <img alt=" open tabs " src="img/99cf36fbe5cd652f.png"> na parte de baixo da lateral esquerda da tela serve para exibir os principais artefatos da tarefa: Experiment.jpynb e Deployment.jpynb</p>
 <p class="image-container"><img alt="Open tabs" src="img/2c3a16bc0b1a20ac.png"></p>
 
@@ -85,13 +85,13 @@
     
       <google-codelab-step label="Mostrar Resultados Aba Lateral" duration="1">
         <p>Mostrar resultados em forma de tabela renderizada usando dataframe Pandas e Matplotlib.<br>   Obs.1: Não pode usar save_figure(figure=plt.gcf()). Deixa a linha com comentário, se precisar.</p>
-<pre><code>      Precisa terminar com: 
+<pre><code>      Precisa terminar com:
          plt.show()
 </code></pre>
 <p class="image-container"><img alt="Mostrar resultados codigo" src="img/9afff402729184b8.png"></p>
 <p>Se tudo correu bem então a tabela renderizada aparece na aba lateral da plataforma.</p>
-<p class="image-container"><img alt="Mostrar resultados aba lateral" src="img/5fe0893d18304502.png"></p>
-<p>A linha &#34;fig, ax = plt.subplots(figsize=(col, 0.4*lin))&#34; dimensiona a tabela em função do tamanho do dataframe, ajustando o tamanho das linhas e das colunas.<br>Após clicar no ícone <img alt=" Visualizar resultados " src="img/b7b8f70de2f1d188.png"> será aberta nova janela com a tabela de resultados.<br>A figura a seguir mostra um exemplo de uma tabela com apenas 5 colunas.</p>
+<p class="image-container"><img alt="Mostrar resultados aba lateral" src="img/7b0456f6e38021a0.png"></p>
+<p>A linha &#34;fig, ax = plt.subplots(figsize=(col, 0.4*lin))&#34; dimensiona a tabela em função do tamanho do dataframe, ajustando o tamanho das linhas e das colunas.<br>Após clicar no ícone <img alt=" Visualizar resultados " src="img/91cc9072664c2d3c.png"> será aberta nova janela com a tabela de resultados.<br>A figura a seguir mostra um exemplo de uma tabela com apenas 5 colunas.</p>
 <p class="image-container"><img alt="Mostrar resultados aba lateral pequeno" src="img/da00d7e3743fbd71.png"></p>
 <p>A figura a seguir mostra outra tabela com 17 colunas redimensionada para caber na tela.</p>
 <p class="image-container"><img alt="Mostrar resultados aba lateral grande" src="img/26052d8d7c7c1a40.png"></p>
@@ -121,16 +121,16 @@
     
       <google-codelab-step label="Implantação e logs" duration="2">
         <p>Cada projeto pode ter vários experimentos, porém apenas um deles será implantado.<br>Espera-se que os experimentos sejam criados e explorados até que o pesquisador se decida pela implantação de um deles para execução em tempo real no servidor.</p>
-<p class="image-container"><img alt="Experimento executar" src="img/8de3efe56ecbce7b.png"></p>
+<p class="image-container"><img alt="Experimento executar" src="img/eafe4471c09b308f.png"></p>
 <p>Depois de criada a atividade desejada, ela deve ser <strong>executada</strong> para permitir sua implantação.<br>Se ocorrer algum erro durante sua execução o botão de implantação fica bloqueado.</p>
-<p class="image-container"><img alt="Experimento implantar" src="img/eb2e4f8557ad0452.png"></p>
+<p class="image-container"><img alt="Experimento implantar" src="img/72235ff11f8f0a9f.png"></p>
 <p>O botão <strong>Implantação</strong> somente será liberado após uma execução completa da atividade sem nenhum erro.<br>É importante lembrar que este botão será liberado somente uma vez para cada projeto.<br>Caso dois ou mais experimentos apresentem bons resultados então o pesquisador deve considerar a possibilidade de criar novos projetos para eles.</p>
-<p class="image-container"><img alt="Experimento implantado" src="img/d37d3ba9e9af7d3.png"></p>
-<p>A janela de <strong>Experimentos Implantados</strong> mostra os experimentos implantados pelo pesquisador.<br>A coluna &#34;Status&#34; apresenta a situação atual do experimento. O experimento deve ter o status &#34;Succeeded&#34; para poder ser executado.<br>A coluna &#34;Nome&#34; apresenta o nome do experimento implantado.<br>   É importante ressaltar que este nome é composto pelo nome do projeto seguido pelo nome do experimento selecionado.<br>A coluna &#34;URL&#34; contém a url do experimento implantado. Ela pode ser usada em um terminal de comandos Unix/Linux.<br>A coluna &#34;Data de Criação&#34; contém a data e a hora da implantação do experimento.<br>A coluna &#34;Ação&#34; contém três opções:<br>   <strong>&#34;Deletar&#34;</strong> (apagar) o experimento<br>   <strong>&#34;Testar Inferência&#34;</strong> para executar o experimento enviando um arquivo CSV para o modelo.<br>   <strong>&#34;Logs&#34;</strong> para visualizar a mensagens do modelo em execução.</p>
-<p>A ação <strong>Testar Inferência</strong> apresenta em uma janela o resultado recebido da execução do modelo no servidor.<br>O título desta janela é <strong>Predições</strong></p>
-<p class="image-container"><img alt="Experimento testado" src="img/a689a14897ca7cd5.png"></p>
+<p class="image-container"><img alt="Experimento implantado" src="img/368b297e95748b7b.png"></p>
+<p>A janela de <strong>Fluxos Implantados</strong> mostra os fluxos implantados pelo pesquisador.<br>A coluna &#34;Status&#34; apresenta a situação atual do experimento. O experimento deve ter o status &#34;Succeeded&#34; para poder ser executado.<br>A coluna &#34;Nome&#34; apresenta o nome do experimento implantado.<br>   É importante ressaltar que este nome é composto pelo nome do projeto seguido pelo nome do experimento selecionado.<br>A coluna &#34;URL&#34; contém a url do experimento implantado. Ela pode ser usada em um terminal de comandos Unix/Linux.<br>A coluna &#34;Data de Criação&#34; contém a data e a hora da implantação do experimento.<br>A coluna &#34;Ação&#34; contém três opções:<br>   <strong>&#34;Deletar&#34;</strong> (apagar) o experimento<br>   <strong>&#34;Testar Inferência&#34;</strong> para executar o experimento enviando um arquivo CSV para o modelo.<br>   <strong>&#34;Logs&#34;</strong> para visualizar a mensagens do modelo em execução.</p>
+<p>A ação <strong>Testar Inferência</strong> apresenta em uma janela o resultado recebido da execução do modelo no servidor.<br>O título desta janela é <strong>Visualizar resultados</strong></p>
+<p class="image-container"><img alt="Experimento testado" src="img/3dd45a01125c9a3e.png"></p>
 <p>A ação <strong>Logs</strong> exibe uma janela para logs.<br>Como a quantidade de mensagens de log costuma ser grande esta janela possui paginação.<br>Note que as mensagens mais recentes ficam no fim da lista.</p>
-<p class="image-container"><img alt="Experimento log" src="img/3eee7215e7c7c2ba.png"></p>
+<p class="image-container"><img alt="Experimento log" src="img/572ae63cf2420db.png"></p>
 
 
       </google-codelab-step>
