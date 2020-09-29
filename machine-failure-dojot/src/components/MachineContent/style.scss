@@ -1,0 +1,35 @@
+.score {
+  background-color: rgba(250, 219, 20, 0.5);
+  border: none;
+  display: block;
+  color: #000;
+  font-size: 3rem;
+  font-weight: bold;
+  height: 130px;
+  width: 130px;
+  margin: 30px auto 10px auto;
+
+  &:hover {
+    background-color: rgba(250, 219, 20, 0.5);
+    color: #000;
+    cursor: default;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.white-box-header {
+  font-weight: bold;
+  padding: 14px 23px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.white-box-content {
+  padding: 14px 23px 14px 23px;
+}
+
+.blue {
+  color: #0050B3;
+}

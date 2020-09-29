@@ -31,6 +31,14 @@ jobs:
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure/
 
+    - name: Machine Failure Dojot - Build 🔧 # This example project is built using yarn and outputs the result to the 'build' folder.
+      run: |
+        cd machine-failure-dojot
+        yarn
+        yarn build
+      env:
+        PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure-dojot/
+
     - name: PlatIAgro Tasks - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
         claat export codelabs/platiagro-tasks/codelab.md
@@ -47,6 +55,10 @@ jobs:
       run: |
         claat export codelabs/aprendizado-maquina/codelab.md
 
+    - name: PlatIAgro Tutorial Aprendizado de Maquina - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-aprendizado-maquina' folder.
+      run: |
+        claat export codelabs/platiagro-dojot/codelab.md
+
     - name: Codelabs Site - Build 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
       run: |
         yarn
@@ -55,6 +67,8 @@ jobs:
         mkdir -p dist/codelabs
         mv platiagro-introduction dist/codelabs/
         mv machine-failure/build dist/machine-failure
+        mv platiagro-dojot dist/codelabs/
+        mv machine-failure-dojot/build dist/machine-failure-dojot
         mv platiagro-tasks dist/codelabs/
         mv projeto-tutorial-platiago dist/codelabs/
         mv tutorial-experimento-platiagro dist/codelabs/

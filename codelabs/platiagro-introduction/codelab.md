@@ -137,7 +137,7 @@ Vamos conectar um dashboard ao modelo implantado.
 
 1. Na tabela de fluxos implantados clique no botão **Copiar**, próximo a URL do serviço.
 
-1. Acesse a [aplicação dashboard](https://platiagro.github.io/platiagro/machine-failure/)
+1. Acesse a [aplicação dashboard](https://platiagro.github.io/tutorials/machine-failure/)
 
 1. Clique em **“Informar URL”**, preencha a URL copiada e clique em OK.
 
