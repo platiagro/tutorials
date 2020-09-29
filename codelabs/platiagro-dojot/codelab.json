@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2020-09-29T17:59:10Z",
+  "id": "platiagro-dojot",
+  "duration": 11,
+  "title": "AI + IoT com PlatIAgro e dojot",
+  "summary": "AI + IoT com PlatIAgro e dojot",
+  "source": "codelabs/platiagro-dojot/codelab.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "platiagro-dojot"
+}
