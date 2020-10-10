@@ -50,7 +50,7 @@
 </aside>
 <h2 is-upgraded><strong>Crie um Novo Modelo &#34;Sensor&#34;</strong></h2>
 <ol type="1">
-<li>No menu lateral, selecione o item <strong>Modelos</strong>.</li>
+<li>No menu lateral, selecione o item <strong>Modelos - *Gerenciamento de modelos</strong>*.</li>
 <li>Clique no botão <strong>Novo Modelo +</strong>, preencha com o nome <strong>&#34;Sensor&#34;</strong>.</li>
 <li>Adicione novos atributos:<ul>
 <li>Nome do atributo: <strong>Maquina</strong><br>Tipo de atributo: Valor estático<br>Tipo de valor: Texto<br>Valor: Maquina1</li>
@@ -72,7 +72,7 @@
 <p class="image-container"><img alt="Painel de configuração de novo modelo na dojot." src="img/31f75cfd7c3890d7.png"></p>
 <h2 is-upgraded><strong>Crie um Novo Dispositivo &#34;Sensor1&#34;</strong></h2>
 <ol type="1">
-<li>No menu lateral, selecione o item <strong>Dispositivos</strong>.</li>
+<li>No menu lateral, selecione o item <strong>Dispositivos - *Dispositivos e configurações</strong>*.</li>
 <li>Clique no botão <strong>Novo Dispositivo +</strong>, preencha com o nome <strong>&#34;Sensor1&#34;</strong>.</li>
 <li>Selecione o modelo <strong>Sensor</strong></li>
 <li>Clique no botão <strong>Criar</strong></li>
@@ -82,7 +82,7 @@
 </aside>
 <h2 is-upgraded><strong>Crie um Novo Modelo &#34;Maquina&#34;</strong></h2>
 <ol type="1">
-<li>No menu lateral, selecione o item <strong>Modelos</strong>.</li>
+<li>No menu lateral, selecione o item <strong>Modelos - *Gerenciamento de modelos</strong>*.</li>
 <li>Clique no botão <strong>Novo Modelo +</strong>, preencha com o nome <strong>&#34;Maquina&#34;</strong>.</li>
 <li>Adicione novos atributos:<ul>
 <li>Nome do atributo: <strong>Maquina<br></strong><br>Tipo de atributo: Valor estático<br><br>Tipo de valor: Texto<br><br>Valor: Maquina1<br></li>
@@ -94,7 +94,7 @@
 <p class="image-container"><img alt="Painel de configuração de novo modelo na dojot." src="img/ac31b1553789cff0.png"></p>
 <h2 is-upgraded><strong>Crie um Novo Dispositivo &#34;Maquina1&#34;</strong></h2>
 <ol type="1">
-<li>No menu lateral, selecione o item <strong>Dispositivos</strong>.</li>
+<li>No menu lateral, selecione o item <strong>Dispositivos - *Dispositivos e configurações</strong>*.</li>
 <li>Clique no botão <strong>Novo Dispositivo +</strong>, preencha com o nome <strong>&#34;Maquina1&#34;</strong>.</li>
 <li>Selecione o modelo <strong>Maquina</strong></li>
 <li>Clique no botão <strong>Criar</strong></li>
@@ -114,7 +114,6 @@
 <p>Para dar início a um projeto, clique no botão <strong>&#34;Novo Projeto&#34;</strong>, localizado acima da lista de projetos.<br><br>Ao clicar no botão será aberto um formulário onde é possível informar um nome e descrição.</p>
 <h2 is-upgraded>Construa um Fluxo de Tarefas</h2>
 <p>Após criar um novo projeto, será possível experimentar vários fluxos de tarefas, seja para o treinamento de modelos ou visualização de resultados.<br><br>Posteriormente, será possível decidir qual deles seguirá para implantação.</p>
-<h3 is-upgraded><strong>Importar um Conjunto de Dados</strong></h3>
 <aside class="warning"><p>Faça download do conjunto de dados <a href="https://raw.githubusercontent.com/platiagro/platiagro.github.io/codelabs/platiagro-dojot/datasets/FalhaEmMaquinasAgricolas.csv" target="_blank"><strong>Falha em Máquinas Agrícolas</strong></a>.</p>
 </aside>
 <ol type="1">
@@ -122,7 +121,9 @@
 <li>No <strong>&#34;Armazém de tarefas&#34;</strong>, dentro do grupo <strong>&#34;Treinamento&#34;</strong>, arraste a tarefa <strong>&#34;Classificador AutoML&#34;</strong> para o painel central.</li>
 <li>No painel central, selecione a tarefa <strong>Upload de arquivo&#34;</strong>. Os detalhes da tarefa irão aparecer à direita.</li>
 <li>Clique no botão <strong>&#34;Selecionar&#34;</strong> e escolha o arquivo <strong>&#34;FalhaMaquinasAgricolas.csv&#34;</strong>, obtido no passo anterior.<br></li>
-<li>Clique no botão <strong>&#34;Importar&#34;</strong> para importar o conjunto de dados.</li>
+<li>Clique no botão <strong>&#34;Importar&#34;</strong> e importe o arquivo FalhaEmMaquinasAgricolas.csv.</li>
+<li>No painel central, selecione a tarefa <strong>&#34;Classificador AutoML&#34;</strong>. Os detalhes da tarefa irão aparecer à direita.</li>
+<li>Selecione o <strong>&#34;Atributo alvo&#34;</strong>: <strong>&#34;FalharaEmBreve&#34;</strong></li>
 </ol>
 <h2 is-upgraded><strong>Executar Fluxo de Experimentação</strong></h2>
 <p>Clique no botão <strong>&#34;Executar&#34;</strong>, a seguinte mensagem será exibida: &#34;Executando o fluxo&#34;</p>
