@@ -112,10 +112,7 @@
 <li>No menu lateral, selecione o item <strong>Dispositivos</strong>.</li>
 <li>Clique no botão <strong>Novo Dispositivo +</strong>, preencha com o nome <strong>&#34;Sensor1&#34;</strong>.</li>
 <li>Selecione o modelo <strong>Sensor</strong></li>
-<li><ol type="1">
 <li>Clique no botão <strong>Criar</strong></li>
-</ol>
-</li>
 </ol>
 <p class="image-container"><img alt="Painel de configuração de novo dispositivo na dojot." src="img/d8133dd4909e8c8d.png"></p>
 <aside class="special"><p>Os dados capturados por este dispositivo serão utilizados em um modelo de predição de falha, implantado na PlatIAgro.</p>
@@ -147,10 +144,7 @@
 <li>No menu lateral, selecione o item <strong>Dispositivos</strong>.</li>
 <li>Clique no botão <strong>Novo Dispositivo +</strong>, preencha com o nome <strong>&#34;Maquina1&#34;</strong>.</li>
 <li>Selecione o modelo <strong>Maquina</strong></li>
-<li><ol type="1">
 <li>Clique no botão <strong>Criar</strong></li>
-</ol>
-</li>
 </ol>
 <p class="image-container"><img alt="Painel de configuração de novo dispositivo na dojot." src="img/b01c24f70b7608e0.png"></p>
 <aside class="special"><p>As predições do modelo implantado na PlatIAgro serão armazenadas neste dispositivo.</p>
@@ -160,7 +154,7 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Crie um modelo para predição de falhas na PlatIAgro" duration="10">
+      <google-codelab-step label="Crie um modelo para predição de falhas na PlatIAgro" duration="15">
         <ol type="1">
 <li>Acesse a PlatIAgro</li>
 </ol>
@@ -169,14 +163,25 @@
 <h2 is-upgraded>Construa um Fluxo de Tarefas</h2>
 <p>Após criar um novo projeto, será possível experimentar vários fluxos de tarefas, seja para o treinamento de modelos ou visualização de resultados.<br><br>Posteriormente, será possível decidir qual deles seguirá para implantação.</p>
 <h3 is-upgraded><strong>Importar um Conjunto de Dados</strong></h3>
-<aside class="warning"><p>Faça download do conjunto de dados <a href="https://raw.githubusercontent.com/platiagro/platiagro.github.io/codelabs/platiagro-introduction/datasets/FalhaEmMaquinasAgricolas.csv" target="_blank"><strong>Falha em Máquinas Agrícolas</strong></a>.</p>
+<aside class="warning"><p>Faça download do conjunto de dados <a href="https://raw.githubusercontent.com/platiagro/platiagro.github.io/codelabs/platiagro-dojot/datasets/FalhaEmMaquinasAgricolas.csv" target="_blank"><strong>Falha em Máquinas Agrícolas</strong></a>.</p>
 </aside>
 <ol type="1">
 <li>No painel central, selecione a tarefa <strong>&#34;Conjunto de Dados&#34;</strong>. Os detalhes da tarefa irão aparecer à direita.</li>
 <li>Clique no botão <strong>&#34;Selecionar&#34;</strong> e escolha o arquivo <strong>&#34;FalhaMaquinasAgricolas.csv&#34;</strong>, obtido no passo anterior.<br></li>
 <li>Clique no botão <strong>&#34;Importar&#34;</strong> para importar o conjunto de dados.</li>
-<li>Selecione o atributo alvo <strong>&#34;Falhará em breve&#34;</strong>.</li>
+<li>Selecione a tarefa <strong>&#34;AutoML Classifier&#34;</strong> dentro do painel <strong>&#34;Treinamento&#34;</strong>.</li>
 </ol>
+<aside class="special"><p>A PlatIAgro possui diversas tarefas nativas para classificação, regressão e agrupamento. Alguns exemplos são:<br><strong>- Redes Neurais<br>- Floresta Aleatória<br>- Regressões<br>- AutoML</strong></p>
+</aside>
+<h2 is-upgraded><strong>Executar Fluxo de Experimentação</strong></h2>
+<p>Clique no botão <strong>&#34;Executar&#34;</strong>, a seguinte mensagem será exibida: &#34;Executando o fluxo&#34;</p>
+<p>Quando a execução do fluxo for concluída com sucesso, <strong>as tarefas ficarão destacadas em verde</strong>.</p>
+<h2 is-upgraded><strong>Faça a Implantação do Fluxo de Experimentação</strong></h2>
+<p>No painel do experimento, clique no botão <strong>Preparar para a implantação</strong>.</p>
+<h2 is-upgraded><strong>Você será direcionado à página de fluxos implantados.</strong></h2>
+<aside class="warning"><p>Leva aproximadamente 5 minutos para que um serviço REST esteja disponível para uso.</p>
+</aside>
+<h2 is-upgraded><strong>Muito bem! A PlatIAgro já está pronta para realizar predições com os dados coletados pela dojot.</strong><br><strong>No próximo passo iremos conectar dojot e PlatIAgro.</strong></h2>
 
 
       </google-codelab-step>
