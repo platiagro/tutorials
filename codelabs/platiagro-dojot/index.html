@@ -32,6 +32,7 @@
 <h2 is-upgraded><strong>O Que Você Vai Aprender</strong></h2>
 <ul>
 <li>Como usar a plataforma dojot para capturar dados de sensores IoT</li>
+<li>Como construir um modelo para predição de falha utilizando dados capturados pela dojot</li>
 <li>Como enviar os dados da dojot para um fluxo implantado na PlatIAgro</li>
 <li>Como conectar uma aplicação à solução de AI + IoT</li>
 </ul>
@@ -44,17 +45,141 @@
       </google-codelab-step>
     
       <google-codelab-step label="Configure os dispositivos (sensores e máquinas) na dojot" duration="10">
+        <p>Vamos adicionar modelos e dispositivos à dojot para coletar dados de sensores e, posteriormente, utilizá-los na PlatIAgro.</p>
+<ol type="1">
+<li>Acesse a plataforma dojot em https://[URL-D0-AMBIENTE]/dojot/ e realize o login</li>
+</ol>
+<h2 is-upgraded>Crie um Novo Modelo &#34;Sensor&#34;</h2>
+<ol type="1">
+<li>No menu lateral, selecione o item <strong>Modelos (Templates)</strong>.</li>
+<li>Clique no botão <strong>+ (Novo Modelo)</strong>, preencha com o nome <code>Sensor</code>.</li>
+<li>Adicione os atributos:</li>
+</ol>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Maquina</p>
+</td><td colspan="1" rowspan="1"><p>Valor estático</p>
+</td><td colspan="1" rowspan="1"><p>Texto</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Temperatura</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Umidade</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Vibracao1</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Vibracao2</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Vibracao3</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Vibracao4</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Vibracao5</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Vibracao6</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>HorasDesdeAUltimaFalha</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Inteiro</p>
+</td></tr>
+</table>
+<ol type="1">
+<li>Clique no botão <strong>Criar</strong></li>
+</ol>
+<h2 is-upgraded>Crie um Novo Dispositivo &#34;SensorMaquina1&#34;</h2>
+<ol type="1">
+<li>No menu lateral, selecione o item <strong>Dispositivos (Devices)</strong>.</li>
+<li>Clique no botão <strong>+ (Novo Dispositivo)</strong>, preencha com o nome <code>SensorMaquina1</code>.</li>
+<li>Selecione o modelo <strong>Sensor</strong></li>
+<li><ol type="1">
+<li>Clique no botão <strong>Criar</strong></li>
+</ol>
+</li>
+</ol>
+<aside class="special"><p>Os dados capturados por este dispositivos serão utilizados em um modelo de predição de falha implantado na PlatIAgro.</p>
+</aside>
+<h2 is-upgraded>Crie um Novo Modelo &#34;Maquina&#34;</h2>
+<ol type="1">
+<li>No menu lateral, selecione o item <strong>Modelos (Templates)</strong>.</li>
+<li>Clique no botão <strong>+ (Novo Modelo)</strong>, preencha com o nome <code>Maquina</code>.</li>
+<li>Adicione os atributos:</li>
+</ol>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Maquina</p>
+</td><td colspan="1" rowspan="1"><p>Valor estático</p>
+</td><td colspan="1" rowspan="1"><p>Texto</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>FalharaEmBreve</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
+</td><td colspan="1" rowspan="1"><p>Texto</p>
+</td></tr>
+</table>
+<ol type="1">
+<li>Clique no botão <strong>Criar</strong></li>
+</ol>
+<h2 is-upgraded>Crie um Novo Dispositivo &#34;Maquina1&#34;</h2>
+<ol type="1">
+<li>No menu lateral, selecione o item <strong>Dispositivos (Devices)</strong>.</li>
+<li>Clique no botão <strong>+ (Novo Dispositivo)</strong>, preencha com o nome <code>Maquina1</code>.</li>
+<li>Selecione o modelo <strong>Maquina</strong></li>
+<li><ol type="1">
+<li>Clique no botão <strong>Criar</strong></li>
+</ol>
+</li>
+</ol>
+<aside class="special"><p>As predições do modelo implantado na PlatIAgro serão armazenadas neste dispositivo.</p>
+</aside>
+<h2 is-upgraded><strong>Muito bem! A dojot já está pronta para receber os dados de sensores IoT. No próximo passo iremos configurar um modelo de predição de falhas na PlatIAgro.</strong></h2>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Crie um modelo para predição de falhas na PlatIAgro" duration="10">
+        <ol type="1">
+<li>Acesse a PlatIAgro em https://[URL-D0-AMBIENTE]/</li>
+</ol>
+<h2 is-upgraded>Crie um Novo Projeto</h2>
+<p>Para dar início a um projeto, clique no botão <strong>&#34;Novo Projeto&#34;</strong>, localizado acima da lista de projetos.<br><br>Ao clicar no botão será aberto um formulário onde é possível informar um nome e descrição.</p>
+<h2 is-upgraded>Construa um Fluxo de Tarefas</h2>
+<p>Após criar um novo projeto, será possível experimentar vários fluxos de tarefas, seja para o treinamento de modelos ou visualização de resultados.<br><br>Posteriormente, será possível decidir qual deles seguirá para implantação.</p>
+<h3 is-upgraded><strong>Importar um Conjunto de Dados</strong></h3>
+<aside class="warning"><p>Faça download do conjunto de dados <a href="https://raw.githubusercontent.com/platiagro/platiagro.github.io/codelabs/platiagro-introduction/datasets/FalhaEmMaquinasAgricolas.csv" target="_blank"><strong>Falha em Máquinas Agrícolas</strong></a>.</p>
+</aside>
+<ol type="1">
+<li>No painel central, selecione a tarefa <strong>&#34;Conjunto de Dados&#34;</strong>. Os detalhes da tarefa irão aparecer à direita.</li>
+<li>Clique no botão <strong>&#34;Selecionar&#34;</strong> e escolha o arquivo <strong>&#34;FalhaMaquinasAgricolas.csv&#34;</strong>, obtido no passo anterior.<br></li>
+<li>Clique no botão <strong>&#34;Importar&#34;</strong> para importar o conjunto de dados.</li>
+<li>Selecione o atributo alvo <strong>&#34;Falhará em breve&#34;</strong>.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Conecte os sensores da dojot à um fluxo da PlatIAgro" duration="5">
         <aside class="warning"><p>TODO</p>
 </aside>
 
 
       </google-codelab-step>
     
-      <google-codelab-step label="Crie um modelo para predição de falhas na PlatIAgro" duration="10">
-        <aside class="warning"><p>TODO</p>
-</aside>
-<h2 is-upgraded><strong>Conectar uma Aplicação à dojot e à PlatIAgro</strong></h2>
-<p>Vamos conectar um dashboard ao modelo implantado.</p>
+      <google-codelab-step label="Conecte uma Aplicação à dojot e à PlatIAgro" duration="5">
+        <p>Vamos conectar um dashboard ao modelo implantado.</p>
 <ol type="1">
 <li>Acesse a <a href="https://platiagro.github.io/tutorials/machine-failure-dojot/" target="_blank">aplicação dashboard</a></li>
 <li>Clique em <strong>Informar</strong>, preencha a URL e Dispositivos e clique em OK.</li>
