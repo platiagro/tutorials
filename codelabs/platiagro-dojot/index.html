@@ -44,21 +44,25 @@
 
       </google-codelab-step>
     
-      <google-codelab-step label="Configure os dispositivos (sensores e máquinas) na dojot" duration="10">
+      <google-codelab-step label="Configure os dispositivos (sensor e máquina) na dojot" duration="10">
         <p>Vamos adicionar modelos e dispositivos à dojot para coletar dados de sensores e, posteriormente, utilizá-los na PlatIAgro.</p>
 <ol type="1">
-<li>Acesse a plataforma dojot em https://[URL-D0-AMBIENTE]/dojot/ e realize o login</li>
+<li>Acesse a plataforma dojot e realize o login</li>
 </ol>
-<h2 is-upgraded>Crie um Novo Modelo &#34;Sensor&#34;</h2>
+<h2 is-upgraded>Crie um Novo Modelo (Template) &#34;Sensor&#34;</h2>
 <ol type="1">
 <li>No menu lateral, selecione o item <strong>Modelos (Templates)</strong>.</li>
-<li>Clique no botão <strong>+ (Novo Modelo)</strong>, preencha com o nome <code>Sensor</code>.</li>
+<li>Clique no botão <strong>+ (Novo Modelo)</strong>, preencha com o nome <strong>&#34;Sensor&#34;</strong>.</li>
 <li>Adicione os atributos:</li>
 </ol>
 <table>
 <tr></tr>
 <tr><td colspan="1" rowspan="1"><p>Maquina</p>
 </td><td colspan="1" rowspan="1"><p>Valor estático</p>
+</td><td colspan="1" rowspan="1"><p>Texto</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Data</p>
+</td><td colspan="1" rowspan="1"><p>Valor dinâmico</p>
 </td><td colspan="1" rowspan="1"><p>Texto</p>
 </td></tr>
 <tr><td colspan="1" rowspan="1"><p>Temperatura</p>
@@ -101,22 +105,22 @@
 <ol type="1">
 <li>Clique no botão <strong>Criar</strong></li>
 </ol>
-<h2 is-upgraded>Crie um Novo Dispositivo &#34;SensorMaquina1&#34;</h2>
+<h2 is-upgraded>Crie um Novo Dispositivo (Device) &#34;Sensor1&#34;</h2>
 <ol type="1">
 <li>No menu lateral, selecione o item <strong>Dispositivos (Devices)</strong>.</li>
-<li>Clique no botão <strong>+ (Novo Dispositivo)</strong>, preencha com o nome <code>SensorMaquina1</code>.</li>
+<li>Clique no botão <strong>+ (Novo Dispositivo)</strong>, preencha com o nome <strong>&#34;Sensor1&#34;</strong>.</li>
 <li>Selecione o modelo <strong>Sensor</strong></li>
 <li><ol type="1">
 <li>Clique no botão <strong>Criar</strong></li>
 </ol>
 </li>
 </ol>
-<aside class="special"><p>Os dados capturados por este dispositivos serão utilizados em um modelo de predição de falha implantado na PlatIAgro.</p>
+<aside class="special"><p>Os dados capturados por este dispositivo serão utilizados em um modelo de predição de falha, implantado na PlatIAgro.</p>
 </aside>
-<h2 is-upgraded>Crie um Novo Modelo &#34;Maquina&#34;</h2>
+<h2 is-upgraded>Crie um Novo Modelo (Template) &#34;Maquina&#34;</h2>
 <ol type="1">
 <li>No menu lateral, selecione o item <strong>Modelos (Templates)</strong>.</li>
-<li>Clique no botão <strong>+ (Novo Modelo)</strong>, preencha com o nome <code>Maquina</code>.</li>
+<li>Clique no botão <strong>+ (Novo Modelo)</strong>, preencha com o nome <strong>&#34;Maquina&#34;</strong>.</li>
 <li>Adicione os atributos:</li>
 </ol>
 <table>
@@ -133,10 +137,10 @@
 <ol type="1">
 <li>Clique no botão <strong>Criar</strong></li>
 </ol>
-<h2 is-upgraded>Crie um Novo Dispositivo &#34;Maquina1&#34;</h2>
+<h2 is-upgraded>Crie um Novo Dispositivo (Device) &#34;Maquina1&#34;</h2>
 <ol type="1">
 <li>No menu lateral, selecione o item <strong>Dispositivos (Devices)</strong>.</li>
-<li>Clique no botão <strong>+ (Novo Dispositivo)</strong>, preencha com o nome <code>Maquina1</code>.</li>
+<li>Clique no botão <strong>+ (Novo Dispositivo)</strong>, preencha com o nome <strong>&#34;Maquina1&#34;</strong>.</li>
 <li>Selecione o modelo <strong>Maquina</strong></li>
 <li><ol type="1">
 <li>Clique no botão <strong>Criar</strong></li>
@@ -145,14 +149,14 @@
 </ol>
 <aside class="special"><p>As predições do modelo implantado na PlatIAgro serão armazenadas neste dispositivo.</p>
 </aside>
-<h2 is-upgraded><strong>Muito bem! A dojot já está pronta para receber os dados de sensores IoT. No próximo passo iremos configurar um modelo de predição de falhas na PlatIAgro.</strong></h2>
+<h2 is-upgraded><strong>Muito bem! A dojot já está pronta para receber os dados de sensores IoT.</strong><br><strong>No próximo passo iremos configurar um modelo de predição de falhas na PlatIAgro.</strong></h2>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Crie um modelo para predição de falhas na PlatIAgro" duration="10">
         <ol type="1">
-<li>Acesse a PlatIAgro em https://[URL-D0-AMBIENTE]/</li>
+<li>Acesse a PlatIAgro</li>
 </ol>
 <h2 is-upgraded>Crie um Novo Projeto</h2>
 <p>Para dar início a um projeto, clique no botão <strong>&#34;Novo Projeto&#34;</strong>, localizado acima da lista de projetos.<br><br>Ao clicar no botão será aberto um formulário onde é possível informar um nome e descrição.</p>
