@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4a3fce6f75572f106325c67ac364e898",
+    "revision": "d7fb26f2cbd6a73de8ac3b2daa1a9c63",
     "url": "https://platiagro.github.io/tutorials/machine-failure-dojot/index.html"
   },
   {
