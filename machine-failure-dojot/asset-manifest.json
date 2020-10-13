@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/main.a5868bd7.chunk.css",
-    "main.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.99ea8cff.chunk.js",
-    "main.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.99ea8cff.chunk.js.map",
+    "main.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.f327270c.chunk.js",
+    "main.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.f327270c.chunk.js.map",
     "runtime-main.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/runtime-main.331eb5dd.js",
     "runtime-main.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/runtime-main.331eb5dd.js.map",
     "static/css/2.e10332d9.chunk.css": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/2.e10332d9.chunk.css",
     "static/js/2.035d03a1.chunk.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.035d03a1.chunk.js",
     "static/js/2.035d03a1.chunk.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.035d03a1.chunk.js.map",
     "index.html": "https://platiagro.github.io/tutorials/machine-failure-dojot/index.html",
-    "precache-manifest.43ce996c2f38f20712161274f054e2cf.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/precache-manifest.43ce996c2f38f20712161274f054e2cf.js",
+    "precache-manifest.e971406d2dd16510b1efe8ebc46d0da8.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/precache-manifest.e971406d2dd16510b1efe8ebc46d0da8.js",
     "service-worker.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/service-worker.js",
     "static/css/2.e10332d9.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/2.e10332d9.chunk.css.map",
     "static/css/main.a5868bd7.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/main.a5868bd7.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.e10332d9.chunk.css",
     "static/js/2.035d03a1.chunk.js",
     "static/css/main.a5868bd7.chunk.css",
-    "static/js/main.99ea8cff.chunk.js"
+    "static/js/main.f327270c.chunk.js"
   ]
 }
