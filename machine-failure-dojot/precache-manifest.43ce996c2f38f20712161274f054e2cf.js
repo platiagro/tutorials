@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d7fb26f2cbd6a73de8ac3b2daa1a9c63",
+    "revision": "6300c3a55237ae7b0a213080e139ebf2",
     "url": "https://platiagro.github.io/tutorials/machine-failure-dojot/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/2.e10332d9.chunk.css"
   },
   {
-    "revision": "1ff9c155995eeb7860d0",
+    "revision": "842f98b68ccf8da1aaeb",
     "url": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/main.a5868bd7.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.035d03a1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1ff9c155995eeb7860d0",
-    "url": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.f9bc39dd.chunk.js"
+    "revision": "842f98b68ccf8da1aaeb",
+    "url": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.99ea8cff.chunk.js"
   },
   {
     "revision": "07b01f501fdf22b09877",
