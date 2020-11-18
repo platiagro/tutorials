@@ -4,7 +4,7 @@
 
 ### Função do componente
 
-Este componente treina um modelo de Regressão Linear usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html). <br>
+Este componente treina um modelo de Regressão Logística para classificação usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). <br>
 Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.
 
 ### Entrada esperada
@@ -21,24 +21,36 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 | Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
 |Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
 |Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
-|Interceptação|`boolean`| `True` `False` |Se é necessário calcular a interceptação para este modelo. Se definido como False, nenhuma interceptação será usada nos cálculos (ou seja, espera-se que os dados estejam centralizados).|
+|Penalidade|`string`| `"l1"` `"l2"` `"elasticnet"` `"None"`|Norma utilizada na penalização do erro.|
+|Regularização Inversa|`number`| - |Retém a modificação de força da regularização ao ser posicionada inversamente no regulador Lambda.|
+|Interceptação|`boolean`| `True`  `False`|Especifica se uma constante (viés ou interceptação) deve ser adicionada à função de decisão.|
+|Peso das Classes|`string`| `balanced`  `balanced_subsample` `None`|Especifica pesos de amostras quando for ajustar classificadores como uma função da classe do target.|
+|Solucionador|`boolean`| `lbfgs`  `sgd` `adam`|Algoritmo a ser usado no problema de otimização.|
+|Iterações|`integer`| - |Número máximo de itereações feitas para os solvers convergirem.|
+|Multiclasse|`boolean`| `auto`  `ovr` `multimomial`|Classificação com mais de duas classes, porém cada amostra pode ser rotulada apenas como uma classe.|
 
 
 ### Métricas de performance
 
 Métricas Obtidas:
 
-1. Coeficiente de determinação (ou R²): Corresponde à correlação ao quadrado entre os valores de resultado observados e os valores previstos pelo modelo.
+1. Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.
+2. Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.
+3. F1-Score: Média harmônica entre precisão e recall.
+4. Suporte: Número de ocorrências de cada classe esperadas
+5. Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo
 
 ### Retorno esperado no experimento
 
 Retornos esperados:
 
-1. Erro na regressão, exemplificada pela imagem a seguir:
+1. Matriz de confusão:
 
-![Distribuição do erro](img/linear-regression/error_distribution.png)
+![Matriz de confusão](img/logistic-regression/predicted_classes_confusion_matrix.png)
 
+2. Curva ROC:
 
+![Curva ROC](img/logistic-regression/roc_curve.png)
 
 ### Retorno esperado na implantação
 
