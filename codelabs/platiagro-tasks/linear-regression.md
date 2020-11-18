@@ -18,11 +18,10 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 | Parâmetro     | Tipo     | Opções        | Descrição                                           |
 |:-------------|:--------:|:-------------:|:-----------------------------------------------------|
 | Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
-| Modo de seleção das features   | `string` |`"incluir"``"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
-|Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas 
-as features serão utilizadas|
+| Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
+|Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
 |Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
-|Interceptação|`boolean`| `"True``False` |Se é necessário calcular a interceptação para este modelo. Se definido como False, nenhuma interceptação será usada nos cálculos (ou seja, espera-se que os dados estejam centralizados).|
+|Interceptação|`boolean`| `"True` `False` |Se é necessário calcular a interceptação para este modelo. Se definido como False, nenhuma interceptação será usada nos cálculos (ou seja, espera-se que os dados estejam centralizados).|
 
 
 ### Métricas de performance
