@@ -26,13 +26,9 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 ### Métricas de performance
 
-Métricas Obtidas:
-
 1. Coeficiente de determinação (ou R²): Corresponde à correlação ao quadrado entre os valores de resultado observados e os valores previstos pelo modelo.
 
 ### Retorno esperado no experimento
-
-Retornos esperados:
 
 1. Erro na regressão, exemplificada pela imagem a seguir:
 
