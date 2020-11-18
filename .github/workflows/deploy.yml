@@ -42,6 +42,7 @@ jobs:
     - name: PlatIAgro Tasks - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
         claat export codelabs/platiagro-tasks/codelab.md
+        claat export codelabs/platiagro-tasks/linear-regression.md
 
     - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
