@@ -1,11 +1,11 @@
-# Classificador AutoML
+# Regressão Logística
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente
 
-Este é um componente que utiliza a biblioteca [auto-sklearn](https://github.com/automl/auto-sklearn) para obter um ou mais modelos classificadores já otimizados. <br>
-O auto-sklearn é um kit de ferramentas de machine learning automatizado e um substituto para [estimator](https://scikit-learn.org/stable/glossary.html#term-estimators) do [scikit-learn](https://scikit-learn.org/stable/).
+Este componente treina um modelo de Regressão Logística para classificação usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). <br>
+Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.
 
 ### Entrada esperada
 
@@ -21,10 +21,13 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 | Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
 |Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
 |Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
-|Tempo máximo de busca|`integer`| - |Limite de tempo (em segundos) para a procura de modelos apropriados.|
-|Tempo máximo para ajuste de modelo|`integer`| - |Limite de tempo (em segundos), para uma única chamada, para ajuste de um modelo de Machine Learning.|
-|Ensemble Learning|`integer`| - |Número de modelos adicionados ao conjunto criado pela seleção do Ensemble das bibliotecas de modelos.|
-|Método de Predição|`string`| `"predict_proba"` `"predict"` |Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.|
+|Penalidade|`string`| `"l1"` `"l2"` `"elasticnet"` `"None"`|Norma utilizada na penalização do erro.|
+|Regularização Inversa|`number`| - |Retém a modificação de força da regularização ao ser posicionada inversamente no regulador Lambda.|
+|Interceptação|`boolean`| `True`  `False`|Especifica se uma constante (viés ou interceptação) deve ser adicionada à função de decisão.|
+|Peso das Classes|`string`| `balanced`  `balanced_subsample` `None`|Especifica pesos de amostras quando for ajustar classificadores como uma função da classe do target.|
+|Solucionador|`boolean`| `lbfgs`  `sgd` `adam`|Algoritmo a ser usado no problema de otimização.|
+|Iterações|`integer`| - |Número máximo de itereações feitas para os solvers convergirem.|
+|Multiclasse|`boolean`| `auto`  `ovr` `multimomial`|Classificação com mais de duas classes, porém cada amostra pode ser rotulada apenas como uma classe.|
 
 
 ### Métricas de performance
@@ -37,9 +40,13 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 ### Retorno esperado no experimento
 
-1. Curva ROC:
+1. Matriz de confusão:
 
-<img src="img/automl-classifier/roc_curve.png" width="400">
+<img src="img/logistic-regression/predicted_classes_confusion_matrix.png" width="400">
+
+2. Curva ROC:
+
+<img src="img/logistic-regression/roc_curve.png" width="400">
 
 ### Retorno esperado na implantação
 

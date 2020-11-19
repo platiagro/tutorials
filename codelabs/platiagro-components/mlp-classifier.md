@@ -1,11 +1,11 @@
-# Classificador AutoML
+# Classificador MLP
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente
 
-Este é um componente que utiliza a biblioteca [auto-sklearn](https://github.com/automl/auto-sklearn) para obter um ou mais modelos classificadores já otimizados. <br>
-O auto-sklearn é um kit de ferramentas de machine learning automatizado e um substituto para [estimator](https://scikit-learn.org/stable/glossary.html#term-estimators) do [scikit-learn](https://scikit-learn.org/stable/).
+Este componente realiza predições usando um modelo Multi-layer Perceptron para classificação usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html). <br>
+Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.
 
 ### Entrada esperada
 
@@ -21,10 +21,13 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 | Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
 |Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
 |Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
-|Tempo máximo de busca|`integer`| - |Limite de tempo (em segundos) para a procura de modelos apropriados.|
-|Tempo máximo para ajuste de modelo|`integer`| - |Limite de tempo (em segundos), para uma única chamada, para ajuste de um modelo de Machine Learning.|
-|Ensemble Learning|`integer`| - |Número de modelos adicionados ao conjunto criado pela seleção do Ensemble das bibliotecas de modelos.|
-|Método de Predição|`string`| `"predict_proba"` `"predict"` |Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.|
+|Camada Oculta",|`integer`| - |O i-ésimo elemento representa o número de neurônios na i-ésima camada oculta.|
+|Ativação|`string`| `identity` `logistic` `tanh` `relu`|Função de ativação para a camada oculta.|
+|Solucionador|`boolean`| `lbfgs`  `sgd` `adam`|Algoritmo a ser usado no problema de otimização.|
+|Taxa de Aprendizado|`string`| `constant`  `invscaling` `adaptive`|Programação da taxa de aprendizado para atualização de peso.|
+|Iteração|`integer`| - |Iteração", description:"Número máximo de iterações.|
+|Embaralhamento|`boolean`| `True` `False` |Se as amostras devem ser embaralhadas em cada iteração. Usado somendo quando solver tiver 'sgd' ou 'adam' como valor.|
+|Método de Predição|`string`| `predict_proba`  `predict`|Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.|
 
 
 ### Métricas de performance
@@ -37,9 +40,13 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 ### Retorno esperado no experimento
 
-1. Curva ROC:
+1. Matriz de confusão:
 
-<img src="img/automl-classifier/roc_curve.png" width="400">
+<img src="img/mlp-classifier/predicted_classes_confusion_matrix.png" width="400">
+
+2. Curva ROC:
+
+<img src="img/mlp-classifier/roc_curve.png" width="400">
 
 ### Retorno esperado na implantação
 

@@ -32,7 +32,7 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 ### Retorno esperado no experimento
 
-1. Erro na regressão, exemplificada pela imagem a seguir:
+1. Erro na regressão, exemplificado pela imagem a seguir:
 
 <img src="img/automl-regressor/error_distribution.png" width="400">
 

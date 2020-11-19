@@ -1,4 +1,4 @@
-# Regressão Linear
+# Regressão Logística
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
@@ -42,11 +42,11 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 1. Matriz de confusão:
 
-![Matriz de confusão](img/logistic-regression/predicted_classes_confusion_matrix.png)
+<img src="img/logistic-regression/predicted_classes_confusion_matrix.png" width="400">
 
 2. Curva ROC:
 
-![Curva ROC](img/logistic-regression/roc_curve.png)
+<img src="img/logistic-regression/roc_curve.png" width="400">
 
 ### Retorno esperado na implantação
 
