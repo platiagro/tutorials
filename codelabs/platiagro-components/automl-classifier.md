@@ -39,7 +39,7 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 1. Curva ROC:
 
-![Curva ROC](img/automl-classifier/roc_curve.png=100x100)
+<img src="img/automl-classifier/roc_curve.png" width="400">
 
 ### Retorno esperado na implantação
 

@@ -32,9 +32,7 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 1. Erro na regressão, exemplificada pela imagem a seguir:
 
-![Distribuição do erro](img/linear-regression/error_distribution.png=100x100)
-
-
+<img src="img/linear-regression/error_distribution.png" width="400">
 
 ### Retorno esperado na implantação
 
