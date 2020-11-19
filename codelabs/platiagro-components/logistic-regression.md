@@ -42,11 +42,11 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 1. Matriz de confusão:
 
-![Matriz de confusão](img/logistic-regression/predicted_classes_confusion_matrix.png){:height="100px" width="100px"}
+<img src="img/logistic-regression/predicted_classes_confusion_matrix.png" width="200" height="200">
 
 2. Curva ROC:
 
-![Curva ROC](img/logistic-regression/roc_curve.png){:height="100px" width="100px"}
+![<img src="img/logistic-regression/roc_curve.png" width="200" height="200"/>](img/logistic-regression/roc_curve.png)
 
 ### Retorno esperado na implantação
 
