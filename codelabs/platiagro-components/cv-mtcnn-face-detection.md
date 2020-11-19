@@ -1,4 +1,12 @@
-# Regressão Logística
+author: Lucas Zanco Ladeira
+summary: Detecção de Faces
+id: cv-mtcnn-face-detection
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
+# Detecção de Faces
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
@@ -47,6 +55,12 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 2. Curva ROC:
 
 <img src="img/logistic-regression/roc_curve.png" width="400">
+=======
+![Matriz de confusão](img/logistic-regression/predicted_classes_confusion_matrix.png)
+
+2. Curva ROC:
+
+![Curva ROC](img/logistic-regression/roc_curve.png)
 
 ### Retorno esperado na implantação
 

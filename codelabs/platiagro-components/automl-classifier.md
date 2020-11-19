@@ -1,3 +1,11 @@
+author: Matheus Gustavo Alves Sasso
+summary: Classificador AutoML
+id: automl-classifier
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
 # Classificador AutoML
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)

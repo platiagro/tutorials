@@ -45,7 +45,7 @@ jobs:
         
     - name: PlatIAgro Components - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-components' folder.
       run: |
-        claat export codelabs/platiagro-tasks/codelab.md
+
         claat export codelabs/platiagro-components/automl-classifier.md
         claat export codelabs/platiagro-components/automl-regressor.md
         claat export codelabs/platiagro-components/cv-mtcnn-face-detection.md
@@ -76,7 +76,7 @@ jobs:
       run: |
         claat export codelabs/aprendizado-maquina/codelab.md
 
-    - name: PlatIAgro Tutorial Aprendizado de Maquina - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-aprendizado-maquina' folder.
+    - name: PlatIAgro Tutorial Dojot - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-dojot' folder.
       run: |
         claat export codelabs/platiagro-dojot/codelab.md
 
@@ -94,6 +94,7 @@ jobs:
         mv projeto-tutorial-platiago dist/codelabs/
         mv tutorial-experimento-platiagro dist/codelabs/
         mv aprendizado-maquina dist/codelabs/
+        mv platiago-components dist/codelabs/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
