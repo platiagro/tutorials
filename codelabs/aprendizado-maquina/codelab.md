@@ -8,6 +8,8 @@ feedback link: https://github.com/platiagro/tutorials
 
 # Introdução à Aprendizado de Máquina
 
+![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
+
 ## Visão Geral
 
 Esse tutorial tem o objetivo de apresentar uma introdução ao aprendizado de máquina, considerando a taxonomia simplificada e algumas características dos dados utilizados na PlatIAgro. Além disso, são utilizados como exemplo os componentes disponíveis na plataforma. O público alvo são usuários que não possuem conhecimento sobre as diferentes técnicas aplicadas no contexto de aprendizado de máquina, ou que desejam obter maior conhecimento nos componentes da PlatIAgro. Dessa maneira, o tutorial está organizado nos seguintes itens.
@@ -22,12 +24,8 @@ Esse tutorial tem o objetivo de apresentar uma introdução ao aprendizado de m�
 
 * **Aprendizado**: apresenta a taxonomia de alguns dos modelos disponíveis na PlatIAgro.
 
-![Fluxo do tutorial](img/tutorial_ml_1.png)
-
 
 ## Tipos de Dados
-
-![Tipos de dados](img/tutorial_ml_2.png)
 
 Dados são utilizados como matéria-prima por modelos de aprendizado de máquina, sendo assim, um modelo tenta descrever o comportamentos dos dados para que seja utilizado em uma determinada tarefa. Basicamente existem dois tipos de dados: estruturados e não estruturados.
 
@@ -41,8 +39,6 @@ Dados não estruturados são dados sem uma estrutura bem definida. Alguns exempl
 
 
 ## Pré-processamento
-
-![Pre processamento](img/tutorial_ml_3.png)
 
 O pré-processamento se refere a técnicas aplicadas nos dados para melhorar a qualidade dos mesmos. Dados tabulares podem ter diferentes características que atrapalham o uso de modelos de aprendizado de máquina, como por exemplo, valores faltantes. As técnicas que serão abordadas estão disponíveis como componentes na PlatIAgro, e compreendem: [Filter](https://github.com/platiagro/projects/tree/master/samples/filter-selection), [Imputer](https://github.com/platiagro/projects/tree/master/samples/imputer), [Normalizer](https://github.com/platiagro/projects/tree/master/samples/normalizer), [Robust Scaler](https://github.com/platiagro/projects/tree/master/samples/robust-scaler), [Variance Threshold](https://github.com/platiagro/projects/tree/master/samples/variance-threshold), [Recursive Feature Elimination](https://github.com/platiagro/projects/tree/master/samples/rfe-selector), [Pré seleção](https://github.com/platiagro/projects/tree/master/samples/pre-selection). Esses componentes são aplicados apenas para dados tabulares.
 
@@ -77,8 +73,6 @@ A <b>Pré Seleção</b> é um componente que agrupa diferentes estratégias para
 
 ## Engenharia de Características
 
-![Engenharia de caracteristicas](img/tutorial_ml_4.png)
-
 A engenharia de características busca criar colunas que se referem a características ocultas em um primeiro momento, como também, fazer transformações em colunas para permitir uma descrição mais clara do comportamento dos dados. Algumas técnicas serão apresentadas, tais como: [Feature Tools](https://github.com/platiagro/projects/tree/master/samples/feature-tools), [Simulated Annealing](https://github.com/platiagro/projects/tree/master/samples/simulated-annealing), [Transformation Graph](https://github.com/platiagro/projects/tree/master/samples/transformation-graph).
 
 ### Feature Tools
@@ -96,8 +90,6 @@ A engenharia de características busca criar colunas que se referem a caracterí
 
 ## Codificação
 
-![Codificacao](img/tutorial_ml_5.png)
-
 Para que um modelo consiga processar dados categóricos textuais, é necessário transformá-los em valores numéricos. Para tal, diversas técnicas podem ser utilizadas, tais como: [LabelEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html), [OrdinalEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OrdinalEncoder.html), [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html). A PlatIAgro utiliza essas técnicas dentro de cada componente que necessita da codificação dos dados.
 
 ### LabelEncoder
@@ -114,8 +106,6 @@ Em alguns casos os diversos valores de uma coluna não se referem a uma ordem. P
 
 
 ## Aprendizado
-
-![Aprendizado](img/tutorial_ml_6.png)
 
 De maneira simplificada existem 4 categorias de aprendizado, sendo elas: <b>supervisionado</b>, <b>não supervisionado</b>, <b>semi-supervisionado</b>, e <b>aprendizado por reforço</b>. Nesse tutorial, serão apenas apresentadas as duas primeiras para introduzir os conceitos. <b>Aprendizado supervisionado</b> é um tipo de aprendizado que requer nos dados um rótulo a ser predito. Por exemplo, para predizer o quanto será produzido de laranjas em uma safra é necessário um histórico de quanto foi produzido nas safras anteriores. <b>Aprendizado não supervisionado</b> tem como papel principal agrupar os dados e identificar registros que se comportam de maneira similar. Ou seja, os dados não possuem um rótulo a ser predito. Por exemplo, de acordo com as características de laranjas é possível saber as mais parecidas para que seja feita uma filtragem.
 
