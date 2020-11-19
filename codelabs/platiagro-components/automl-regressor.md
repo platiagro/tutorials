@@ -1,10 +1,9 @@
-# Classificador AutoML
-
+# Regressor AutoML
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente
 
-Este é um componente que utiliza a biblioteca [auto-sklearn](https://github.com/automl/auto-sklearn) para obter um ou mais modelos classificadores já otimizados. <br>
+Este é um componente que utiliza a biblioteca [auto-sklearn](https://github.com/automl/auto-sklearn) para obter um ou mais modelos regressores já otimizados. <br>
 O auto-sklearn é um kit de ferramentas de machine learning automatizado e um substituto para [estimator](https://scikit-learn.org/stable/glossary.html#term-estimators) do [scikit-learn](https://scikit-learn.org/stable/).
 
 ### Entrada esperada
@@ -24,22 +23,19 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 |Tempo máximo de busca|`integer`| - |Limite de tempo (em segundos) para a procura de modelos apropriados.|
 |Tempo máximo para ajuste de modelo|`integer`| - |Limite de tempo (em segundos), para uma única chamada, para ajuste de um modelo de Machine Learning.|
 |Ensemble Learning|`integer`| - |Número de modelos adicionados ao conjunto criado pela seleção do Ensemble das bibliotecas de modelos.|
-|Método de Predição|`string`| `predict_proba` `predict` |Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.|
+
 
 
 ### Métricas de performance
 
-1. Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.
-2. Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.
-3. F1-Score: Média harmônica entre precisão e recall.
-4. Suporte: Número de ocorrências de cada classe esperadas
-5. Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo
+1. Coeficiente de determinação (ou R²): Corresponde à correlação ao quadrado entre os valores de resultado observados e os valores previstos pelo modelo.
 
 ### Retorno esperado no experimento
 
-1. Curva ROC:
+1. Erro na regressão, exemplificada pela imagem a seguir:
 
-![Curva ROC](img/automl-classifier/roc_curve.png=100x100)
+![Distribuição do erro](img/automl-regressor/error_distribution.png=100x100)
+
 
 ### Retorno esperado na implantação
 

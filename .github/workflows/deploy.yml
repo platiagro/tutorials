@@ -49,6 +49,10 @@ jobs:
         claat export codelabs/platiagro-components/linear-regression.md
         claat export codelabs/platiagro-components/logistic-regression.md
         claat export codelabs/platiagro-components/automl-classifier.md
+        claat export codelabs/platiagro-components/automl-regressor.md
+        claat export codelabs/platiagro-components/feature-tools.md
+        claat export codelabs/platiagro-components/simulated-annealing.md
+        claat export codelabs/platiagro-components/transformation-graph.md
         
     - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
