@@ -70,7 +70,11 @@ jobs:
         claat export codelabs/platiagro-components/robust-scaler.md
         claat export codelabs/platiagro-components/simulated-annealing.md
         claat export codelabs/platiagro-components/transformation-graph.md
-        claat export codelabs/platiagro-components/variance-threshold.md
+        claat export codelabs/platiagro-components/variance-threshold.md    
+        claat export codelabs/platiagro-components/svr.md
+        claat export codelabs/platiagro-components/svc.md
+        claat export codelabs/platiagro-components/kmeans-clustering.md
+        claat export codelabs/platiagro-components/isolation-forest-clustering.md
         
     - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
