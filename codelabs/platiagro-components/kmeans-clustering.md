@@ -25,10 +25,9 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 | Parâmetro     | Tipo     | Opções        | Descrição                                           |
 |:-------------|:--------:|:-------------:|:-----------------------------------------------------|
-|Clusters|`number`| - |Quantidade de clusters a serem considerados.|
-|Inicializações|`number`| - |Quantidade de vezes que o algotirimo será executado em semenstes diferentes.|
-|Interações|`number`| - |Quantidade máxima de interações que o algotirimo fará cada execução.|
-|Distâncias pré-calculadas|`string`| `"auto"` `"predict"`|Processamento mais rápido, porem oucupa mais memória.|
+|Quantidade de clusters|`number`| - |O KMeans utiliza uma quantidade K de clusters para separar os dados.|
+|Quantidade de sementes|`number`| - |Número de vezes que o algoritmo será executado com diferentes sementes de centróide.|
+|Número de iterações|`number`| - |Número máximo de iterações do algoritmo em uma única execução.|
 
 ### Métricas de performance
 

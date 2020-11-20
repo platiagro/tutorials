@@ -26,9 +26,9 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 | Parâmetro     | Tipo     | Opções        | Descrição                                           |
 |:-------------|:--------:|:-------------:|:-----------------------------------------------------|
-|Máximo de amostras|`number`| - |Número de amostras a serem retiradas da base de treinamento para treinar cada estimador.|
-|Contaminação|`number`| - |Proporção de outliers no conjunto de dados. Usado ao ajustar para definir o limite nas pontuações das amostras.|
-|Máximo de freatures|`number`| - |Quantidade de features a serem extraidas para cada treino dos estimadores.|
+|Quantidade máxima de amostras|`number`| - |O número de amostras máximo a serem retiradas dos dados para treinar cada estimador de base.|
+|Contaminação|`number`| - |A quantidade de contaminação do conjunto de dados, ou seja, a proporção de outliers no conjunto de dados.|
+|Quantidade máxima de características|`number`| - |O número de características máximo a serem retiradas dos dados para treinar cada estimador de base.|
 
 
 ### Retorno esperado no experimento
