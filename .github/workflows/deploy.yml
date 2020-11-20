@@ -50,19 +50,27 @@ jobs:
         claat export codelabs/platiagro-components/automl-regressor.md
         claat export codelabs/platiagro-components/cv-mtcnn-face-detection.md
         claat export codelabs/platiagro-components/cv-ocr.md
+        claat export codelabs/platiagro-components/default-yolo.md
+        claat export codelabs/platiagro-components/descriptive-analysis.md
+        claat export codelabs/platiagro-components/feature-tools.md
+        claat export codelabs/platiagro-components/filter-selection.md
+        claat export codelabs/platiagro-components/grouping-categorical-features.md
+        claat export codelabs/platiagro-components/imputer.md
         claat export codelabs/platiagro-components/linear-regression.md
         claat export codelabs/platiagro-components/logistic-regression.md
         claat export codelabs/platiagro-components/mlp-classifier.md
         claat export codelabs/platiagro-components/mlp-regressor.md
         claat export codelabs/platiagro-components/nlp-marianmt-translator.md
         claat export codelabs/platiagro-components/nlp-text-pre-processor.md
+        claat export codelabs/platiagro-components/normalizer.md
+        claat export codelabs/platiagro-components/pre-selection.md
         claat export codelabs/platiagro-components/random-forest-classifier.md
         claat export codelabs/platiagro-components/random-forest-regressor.md
-        claat export codelabs/platiagro-components/svc.md
-        claat export codelabs/platiagro-components/svr.md
-        claat export codelabs/platiagro-components/feature-tools.md
+        claat export codelabs/platiagro-components/rfe-selector.md
+        claat export codelabs/platiagro-components/robust-scaler.md
         claat export codelabs/platiagro-components/simulated-annealing.md
         claat export codelabs/platiagro-components/transformation-graph.md
+        claat export codelabs/platiagro-components/variance-threshold.md
         
     - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
