@@ -1,10 +1,18 @@
-# Feature Tools
+author: Lucas Zanco Ladeira
+summary: Transformation Graph
+id: transformation-graph
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
+# Transformation Graph
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente
 
-Este componente utiliza [Feature Tools](https://www.featuretools.com/) para AutoFeaturing. É feita uma validação para retornar os dados que apresentarem o melhor, sejam eles os dados gerados pelo componente ou os dados iniciais.
+Este componente utiliza um percurso em grafos para explorar as possíveis soluções de transformações para AutoFeaturing. É feita uma validação para retornar os dados que apresentarem o melhor, sejam eles os dados gerados pelo componente ou os dados iniciais.
 
 ### Entrada esperada
 
@@ -18,7 +26,8 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 |:-------------|:--------:|:-------------:|:-----------------------------------------------------|
 | Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
 | Coluna de data  | `feature` | - | Coluna com data que será utilizada para extrair novas características.|
-| Colunas para agrupar  | `feature` | - | Colunas que serão utilizadas para agrupar e extrair novas características.|
+| Limite de busca  | `integer` | - | Parâmetro para aumentar ou diminuir a busca por soluções.|
+
 
 ### Métricas de performance
 

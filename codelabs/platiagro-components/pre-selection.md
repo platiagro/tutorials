@@ -1,10 +1,22 @@
+author: Lucas Zanco Ladeira
+summary: Pré Seleção
+id: pre-selection
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
 # Feature Tools
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente
 
-Este componente utiliza [Feature Tools](https://www.featuretools.com/) para AutoFeaturing. É feita uma validação para retornar os dados que apresentarem o melhor, sejam eles os dados gerados pelo componente ou os dados iniciais.
+Este componente remove atributos de acordo com os seguintes critérios:
+
+- Variabilidade próximo de 0;<br>
+- Alta correlação entre si;<br>
+- Lida com NaN e valores faltantes.
 
 ### Entrada esperada
 
@@ -17,12 +29,12 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 | Parâmetro     | Tipo     | Opções        | Descrição                                           |
 |:-------------|:--------:|:-------------:|:-----------------------------------------------------|
 | Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
-| Coluna de data  | `feature` | - | Coluna com data que será utilizada para extrair novas características.|
-| Colunas para agrupar  | `feature` | - | Colunas que serão utilizadas para agrupar e extrair novas características.|
+| Limiar de correlação  | `float` | - | Atributos com correlação maior que o limiar serão removidos. |
+| Limiar de threshold  | `float` | - | Atributos com variância menor que o limiar serão removidos. |
 
 ### Métricas de performance
 
-Neste componente é utilizado o f1-score para avaliar cada dado distinto.
+Neste componente não é necessário avaliar a performance.
 
 ### Retorno esperado no experimento
 
@@ -33,4 +45,4 @@ Neste componente é utilizado o f1-score para avaliar cada dado distinto.
 
 ### Retorno esperado na implantação
 
-Dados com novas características criadas ou os dados iniciais se não for possível obter resultado melhor com essa estratégia.
+Dados com as colunas filtradas de acordo com variabilidade, alta correlação, e valores faltantes.

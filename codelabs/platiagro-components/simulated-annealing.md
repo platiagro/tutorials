@@ -4,7 +4,7 @@
 
 ### Função do componente
 
-Este é um componente que usa uma técnica chamada Simulated Annealing para executar a AutoFeaturing.
+Este é um componente que usa uma técnica chamada Simulated Annealing para executar o AutoFeaturing. É feita uma validação para retornar os dados que apresentarem o melhor, sejam eles os dados gerados pelo componente ou os dados iniciais.
 
 ### Entrada esperada
 
@@ -18,28 +18,21 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 |:-------------|:--------:|:-------------:|:-----------------------------------------------------|
 | Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
 | Coluna de data  | `feature` | - | Coluna com data que será utilizada para extrair novas características.|
-| Colunas para agrupar  | `feature` | - | CColunas que serão utilizadas para agrupar e extrair novas características.|
+| Colunas para agrupar  | `feature` | - | Colunas que serão utilizadas para agrupar e extrair novas características.|
 | Alpha  | `integer` | - | Parâmetro para aumentar ou diminuir a busca por soluções.|
 
 
 ### Métricas de performance
 
-1. Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.
-2. Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.
-3. F1-Score: Média harmônica entre precisão e recall.
-4. Suporte: Número de ocorrências de cada classe esperadas
-5. Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo
+Neste componente é utilizado o f1-score para avaliar cada dado distinto.
 
 ### Retorno esperado no experimento
 
-1. Matriz de confusão:
+1. Descrição dos dados gerados pelo componente.
 
-![Matriz de confusão](img/logistic-regression/predicted_classes_confusion_matrix.png)
+![Tabela dos Dados](img/table.png)
 
-2. Curva ROC:
-
-![Curva ROC](img/logistic-regression/roc_curve.png)
 
 ### Retorno esperado na implantação
 
-Tabela com os valores preditos para o atributo alvo.
+Dados com novas características criadas ou os dados iniciais se não for possível obter resultado melhor com essa estratégia.
