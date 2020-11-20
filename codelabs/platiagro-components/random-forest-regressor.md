@@ -1,3 +1,11 @@
+author: Matheus Gustavo Alves Sasso
+summary: Regressor Random Forest
+id: random-forest-regressor
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
 # Regressor Random Forest
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
@@ -34,7 +42,7 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 1. Erro na regressão, exemplificado pela imagem a seguir:
 
-<img src="img/linear-regression/error_distribution.png" width="400">
+<img src="img/random-forest-regressor/error_distribution.png" width="400">
 
 ### Retorno esperado na implantação
 

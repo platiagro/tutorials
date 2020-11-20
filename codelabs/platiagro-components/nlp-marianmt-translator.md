@@ -1,15 +1,26 @@
-# Regressão Logística
+author: Matheus Gustavo Alves Sasso
+summary: MariamMT Translator
+id: nlp-marianmt-translator
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
+# Tradutor MarianMT
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente
 
-Este componente treina um modelo de Regressão Logística para classificação usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). <br>
-Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.
+Utilização do modelo [MarianMT](https://huggingface.co/transformers/model_doc/marian.html) para tradução. 
+
+* Neste exemplo a tradução é feito do inglês para o português, mas ela pode ser feita em qualquer uma das línguas suportadas pelo MarianMT. 
+* Para adaptar para traduções em outras línguas é necessário verificacar se há o modelo pré-treinado disponível no MarianMT e adaptar o truncamento de strings do [spacy](https://spacy.io/usage/models) para o idioma desejado
+* A métrica computada é o [sacrebleu](https://https://github.com/mjpost/sacrebleu) 
 
 ### Entrada esperada
 
-Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.
+Espera-se como entrada para o componente uma tabela com entradas textuais.
 
 ### Parâmetros
 
@@ -20,34 +31,20 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 | Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
 | Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
 |Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
-|Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
-|Penalidade|`string`| `"l1"` `"l2"` `"elasticnet"` `"None"`|Norma utilizada na penalização do erro.|
-|Regularização Inversa|`number`| - |Retém a modificação de força da regularização ao ser posicionada inversamente no regulador Lambda.|
-|Interceptação|`boolean`| `True`  `False`|Especifica se uma constante (viés ou interceptação) deve ser adicionada à função de decisão.|
-|Peso das Classes|`string`| `balanced`  `balanced_subsample` `None`|Especifica pesos de amostras quando for ajustar classificadores como uma função da classe do target.|
-|Solucionador|`boolean`| `lbfgs`  `sgd` `adam`|Algoritmo a ser usado no problema de otimização.|
-|Iterações|`integer`| - |Número máximo de itereações feitas para os solvers convergirem.|
-|Multiclasse|`boolean`| `auto`  `ovr` `multimomial`|Classificação com mais de duas classes, porém cada amostra pode ser rotulada apenas como uma classe.|
-
+| Idioma de destino | `string` | `">>fr<<"` `">>es<<"` `">>it<<"` `">>pt<<"` `">>pt_br<<"` `">>ro<<"` `">>ca<<"` `">>gl<<"` `">>pt_BR<<"``">>la<<"` `">>wa<<"` `">>fur<<"` `">>oc<<"` `">>fr_CA<<"` `">>sc<<"` `">>es_ES<<"` `">>es_MX<<"` `">>es_AR<<"` `">>es_PR<<"` `">>es_UY<<"` `">>es_CL<<"` `">>es_CO<<"` `">>es_CR<<"` `">>es_GT<<"` `">>es_HN<<"` `">>es_NI<<"` `">>es_PA<<"` `">>es_PE<<"` `">>es_VE<<"` `">>es_DO<<"` `">>es_EC<<"``">>es_SV<<"` `">>an<<"` `">>pt_PT<<"` `">>frp<<"` `">>lad<<"` `">>vec<<"` `">>fr_FR<<"` `">>co<<"` `">>it_IT<<"` `">>lld<<"` `">>lij<<"` `">>lmo<<"` `">>nap<<"` `">>rm<<"` `">>scn<<"` `">>mwl<<" `| Idioma de destino do alvo. |
+|Modelo pré treinado no idioma de origem"|`string`| `"Helsinki-NLP/opus-mt-NORTH_EU-NORTH_EU"` `"Helsinki-NLP/opus-mt-ROMANCE-en"` `"Helsinki-NLP/opus-mt-SCANDINAVIA-SCANDINAVIA"` `"Helsinki-NLP/opus-mt-de-ZH"` `Helsinki-NLP/opus-mt-en-CELTIC"` `"Helsinki-NLP/opus-mt-en-ROMANCE"` `"Helsinki-NLP/opus-mt-es-NORWAY"` `"Helsinki-NLP/opus-mt-fi-NORWAY"` `"Helsinki-NLP/opus-mt-fi-ZH"` `"Helsinki-NLP/opus-mt-fi_nb_no_nn_ru_sv_en-SAMI"` `"Helsinki-NLP/opus-mt-sv-NORWAY"` `"Helsinki-NLP/opus-mt-sv-ZH"` |Nome do modelo entre os modelos pré-treinados|
+|Tamanho máximo da sentença de entrada|`integer`| - |Tamanho máximo da sentença de entrada em tokens.|
+|Tamanho máximo da sentença de saída|`integer`| - |Tamanho máximo da sentença de saída em tokens.|
+|Tamanho do Batch de inferência|`integer`| - |Tamanho do batch aplicado em inferência.|
 
 ### Métricas de performance
 
-1. Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.
-2. Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.
-3. F1-Score: Média harmônica entre precisão e recall.
-4. Suporte: Número de ocorrências de cada classe esperadas
-5. Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo
+1. BLEU: A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência
 
 ### Retorno esperado no experimento
 
-1. Matriz de confusão:
-
-<img src="img/logistic-regression/predicted_classes_confusion_matrix.png" width="400">
-
-2. Curva ROC:
-
-<img src="img/logistic-regression/roc_curve.png" width="400">
+1. Dataframe com o texto de entrada, texto de referência, texto traduzido e o score bleu  
 
 ### Retorno esperado na implantação
 
-Tabela com os valores preditos para o atributo alvo.
+Numpy array contendo os textos traduzidos.

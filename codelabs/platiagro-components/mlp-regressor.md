@@ -22,9 +22,9 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 |Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
 |Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
 |Camada Oculta",|`integer`| - |O i-ésimo elemento representa o número de neurônios na i-ésima camada oculta.|
-|Ativação|`string`| `identity` `logistic` `tanh` `relu`|Função de ativação para a camada oculta.|
-|Solucionador|`boolean`| `lbfgs`  `sgd` `adam`|Algoritmo a ser usado no problema de otimização.|
-|Taxa de Aprendizado|`string`| `constant`  `invscaling` `adaptive`|Programação da taxa de aprendizado para atualização de peso.|
+|Ativação|`string`| `"identity"` `"logistic"` `"tanh"` `"relu"`|Função de ativação para a camada oculta.|
+|Solucionador|`boolean`| `"lbfgs"`  `"sgd"` `"adam"`|Algoritmo a ser usado no problema de otimização.|
+|Taxa de Aprendizado|`string`| `"constant"`  `"invscaling"` `"adaptive"`|Programação da taxa de aprendizado para atualização de peso.|
 |Iteração|`integer`| - |Iteração", description:"Número máximo de iterações.|
 |Embaralhamento|`boolean`| `True` `False` |Se as amostras devem ser embaralhadas em cada iteração. Usado somendo quando solver tiver 'sgd' ou 'adam' como valor.|
 

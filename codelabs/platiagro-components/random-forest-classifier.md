@@ -1,3 +1,11 @@
+author: Matheus Gustavo Alves Sasso
+summary: Classificador Random Forest
+id: random-forest-classifier
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
 # Classficador Random Forest
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
@@ -25,7 +33,7 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 |Profundidade|`integer`| - |O máximo de profundidade da árvore.|
 |Features|`string`| `"auto"`  `"sqrt"` `"log2"`|O máximo de features a serem considerados ao procurar a melhor divisão.|
 |Peso das Classes|`string`| `"balanced"` `"balanced_subsample"`|Especifica pesos de amostras quando for ajustar classificadores como uma função da classe do target.|
-|Método de Predição|`string`| `predict_proba` `predict` |Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.|
+|Método de Predição|`string`| `"predict_proba"` `"predict"` |Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.|
 
 
 
