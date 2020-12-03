@@ -27,6 +27,75 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este componente treina um modelo Support Vector Regression usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html" target="_blank">Scikit-learn</a>. <br><br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê diversas ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.</p>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Modo de seleção das features</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;incluir&#34;&#34;remover&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features para incluir/remover no modelo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features para fazer codificação ordinal</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Kernel</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;linear&#34;&#34;poly&#34;&#34;rbf&#34;&#34;sigmoid&#34;&#34;precomputed&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Especifica o tipo de kernel a ser usado no algoritmo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Grau</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Grau da função polinomial do kernel (‘poly&#39;). Ignorado por outros kernels.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Gama</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;scale&#34;&#34;auto&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Coeficiente de kernel para ‘rbf&#39;, ‘poly&#39; e ‘sigmoid&#39;.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Regularização</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>A força da regularização é inversamente proporcional a C. Deve ser positivo. Penalidade é l2².</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Iteração</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Limite fixo nas iterações no solver, ou -1 sem limite.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<ol type="1">
+<li>Coeficiente de determinação (ou R²), corresponde à correlação ao quadrado entre os valores de resultado observados e os valores previstos pelo modelo.<h2 is-upgraded>Retorno esperado no experimento</h2>
+</li>
+<li>Distribuição do erro:</li>
+</ol>
+<p class="image-container"><img style="width: 400.00px" src="img/bd1674847caa4ad4.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Tabela com os valores preditos para o atributo alvo.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

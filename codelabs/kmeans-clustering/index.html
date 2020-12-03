@@ -27,6 +27,47 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este é um componente que treina um modelo K-Means usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html" target="_blank">Scikit-learn</a>. <br><br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado.Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.</p>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Quantidade de clusters</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>O KMeans utiliza uma quantidade K de clusters para separar os dados.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Quantidade de sementes</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Número de vezes que o algoritmo será executado com diferentes sementes de centróide.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Número de iterações</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Número máximo de iterações do algoritmo em uma única execução.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<ol type="1">
+<li>Escore de Silhouette: Avalia a qualidade dos clusters criados usando algoritmos de clustering em termos de quão bem as amostras são agrupadas com outras amostras semelhantes entre si.</li>
+</ol>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Gráfico de PCA:</li>
+</ol>
+<p class="image-container"><img style="width: 400.00px" src="img/600b0a7347f56c36.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Tabela com os valores preditos para o atributo alvo.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

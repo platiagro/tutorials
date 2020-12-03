@@ -27,6 +27,95 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este componente realiza predições usando um modelo Multi-layer Perceptron para classificação usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html" target="_blank">Scikit-learn</a>. <br><br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.</p>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Modo de seleção das features</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;incluir&#34;&#34;remover&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features para incluir/remover no modelo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features para fazer codificação ordinal</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Camada Oculta&#34;,</p>
+</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>O i-ésimo elemento representa o número de neurônios na i-ésima camada oculta.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Ativação</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>identitylogistictanhrelu</code></p>
+</td><td colspan="1" rowspan="1"><p>Função de ativação para a camada oculta.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Solucionador</p>
+</td><td colspan="1" rowspan="1"><p><code>boolean</code></p>
+</td><td colspan="1" rowspan="1"><p><code>lbfgssgdadam</code></p>
+</td><td colspan="1" rowspan="1"><p>Algoritmo a ser usado no problema de otimização.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Taxa de Aprendizado</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>constantinvscalingadaptive</code></p>
+</td><td colspan="1" rowspan="1"><p>Programação da taxa de aprendizado para atualização de peso.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Iteração</p>
+</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Iteração&#34;, description:&#34;Número máximo de iterações.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Embaralhamento</p>
+</td><td colspan="1" rowspan="1"><p><code>boolean</code></p>
+</td><td colspan="1" rowspan="1"><p><code>TrueFalse</code></p>
+</td><td colspan="1" rowspan="1"><p>Se as amostras devem ser embaralhadas em cada iteração. Usado somendo quando solver tiver ‘sgd&#39; ou ‘adam&#39; como valor.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Método de Predição</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>predict_probapredict</code></p>
+</td><td colspan="1" rowspan="1"><p>Se optar por ‘predict_proba&#39;, o método de predição será a probabilidade estimada de cada classe, já o ‘predict&#39; prediz a qual classe pertence.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<ol type="1">
+<li>Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.</li>
+<li>Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.</li>
+<li>F1-Score: Média harmônica entre precisão e recall.</li>
+<li>Suporte: Número de ocorrências de cada classe esperadas</li>
+<li>Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo</li>
+</ol>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Matriz de confusão:</li>
+</ol>
+<p class="image-container"><img style="width: 400.00px" src="img/1c7130ad0f9a4927.png"></p>
+<ol type="1">
+<li>Curva ROC:</li>
+</ol>
+<p class="image-container"><img style="width: 400.00px" src="img/db6a6beaf3870d2d.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Tabela com os valores preditos para o atributo alvo.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

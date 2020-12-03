@@ -27,6 +27,95 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este componente treina um modelo de Regressão Logística para classificação usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html" target="_blank">Scikit-learn</a>. <br><br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.</p>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Modo de seleção das features</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;incluir&#34;&#34;remover&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features para incluir/remover no modelo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features para fazer codificação ordinal</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Penalidade</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;l1&#34;&#34;l2&#34;&#34;elasticnet&#34;&#34;None&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Norma utilizada na penalização do erro.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Regularização Inversa</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Retém a modificação de força da regularização ao ser posicionada inversamente no regulador Lambda.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Interceptação</p>
+</td><td colspan="1" rowspan="1"><p><code>boolean</code></p>
+</td><td colspan="1" rowspan="1"><p><code>TrueFalse</code></p>
+</td><td colspan="1" rowspan="1"><p>Especifica se uma constante (viés ou interceptação) deve ser adicionada à função de decisão.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Peso das Classes</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;balanced&#34;&#34;balanced_subsample&#34;None</code></p>
+</td><td colspan="1" rowspan="1"><p>Especifica pesos de amostras quando for ajustar classificadores como uma função da classe do target.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Solucionador</p>
+</td><td colspan="1" rowspan="1"><p><code>boolean</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;lbfgs&#34;&#34;sgd&#34;&#34;adam&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Algoritmo a ser usado no problema de otimização.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Iterações</p>
+</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Número máximo de itereações feitas para os solvers convergirem.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Multiclasse</p>
+</td><td colspan="1" rowspan="1"><p><code>boolean</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;auto&#34;&#34;ovr&#34;&#34;multimomial&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Classificação com mais de duas classes, porém cada amostra pode ser rotulada apenas como uma classe.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<ol type="1">
+<li>Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.</li>
+<li>Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.</li>
+<li>F1-Score: Média harmônica entre precisão e recall.</li>
+<li>Suporte: Número de ocorrências de cada classe esperadas</li>
+<li>Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo</li>
+</ol>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Matriz de confusão:</li>
+</ol>
+<p class="image-container"><img style="width: 400.00px" src="img/1c7130ad0f9a4927.png"></p>
+<ol type="1">
+<li>Curva ROC:</li>
+</ol>
+<p class="image-container"><img style="width: 400.00px" src="img/829a74fe6a26c6bf.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Tabela com os valores preditos para o atributo alvo.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

@@ -27,6 +27,84 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Utilização das bibliotecas <a href="https://opencv.org/" target="_blank">opencv</a> e  <a href="https://tesseract-ocr.github.io/" target="_blank">Tesseract OCR</a> para o reconhecimento de texto em imagens e da biblioteca <a href="https://github.com/jitsi/jiwer" target="_blank">JiWER</a> para cálculo de mérticas de perfomance.</p>
+<ul>
+<li>Mais detlalhes sobre  o funcionamento dos algorítimos e das línguas nos quais o mesmo podem são utilizados são encontrados na <a href="https://tesseract-ocr.github.io/tessdoc/Data-Files" target="_blank">Tesseract documentation</a></li>
+<li>Caso seja passado um arquivo .xlsx com as strings de target pode visualizar a perfonrmance do algorítimo</li>
+</ul>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente um arquivo .zip contendo images e podendo conter uma tabela .xlsx com uma coluna contendo as respostas esperadas.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Modo de seleção das features</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;incluir&#34;&#34;remover&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features para incluir/remover no modelo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Confiabilidade do bbox</p>
+</td><td colspan="1" rowspan="1"><p><code>number</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>O quanto de confiabilidade o algorítmo deve possuir sobre o bbox para que o mesmo apareça.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Modeo de segmentação do PyTesseract</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;Orientation and script detection (OSD) only.&#34;&#34;Automatic page segmentation with OSD.&#34;&#34;Automatic page segmentation  but no OSD  or OCR.&#34;&#34;Fully automatic page segmentation  but no OSD. (Default)&#34;&#34;Assume a single column of text of variable sizes.&#34;&#34;Assume a single uniform block of vertically aligned text.&#34;&#34;Assume a single uniform block of text.&#34;&#34;Treat the image as a single text line.&#34;&#34;Treat the image as a single word.&#34;&#34;Treat the image as a single word in a circle.&#34;&#34;Treat the image as a single character.&#34;&#34;Sparse text. Find as much text as possible in no particular order.&#34;&#34;Sparse text with OSD&#34;&#34;Raw line. Treat the image as a single text line  bypassing hacks that are Tesseract-specific.&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Para mais informações acesse a documentação linkada no inicio do notebook.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>OCR engine do Pytesseract</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;Legacy engine only.&#34;&#34;Neural nets LSTM engine only.&#34;&#34;Legacy + LSTM engines.&#34;&#34;Default, based on what is available.&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Para mais informações acesse a documentação linkada no inicio do notebook.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Confiabilidade do bbox</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;por&#34;&#34;eng&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>O quanto de confiabilidade o algorítmo deve possuir sobre o bbox para que o mesmo apareça.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Forma de retorno dos bboxes</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;np_array&#34;&#34;image&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Escolher se bboxes serão retornados na imagem ou como um numpy array.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Formato de retorno da imagem.</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p><code>&#34;N/A&#34;&#34;.jpg&#34;&#34;.png&#34;</code></p>
+</td><td colspan="1" rowspan="1"><p>Escolher formato de retorno da imagem, N/A se retornar numpy array. Apenas aplicável caso bbox_return = image</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<ol type="1">
+<li>Word Error Rate (WER): Proporção de palavras erradas entre as palavras processadas. WER = ((S+D+I)/(H+S+D))</li>
+<li>Match Error Rate (MER): Proporção de palavras correspondidas que são erros. MER = ((S+D+I)/(H+S+D+I))</li>
+<li>Word Information Lost (WIL): Proporção de informação perdida. WIL = 1- ((H^2)/((H+S+D)(H+S+I)))</li>
+<li>Word Information Preserved (WIP): Proporção de informação preservada. WIP = 1- WIL</li>
+</ol>
+<p>Legenda:  I= Número de Inserções, D = Número de Deleções, S = Número de Substituições, H = Número de Acertos.</p>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Dataframe com o texto de fererência, o texto encontrado, as coordenadas dos bboxes nas regiões em que os textos foram identificados e também as métricas calculadas. Em caso de não haver o arquivo .xlsx de referência, retorna apenas o texto encontrado e as coordenadas dos bboxes nas regiões em que os textos foram identificados.</li>
+</ol>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Saída dependende do argumento do tipo de retorno. Caso seja uma imagem retorna um arquivo bytes em que o texto está marcado. Caso seja um numpy array retorna as posições dos bboxes em numpy array.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

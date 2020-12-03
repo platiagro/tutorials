@@ -27,6 +27,36 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este componente utiliza o algoritmo Yolo para detecção e classificação de objetos em imagens implementado na biblioteca <a href="https://pypi.org/project/yolov4/" target="_blank">Yolov4</a>. Essa biblioteca utiliza uma versão do modelo treinado com a base de dados Coco, e portanto, reconhece os objetos descritos em coco.names.</p>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente um arquivo .zip com imagens.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Linguagem</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p>português, inglês</p>
+</td><td colspan="1" rowspan="1"><p>O objeto detectado pode estar em português ou inglês.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<p>Neste componente, como é utilizado um modelo pré-treinado, não são utilizadas métricas de performance.</p>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Objetos identificados na imagem, probabilidade de cada objeto, e coordenadas das boundary boxes.</li>
+</ol>
+<p class="image-container"><img alt="Matriz de confusão" src="img/cfc2d77eb702d9ee.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Objetos identificados na imagem, probabilidade de cada objeto, e coordenadas das boundary boxes.</p>
+<p class="image-container"><img alt="Matriz de confusão" src="img/cfc2d77eb702d9ee.png"></p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

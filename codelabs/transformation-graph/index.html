@@ -27,6 +27,45 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este componente utiliza um percurso em grafos para explorar possíveis soluções de transformações para a geração automática de features (AutoFeaturing). É feita uma validação para determinar as features mais importantes para o problema de interesse, sejam elas geradas automaticamente pelo componente ou providas como entrada.</p>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Coluna de data</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Coluna com data que será utilizada para extrair novas características.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Limite de busca</p>
+</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Parâmetro para aumentar ou diminuir a busca por soluções.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<p>Neste componente é utilizado o f1-score para avaliar cada dado distinto.</p>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Descrição dos dados gerados pelo componente.</li>
+</ol>
+<p class="image-container"><img alt="Tabela dos Dados" src="img/13ed870aa5e3607e.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Dados com novas características criadas ou os dados iniciais se não for possível obter resultado melhor com essa estratégia.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

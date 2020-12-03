@@ -27,6 +27,60 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este componente realiza o agrupamento de features categóricas com alta cardinalidade para serem implementadas por modelos de classificação. Neste componente são implementadas três estratégias de agrupamento (method):</p>
+<ul>
+<li>percent: o agrupamento é feito considerando um ponto de corte definido. Categorias abaixo desse limiar são agrupadas em uma categoria denominada &#34;other&#34;;<br></li>
+<li>top_n: apenas as n categorias mais frequentes são mantidas. As demais são agrupadas em uma categoria denominada &#34;other&#34;;<br></li>
+<li>kmeans: Para cada classe, são calculadas sua frequência relativa e porcentagem de casos positivos da variável resposta. Então, o algoritmo kmeans utiliza estas informações para o agrupamento.</li>
+</ul>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Features categóricas para fazer agrupamento de classes</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>O agrupamento será feito considerando apenas as features categóricas selecionadas neste parâmetro.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Estratégia de agrupamento</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>percent, top_n, kmeans</p>
+</td><td colspan="1" rowspan="1"><p>Escolha do método que será utilizado para agrupar as classes das variávevis categóricas.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Ponto de corte para agrupamento</p>
+</td><td colspan="1" rowspan="1"><p><code>float</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Classes com frequência relativa abaixo desse ponto de corte serão agrupadas em uma mesma classe.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Número de classes que deverão ser mantidas/criadas</p>
+</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Se a estratégia for kmeans, n representa o número de grupos criados pelo algoritmo, se for top_n, as n classes mais frequentes serão mantidas.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<p>Neste componente não é necessário avaliar a performance.</p>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Descrição dos dados gerados pelo componente.</li>
+</ol>
+<p class="image-container"><img alt="Tabela dos Dados" src="img/13ed870aa5e3607e.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Dados com colunas categóricas de alta cardinalidade agrupadas.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>

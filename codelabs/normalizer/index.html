@@ -27,6 +27,40 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
+      <google-codelab-step label="Visão Geral" duration="5">
+        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
+<h2 is-upgraded>Função do componente</h2>
+<p>Este é um componente que normaliza as amostras individualmente de acordo com a norma da unidade. Faz uso da implementação do Scikit-learn.<br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.</p>
+<h2 is-upgraded>Entrada esperada</h2>
+<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
+<h2 is-upgraded>Parâmetros</h2>
+<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<table>
+<tr></tr>
+<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
+</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
+</td><td colspan="1" rowspan="1"><p>-</p>
+</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>Norma</p>
+</td><td colspan="1" rowspan="1"><p><code>string</code></p>
+</td><td colspan="1" rowspan="1"><p>l1, l2, max</p>
+</td><td colspan="1" rowspan="1"><p>A norma a ser usada para normalizar cada amostra diferente de zero. Se a norma ‘max&#39; for usada, os valores serão redimensionados pelo máximo dos valores absolutos.</p>
+</td></tr>
+</table>
+<h2 is-upgraded>Métricas de performance</h2>
+<p>Neste componente não é necessário avaliar a performance.</p>
+<h2 is-upgraded>Retorno esperado no experimento</h2>
+<ol type="1">
+<li>Descrição dos dados gerados pelo componente.</li>
+</ol>
+<p class="image-container"><img alt="Tabela dos Dados" src="img/13ed870aa5e3607e.png"></p>
+<h2 is-upgraded>Retorno esperado na implantação</h2>
+<p>Dados normalizados de acordo com a norma.</p>
+
+
+      </google-codelab-step>
+    
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
