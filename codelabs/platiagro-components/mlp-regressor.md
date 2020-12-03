@@ -1,3 +1,11 @@
+author: Matheus Gustavo Alves Sasso
+summary: Regressor MLP
+id: mlp-regressor
+categories: platiagro
+environments: Web
+status: Published
+feedback link: https://github.com/platiagro/tutorials
+
 # Regressor MLP
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
