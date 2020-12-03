@@ -4,11 +4,11 @@
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2020-12-03T16:22:15Z",
-  "id": "aprendizado-maquina",
+  "id": "random-forest-classifier",
   "duration": 0,
-  "title": "Introdução à Aprendizado de Máquina",
-  "summary": "Introdução à Aprendizado de Máquina",
-  "source": "codelabs/aprendizado-maquina/codelab.md",
+  "title": "Classficador Random Forest",
+  "summary": "Classificador Random Forest",
+  "source": "codelabs/platiagro-components/random-forest-classifier.md",
   "theme": "",
   "status": [
     "published"
@@ -20,5 +20,5 @@
     "web"
   ],
   "feedback": "https://github.com/platiagro/tutorials",
-  "url": "aprendizado-maquina"
+  "url": "random-forest-classifier"
 }

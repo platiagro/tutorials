@@ -4,11 +4,11 @@
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2020-12-03T16:22:15Z",
-  "id": "projeto-tutorial-platiago",
-  "duration": 17,
-  "title": "Meus Projetos",
-  "summary": "PlatIAgro Tutorial",
-  "source": "codelabs/Tutorial-projeto-experimento/Projeto.md",
+  "id": "variance-threshold",
+  "duration": 0,
+  "title": "Feature Tools",
+  "summary": "Limiar de Variação",
+  "source": "codelabs/platiagro-components/variance-threshold.md",
   "theme": "",
   "status": [
     "published"
@@ -19,6 +19,6 @@
   "tags": [
     "web"
   ],
-  "feedback": "https://github.com/platiagro/platiagro",
-  "url": "projeto-tutorial-platiago"
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "variance-threshold"
 }
