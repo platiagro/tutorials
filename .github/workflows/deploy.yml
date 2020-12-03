@@ -18,6 +18,8 @@ jobs:
         wget -O $GITHUB_WORKSPACE/bin/claat https://github.com/googlecodelabs/tools/releases/download/v2.2.0/claat-linux-amd64
         echo "::add-path::$GITHUB_WORKSPACE/bin"
         chmod +x $GITHUB_WORKSPACE/bin/claat
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
     - name: PlatIAgro Introduction - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-introduction' folder.
       run: |
