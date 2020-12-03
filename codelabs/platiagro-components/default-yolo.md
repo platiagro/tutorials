@@ -1,6 +1,6 @@
 author: Lucas Zanco Ladeira
-summary: Detecção de Faces
-id: cv-mtcnn-face-detection
+summary: Detecção de Objetos
+id: default-yolo
 categories: platiagro
 environments: Web
 status: Published
