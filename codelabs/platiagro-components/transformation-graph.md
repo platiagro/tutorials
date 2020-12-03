@@ -8,6 +8,9 @@ feedback link: https://github.com/platiagro/tutorials
 
 # Transformation Graph
 
+## Visão Geral
+Duration: 0:05:00
+
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente

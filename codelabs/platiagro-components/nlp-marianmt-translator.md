@@ -8,15 +8,18 @@ feedback link: https://github.com/platiagro/tutorials
 
 # Tradutor MarianMT
 
+## Visão Geral
+Duration: 0:05:00
+
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
 ### Função do componente
 
-Utilização do modelo [MarianMT](https://huggingface.co/transformers/model_doc/marian.html) para tradução. 
+Utilização do modelo [MarianMT](https://huggingface.co/transformers/model_doc/marian.html) para tradução.
 
-* Neste exemplo a tradução é feito do inglês para o português, mas ela pode ser feita em qualquer uma das línguas suportadas pelo MarianMT. 
+* Neste exemplo a tradução é feito do inglês para o português, mas ela pode ser feita em qualquer uma das línguas suportadas pelo MarianMT.
 * Para adaptar para traduções em outras línguas é necessário verificacar se há o modelo pré-treinado disponível no MarianMT e adaptar o truncamento de strings do [spacy](https://spacy.io/usage/models) para o idioma desejado
-* A métrica computada é o [sacrebleu](https://https://github.com/mjpost/sacrebleu) 
+* A métrica computada é o [sacrebleu](https://https://github.com/mjpost/sacrebleu)
 
 ### Entrada esperada
 
@@ -43,7 +46,7 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 ### Retorno esperado no experimento
 
-1. Dataframe com o texto de entrada, texto de referência, texto traduzido e o score bleu  
+1. Dataframe com o texto de entrada, texto de referência, texto traduzido e o score bleu
 
 ### Retorno esperado na implantação
 
