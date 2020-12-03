@@ -6,7 +6,7 @@ environments: Web
 status: Published
 feedback link: https://github.com/platiagro/tutorials
 
-# Feature Tools
+# Robust Scaler
 
 ## Visão Geral
 Duration: 0:05:00
