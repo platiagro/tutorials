@@ -42,7 +42,7 @@ jobs:
     - name: PlatIAgro Tasks - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
         claat export codelabs/platiagro-tasks/codelab.md
-        
+
     - name: PlatIAgro Components - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-components' folder.
       run: |
 
@@ -70,12 +70,12 @@ jobs:
         claat export codelabs/platiagro-components/robust-scaler.md
         claat export codelabs/platiagro-components/simulated-annealing.md
         claat export codelabs/platiagro-components/transformation-graph.md
-        claat export codelabs/platiagro-components/variance-threshold.md    
+        claat export codelabs/platiagro-components/variance-threshold.md
         claat export codelabs/platiagro-components/svr.md
         claat export codelabs/platiagro-components/svc.md
         claat export codelabs/platiagro-components/kmeans-clustering.md
         claat export codelabs/platiagro-components/isolation-forest-clustering.md
-        
+
     - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
         claat export codelabs/Tutorial-projeto-experimento/Projeto.md
@@ -106,7 +106,36 @@ jobs:
         mv projeto-tutorial-platiago dist/codelabs/
         mv tutorial-experimento-platiagro dist/codelabs/
         mv aprendizado-maquina dist/codelabs/
-        mv platiago-components dist/codelabs/
+
+        mv automl-classifier dist/codelabs/
+        mv automl-regressor dist/codelabs/
+        mv cv-mtcnn-face-detection dist/codelabs/
+        mv cv-ocr dist/codelabs/
+        mv default-yolo dist/codelabs/
+        mv descriptive-analysis dist/codelabs/
+        mv feature-tools dist/codelabs/
+        mv filter-selection dist/codelabs/
+        mv grouping-categorical-features dist/codelabs/
+        mv imputer dist/codelabs/
+        mv linear-regression dist/codelabs/
+        mv logistic-regression dist/codelabs/
+        mv mlp-classifier dist/codelabs/
+        mv mlp-regressor dist/codelabs/
+        mv nlp-marianmt-translator dist/codelabs/
+        mv nlp-text-pre-processor dist/codelabs/
+        mv normalizer dist/codelabs/
+        mv pre-selection dist/codelabs/
+        mv random-forest-classifier dist/codelabs/
+        mv random-forest-regressor dist/codelabs/
+        mv rfe-selector dist/codelabs/
+        mv robust-scaler dist/codelabs/
+        mv simulated-annealing dist/codelabs/
+        mv transformation-graph dist/codelabs/
+        mv variance-threshold dist/codelabs/
+        mv svr dist/codelabs/
+        mv svc dist/codelabs/
+        mv kmeans-clustering dist/codelabs/
+        mv isolation-forest-clustering dist/codelabs/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
