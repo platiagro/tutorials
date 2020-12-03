@@ -12,7 +12,7 @@ feedback link: https://github.com/platiagro/tutorials
 
 ### Função do componente
 
-Este componente utiliza um percurso em grafos para explorar as possíveis soluções de transformações para AutoFeaturing. É feita uma validação para retornar os dados que apresentarem o melhor, sejam eles os dados gerados pelo componente ou os dados iniciais.
+Este componente utiliza um percurso em grafos para explorar possíveis soluções de transformações para a geração automática de features (AutoFeaturing). É feita uma validação para determinar as features mais importantes para o problema de interesse, sejam elas geradas automaticamente pelo componente ou providas como entrada.
 
 ### Entrada esperada
 
