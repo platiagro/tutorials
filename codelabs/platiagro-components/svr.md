@@ -41,13 +41,40 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 ### Métricas de performance
 
 1. Coeficiente de determinação (ou R²), corresponde à correlação ao quadrado entre os valores de resultado observados e os valores previstos pelo modelo.
+
 ### Retorno esperado no experimento
 
-1. Distribuição do erro:
+1. Dados de teste:
 
-<img src="img/svr/error_distribution.png" width="400">
+<img src="img/regression/regression_data.png" width="400">
 
+2. Distribuição do erro na regressão:
 
+<img src="img/regression/regression_error.png" width="400">
+
+3. Diferença do erro:
+
+<img src="img/regression/prediction_diff.png" width="400">
+
+4. Diferença ordenada do erro:
+
+<img src="img/regression/sorted_prediction_diff.png" width="400">
+
+5. Erro absoluto:
+
+<img src="img/regression/absolute_error.png" width="400">
+
+6. Probabilidade do erro:
+
+<img src="img/regression/probability_error.png" width="400">
+
+7. Erro por segmento:
+
+<img src="img/regression/segment_error.png" width="400">
+
+8. Tabela dos dados:
+
+<img src="img/table.png" width="400">
 
 ### Retorno esperado na implantação
 

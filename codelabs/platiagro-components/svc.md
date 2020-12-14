@@ -52,11 +52,19 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 1. Matriz de confusão:
 
-<img src="img/svc/predicted_classes_confusion_matrix.png" width="400">
+<img src="img/classification/confusion_matrix.png" width="400">
 
-2. Curva ROC:
+2. Dados de teste:
 
-<img src="img/svc/roc_curve.png" width="400">
+<img src="img/classification/classification_data.png" width="400">
+
+3. Curva ROC:
+
+<img src="img/classification/roc_curve.png" width="400">
+
+4. Tabela dos dados:
+
+<img src="img/table.png" width="400">
 
 ### Retorno esperado na implantação
 
