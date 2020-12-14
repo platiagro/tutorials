@@ -36,10 +36,13 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 ### Retorno esperado no experimento
 
-1. Gráfico de PCA:
+1. Dados de teste:
 
-<img src="img/isolation-forest-clustering/pca_graph_if.png" width="400">
+<img src="img/clustering/clustering_data_isolation.png" width="400">
 
+2. Tabela dos dados:
+
+<img src="img/table.png" width="400">
 
 ### Retorno esperado na implantação
 
