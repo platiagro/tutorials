@@ -48,19 +48,23 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 ### Retorno esperado no experimento
 
+1. Dados de teste:
+
+<img src="img/classification/classification_data.png" width="400">
+
 1. Matriz de confusão:
 
 <img src="img/classification/confusion_matrix.png" width="400">
 
-2. Dados de teste:
+1. Métricas comuns:
 
-<img src="img/classification/classification_data.png" width="400">
+<img src="img/classification/common_metrics.png" width="400">
 
-3. Curva ROC:
+1. Curva ROC:
 
 <img src="img/classification/roc_curve.png" width="400">
 
-4. Tabela dos dados:
+1. Tabela dos dados:
 
 <img src="img/table.png" width="400">
 
