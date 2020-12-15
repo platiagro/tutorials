@@ -39,40 +39,10 @@ const connect = async (
   });
 
   client.on(machine, (message) => {
-    console.log(`Message from ${machine} (machine)`);
+    console.log(`Message from ${machine} (model)`);
     console.log(message);
     onMachineMessage(dispatch, message);
   });
-
-  // let i = 0;
-  // let date = data[i]["Data"];
-
-  // // Every 2 seconds, sends messages to sensor
-  // setInterval(() => {
-  //   const currentData = data
-  //     .filter((d) => d["Data"] === date)
-  //     .map(Object.values);
-
-  //   currentData.forEach((d) => {
-  //     console.log(`Sent message to ${sensor}`);
-  //     console.log(d);
-  //     client.emit(sensor, JSON.stringify(d));
-  //   });
-
-  //   // Finds next date
-  //   while (++i < data.length) {
-  //     if (data[i]["Data"] !== date) {
-  //       date = data[i]["Data"];
-  //       break;
-  //     }
-  //   }
-  //   // After all data has been sent,
-  //   // resets counter and starts all over again
-  //   if (i === data.length) {
-  //     i = 0;
-  //     date = data[i]["Data"];
-  //   }
-  // }, 2000);
 };
 
 const getAuthToken = async (url) => {

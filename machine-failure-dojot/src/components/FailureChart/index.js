@@ -43,12 +43,14 @@ const prepareData = (rawData) => {
   const preparedData = { datasets: [] };
 
   const machineIndex = 0;
+
   preparedData.datasets.push({
     label: machines[machineIndex],
     backgroundColor: colors[machineIndex % colors.length],
     borderColor: "rgba(0, 0, 0, 0.0)",
     data: rawData.slice(-5).map((prediction) => {
-      const y = prediction["AutoMLCLassifier_predict_proba_Sim"];
+      const yKey = Object.keys(prediction).find(k => k.endsWith("Sim"));
+      const y = prediction[yKey];
       const r = 155 * y ** 3 - 268 * y ** 2 + 150 * y + 12.5;
       return { x: machineIndex + 1, y: y, r: r };
     }),

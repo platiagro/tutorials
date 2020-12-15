@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { Bar } from 'react-chartjs-2';
+import { Skeleton } from "antd";
+import { Bar } from "react-chartjs-2";
 
-import Chart from 'chart.js';
+import Chart from "chart.js";
+
+// import data from './chart_mock';
+
 Chart.elements.Rectangle.prototype.draw = function () {
   var ctx = this._chart.ctx;
   var vm = this._view;
@@ -19,13 +24,13 @@ Chart.elements.Rectangle.prototype.draw = function () {
   if (cornerRadius < 0) {
     cornerRadius = 0;
   }
-  if (typeof cornerRadius == 'undefined') {
+  if (typeof cornerRadius == "undefined") {
     cornerRadius = 0;
   }
-  if (typeof fullCornerRadius == 'undefined') {
+  if (typeof fullCornerRadius == "undefined") {
     fullCornerRadius = false;
   }
-  if (typeof stackedRounded == 'undefined') {
+  if (typeof stackedRounded == "undefined") {
     stackedRounded = false;
   }
 
@@ -37,7 +42,7 @@ Chart.elements.Rectangle.prototype.draw = function () {
     bottom = vm.base;
     signX = 1;
     signY = bottom > top ? 1 : -1;
-    borderSkipped = vm.borderSkipped || 'bottom';
+    borderSkipped = vm.borderSkipped || "bottom";
   } else {
     // horizontal bar
     left = vm.base;
@@ -46,7 +51,7 @@ Chart.elements.Rectangle.prototype.draw = function () {
     bottom = vm.y + vm.height / 2;
     signX = right > left ? 1 : -1;
     signY = 1;
-    borderSkipped = vm.borderSkipped || 'left';
+    borderSkipped = vm.borderSkipped || "left";
   }
 
   // Canvas doesn't allow us to stroke inside the width so we can
@@ -57,10 +62,12 @@ Chart.elements.Rectangle.prototype.draw = function () {
     borderWidth = borderWidth > barSize ? barSize : borderWidth;
     var halfStroke = borderWidth / 2;
     // Adjust borderWidth when bar top position is near vm.base(zero).
-    var borderLeft = left + (borderSkipped !== 'left' ? halfStroke * signX : 0);
-    var borderRight = right + (borderSkipped !== 'right' ? -halfStroke * signX : 0);
-    var borderTop = top + (borderSkipped !== 'top' ? halfStroke * signY : 0);
-    var borderBottom = bottom + (borderSkipped !== 'bottom' ? -halfStroke * signY : 0);
+    var borderLeft = left + (borderSkipped !== "left" ? halfStroke * signX : 0);
+    var borderRight =
+      right + (borderSkipped !== "right" ? -halfStroke * signX : 0);
+    var borderTop = top + (borderSkipped !== "top" ? halfStroke * signY : 0);
+    var borderBottom =
+      bottom + (borderSkipped !== "bottom" ? -halfStroke * signY : 0);
     // not become a vertical line?
     if (borderLeft !== borderRight) {
       top = borderTop;
@@ -85,11 +92,11 @@ Chart.elements.Rectangle.prototype.draw = function () {
     [left, bottom],
     [left, top],
     [right, top],
-    [right, bottom]
+    [right, bottom],
   ];
 
   // Find first (starting) corner with fallback to 'bottom'
-  var borders = ['bottom', 'left', 'top', 'right'];
+  var borders = ["bottom", "left", "top", "right"];
   var startCorner = borders.indexOf(borderSkipped, 0);
   if (startCorner === -1) {
     startCorner = 0;
@@ -109,7 +116,7 @@ Chart.elements.Rectangle.prototype.draw = function () {
     corner = cornerAt(i);
     nextCornerId = i + 1;
     if (nextCornerId === 4) {
-      nextCornerId = 0
+      nextCornerId = 0;
     }
 
     nextCorner = cornerAt(nextCornerId);
@@ -150,24 +157,24 @@ Chart.elements.Rectangle.prototype.draw = function () {
       // bottom right
       ctx.quadraticCurveTo(x_br, y_br, x_br, y_br - radius);
 
-
       ctx.lineTo(x_tr, y_tr + radius);
 
       // top right
-      fullCornerRadius ? ctx.quadraticCurveTo(x_tr, y_tr, x_tr - radius, y_tr) : ctx.lineTo(x_tr, y_tr, x_tr - radius, y_tr);
-
+      fullCornerRadius
+        ? ctx.quadraticCurveTo(x_tr, y_tr, x_tr - radius, y_tr)
+        : ctx.lineTo(x_tr, y_tr, x_tr - radius, y_tr);
 
       ctx.lineTo(x_tl + radius, y_tl);
 
       // top left
-      fullCornerRadius ? ctx.quadraticCurveTo(x_tl, y_tl, x_tl, y_tl + radius) : ctx.lineTo(x_tl, y_tl, x_tl, y_tl + radius);
-
+      fullCornerRadius
+        ? ctx.quadraticCurveTo(x_tl, y_tl, x_tl, y_tl + radius)
+        : ctx.lineTo(x_tl, y_tl, x_tl, y_tl + radius);
 
       ctx.lineTo(x_bl, y_bl - radius);
 
       //  bottom left
       ctx.quadraticCurveTo(x_bl, y_bl, x_bl + radius, y_bl);
-
     } else if (width < 0) {
       // Negative values in a horizontal bar chart
       x_tl = x + width;
@@ -186,12 +193,16 @@ Chart.elements.Rectangle.prototype.draw = function () {
       ctx.lineTo(x_br - radius, y_br);
 
       //  Bottom right corner
-      fullCornerRadius ? ctx.quadraticCurveTo(x_br, y_br, x_br, y_br - radius) : ctx.lineTo(x_br, y_br, x_br, y_br - radius);
+      fullCornerRadius
+        ? ctx.quadraticCurveTo(x_br, y_br, x_br, y_br - radius)
+        : ctx.lineTo(x_br, y_br, x_br, y_br - radius);
 
       ctx.lineTo(x_tr, y_tr + radius);
 
       // top right Corner
-      fullCornerRadius ? ctx.quadraticCurveTo(x_tr, y_tr, x_tr - radius, y_tr) : ctx.lineTo(x_tr, y_tr, x_tr - radius, y_tr);
+      fullCornerRadius
+        ? ctx.quadraticCurveTo(x_tr, y_tr, x_tr - radius, y_tr)
+        : ctx.lineTo(x_tr, y_tr, x_tr - radius, y_tr);
 
       ctx.lineTo(x_tl + radius, y_tl);
 
@@ -202,11 +213,13 @@ Chart.elements.Rectangle.prototype.draw = function () {
 
       //  bttom left corner
       ctx.quadraticCurveTo(x_bl, y_bl, x_bl + radius, y_bl);
-
     } else {
-
       var lastVisible = 0;
-      for (var findLast = 0, findLastTo = this._chart.data.datasets.length; findLast < findLastTo; findLast++) {
+      for (
+        var findLast = 0, findLastTo = this._chart.data.datasets.length;
+        findLast < findLastTo;
+        findLast++
+      ) {
         if (!this._chart.getDatasetMeta(findLast).hidden) {
           lastVisible = findLast;
         }
@@ -222,32 +235,31 @@ Chart.elements.Rectangle.prototype.draw = function () {
         // top right
         ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
 
-
         ctx.lineTo(x + width, y + height - radius);
 
         // bottom right
-        if (fullCornerRadius || typeOfChart === 'horizontalBar')
-          ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
-        else
-          ctx.lineTo(x + width, y + height, x + width - radius, y + height);
-
+        if (fullCornerRadius || typeOfChart === "horizontalBar")
+          ctx.quadraticCurveTo(
+            x + width,
+            y + height,
+            x + width - radius,
+            y + height
+          );
+        else ctx.lineTo(x + width, y + height, x + width - radius, y + height);
 
         ctx.lineTo(x + radius, y + height);
 
         // bottom left
         if (fullCornerRadius)
           ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
-        else
-          ctx.lineTo(x, y + height, x, y + height - radius);
-
+        else ctx.lineTo(x, y + height, x, y + height - radius);
 
         ctx.lineTo(x, y + radius);
 
         // top left
-        if (fullCornerRadius || typeOfChart === 'bar')
+        if (fullCornerRadius || typeOfChart === "bar")
           ctx.quadraticCurveTo(x, y, x + radius, y);
-        else
-          ctx.lineTo(x, y, x + radius, y);
+        else ctx.lineTo(x, y, x + radius, y);
       } else {
         ctx.moveTo(x, y);
         ctx.lineTo(x + width, y);
@@ -256,7 +268,6 @@ Chart.elements.Rectangle.prototype.draw = function () {
         ctx.lineTo(x, y);
       }
     }
-
   }
 
   ctx.fill();
@@ -265,53 +276,94 @@ Chart.elements.Rectangle.prototype.draw = function () {
   }
 };
 
+const prepareData = (rawData) => {
+  let preparedData = {
+    labels: [
+      "Vibração 1",
+      "Vibração 2",
+      "Vibração 3",
+      "Vibração 4",
+      "Vibração 5",
+      "Vibração 6",
+    ],
+    datasets: [],
+  };
+  if (rawData.length > 0) {
+    preparedData.datasets.push({
+      label: "Medidas de Vibração",
+      backgroundColor: "#0094AD",
+      borderColor: "#0094AD",
+      borderWidth: 1,
+      data: [
+        rawData[rawData.length - 1]["Vibracao1"],
+        rawData[rawData.length - 1]["Vibracao2"],
+        rawData[rawData.length - 1]["Vibracao3"],
+        rawData[rawData.length - 1]["Vibracao4"],
+        rawData[rawData.length - 1]["Vibracao5"],
+        rawData[rawData.length - 1]["Vibracao6"],
+      ],
+    });
+  }
+  return preparedData;
+};
+
 const MeasuresChart = (props) => {
   const { data } = props;
+  if (!data || data.length === 0) {
+    return <Skeleton active />;
+  }
+  const preparedData = prepareData(data);
   return (
-    <>
-      <Bar
-        data={data}
-        height={200}
-        options={{
-          legend: {
-            display: false
-          },
-          tooltips: {
-            enabled: false
-          },
-          maintainAspectRatio: false,
-          cornerRadius: 2,
-          scales: {
-            xAxes: [{
+    <Bar
+      data={preparedData}
+      height={200}
+      options={{
+        legend: {
+          display: false,
+        },
+        tooltips: {
+          enabled: false,
+        },
+        maintainAspectRatio: false,
+        cornerRadius: 2,
+        scales: {
+          xAxes: [
+            {
               gridLines: {
-                display: false
+                display: false,
               },
               ticks: {
-                fontColor: '#333',
-                fontFamily: 'Open Sans',
+                fontColor: "#333",
+                fontFamily: "Open Sans",
                 fontSize: 14,
                 autoSkip: false,
                 maxRotation: 0,
-                minRotation: 0
-              }
-            }],
-            yAxes: [{
+                minRotation: 0,
+              },
+            },
+          ],
+          yAxes: [
+            {
               gridLines: {
-                display: false
+                display: false,
               },
               ticks: {
-                fontColor: '#333',
-                fontFamily: 'Open Sans',
+                fontColor: "#333",
+                fontFamily: "Open Sans",
                 fontSize: 16,
                 beginAtZero: true,
-                stepSize: 400
-              }
-            }]
-          }
-        }}
-      />
-    </>
+                stepSize: 400,
+              },
+            },
+          ],
+        },
+      }}
+    />
   );
+};
+
+MeasuresChart.propTypes = {
+  data: PropTypes.array,
 };
 
 export default MeasuresChart;

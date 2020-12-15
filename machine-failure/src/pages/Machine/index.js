@@ -1,10 +1,26 @@
 import React from 'react';
 
-import MachineContainer from '../../components/MachineContainer';
-import data from './data_mock';
+import './style.scss';
+import { Layout } from 'antd';
 
-const Machine = () => (
-  <MachineContainer data={data} />
-);
+import MachineHeader from '../../components/MachineHeader';
+import MachineContainer from '../../containers/MachineContainer';
+
+const { Header, Content } = Layout;
+
+const Machine = () => {
+  return (
+    <>
+      <Header>
+        <MachineHeader />
+      </Header>
+      <Layout className='machine-container'>
+        <Content className='machine-wrapper'>
+          <MachineContainer />
+        </Content>
+      </Layout>
+    </>
+  );
+};
 
 export default Machine;

@@ -18,8 +18,8 @@ export const disconnect = () => {
   };
 };
 
-export const setConfig = (url, sensor, machine) => (dispatch) => {
-  dojot.connect(url, sensor, machine, dispatch, onSensorMessage, onMachineMessage)
+export const setConfig = (url) => (dispatch) => {
+  dojot.connect(url, dispatch, onSensorMessage, onMachineMessage)
     .then(() => {
       console.log(`Conectado a: ${url}`);
       dispatch(connect());
@@ -32,8 +32,6 @@ export const setConfig = (url, sensor, machine) => (dispatch) => {
   return {
     type: actionTypes.SET_CONFIG,
     url: url,
-    sensor: sensor,
-    machine: machine,
   };
 };
 
