@@ -47,31 +47,31 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 <img src="img/regression/regression_data.png" width="400">
 
-2. Distribuição do erro na regressão:
+1. Distribuição do erro na regressão:
 
 <img src="img/regression/regression_error.png" width="400">
 
-3. Diferença do erro:
+1. Diferença do erro:
 
 <img src="img/regression/prediction_diff.png" width="400">
 
-4. Diferença ordenada do erro:
+1. Diferença ordenada do erro:
 
 <img src="img/regression/sorted_prediction_diff.png" width="400">
 
-5. Erro absoluto:
+1. Erro absoluto:
 
 <img src="img/regression/absolute_error.png" width="400">
 
-6. Probabilidade do erro:
+1. Probabilidade do erro:
 
 <img src="img/regression/probability_error.png" width="400">
 
-7. Erro por segmento:
+1. Erro por segmento:
 
 <img src="img/regression/segment_error.png" width="400">
 
-8. Tabela dos dados:
+1. Tabela dos dados:
 
 <img src="img/table.png" width="400">
 

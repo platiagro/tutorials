@@ -40,7 +40,7 @@ Na tabela abaixo, observamos os parâmetros necessários para que o componente f
 
 <img src="img/clustering/clustering_data_isolation.png" width="400">
 
-2. Tabela dos dados:
+1. Tabela dos dados:
 
 <img src="img/table.png" width="400">
 
