@@ -45,16 +45,17 @@ Uma maneira de fazer isso é utilizando o putty, como mostra a imagem a seguir:
 ![Putty](img/screenshot_putty.png)
 
 
-Após incluir a senha a tela:
+Após incluir a senha, observa-se a tela:
 
 ![Putty_senha](img/putty_terminal_senha.png)
 
 
 Por último é necessário incluir o comando:
 
-'''bash
+```bat
+
 sudo shutdown -P now
-'''
+```
 
 
 Após incluir a senha, caso apareceça a mensagem abaixo, a GPU foi desligada com sucesso!
