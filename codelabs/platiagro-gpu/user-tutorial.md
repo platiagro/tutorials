@@ -15,7 +15,7 @@ Duration: 0:05:00
 
 
 ### Ligando a GPU
-Primeiramente ,para ligar o ambiente com GPU é necessário acessar o [auto-atendimento][https://autoatendimento.cpqd.com.br/job/AWS/job/Inicia%20inst%C3%A2ncia%20spot%20Platiagro/build?delay=0sec]. Feito isso, você será redirecionado para a págia com os campos abaixo:
+Primeiramente ,para ligar o ambiente com GPU é necessário acessar o [auto-atendimento](https://autoatendimento.cpqd.com.br/job/AWS/job/Inicia%20inst%C3%A2ncia%20spot%20Platiagro/build?delay=0sec). Feito isso, você será redirecionado para a págia com os campos abaixo:
 
 ![Campos para construção dos parâmetros da GPU](img/screenshot_costrucao_gpu.png)
 
@@ -29,7 +29,7 @@ Feito isso é necessário esperar cerca de 1 minuto. E a GPU poderá ser acessad
 
 ### Acessando a GPU
 
-Para entrar no ambiente com GPU basta acessar o ambiente [awspltiagro01][https://awsplatiagro01/]
+Para entrar no ambiente com GPU basta acessar o ambiente [awspltiagro01](https://awsplatiagro01/)
 
 
 ### Desligando a GPU
@@ -58,7 +58,7 @@ sudo shutdown -P now
 ```
 
 
-Após incluir a senha, caso apareceça a mensagem abaixo, a GPU foi desligada com sucesso!
+Após incluir a senha, a mensagem abaixo deverá aparecer. Se isso acontecer, a GPU foi desligada com sucesso!
 
 ![msg_desligar](img/msg_desligar.png)
 
