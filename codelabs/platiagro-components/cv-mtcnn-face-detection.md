@@ -17,9 +17,11 @@ feedback link: https://github.com/platiagro/tutorials
 
 Este componente utiliza a biblioteca [facenet-pytorch](https://github.com/timesler/facenet-pytorch), a qual disponibiliza o modelo [MTCNN](https://arxiv.org/abs/1604.02878) para detecção de faces. O MTCNN possui a performance estado da arte nos benchmarks [FDDB](http://vis-www.cs.umass.edu/fddb/) e [WIDER FACE](http://shuoyang1213.me/WIDERFACE/). Melhores explicações são encontradas neste [artigo do kaggle](https://www.kaggle.com/timesler/guide-to-mtcnn-in-facenet-pytorch).
 
+
 ## Entrada esperada
 
 Espera-se como entrada para o componente um arquivo .zip com imagens.
+
 
 ## Parâmetros
 

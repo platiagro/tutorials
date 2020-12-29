@@ -6,14 +6,13 @@ environments: Web
 status: Published
 feedback link: https://github.com/platiagro/tutorials
 
-# Tradutor MarianMT
-
-## Visão Geral
-Duration: 0:05:00
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
-### Função do componente
+
+# Tradutor MarianMT
+
+## Função do componente
 
 Utilização do modelo [MarianMT](https://huggingface.co/transformers/model_doc/marian.html) para tradução.
 
@@ -21,33 +20,62 @@ Utilização do modelo [MarianMT](https://huggingface.co/transformers/model_doc/
 * Para adaptar para traduções em outras línguas é necessário verificacar se há o modelo pré-treinado disponível no MarianMT e adaptar o truncamento de strings do [spacy](https://spacy.io/usage/models) para o idioma desejado
 * A métrica computada é o [sacrebleu](https://https://github.com/mjpost/sacrebleu)
 
-### Entrada esperada
+
+## Entrada esperada
 
 Espera-se como entrada para o componente uma tabela com entradas textuais.
 
-### Parâmetros
 
-Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:
+## Parâmetros
 
-| Parâmetro     | Tipo     | Opções        | Descrição                                           |
-|:-------------|:--------:|:-------------:|:-----------------------------------------------------|
-| Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
-| Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
-|Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
-| Idioma de destino | `string` | `">>fr<<"` `">>es<<"` `">>it<<"` `">>pt<<"` `">>pt_br<<"` `">>ro<<"` `">>ca<<"` `">>gl<<"` `">>pt_BR<<"``">>la<<"` `">>wa<<"` `">>fur<<"` `">>oc<<"` `">>fr_CA<<"` `">>sc<<"` `">>es_ES<<"` `">>es_MX<<"` `">>es_AR<<"` `">>es_PR<<"` `">>es_UY<<"` `">>es_CL<<"` `">>es_CO<<"` `">>es_CR<<"` `">>es_GT<<"` `">>es_HN<<"` `">>es_NI<<"` `">>es_PA<<"` `">>es_PE<<"` `">>es_VE<<"` `">>es_DO<<"` `">>es_EC<<"``">>es_SV<<"` `">>an<<"` `">>pt_PT<<"` `">>frp<<"` `">>lad<<"` `">>vec<<"` `">>fr_FR<<"` `">>co<<"` `">>it_IT<<"` `">>lld<<"` `">>lij<<"` `">>lmo<<"` `">>nap<<"` `">>rm<<"` `">>scn<<"` `">>mwl<<" `| Idioma de destino do alvo. |
-|Modelo pré treinado no idioma de origem"|`string`| `"Helsinki-NLP/opus-mt-NORTH_EU-NORTH_EU"` `"Helsinki-NLP/opus-mt-ROMANCE-en"` `"Helsinki-NLP/opus-mt-SCANDINAVIA-SCANDINAVIA"` `"Helsinki-NLP/opus-mt-de-ZH"` `Helsinki-NLP/opus-mt-en-CELTIC"` `"Helsinki-NLP/opus-mt-en-ROMANCE"` `"Helsinki-NLP/opus-mt-es-NORWAY"` `"Helsinki-NLP/opus-mt-fi-NORWAY"` `"Helsinki-NLP/opus-mt-fi-ZH"` `"Helsinki-NLP/opus-mt-fi_nb_no_nn_ru_sv_en-SAMI"` `"Helsinki-NLP/opus-mt-sv-NORWAY"` `"Helsinki-NLP/opus-mt-sv-ZH"` |Nome do modelo entre os modelos pré-treinados|
-|Tamanho máximo da sentença de entrada|`integer`| - |Tamanho máximo da sentença de entrada em tokens.|
-|Tamanho máximo da sentença de saída|`integer`| - |Tamanho máximo da sentença de saída em tokens.|
-|Tamanho do Batch de inferência|`integer`| - |Tamanho do batch aplicado em inferência.|
+A seguir são listados todos os parâmetros utilizados pelo componente:
 
-### Métricas de performance
+- **Atributo do texto**: `feature` <span style="color:red">(Obrigatório)</span>.<br>
+<em>Este atributo será traduzido e apresentado o resultado.</em>
+
+
+- **Atributo alvo**: `feature` <span style="color:red">(Obrigatório)</span>.<br>
+<em>Seu modelo será treinado para prever os valores do alvo.</em>
+
+
+- **Idioma de entrada**: `string`, {`"Alemão"`, `"Catalão"`, `"Espanhol"`, `"Francês"`, `"Inglês"`, `"Italiano"`, `"Latim"`, `"Português"`, `"Romeno"`}, padrão: `"Inglês"`.<br>
+<em>Idioma de entrada.</em>
+
+
+- **Idioma de saída**: `string`, {`"Alemão"`, `"Catalão"`, `"Espanhol"`, `"Francês"`, `"Inglês"`, `"Italiano"`, `"Latim"`, `"Português"`, `"Romeno"`}, padrão: `"Português"`.<br>
+<em>Idioma de saída.</em>
+
+
+- **Semente de aleatoriedade**: `integer`, padrão: `42`.<br>
+<em>Semente de aleatoriedade utilizada pelo modelo.</em>
+
+
+- **Tamanho máximo da sentença de entrada**: `integer`, padrão: `127`.<br>
+<em>Tamanho máximo da sentença de entrada em tokens.</em>
+
+
+- **Tamanho máximo da sentença de saída**: `integer`, padrão: `256`.<br>
+<em>Tamanho máximo da sentença de saída em tokens.</em>
+
+
+- **Tamanho do batch de inferência**: `integer`, padrão:`2`.<br>
+<em>Tamanho do batch aplicado na inferência.</em>
+
+
+## Métricas de performance
+
+As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.
 
 1. BLEU: A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência
 
-### Retorno esperado no experimento
+
+## Retorno esperado na experimentação
+
+O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:
 
 1. Dataframe com o texto de entrada, texto de referência, texto traduzido e o score bleu
 
-### Retorno esperado na implantação
 
-Numpy array contendo os textos traduzidos.
+## Retorno esperado na implantação
+
+Espera-se como retorno numpy arrays contendo os textos traduzidos.
