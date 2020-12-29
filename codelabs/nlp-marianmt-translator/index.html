@@ -27,72 +27,59 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
-      <google-codelab-step label="Visão Geral" duration="5">
-        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
-<h2 is-upgraded>Função do componente</h2>
-<p>Utilização do modelo <a href="https://huggingface.co/transformers/model_doc/marian.html" target="_blank">MarianMT</a> para tradução.</p>
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Utilização do modelo <a href="https://huggingface.co/transformers/model_doc/marian.html" target="_blank">MarianMT</a> para tradução.</p>
 <ul>
 <li>Neste exemplo a tradução é feito do inglês para o português, mas ela pode ser feita em qualquer uma das línguas suportadas pelo MarianMT.</li>
 <li>Para adaptar para traduções em outras línguas é necessário verificacar se há o modelo pré-treinado disponível no MarianMT e adaptar o truncamento de strings do <a href="https://spacy.io/usage/models" target="_blank">spacy</a> para o idioma desejado</li>
 <li>A métrica computada é o <a href="https://https://github.com/mjpost/sacrebleu" target="_blank">sacrebleu</a></li>
 </ul>
-<h2 is-upgraded>Entrada esperada</h2>
-<p>Espera-se como entrada para o componente uma tabela com entradas textuais.</p>
-<h2 is-upgraded>Parâmetros</h2>
-<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
-<table>
-<tr></tr>
-<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Modo de seleção das features</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;incluir&#34;&#34;remover&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Features para incluir/remover no modelo</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Idioma de destino</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;&gt;&gt;fr&lt;&lt;&#34;&#34;&gt;&gt;es&lt;&lt;&#34;&#34;&gt;&gt;it&lt;&lt;&#34;&#34;&gt;&gt;pt&lt;&lt;&#34;&#34;&gt;&gt;pt_br&lt;&lt;&#34;&#34;&gt;&gt;ro&lt;&lt;&#34;&#34;&gt;&gt;ca&lt;&lt;&#34;&#34;&gt;&gt;gl&lt;&lt;&#34;&#34;&gt;&gt;pt_BR&lt;&lt;&#34;&#34;&gt;&gt;la&lt;&lt;&#34;&#34;&gt;&gt;wa&lt;&lt;&#34;&#34;&gt;&gt;fur&lt;&lt;&#34;&#34;&gt;&gt;oc&lt;&lt;&#34;&#34;&gt;&gt;fr_CA&lt;&lt;&#34;&#34;&gt;&gt;sc&lt;&lt;&#34;&#34;&gt;&gt;es_ES&lt;&lt;&#34;&#34;&gt;&gt;es_MX&lt;&lt;&#34;&#34;&gt;&gt;es_AR&lt;&lt;&#34;&#34;&gt;&gt;es_PR&lt;&lt;&#34;&#34;&gt;&gt;es_UY&lt;&lt;&#34;&#34;&gt;&gt;es_CL&lt;&lt;&#34;&#34;&gt;&gt;es_CO&lt;&lt;&#34;&#34;&gt;&gt;es_CR&lt;&lt;&#34;&#34;&gt;&gt;es_GT&lt;&lt;&#34;&#34;&gt;&gt;es_HN&lt;&lt;&#34;&#34;&gt;&gt;es_NI&lt;&lt;&#34;&#34;&gt;&gt;es_PA&lt;&lt;&#34;&#34;&gt;&gt;es_PE&lt;&lt;&#34;&#34;&gt;&gt;es_VE&lt;&lt;&#34;&#34;&gt;&gt;es_DO&lt;&lt;&#34;&#34;&gt;&gt;es_EC&lt;&lt;&#34;&#34;&gt;&gt;es_SV&lt;&lt;&#34;&#34;&gt;&gt;an&lt;&lt;&#34;&#34;&gt;&gt;pt_PT&lt;&lt;&#34;&#34;&gt;&gt;frp&lt;&lt;&#34;&#34;&gt;&gt;lad&lt;&lt;&#34;&#34;&gt;&gt;vec&lt;&lt;&#34;&#34;&gt;&gt;fr_FR&lt;&lt;&#34;&#34;&gt;&gt;co&lt;&lt;&#34;&#34;&gt;&gt;it_IT&lt;&lt;&#34;&#34;&gt;&gt;lld&lt;&lt;&#34;&#34;&gt;&gt;lij&lt;&lt;&#34;&#34;&gt;&gt;lmo&lt;&lt;&#34;&#34;&gt;&gt;nap&lt;&lt;&#34;&#34;&gt;&gt;rm&lt;&lt;&#34;&#34;&gt;&gt;scn&lt;&lt;&#34;&#34;&gt;&gt;mwl&lt;&lt;&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>Idioma de destino do alvo.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Modelo pré treinado no idioma de origem&#34;</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;Helsinki-NLP/opus-mt-NORTH_EU-NORTH_EU&#34;&#34;Helsinki-NLP/opus-mt-ROMANCE-en&#34;&#34;Helsinki-NLP/opus-mt-SCANDINAVIA-SCANDINAVIA&#34;&#34;Helsinki-NLP/opus-mt-de-ZH&#34;Helsinki-NLP/opus-mt-en-CELTIC&#34;&#34;Helsinki-NLP/opus-mt-en-ROMANCE&#34;&#34;Helsinki-NLP/opus-mt-es-NORWAY&#34;&#34;Helsinki-NLP/opus-mt-fi-NORWAY&#34;&#34;Helsinki-NLP/opus-mt-fi-ZH&#34;&#34;Helsinki-NLP/opus-mt-fi_nb_no_nn_ru_sv_en-SAMI&#34;&#34;Helsinki-NLP/opus-mt-sv-NORWAY&#34;&#34;Helsinki-NLP/opus-mt-sv-ZH&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>Nome do modelo entre os modelos pré-treinados</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Tamanho máximo da sentença de entrada</p>
-</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Tamanho máximo da sentença de entrada em tokens.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Tamanho máximo da sentença de saída</p>
-</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Tamanho máximo da sentença de saída em tokens.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Tamanho do Batch de inferência</p>
-</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Tamanho do batch aplicado em inferência.</p>
-</td></tr>
-</table>
-<h2 is-upgraded>Métricas de performance</h2>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com entradas textuais.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>Atributo do texto</strong>: <code>feature</code>(Obrigatório).<br><em>Este atributo será traduzido e apresentado o resultado.</em></li>
+<li><strong>Atributo alvo</strong>: <code>feature</code>(Obrigatório).<br><em>Seu modelo será treinado para prever os valores do alvo.</em></li>
+<li><strong>Idioma de entrada</strong>: <code>string</code>, {<code>&#34;Alemã</code>o&#34;, <code>&#34;Catalã</code>o&#34;, <code>&#34;Espanhol&#34;</code>, <code>&#34;Francê</code>s&#34;, <code>&#34;Inglê</code>s&#34;, <code>&#34;Italiano&#34;</code>, <code>&#34;Latim&#34;</code>, <code>&#34;Portuguê</code>s&#34;, <code>&#34;Romeno&#34;</code>}, padrão: <code>&#34;Inglê</code>s&#34;.<br><em>Idioma de entrada.</em></li>
+<li><strong>Idioma de saída</strong>: <code>string</code>, {<code>&#34;Alemã</code>o&#34;, <code>&#34;Catalã</code>o&#34;, <code>&#34;Espanhol&#34;</code>, <code>&#34;Francê</code>s&#34;, <code>&#34;Inglê</code>s&#34;, <code>&#34;Italiano&#34;</code>, <code>&#34;Latim&#34;</code>, <code>&#34;Portuguê</code>s&#34;, <code>&#34;Romeno&#34;</code>}, padrão: <code>&#34;Portuguê</code>s&#34;.<br><em>Idioma de saída.</em></li>
+<li><strong>Semente de aleatoriedade</strong>: <code>integer</code>, padrão: <code>42</code>.<br><em>Semente de aleatoriedade utilizada pelo modelo.</em></li>
+<li><strong>Tamanho máximo da sentença de entrada</strong>: <code>integer</code>, padrão: <code>127</code>.<br><em>Tamanho máximo da sentença de entrada em tokens.</em></li>
+<li><strong>Tamanho máximo da sentença de saída</strong>: <code>integer</code>, padrão: <code>256</code>.<br><em>Tamanho máximo da sentença de saída em tokens.</em></li>
+<li><strong>Tamanho do batch de inferência</strong>: <code>integer</code>, padrão:<code>2</code>.<br><em>Tamanho do batch aplicado na inferência.</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Métricas de performance" duration="0">
+        <p>As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.</p>
 <ol type="1">
 <li>BLEU: A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência</li>
 </ol>
-<h2 is-upgraded>Retorno esperado no experimento</h2>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:</p>
 <ol type="1">
 <li>Dataframe com o texto de entrada, texto de referência, texto traduzido e o score bleu</li>
 </ol>
-<h2 is-upgraded>Retorno esperado na implantação</h2>
-<p>Numpy array contendo os textos traduzidos.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Espera-se como retorno numpy arrays contendo os textos traduzidos.</p>
 
 
       </google-codelab-step>

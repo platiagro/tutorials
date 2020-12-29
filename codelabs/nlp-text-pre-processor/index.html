@@ -27,46 +27,49 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
-      <google-codelab-step label="Visão Geral" duration="5">
-        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
-<h2 is-upgraded>Função do componente</h2>
-<p>Este é um componente que utiliza a biblioteca <a href="https://www.nltk.org/" target="_blank">nltk</a> e <a href="https://pypi.org/project/ftfy/" target="_blank">ftfy</a> e <a href="https://docs.python.org/3/library/re.html" target="_blank">regex</a> para pré processar textos que entrrão em outros componentes.</p>
-<h2 is-upgraded>Entrada esperada</h2>
-<p>Espera-se como entrada para o componente uma tabela com pelo menos uma coluna em formato de texto.</p>
-<h2 is-upgraded>Parâmetros</h2>
-<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
-<table>
-<tr></tr>
-<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Modo de seleção das features</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;incluir&#34;&#34;remover&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Features para incluir/remover no modelo</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Idioma</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;portuguese&#34;&#34;english&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>Linguagem da qual os stopwords pertencem. Deve ser a mesma utilizada no dataset.</p>
-</td></tr>
-</table>
-<p>|Aplicação de Casing|<code>string</code>| <code>&#34;Lower&#34;&#34;Upper&#34;&#34;NotApply&#34;</code>|Aplica caixa baixa, caixa alta ou não aplicação de caixa.|<br>|Remoção de Stop Words|<code>boolean</code>|<code>TrueFalse</code>|Caso True remove conjunções, artigos e outros textos que não carregam informações relevantes para certas classes de algorítmos de NLP|<br>|Remoção de Top Words|<code>boolean</code>|<code>TrueFalse</code>|Caso True remove as palavras que mais aparece todo texto, em que a porcentagem pe controlada.|<br>|Porcentagem de Top Words|<code>number</code>|<code>TrueFalse</code>|Porcentagem das palavras que mais aparecem.|<br>|Stemming|<code>boolean</code>| <code>TrueFalse</code>|Caso True aplica stemming. Esta técnica remove os sufixos das palavras.|<br>|Lemmatization|<code>boolean</code>|<code>TrueFalse</code>|Caso True aplica lemmatization. Esta técnica mantém apenas as raízes das palavras.|<br>|Remoção de pontuação|<code>boolean</code>|<code>TrueFalse</code>|Caso True remove as pontuações do texto.|<br>|Remoção de quebras de linha|<code>boolean</code>|<code>TrueFalse</code>|Caso True remove todas as quebras de linha \n e \r no texto.|<br>|Remoção de acentos|<code>boolean</code>|<code>TrueFalse</code>|Caso True remove todos os acentos no texto.|<br>|Remoção de HTML|<code>boolean</code>|<code>TrueFalse</code>|Caso True remove todas as tags HTML. Estas possuem o formato |<br>|Remoção de CSS|<code>boolean</code>|<code>TrueFalse</code>|Caso True remove todas as tags CSS. Estas possuem o formato {tag}|</p>
-<h2 is-upgraded>Métricas de performance</h2>
-<p>Não se aplica</p>
-<h2 is-upgraded>Retorno esperado no experimento</h2>
-<ol type="1">
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Este é um componente que utiliza a biblioteca <a href="https://www.nltk.org/" target="_blank">nltk</a> e <a href="https://pypi.org/project/ftfy/" target="_blank">ftfy</a> e <a href="https://docs.python.org/3/library/re.html" target="_blank">regex</a> para pré processar textos que entrrão em outros componentes.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com pelo menos uma coluna em formato de texto.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>Atributo alvo</strong>: <code>feature</code>(Obrigatório).<br><em>Seu modelo será treinado para prever os valores do alvo.</em></li>
+<li><strong>Linguagem</strong>: <code>string</code>, {<code>&#34;Portuguê</code>s&#34;, <code>&#34;Inglê</code>s&#34;}, padrão: <code>&#34;Portuguê</code>s&#34;.<br><em>Linguagem para pre-processar.</em></li>
+<li><strong>Aplicação de casing</strong>: <code>string</code>, {<code>&#34;Caixa baixa&#34;</code>, <code>&#34;Caixa alta&#34;</code>, <code>&#34;Não Aplica</code>r&#34;}, padrão: <code>&#34;Caixa baixa&#34;</code>.<br><em>Caixa baixa, caixa alta ou não aplicação de caixa.</em></li>
+<li><strong>Remoção de Stop Words</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>True</code>.<br><em>Caso True remove conjunções, artigos e outros textos que não carregam informações relevantes para certas classes de algorítmos de NLP.</em></li>
+<li><strong>Remoção de Top Words</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>True</code>.<br><em>Caso True remove as palavras que mais aparece todo texto, em que a porcentagem pe controlada.</em></li>
+<li><strong>Porcentagem de Top Words</strong>: <code>float</code>, padrão:<code>0.01</code>.<br><em>Porcentagem das palavras que mais aparecem.</em></li>
+<li><strong>Stemming</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>False</code>.<br><em>Caso True aplica stemming. Esta técnica remove os sufixos das palavras.</em></li>
+<li><strong>Lemmatization</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>False</code>.<br><em>Caso True aplica lemmatization. Esta técnica mantém apenas as raízes das palavras.</em></li>
+<li><strong>Remoção de pontuação</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>False</code>.<br><em>Caso True remove as pontuações do texto.</em></li>
+<li><strong>Remoção de quebras de linha</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>False</code>.<br><em>Caso True remove todas as quebras de linha \n e \r no texto.</em></li>
+<li><strong>Remoção de acentos</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>False</code>.<br><em>Caso True remove todos os acentos no texto.</em></li>
+<li><strong>Remoção de HTML</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>False</code>.<br><em>Caso True remove todas as tags HTML. Estas possuem o formato </em></li>
+<li><strong>Remoção de CSS</strong>: <code>boolean</code>, {<code>True</code>, <code>False</code>}, padrão:<code>False</code>.<br><em>Caso True remove todas as tags CSS. Estas possuem o formato {tag}</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <ol type="1">
 <li>Espera-se como retorno os textos pré-processados em formato de tabela para as colunas especificadas.</li>
 </ol>
-<h2 is-upgraded>Retorno esperado na implantação</h2>
-<p>Espera-se como retorno os textos pré-processados em formato de tabela para as colunas especificadas.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Espera-se como retorno os textos pré-processados em formato de tabela para as colunas especificadas.</p>
 
 
       </google-codelab-step>
