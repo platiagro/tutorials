@@ -27,41 +27,40 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
-      <google-codelab-step label="Visão Geral" duration="5">
-        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
-<h2 is-upgraded>Função do componente</h2>
-<p>Esse componente executa a classificação de atributos com eliminação recursiva de atributos com base em um estimador do Random Forest com hiperparâmetros padrão. A validação cruzada, K-fold, é empregada para estimar a importância do recurso. Faz uso da implementação RFECV do Scikit-learn.<br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.</p>
-<h2 is-upgraded>Entrada esperada</h2>
-<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
-<h2 is-upgraded>Parâmetros</h2>
-<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
-<table>
-<tr></tr>
-<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Número mínimo de features a ser selecionado</p>
-</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Número de folds para a validação cruzada</p>
-</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td></tr>
-</table>
-<h2 is-upgraded>Métricas de performance</h2>
-<p>Neste componente não é necessário avaliar a performance.</p>
-<h2 is-upgraded>Retorno esperado no experimento</h2>
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Esse componente executa a classificação de atributos com eliminação recursiva de atributos com base em um estimador do Random Forest com hiperparâmetros padrão. A validação cruzada, K-fold, é empregada para estimar a importância do recurso. Faz uso da implementação RFECV do <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFECV.html" target="_blank">Scikit-learn</a>. Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos, categóricos ou de data. A tabela deve ser de um dos seguintes tipos: Comma-separated values (.csv) ou Excel (.xls, .xlsx).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>Atributo alvo</strong>: <code>feature</code>(Obrigatório).<br><em>Esse valor será utilizado para garantir que o alvo não seja removido.</em></li>
+<li><strong>Número mínimo de features</strong>: <code>integer</code>, padrão: <code>3</code>.<br><em>Número mínimo de features a ser selecionado.</em></li>
+<li><strong>Número de folds</strong>: <code>integer</code>, padrão: <code>10</code>.<br><em>Número de folds para a validação cruzada.</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:</p>
 <ol type="1">
-<li>Descrição dos dados gerados pelo componente.</li>
+<li>Tabela dos dados<br><em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em><img style="width: 800.00px" src="img/13ed870aa5e3607e.png"></li>
 </ol>
-<p class="image-container"><img alt="Tabela dos Dados" src="img/13ed870aa5e3607e.png"></p>
-<h2 is-upgraded>Retorno esperado na implantação</h2>
-<p>Dados com as colunas filtradas de acordo com o número mínimo de features e folds no método RFECV.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Dados com as colunas filtradas de acordo com o número mínimo de features e folds no método RFECV.</p>
 
 
       </google-codelab-step>

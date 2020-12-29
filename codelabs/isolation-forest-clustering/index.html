@@ -27,43 +27,51 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
-      <google-codelab-step label="Visão Geral" duration="5">
-        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
-<h2 is-upgraded>Função do componente</h2>
-<p>Este é um componente que treina um modelo Isolation Forest usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html" target="_blank">Scikit-learn</a>. <br><br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.</p>
-<h2 is-upgraded>Entrada esperada</h2>
-<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
-<h2 is-upgraded>Parâmetros</h2>
-<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
-<table>
-<tr></tr>
-<tr><td colspan="1" rowspan="1"><p>Quantidade máxima de amostras</p>
-</td><td colspan="1" rowspan="1"><p><code>number</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>O número de amostras máximo a serem retiradas dos dados para treinar cada estimador de base.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Contaminação</p>
-</td><td colspan="1" rowspan="1"><p><code>number</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>A quantidade de contaminação do conjunto de dados, ou seja, a proporção de outliers no conjunto de dados.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Quantidade máxima de características</p>
-</td><td colspan="1" rowspan="1"><p><code>number</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>O número de características máximo a serem retiradas dos dados para treinar cada estimador de base.</p>
-</td></tr>
-</table>
-<h2 is-upgraded>Retorno esperado no experimento</h2>
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Este é um componente que treina um modelo Isolation Forest usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html" target="_blank">Scikit-learn</a>. <br><br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos, categóricos ou de data. Os valores de data devem ser removidos ou selecionados para codificação ordinal para que o modelo consiga processá-los. A tabela deve ser de um dos seguintes tipos: Comma-separated values (.csv) ou Excel (.xls, .xlsx).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>Quantidade máxima de características</strong>: <code>float</code>, padrão: <code>&#34;auto&#34;</code>.<br><em>O número de características máximo a serem retiradas dos dados para treinar cada estimador de base.</em></li>
+<li><strong>Contaminação</strong>: <code>float</code>, padrão: <code>0.1</code>.<br><em>A quantidade de contaminação do conjunto de dados, ou seja, a proporção de outliers no conjunto de dados.</em></li>
+<li><strong>Quantidade máxima de amostras</strong>: <code>float</code>, padrão: <code>1.0</code>.<br><em>O número de amostras máximo a serem retiradas dos dados para treinar cada estimador de base.</em></li>
+<li><strong>Gráficos a serem ignorados</strong>: <code>string</code>, {<code>&#34;Dados de Teste&#34;</code>, <code>&#34;Tabelas de Dados&#34;</code>}.<br><em>Considerando a quantidade de gráficos que são retornados ao executar a experimentação, o usuário pode selecionar quais ele não deseja visualizar.</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Métricas de performance" duration="0">
+        <p>As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.</p>
 <ol type="1">
-<li>Dados de teste:</li>
+<li>Pontuação de anomalia: considerando que o modelo faz a predição da anomalia, ela mesma é utilizada para avaliar o modelo.</li>
 </ol>
-<p class="image-container"><img style="width: 400.00px" src="img/28645c893d7a01b9.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.</p>
 <ol type="1">
-<li>Tabela dos dados:</li>
+<li>Dados de teste<br><em> Apresenta a distribuição dos dados de teste considerando as duas características mais relevantes para o modelo.</em><img style="width: 400.00px" src="img/28645c893d7a01b9.png"></li>
+<li>Tabela dos dados<br><em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em><img style="width: 800.00px" src="img/13ed870aa5e3607e.png"></li>
 </ol>
-<p class="image-container"><img style="width: 400.00px" src="img/13ed870aa5e3607e.png"></p>
-<h2 is-upgraded>Retorno esperado na implantação</h2>
-<p>Tabela com os valores preditos para o atributo alvo.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Tabela com os valores preditos de anomalia.</p>
 
 
       </google-codelab-step>

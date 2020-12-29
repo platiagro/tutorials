@@ -27,96 +27,64 @@
                   environment="web"
                   feedback-link="https://github.com/platiagro/tutorials">
     
-      <google-codelab-step label="Visão Geral" duration="5">
-        <p class="image-container"><img alt="Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico" src="img/1df48b98f977264b.png"></p>
-<h2 is-upgraded>Função do componente</h2>
-<p>Este componente treina um modelo Random Forest para regressão usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html" target="_blank">Scikit-learn</a>. <br><br>Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.</p>
-<h2 is-upgraded>Entrada esperada</h2>
-<p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.</p>
-<h2 is-upgraded>Parâmetros</h2>
-<p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
-<table>
-<tr></tr>
-<tr><td colspan="1" rowspan="1"><p>Atributo alvo</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo será treinado para prever os valores do alvo.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Modo de seleção das features</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;incluir&#34;&#34;remover&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Features para incluir/remover no modelo</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Features para fazer codificação ordinal</p>
-</td><td colspan="1" rowspan="1"><p><code>feature</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Estimadores</p>
-</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>Número de árvores na floresta.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Critério</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;mse&#34;&#34;mae&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>Função para medir a qualidade de uma divisão.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Profundidade</p>
-</td><td colspan="1" rowspan="1"><p><code>integer</code></p>
-</td><td colspan="1" rowspan="1"><p>-</p>
-</td><td colspan="1" rowspan="1"><p>O máximo de profundidade da árvore.</p>
-</td></tr>
-<tr><td colspan="1" rowspan="1"><p>Features</p>
-</td><td colspan="1" rowspan="1"><p><code>string</code></p>
-</td><td colspan="1" rowspan="1"><p><code>&#34;auto&#34;&#34;sqrt&#34;&#34;log2&#34;</code></p>
-</td><td colspan="1" rowspan="1"><p>O máximo de features a serem considerados ao procurar a melhor divisão.</p>
-</td></tr>
-</table>
-<h2 is-upgraded>Métricas de performance</h2>
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Este componente treina um modelo Random Forest para regressão usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html" target="_blank">Scikit-learn</a>.Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos, categóricos ou de data. Os valores de data devem ser removidos ou selecionados para codificação ordinal para que o modelo consiga processá-los. A tabela deve ser de um dos seguintes tipos: Comma-separated values (.csv) ou Excel (.xls, .xlsx).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:</p>
+<ul>
+<li><strong>Atributo alvo</strong>: <code>feature</code>(Obrigatório).<br><em>Seu modelo será treinado para prever os valores do alvo.</em></li>
+<li><strong>Modo de seleção das features</strong>: <code>string</code>, {<code>&#34;incluir&#34;</code>, <code>&#34;remover&#34;</code>}, padrão: <code>&#34;remover&#34;</code>.<br><em>Se deseja informar quais features deseja incluir no modelo, selecione a opção ‘incluir&#39;. Caso deseje informar as features que não devem ser utilizadas, selecione ‘remover&#39;.</em></li>
+<li><strong>Features para incluir/remover no modelo</strong>: <code>feature</code>.<br><em>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas.</em></li>
+<li><strong>Features para fazer codificação ordinal</strong>: <code>feature</code>.<br><em>Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.</em></li>
+<li><strong>Número de estimadores</strong>: <code>integer</code>, padrão: <code>10</code>.<br><em>Número de árvores na floresta.</em></li>
+<li><strong>Critério</strong>: <code>string</code>, {<code>&#34;mse&#34;</code>, <code>&#34;mae&#34;</code>}, padrão: <code>&#34;mse&#34;</code>.<br><em>Função para medir a qualidade de uma divisão.</em></li>
+<li><strong>Profundidade</strong>: <code>integer</code>, padrão: <code>None</code>.<br><em>O máximo de profundidade da árvore.</em></li>
+<li><strong>Features</strong>: <code>string</code>, {<code>&#34;auto&#34;</code>, <code>&#34;sqrt&#34;</code>, <code>&#34;log2&#34;</code>}, padrão: <code>&#34;auto&#34;</code>.<br><em>O máximo de features a serem considerados ao procurar a melhor divisão.</em></li>
+<li><strong>Gráficos a serem ignorados</strong>: <code>string</code>, {<code>&#34;Dados de Teste&#34;</code>, <code>&#34;Erro da Regressã</code>o&#34;, <code>&#34;Diferença do Err</code>o&#34;, <code>&#34;Diferença Ordenada do Err</code>o&#34;, <code>&#34;Erro Absoluto&#34;</code>, <code>&#34;Probabilidade do Erro&#34;</code>, <code>&#34;Erro de Segmentos&#34;</code>, <code>&#34;Tabelas de Dados&#34;</code>}.<br><em>Considerando a quantidade de gráficos que são retornados ao executar a experimentação, o usuário pode selecionar quais ele não deseja visualizar.</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Métricas de performance" duration="0">
+        <p>As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.</p>
 <ol type="1">
 <li>Coeficiente de determinação (ou R²): Corresponde à correlação ao quadrado entre os valores de resultado observados e os valores previstos pelo modelo.</li>
+<li>Erro médio absoluto (MAE): Média do erro absoluto considerando os valores de resultado observados e os valores previstos pelo modelo.</li>
+<li>Erro médio quadrático (MSE): Média quadrática do erro considerando os valores de resultado observados e os valores previstos pelo modelo.</li>
 </ol>
-<h2 is-upgraded>Retorno esperado no experimento</h2>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:</p>
 <ol type="1">
-<li>Dados de teste:</li>
+<li>Dados de teste<br><em> Apresenta a distribuição dos dados de teste considerando as duas características mais relevantes para o modelo e o rótulo.</em><img style="width: 400.00px" src="img/9f787744dad8d391.png"></li>
+<li>Distribuição do erro na regressão<br><em>Apresenta a distribuição do erro na regressão como uma estimativa de densidade do kernel.</em><img style="width: 400.00px" src="img/cca60b805fcaf9d5.png"></li>
+<li>Distribuição do rótulo<br><em>Apresenta a diferença entre o resultado observado e os valores preditos.</em><img style="width: 400.00px" src="img/beea554edb7baa04.png"></li>
+<li>Distribuição do rótulo ordenada<br><em>Apresenta a diferença entre o resultado observado e os valores preditos de maneira ordenada.</em><img style="width: 400.00px" src="img/d6076175dcb5eefe.png"></li>
+<li>Erro absoluto<br><em>Apresenta o erro absoluto considerando o resultado observado e os valores preditos.</em><img style="width: 400.00px" src="img/2e4ea8299ea8c54c.png"></li>
+<li>Probabilidade do erro<br><em>Apresenta a comparação do erro e da normal.</em><img style="width: 400.00px" src="img/b9a7ad0512d2d58c.png"></li>
+<li>Erro por segmento<br><em>Apresenta comparação da estimativa de densidade do kernel para segmentos distintos.</em><img style="width: 400.00px" src="img/8cb14a60d5dd46b.png"></li>
+<li>Tabela dos dados<br><em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em><img style="width: 800.00px" src="img/13ed870aa5e3607e.png"></li>
 </ol>
-<p class="image-container"><img style="width: 400.00px" src="img/9f787744dad8d391.png"></p>
-<ol type="1">
-<li>Distribuição do erro na regressão:</li>
-</ol>
-<p class="image-container"><img style="width: 400.00px" src="img/cca60b805fcaf9d5.png"></p>
-<ol type="1">
-<li>Diferença do erro:</li>
-</ol>
-<p class="image-container"><img style="width: 400.00px" src="img/beea554edb7baa04.png"></p>
-<ol type="1">
-<li>Diferença ordenada do erro:</li>
-</ol>
-<p class="image-container"><img style="width: 400.00px" src="img/d6076175dcb5eefe.png"></p>
-<ol type="1">
-<li>Erro absoluto:</li>
-</ol>
-<p class="image-container"><img style="width: 400.00px" src="img/2e4ea8299ea8c54c.png"></p>
-<ol type="1">
-<li>Probabilidade do erro:</li>
-</ol>
-<p class="image-container"><img style="width: 400.00px" src="img/b9a7ad0512d2d58c.png"></p>
-<ol type="1">
-<li>Erro por segmento:</li>
-</ol>
-<p class="image-container"><img style="width: 400.00px" src="img/8cb14a60d5dd46b.png"></p>
-<ol type="1">
-<li>Tabela dos dados:</li>
-</ol>
-<p class="image-container"><img style="width: 400.00px" src="img/13ed870aa5e3607e.png"></p>
-<h2 is-upgraded>Retorno esperado na implantação</h2>
-<p>Tabela com os valores preditos para o atributo alvo.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>O retorno durante a implantação se refere a tabela com os valores preditos para o atributo alvo. Sendo que, cada linha da tabela se refere a um registro enviado ao modelo.</p>
 
 
       </google-codelab-step>
