@@ -6,59 +6,69 @@ environments: Web
 status: Published
 feedback link: https://github.com/platiagro/tutorials
 
-# Detecção de Faces
-
-## Visão Geral
-Duration: 0:05:00
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
-### Função do componente
 
-Este componente treina um modelo de Regressão Logística para classificação usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html). <br>
-Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.
-
-### Entrada esperada
-
-Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.
-
-### Parâmetros
-
-Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:
-
-| Parâmetro     | Tipo     | Opções        | Descrição                                           |
-|:-------------|:--------:|:-------------:|:-----------------------------------------------------|
-| Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
-| Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
-|Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
-|Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
-|Penalidade|`string`| `"l1"` `"l2"` `"elasticnet"` `"None"`|Norma utilizada na penalização do erro.|
-|Regularização Inversa|`number`| - |Retém a modificação de força da regularização ao ser posicionada inversamente no regulador Lambda.|
-|Interceptação|`boolean`| `True`  `False`|Especifica se uma constante (viés ou interceptação) deve ser adicionada à função de decisão.|
-|Peso das Classes|`string`| `balanced`  `balanced_subsample` `None`|Especifica pesos de amostras quando for ajustar classificadores como uma função da classe do target.|
-|Solucionador|`boolean`| `lbfgs`  `sgd` `adam`|Algoritmo a ser usado no problema de otimização.|
-|Iterações|`integer`| - |Número máximo de itereações feitas para os solvers convergirem.|
-|Multiclasse|`boolean`| `auto`  `ovr` `multimomial`|Classificação com mais de duas classes, porém cada amostra pode ser rotulada apenas como uma classe.|
+# Detecção de Faces
 
 
-### Métricas de performance
+## Função do componente
 
-1. Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.
-2. Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.
-3. F1-Score: Média harmônica entre precisão e recall.
-4. Suporte: Número de ocorrências de cada classe esperadas
-5. Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo
+Este componente utiliza a biblioteca [facenet-pytorch](https://github.com/timesler/facenet-pytorch), a qual disponibiliza o modelo [MTCNN](https://arxiv.org/abs/1604.02878) para detecção de faces. O MTCNN possui a performance estado da arte nos benchmarks [FDDB](http://vis-www.cs.umass.edu/fddb/) e [WIDER FACE](http://shuoyang1213.me/WIDERFACE/). Melhores explicações são encontradas neste [artigo do kaggle](https://www.kaggle.com/timesler/guide-to-mtcnn-in-facenet-pytorch).
 
-### Retorno esperado no experimento
+## Entrada esperada
 
-1. Matriz de confusão:
+Espera-se como entrada para o componente um arquivo .zip com imagens.
 
-<img src="img/classification/confusion_matrix.png" width="400">
+## Parâmetros
 
-2. Curva ROC:
+A seguir são listados todos os parâmetros utilizados pelo componente:
 
-<img src="img/classification/roc_curve.png" width="400">
+- **Tamanho da imagem**: `integer`, padrão: `160`.<br>
+<em>Tamanho da imagem de saída em pixels. Imagem será quadrada.</em>
 
-### Retorno esperado na implantação
 
-Tabela com os valores preditos para o atributo alvo.
+- **Margem adicionada ao bbox**: `integer`, padrão: `20`.<br>
+<em>Margem adicionada em relação ao número de pixels da imagem final.</em>
+
+
+- **Menor tamanho de rosto**: `integer`, padrão: `20`.<br>
+<em>Menor tamanho de rosto que o algorítimo irá procurar em pixels.</em>
+
+
+- **Fator de escalabilidade**: `integer`: padrão: `0.709`.<br>
+<em>Fator de escalabilidade para pirâmide de tamanhos de rosto.</em>
+
+
+- **Manter todas as faces**: `boolean`, {`True`, `False`}, padrão: `True`.<br>
+<em>Se True retorna todas as faces, se não retorna apenas a com maior probabilidade caso encontre.</em>
+
+
+- **Ambiente**: `string`, {`"cuda"`, `"cpu"`}, padrão: `"cuda"`.<br>
+<em>Escolher entre CPU e GPU. Se escolher GPU e não houver irá substituir automaticamente por cpu.</em>
+
+
+- **Semente Aleatória**: `integer`, padrão: `7`.<br>
+<em>Semente para replicabilidade dos resultados.</em>
+
+
+- **Batch size para inferência**: `integer`, padrão: `2`.<br>
+<em>Inferência em batch para acelerar o processo.</em>
+
+
+- **Dimensão para redimensionamento**: `integer`, padrão: `512`.<br>
+<em>Dimensão em que todas as imagens serão redimensionadas para poderem ser procesadas em batch. Ficarão todas quadradas.</em>
+
+
+## Retorno esperado na experimentação
+
+O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:
+
+1. Tabela dos dados<br> <em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em>
+<img src="img/table.png" width="800">
+
+
+## Retorno esperado na implantação
+
+Lista com todas as face ou apenas a face com maior probabilidade.
