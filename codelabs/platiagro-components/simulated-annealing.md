@@ -6,44 +6,50 @@ environments: Web
 status: Published
 feedback link: https://github.com/platiagro/tutorials
 
-# Simulate Annealing
-
-## Visão Geral
-Duration: 0:05:00
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
-### Função do componente
+
+# Simulate Annealing
+
+## Função do componente
 
 Este é um componente que usa uma técnica chamada Simulated Annealing para executar o AutoFeaturing. É feita uma validação para retornar os dados que apresentarem o melhor, sejam eles os dados gerados pelo componente ou os dados iniciais.
 
-### Entrada esperada
 
-Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos.
+## Entrada esperada
 
-### Parâmetros
-
-Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:
-
-| Parâmetro     | Tipo     | Opções        | Descrição                                           |
-|:-------------|:--------:|:-------------:|:-----------------------------------------------------|
-| Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
-| Coluna de data  | `feature` | - | Coluna com data que será utilizada para extrair novas características.|
-| Colunas para agrupar  | `feature` | - | Colunas que serão utilizadas para agrupar e extrair novas características.|
-| Alpha  | `integer` | - | Parâmetro para aumentar ou diminuir a busca por soluções.|
+Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos, categóricos ou de data. A tabela deve ser de um dos seguintes tipos: Comma-separated values (.csv) ou Excel (.xls, .xlsx).
 
 
-### Métricas de performance
+## Parâmetros
 
-Neste componente é utilizado o f1-score para avaliar cada dado distinto.
+A seguir são listados todos os parâmetros utilizados pelo componente:
 
-### Retorno esperado no experimento
-
-1. Descrição dos dados gerados pelo componente.
-
-![Tabela dos Dados](img/table.png)
+- **Atributo alvo**: `feature` <span style="color:red">(Obrigatório)</span>.<br>
+<em>Esse valor será utilizado para garantir que o alvo não seja removido.</em>
 
 
-### Retorno esperado na implantação
+- **Coluna de data**: `feature`.<br>
+<em>Coluna com data que será utilizada para extrair novas características.</em>
+
+
+- **Colunas para agrupar**: `feature`.<br>
+<em>Colunas que serão utilizadas para agrupar e extrair novas características.</em>
+
+
+- **Alpha**: `integer`, padrão: `0.5`. <br>
+<em>Parâmetro para aumentar ou diminuir a busca por soluções.</em>
+
+
+## Retorno esperado na experimentação
+
+O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:
+
+1. Tabela dos dados<br> <em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em>
+<img src="img/table.png" width="800">
+
+
+## Retorno esperado na implantação
 
 Dados com novas características criadas ou os dados iniciais se não for possível obter resultado melhor com essa estratégia.

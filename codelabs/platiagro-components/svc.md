@@ -6,70 +6,105 @@ environments: Web
 status: Published
 feedback link: https://github.com/platiagro/tutorials
 
-# Classificador SVM
-
-## Visão Geral
-Duration: 0:05:00
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
 
-### Função do componente
 
-Este componente treina um modelo Support Vector Classification usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html). <br>
-Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê diversas ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.
+# Classificador SVM
 
-### Entrada esperada
+## Função do componente
 
-Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos ou categóricos.
+Este componente treina um modelo Support Vector Classification usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html). Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê diversas ferramentas para montagem de modelo, pré-processamento de dados, seleção e avaliação de modelos, e muitos outros utilitários.
 
-### Parâmetros
 
-Na tabela abaixo, observamos os parâmetros necessários para que o componente funcione da maneira correta:
+## Entrada esperada
 
-| Parâmetro     | Tipo     | Opções        | Descrição                                           |
-|:-------------|:--------:|:-------------:|:-----------------------------------------------------|
-| Atributo alvo     | `feature` | - | Seu modelo será treinado para prever os valores do alvo. |
-| Modo de seleção das features   | `string` |`"incluir"` `"remover"`| Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.  |
-|Features para incluir/remover no modelo|`feature`| - |Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas|
-|Features para fazer codificação ordinal|`feature`| - |Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.|
-|Kernel|`string`| `"linear"` `"poly"` `"rbf"` `"sigmoid"` `"precomputed"`|Especifica o tipo de kernel a ser usado no algoritmo.|
-|Grau|`number`| - |Grau da função polinomial do kernel ('poly'). Ignorado por outros kernels.|
-|Gama|`string`| `"scale"` `"auto"`|Coeficiente de kernel para 'rbf', 'poly' e 'sigmoid'.|
-|Regularização|`number`| - |A força da regularização é inversamente proporcional a C. Deve ser positivo. Penalidade é l2².|
-|Iteração|`number`| - |Limite fixo nas iterações no solver, ou -1 sem limite.|
-|Probabilidade|`boolean`| `True`  `False`|Se é necessário ativar estimativas de probabilidade.  Deve ser ativado antes da chamada fit() do modelo, reduzirá a velocidade desse método, pois ele usa internamente o 5-fold-cross-validation, e predict_proba pode ser inconsistente com a chamada predict().|
-|Método de Predição|`string`| `"predict_proba"` `"predict"`|Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.|
+Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos, categóricos ou de data. Os valores de data devem ser removidos ou selecionados para codificação ordinal para que o modelo consiga processá-los. A tabela deve ser de um dos seguintes tipos: Comma-separated values (.csv) ou Excel (.xls, .xlsx).
 
-### Métricas de performance
+
+## Parâmetros
+
+A seguir são listados todos os parâmetros utilizados pelo componente:
+
+- **Atributo alvo**: `feature` <span style="color:red">(Obrigatório)</span>.<br>
+<em>Seu modelo será treinado para prever os valores do alvo.</em>
+
+
+- **Modo de seleção das features**: `string`, {`"incluir"`, `"remover"`}, padrão: `"remover"`.<br>
+<em>Se deseja informar quais features deseja incluir no modelo, selecione a opção 'incluir'. Caso deseje informar as features que não devem ser utilizadas, selecione 'remover'.</em>
+
+
+- **Features para incluir/remover no modelo**: `feature`.<br>
+<em>Seu modelo será feito considerando apenas as features selecionadas. Caso nada seja especificado, todas as features serão utilizadas.</em>
+
+
+- **Features para fazer codificação ordinal**: `feature`.<br>
+<em>Seu modelo utilizará a codificação ordinal para as features selecionadas. As demais features categóricas serão codificadas utilizando One-Hot-Encoding.</em>
+
+
+- **Kernel**: `string`, {`"linear"`, `"poly"`, `"rbf"`, `"sigmoid"`, `"precomputed"`}, padrão: `"rbf"`.<br>
+<em>Especifica o tipo de kernel a ser usado no algoritmo.</em>
+
+
+- **Regularização**: `float`, padrão: `1.0`. <br>
+<em>A força da regularização é inversamente proporcional a C. Deve ser positivo. Penalidade é l2².</em>
+
+
+- **Grau**: `integer`, padrão: `3`. <br>
+<em>Grau da função polinomial do kernel ('poly'). Ignorado por outros kernels</em>
+
+
+- **Gama**: `string`, {`"scale"`, `"auto"`}, padrão: `"auto"`. <br>
+<em>Coeficiente de kernel para 'rbf', 'poly' e 'sigmoid'.</em>
+
+
+- **Iteração**: `integer`, padrão: `-1`. <br>
+<em>Limite fixo nas iterações no solver, ou -1 sem limite.</em>
+
+
+- **Probabilidade**: `boolean`, {`True`, `False`}, padrão: `True`. <br>
+<em>Se é necessário ativar estimativas de probabilidade.  Deve ser ativado antes da chamada fit() do modelo, reduzirá a velocidade desse método, pois ele usa internamente o 5-fold-cross-validation, e predict_proba pode ser inconsistente com a chamada predict().</em>
+
+
+- **Método de Predição**: `string`, {`"predict_proba"`, `"predict"`}, padrão: `"predict_proba"`. <br>
+<em>Se optar por 'predict_proba', o método de predição será a probabilidade estimada de cada classe, já o 'predict' prediz a qual classe pertence.</em>
+
+
+- **Gráficos a serem ignorados**: `string`, {`"Dados de Teste"`, `"Matriz de Confusão"`, `"Métricas Comuns"`, `"Curva HOC"`, `"Tabelas de Dados"`}.<br>
+<em>Considerando a quantidade de gráficos que são retornados ao executar a experimentação, o usuário pode selecionar quais ele não deseja visualizar.</em>
+
+
+## Métricas de performance
+
+As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.
 
 1. Acurácia: Indica uma performance geral do modelo. Dentre todas as classificações, quantas o modelo classificou corretamente.
-2. Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.
-3. F1-Score: Média harmônica entre precisão e recall.
-4. Suporte: Número de ocorrências de cada classe esperadas
-5. Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo
+1. Recall: Dentre todas as situações de classe positivo como valor esperado, quantas estão corretas.
+1. F1-Score: Média harmônica entre precisão e recall.
+1. Suporte: Número de ocorrências de cada classe esperadas
+1. Matriz de confusão: Tabela que mostra as frequências de classificação para cada classe do modelo
 
-### Retorno esperado no experimento
 
-1. Dados de teste:
+## Retorno esperado na experimentação
 
+O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:
+
+1. Dados de teste<br> <em> Apresenta a distribuição dos dados de teste considerando as duas características mais relevantes para o modelo.</em>
 <img src="img/classification/classification_data.png" width="400">
 
-1. Matriz de confusão:
+1. Matriz de confusão<br> <em>Apresenta a matriz de confusão. É possível obsersar relações entre os acertos e erros das cada classe. </em>
+<img src="img/classification/confusion_matrix.png" width="350">
 
-<img src="img/classification/confusion_matrix.png" width="400">
+1. Métricas comuns<br> <em>Apresenta métricas comuns utilizadas para avaliar modelos de classificação, como por exemplo: precision e recall.</em>
+<img src="img/classification/common_metrics.png" width="800">
 
-1. Métricas comuns:
-
-<img src="img/classification/common_metrics.png" width="400">
-
-1. Curva ROC:
-
+1. Curva ROC<br> <em>Apresenta um gráfico da Curva ROC. Esse gráfico permite avaliar a performance de um classificador binário para diferentes pontos de cortes. A métrica AUC (Area under curve) também é calculada e indicada na legenda do gráfico. Se a variável resposta tiver mais de duas categorias, o cálculo da curva ROC e AUC é feito utilizando o algoritmo one-vs-rest, ou seja, calcula-se a curva ROC e AUC de cada classe em relação ao restante.</em>
 <img src="img/classification/roc_curve.png" width="400">
 
-1. Tabela dos dados:
+1. Tabela dos dados<br> <em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em>
+<img src="img/table.png" width="800">
 
-<img src="img/table.png" width="400">
 
-### Retorno esperado na implantação
+## Retorno esperado na implantação
 
-Tabela com os valores preditos para o atributo alvo.
+O retorno durante a implantação se refere a tabela com os valores preditos para o atributo alvo. Sendo que, cada linha da tabela se refere a um registro enviado ao modelo.
