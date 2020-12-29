@@ -20,9 +20,11 @@ Utilização das bibliotecas [opencv](https://opencv.org/) e  [Tesseract OCR](ht
 
 *   Caso seja passado um arquivo .xlsx com as strings de target pode visualizar a perfonrmance do algorítimo
 
+
 ## Entrada esperada
 
 Espera-se como entrada para o componente um arquivo .zip contendo images e podendo conter uma tabela .xlsx com uma coluna contendo as respostas esperadas.
+
 
 ## Parâmetros
 
@@ -75,12 +77,14 @@ As métricas de performance tem o propósito de ajudar o usuário a avaliar a pe
 
 Legenda:  I= Número de Inserções, D = Número de Deleções, S = Número de Substituições, H = Número de Acertos.
 
+
 ## Retorno esperado na experimentação
 
 O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:
 
 1. Tabela dos dados<br> <em>Dataframe com o texto de fererência, o texto encontrado, as coordenadas dos bboxes nas regiões em que os textos foram identificados e também as métricas calculadas. Em caso de não haver o arquivo .xlsx de referência, retorna apenas o texto encontrado e as coordenadas dos bboxes nas regiões em que os textos foram identificados.</em>
 <img src="img/table.png" width="800">
+
 
 ## Retorno esperado na implantação
 
