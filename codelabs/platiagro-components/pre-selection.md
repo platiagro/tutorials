@@ -30,7 +30,7 @@ Espera-se como entrada para o componente uma tabela com colunas que representam 
 
 A seguir são listados todos os parâmetros utilizados pelo componente:
 
-- **Atributo alvo**: `feature` <span style="color:red">(Obrigatório)</span>.<br>
+- **Atributo alvo**: `feature`.<br>
 <em>Esse valor será utilizado para garantir que o alvo não seja removido.</em>
 
 
