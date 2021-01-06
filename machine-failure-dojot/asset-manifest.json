@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/main.a5868bd7.chunk.css",
-    "main.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.36aeccd6.chunk.js",
-    "main.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.36aeccd6.chunk.js.map",
+    "main.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.6180a099.chunk.js",
+    "main.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/main.6180a099.chunk.js.map",
     "runtime-main.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/runtime-main.331eb5dd.js",
     "runtime-main.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/runtime-main.331eb5dd.js.map",
     "static/css/2.e10332d9.chunk.css": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/2.e10332d9.chunk.css",
-    "static/js/2.035d03a1.chunk.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.035d03a1.chunk.js",
-    "static/js/2.035d03a1.chunk.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.035d03a1.chunk.js.map",
+    "static/js/2.a2e81950.chunk.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.a2e81950.chunk.js",
+    "static/js/2.a2e81950.chunk.js.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.a2e81950.chunk.js.map",
     "index.html": "https://platiagro.github.io/tutorials/machine-failure-dojot/index.html",
-    "precache-manifest.9aa81ee514f70c1d41ba6a827b593518.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/precache-manifest.9aa81ee514f70c1d41ba6a827b593518.js",
+    "precache-manifest.dbf55deea23da1edee20708a6c5bb45e.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/precache-manifest.dbf55deea23da1edee20708a6c5bb45e.js",
     "service-worker.js": "https://platiagro.github.io/tutorials/machine-failure-dojot/service-worker.js",
     "static/css/2.e10332d9.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/2.e10332d9.chunk.css.map",
     "static/css/main.a5868bd7.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/css/main.a5868bd7.chunk.css.map",
-    "static/js/2.035d03a1.chunk.js.LICENSE.txt": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.035d03a1.chunk.js.LICENSE.txt"
+    "static/js/2.a2e81950.chunk.js.LICENSE.txt": "https://platiagro.github.io/tutorials/machine-failure-dojot/static/js/2.a2e81950.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.331eb5dd.js",
     "static/css/2.e10332d9.chunk.css",
-    "static/js/2.035d03a1.chunk.js",
+    "static/js/2.a2e81950.chunk.js",
     "static/css/main.a5868bd7.chunk.css",
-    "static/js/main.36aeccd6.chunk.js"
+    "static/js/main.6180a099.chunk.js"
   ]
 }
