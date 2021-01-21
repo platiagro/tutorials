@@ -35,7 +35,7 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 - **Idioma**: `string`, {`"ingles"`, `"portugues"`}, padrão: `"ingles"` <span style="color:red">(Obrigatório)</span>.<br>
 <em>Idioma em que os stopwords pertencem. Deve ser o mesmo utilizado no dataset.</em>
 
-- **Gráficos a serem ignorados**: `string`, {"Dados de Treino", "Matriz de Confusão", "Métricas Comuns", "Curva ROC", "Tabelas de Dados","Performance Batch Treinamento","Performance Época Treinamento","Performance Batch Validação","Performance Época Validação"}, padrão: `"ingles"` <span style="color:red">(Obrigatório)</span>.<br>
+- **Gráficos a serem ignorados**: `string`, {`"Dados de Treino"`,`"Matriz de Confusão"`,`"Métricas Comuns"`,`"Curva ROC"`,`"Tabelas de Dados"`,`"Performance Batch Treinamento"`,`"Performance Época Treinamento"`,`"Performance Batch Validação"`,`"Performance Época Validação"`} <span style="color:red">(Obrigatório)</span>.<br>
 <em>Diversos gráficos são gerados ao executar o treinamento e validação do modelo, selecione quais não devem ser gerados.</em>
 
 - **Tamanho do batch de treinamento**: `integer` <span style="color:red">(Obrigatório)</span>.<br>
@@ -56,13 +56,13 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 - **Semente de aleatoriedade**: `integer` <span style="color:red">(Obrigatório)</span>.<br>
 <em>Semente para replicação dos resultados.</em>
 
-- **Dimensão das camada escondidas**: `integer`,`multiple`, {1000,500,300,200,100,50,20,10}  <span style="color:red">(Obrigatório)</span>.<br>
+- **Dimensão das camada escondidas**: `integer`,`multiple`, {`1000`,`500`,`300`,`200`,`100`,`50`,`20`,`10`}  <span style="color:red">(Obrigatório)</span>.<br>
 <em>Dimensão da camadas escondidas da rede neural de classifcação.</em>
 
-- **Função de ativação**: `string`, {"relu","tanh"} <span style="color:red">(Obrigatório)</span>.<br>
+- **Função de ativação**: `string`, {`"relu"`,`"tanh"`} <span style="color:red">(Obrigatório)</span>.<br>
 <em>Função de ativação utilizada nas camadas ocultas da MLP.</em>
 
-- **Dimensão dos vetores Glove**: `integer`, {50,100,200,300,600,1000}  <span style="color:red">(Obrigatório)</span>.<br>
+- **Dimensão dos vetores Glove**: `integer`, {`50`,`100`,`200`,`300`,`600`,`1000`}  <span style="color:red">(Obrigatório)</span>.<br>
 <em>Dimensão dos vetores Glove pré treinados. Opções do inglês:50,100,200,300. Opções do português:50,100,300,600,1000.</em>
 
 - **Utilizar GPUs?**: `boolean` <span style="color:red">(Obrigatório)</span>.<br>
@@ -108,16 +108,16 @@ O retorno durante a experimentação ajuda o usuário a analisar tanto métricas
 <img src="img/table_nlp.png" width="800">
 
 5. Performance de treino por batch<br> <em>Comportamento da acurácia e da função de perda por batch na etapa de treino.</em>
-<img src="img/algorithims_performance/train_batch_performance.png" width="800">
+<img src="img/algorithims_performance/train_batch_performance.png" width="400">
 
 6. Performance de treino por época<br> <em>Comportamento da acurácia e da função de perda por época na etapa de treino.</em>
-<img src="img/algorithims_performance/train_epoch_performance.png" width="800">
+<img src="img/algorithims_performance/train_epoch_performance.png" width="400">
 
 7. Performance de validação por batch<br> <em>Comportamento da acurácia e da função de perda por batch na etapa de validação.</em>
-<img src="img/algorithims_performance/valid_batch_performance.png" width="800">
+<img src="img/algorithims_performance/valid_batch_performance.png" width="400">
 
 8. Performance de validação por época<br> <em>Comportamento da acurácia e da função de perda por época na etapa de validação.</em>
-<img src="img/algorithims_performance/valid_epoch_performance.png" width="800">
+<img src="img/algorithims_performance/valid_epoch_performance.png" width="400">
 
 
 ## Retorno esperado na implantação
