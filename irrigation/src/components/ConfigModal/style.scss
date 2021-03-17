@@ -1,0 +1,27 @@
+.center-box {
+  background-color: #fff;
+  margin: 50px auto;
+  padding: 50px 100px;
+  text-align: center;
+
+  button {
+    display: block;
+    margin: 38px auto 0 auto;
+  }
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 1.4rem;
+}
+
+.blue {
+  background-color: #0050B3;
+  border: none;
+  color: #fff;
+  &:hover, &:focus {
+    background-color: #0050B3;
+    color: #fff;
+  }
+}
+
