@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://platiagro.github.io/tutorials/fruit-prices/static/css/main.61c92cb6.chunk.css",
-    "main.js": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.b614786a.chunk.js",
-    "main.js.map": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.b614786a.chunk.js.map",
+    "main.js": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.0ecb6ce9.chunk.js",
+    "main.js.map": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.0ecb6ce9.chunk.js.map",
     "runtime-main.js": "https://platiagro.github.io/tutorials/fruit-prices/static/js/runtime-main.9faecf91.js",
     "runtime-main.js.map": "https://platiagro.github.io/tutorials/fruit-prices/static/js/runtime-main.9faecf91.js.map",
     "static/css/2.42ec2a3e.chunk.css": "https://platiagro.github.io/tutorials/fruit-prices/static/css/2.42ec2a3e.chunk.css",
     "static/js/2.7c705c10.chunk.js": "https://platiagro.github.io/tutorials/fruit-prices/static/js/2.7c705c10.chunk.js",
     "static/js/2.7c705c10.chunk.js.map": "https://platiagro.github.io/tutorials/fruit-prices/static/js/2.7c705c10.chunk.js.map",
     "index.html": "https://platiagro.github.io/tutorials/fruit-prices/index.html",
-    "precache-manifest.3cabe6ecb11f8d8d9f0c32e93203d434.js": "https://platiagro.github.io/tutorials/fruit-prices/precache-manifest.3cabe6ecb11f8d8d9f0c32e93203d434.js",
+    "precache-manifest.2b289aeb0464a77e9a952254f0077eab.js": "https://platiagro.github.io/tutorials/fruit-prices/precache-manifest.2b289aeb0464a77e9a952254f0077eab.js",
     "service-worker.js": "https://platiagro.github.io/tutorials/fruit-prices/service-worker.js",
     "static/css/2.42ec2a3e.chunk.css.map": "https://platiagro.github.io/tutorials/fruit-prices/static/css/2.42ec2a3e.chunk.css.map",
     "static/css/main.61c92cb6.chunk.css.map": "https://platiagro.github.io/tutorials/fruit-prices/static/css/main.61c92cb6.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.42ec2a3e.chunk.css",
     "static/js/2.7c705c10.chunk.js",
     "static/css/main.61c92cb6.chunk.css",
-    "static/js/main.b614786a.chunk.js"
+    "static/js/main.0ecb6ce9.chunk.js"
   ]
 }
