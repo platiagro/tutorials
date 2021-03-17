@@ -1,0 +1,46 @@
+.white-box {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 14px 23px;
+  height: 250px;
+
+  &.no-padding {
+    padding: 0;
+    height: 290px;
+  }
+
+  &.disabled {
+    .white-box-title, .white-box-name, .white-box-price {
+      opacity: 0.5;
+    }
+  }
+}
+
+.white-box-title {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.white-box-name {
+  color: rgba#000;
+  font-size: 1.4rem;
+}
+
+.white-box-price {
+  color: rgba#000;
+  font-size: 2.3rem;
+}
+
+.white-box-chart {
+  max-height: 50px;
+  margin-bottom: 10px;
+}
+
+.white-box-divider {
+  background-color: #F0F2F5;
+  height: 1px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  width: 100%;
+}

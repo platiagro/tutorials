@@ -41,6 +41,14 @@ jobs:
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure-dojot/
 
+    - name: Fruit Prices - Build 🔧 # This example project is built using yarn and outputs the result to the 'build' folder.
+      run: |
+        cd fruit-prices
+        yarn
+        yarn build
+      env:
+        PUBLIC_URL: https://platiagro.github.io/tutorials/fruit-prices/
+
     - name: PlatIAgro Tasks - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
         claat export codelabs/platiagro-tasks/codelab.md
@@ -104,6 +112,7 @@ jobs:
         mv machine-failure/build dist/machine-failure
         mv platiagro-dojot dist/codelabs/
         mv machine-failure-dojot/build dist/machine-failure-dojot
+        mv fruit-prices/build dist/fruit-prices
         mv platiagro-tasks dist/codelabs/
         mv projeto-tutorial-platiago dist/codelabs/
         mv tutorial-experimento-platiagro dist/codelabs/
