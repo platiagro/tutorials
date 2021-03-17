@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d2b6d5ecc9b253081c2080302ce656cd",
+    "revision": "f0735a77b508c7277521dfa4ca26f992",
     "url": "https://platiagro.github.io/tutorials/fruit-prices/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://platiagro.github.io/tutorials/fruit-prices/static/css/2.42ec2a3e.chunk.css"
   },
   {
-    "revision": "f68ddc528b703e834a0e",
+    "revision": "8776a3def12645194184",
     "url": "https://platiagro.github.io/tutorials/fruit-prices/static/css/main.61c92cb6.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://platiagro.github.io/tutorials/fruit-prices/static/js/2.7c705c10.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f68ddc528b703e834a0e",
-    "url": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.a272b917.chunk.js"
+    "revision": "8776a3def12645194184",
+    "url": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.ea013b02.chunk.js"
   },
   {
     "revision": "15a7cb0ac0abf758e2e5",
