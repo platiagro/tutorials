@@ -6,7 +6,30 @@ body,
   height: 100%;
 }
 
-
 .ant-menu.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
   background-color: #0050B3 !important;
+}
+
+.ant-btn.ant-btn-warning {
+  background: #faad14;
+  border-color: #faad14;
+  color: #000;
+
+  &:hover, &:focus {
+    background: lighten(#faad14, 10%);
+    border-color: lighten(#faad14, 10%);
+    color: #000;
+  }
+}
+
+.ant-btn.ant-btn-green {
+  background: #52c41a;
+  border-color: #52c41a;
+  color: #000;
+
+  &:hover, &:focus {
+    background: lighten(#52c41a, 10%);
+    border-color: lighten(#52c41a, 10%);
+    color: #000;
+  }
 }

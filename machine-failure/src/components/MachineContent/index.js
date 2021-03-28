@@ -36,7 +36,7 @@ const MachineContent = (props) => {
             </Form.Item>
             <Form.Item style={{ float: "right", margin: 0 }}>
               <Button className="orange" onClick={onDisconnect}>
-                Redefinir URL e Dispositivos
+                Redefinir URL
               </Button>
             </Form.Item>
           </Form>

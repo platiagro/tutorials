@@ -64,7 +64,7 @@ const FruitsContent = (props) => {
             </Form.Item>
             <Form.Item style={{ float: "right", margin: 0 }}>
               <Button className="green" onClick={onDisconnect}>
-                Redefinir URL e Dispositivos
+                Redefinir URL
               </Button>
             </Form.Item>
           </Form>
