@@ -51,7 +51,7 @@ Posteriormente, será possível decidir qual deles seguirá para implantação.
 ### **Importar um Conjunto de Dados**
 
 Negative
-: Faça download do conjunto de dados **[Falha em Máquinas Agrícolas](https://raw.githubusercontent.com/platiagro/platiagro.github.io/codelabs/platiagro-introduction/datasets/FalhaEmMaquinasAgricolas.csv)**.
+: Faça download do conjunto de dados **[Falha em Máquinas Agrícolas](https://raw.githubusercontent.com/platiagro/platiagro.github.io/datasets/FalhaEmMaquinasAgricolas.csv)**.
 
 1. No painel central, selecione a tarefa **“Conjunto de Dados”**. Os detalhes da tarefa irão aparecer à direita.
 
