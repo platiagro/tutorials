@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://platiagro.github.io/tutorials/fruit-prices/precache-manifest.2b289aeb0464a77e9a952254f0077eab.js"
+  "https://platiagro.github.io/tutorials/fruit-prices/precache-manifest.36cd1f828cfffc6900802902ccdc6689.js"
 );
 
 self.addEventListener('message', (event) => {
