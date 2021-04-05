@@ -1,14 +1,18 @@
 // ACTION TYPES
 import actionTypes from './actionTypes';
 
+import machines from "../machines_mock";
+
 // INITIAL STATE
 const initialState = {
   isConnected: false,
 
   url: null,
 
-  sensorData: [],
-  machineData: [],
+  selectedMachine: "Minerva",
+
+  sensorData: Array.from(Array(machines.length), () => new Array(0)),
+  machineData: Array.from(Array(machines.length), () => new Array(0)),
 
   score: null,
 };
@@ -20,6 +24,7 @@ const initialState = {
  * @param action
  */
 const reducer = (state = initialState, action = undefined) => {
+  const machineIndex = machines.indexOf(action.machine);
   switch (action.type) {
     case actionTypes.CONNECT:
       return {
@@ -40,22 +45,28 @@ const reducer = (state = initialState, action = undefined) => {
       };
 
     case actionTypes.SET_SENSOR_DATA:
+      const sensorData = state.sensorData.map((data, i) =>
+        (i === machineIndex) ? [...data, action.data] : data
+      );
       return {
         ...state,
-        sensorData: [
-          ...state.sensorData,
-          action.data,
-        ],
-      }
+        sensorData: sensorData,
+      };
 
     case actionTypes.SET_MACHINE_DATA:
+      const machineData = state.machineData.map((data, i) =>
+        (i === machineIndex) ? [...data, action.data] : data);
+      const score = action.machine === state.selectedMachine ? action.score : state.score;
       return {
         ...state,
-        machineData: [
-          ...state.machineData,
-          action.data,
-        ],
-        score: action.score,
+        machineData: machineData,
+        score: score,
+      };
+
+    case actionTypes.SELECT_MACHINE:
+      return {
+        ...state,
+        selectedMachine: action.machine,
       }
 
     // DEFAULT

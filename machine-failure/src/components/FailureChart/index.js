@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Skeleton } from "antd";
 import { Bubble } from "react-chartjs-2";
 
-import machines from "../MachineContent/machines_mock";
+import machines from "../../machines_mock";
 
 // import data from './chart_mock';
 
@@ -42,18 +42,19 @@ const colors = [
 const prepareData = (rawData) => {
   const preparedData = { datasets: [] };
 
-  const machineIndex = 0;
-  preparedData.datasets.push({
-    label: machines[machineIndex],
-    backgroundColor: colors[machineIndex % colors.length],
-    borderColor: "rgba(0, 0, 0, 0.0)",
-    data: rawData.slice(-5).map((prediction) => {
-      const yKey = Object.keys(prediction).find(k => k.endsWith("Sim"));
-      const y = prediction[yKey];
-      const r = 155 * y ** 3 - 268 * y ** 2 + 150 * y + 12.5;
-      return { x: machineIndex + 1, y: y, r: r };
-    }),
-  });
+  for (let machineIndex = 0; machineIndex < rawData.length; machineIndex++) {
+    preparedData.datasets.push({
+      label: machines[machineIndex],
+      backgroundColor: colors[machineIndex % colors.length],
+      borderColor: "rgba(0, 0, 0, 0.0)",
+      data: rawData[machineIndex].slice(-5).map((prediction) => {
+        const yKey = Object.keys(prediction).find(k => k.endsWith("Sim"));
+        const y = prediction[yKey];
+        const r = 155 * y ** 3 - 268 * y ** 2 + 150 * y + 12.5;
+        return { x: machineIndex + 1, y: y, r: r };
+      }),
+    });
+  }
 
   return preparedData;
 };

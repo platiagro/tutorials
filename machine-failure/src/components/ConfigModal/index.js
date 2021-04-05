@@ -31,13 +31,13 @@ class ConfigModal extends React.Component {
     const { isModalVisible } = this.state;
     const { theme } = this.props;
     const layout = {
-      labelCol: { span: 8 },
-      wrapperCol: { span: 16 },
+      labelCol: { span: 4 },
+      wrapperCol: { span: 20 },
     };
     return (
       <>
         <Modal
-          title="Informar URL do ambiente e Dispositivos"
+          title="Informar URL do fluxo implantado na PlatIAgro"
           width={600}
           visible={isModalVisible}
           onOk={this.handleOk}

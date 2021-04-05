@@ -36,17 +36,28 @@ export const setConfig = (url) => (dispatch) => {
 };
 
 const onSensorMessage = (dispatch, message) => {
+  const machineKey = Object.keys(message.attrs).find(k => k.endsWith("Maquina"));
   dispatch({
     type: actionTypes.SET_SENSOR_DATA,
     data: message.attrs,
+    machine: message.attrs[machineKey],
   });
 };
 
 const onMachineMessage = (dispatch, message) => {
+  const machineKey = Object.keys(message.attrs).find(k => k.endsWith("Maquina"));
   const scoreKey = Object.keys(message.attrs).find(k => k.endsWith("Sim"));
   dispatch({
     type: actionTypes.SET_MACHINE_DATA,
     data: message.attrs,
+    machine: message.attrs[machineKey],
     score: message.attrs[scoreKey].toFixed(2),
   });
+};
+
+export const selectMachine = (machine) => {
+  return {
+    type: actionTypes.SELECT_MACHINE,
+    machine: machine,
+  }
 };

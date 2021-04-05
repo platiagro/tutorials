@@ -9,6 +9,8 @@ const SET_SENSOR_DATA = 'SET_SENSOR_DATA';
 
 const SET_MACHINE_DATA = 'SET_MACHINE_DATA';
 
+const SELECT_MACHINE = 'SELECT_MACHINE';
+
 // EXPORT
 export default {
   CONNECT,
@@ -19,4 +21,6 @@ export default {
   SET_SENSOR_DATA,
 
   SET_MACHINE_DATA,
+
+  SELECT_MACHINE,
 };

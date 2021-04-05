@@ -10,23 +10,23 @@ const IrrigationLines = () => {
   return (
     <div style={{margin: "40px 0"}}>
       <Row className="irrigation-line" justify="space-around" gutter={[0, 16]}>
-        <Col span={4}>
-          <IrrigationSystem volume={3} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={3} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={6} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={6} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={8} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={8} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={11} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={11} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={15} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={15} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={18} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={18} />
         </Col>
       </Row>
       <Row justify="center" gutter={[16, 16]}>
@@ -38,23 +38,23 @@ const IrrigationLines = () => {
         </Col>
       </Row>
       <Row className="irrigation-line" justify="space-around" gutter={[0, 16]}>
-        <Col span={4}>
-          <IrrigationSystem volume={3} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={3} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={6} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={6} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={8} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={8} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={11} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={11} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={15} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={15} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={18} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={18} />
         </Col>
       </Row>
       <Row justify="center" gutter={[16, 16]}>
@@ -66,23 +66,23 @@ const IrrigationLines = () => {
         </Col>
       </Row>
       <Row className="irrigation-line" justify="space-around" gutter={[0, 16]}>
-        <Col span={4}>
-          <IrrigationSystem volume={3} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={3} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={6} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={6} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={8} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={8} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={11} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={11} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={15} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={15} />
         </Col>
-        <Col span={4}>
-          <IrrigationSystem volume={18} style={{ marginRight: "15px" }} />
+        <Col flex="none">
+          <IrrigationSystem volume={18} />
         </Col>
       </Row>
     </div>

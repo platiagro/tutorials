@@ -3,9 +3,11 @@ import { connect } from 'react-redux';
 
 import MeasuresChart from '../../components/MeasuresChart';
 
+import machines from '../../machines_mock';
+
 const mapStateToProps = (state) => {
   return {
-    sensorData: state.sensorData,
+    sensorData: state.sensorData[machines.indexOf(state.selectedMachine)],
   };
 };
 

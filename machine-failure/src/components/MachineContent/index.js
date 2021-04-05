@@ -8,13 +8,13 @@ import ConfigModalContainer from "../../containers/ConfigModalContainer";
 import MeasuresChartContainer from "../../containers/MeasuresChartContainer";
 import FailureChartContainer from "../../containers/FailureChartContainer";
 
-import machines from "./machines_mock";
+import machines from "../../machines_mock";
 
 const { Option } = Select;
 
 const MachineContent = (props) => {
   const { isConnected, machine, score } = props;
-  const { onDisconnect } = props;
+  const { onDisconnect, onChangeMachine } = props;
 
   return (
     <>
@@ -28,6 +28,7 @@ const MachineContent = (props) => {
                 style={{ width: 300 }}
                 placeholder="Selecione"
                 value={machine}
+                onChange={onChangeMachine}
               >
                 {machines.map((machine) => (
                   <Option key={machine}>{machine}</Option>
@@ -92,6 +93,9 @@ const MachineContent = (props) => {
 MachineContent.propTypes = {
   isConnected: PropTypes.bool,
   machine: PropTypes.string,
+  score: PropTypes.string,
+  onDisconnect: PropTypes.func,
+  onChangeMachine: PropTypes.func,
 };
 
 export default MachineContent;
