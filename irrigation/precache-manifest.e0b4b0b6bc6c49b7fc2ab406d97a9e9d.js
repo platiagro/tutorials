@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9f99e00c3b807b0be073a9562e9d07b7",
+    "revision": "f26dcb4355be0009225977be55a27da3",
     "url": "https://platiagro.github.io/tutorials/irrigation/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://platiagro.github.io/tutorials/irrigation/static/css/2.42ec2a3e.chunk.css"
   },
   {
-    "revision": "1a5c4c2a50af1ef9867a",
+    "revision": "ac69559afa42bc5e5509",
     "url": "https://platiagro.github.io/tutorials/irrigation/static/css/main.d48041af.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://platiagro.github.io/tutorials/irrigation/static/js/2.0aaeb1e8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1a5c4c2a50af1ef9867a",
-    "url": "https://platiagro.github.io/tutorials/irrigation/static/js/main.6d67859c.chunk.js"
+    "revision": "ac69559afa42bc5e5509",
+    "url": "https://platiagro.github.io/tutorials/irrigation/static/js/main.230be287.chunk.js"
   },
   {
     "revision": "3b8c1731be79a0cba07b",

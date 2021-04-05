@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "https://platiagro.github.io/tutorials/machine-failure/static/css/main.a5868bd7.chunk.css",
-    "main.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/main.80006340.chunk.js",
-    "main.js.map": "https://platiagro.github.io/tutorials/machine-failure/static/js/main.80006340.chunk.js.map",
+    "main.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/main.0e9efc3e.chunk.js",
+    "main.js.map": "https://platiagro.github.io/tutorials/machine-failure/static/js/main.0e9efc3e.chunk.js.map",
     "runtime-main.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/runtime-main.adaf232b.js",
     "runtime-main.js.map": "https://platiagro.github.io/tutorials/machine-failure/static/js/runtime-main.adaf232b.js.map",
     "static/css/2.42ec2a3e.chunk.css": "https://platiagro.github.io/tutorials/machine-failure/static/css/2.42ec2a3e.chunk.css",
-    "static/js/2.42d3dbd4.chunk.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.42d3dbd4.chunk.js",
-    "static/js/2.42d3dbd4.chunk.js.map": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.42d3dbd4.chunk.js.map",
+    "static/js/2.516c047a.chunk.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.516c047a.chunk.js",
+    "static/js/2.516c047a.chunk.js.map": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.516c047a.chunk.js.map",
     "index.html": "https://platiagro.github.io/tutorials/machine-failure/index.html",
-    "precache-manifest.a5362fccce4ba150c8d7d1127472dcac.js": "https://platiagro.github.io/tutorials/machine-failure/precache-manifest.a5362fccce4ba150c8d7d1127472dcac.js",
+    "precache-manifest.831ed59045963490adc4373b7a56dea5.js": "https://platiagro.github.io/tutorials/machine-failure/precache-manifest.831ed59045963490adc4373b7a56dea5.js",
     "service-worker.js": "https://platiagro.github.io/tutorials/machine-failure/service-worker.js",
     "static/css/2.42ec2a3e.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure/static/css/2.42ec2a3e.chunk.css.map",
     "static/css/main.a5868bd7.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure/static/css/main.a5868bd7.chunk.css.map",
-    "static/js/2.42d3dbd4.chunk.js.LICENSE.txt": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.42d3dbd4.chunk.js.LICENSE.txt"
+    "static/js/2.516c047a.chunk.js.LICENSE.txt": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.516c047a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.adaf232b.js",
     "static/css/2.42ec2a3e.chunk.css",
-    "static/js/2.42d3dbd4.chunk.js",
+    "static/js/2.516c047a.chunk.js",
     "static/css/main.a5868bd7.chunk.css",
-    "static/js/main.80006340.chunk.js"
+    "static/js/main.0e9efc3e.chunk.js"
   ]
 }

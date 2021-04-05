@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://platiagro.github.io/tutorials/irrigation/precache-manifest.bb482c082df3bb3d9ab5b62f9b35da4b.js"
+  "https://platiagro.github.io/tutorials/irrigation/precache-manifest.e0b4b0b6bc6c49b7fc2ab406d97a9e9d.js"
 );
 
 self.addEventListener('message', (event) => {
