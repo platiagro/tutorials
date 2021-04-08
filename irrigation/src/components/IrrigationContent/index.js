@@ -5,12 +5,12 @@ import "./style.scss";
 import { Button, Col, Form, Row } from "antd";
 
 import ConfigModalContainer from "../../containers/ConfigModalContainer";
+import IrrigationSwitchContainer from "../../containers/IrrigationSwitchContainer";
+import WaterVolumeLegendContainer from "../../containers/WaterVolumeLegendContainer";
+// import PrecipitationProbaContainer from "../../containers/PrecipitationProbaContainer";
 
 import IrrigationLines from "../IrrigationLines";
-import IrrigationSwitch from "../IrrigationSwitch";
-import RealPrecipitation from "../RealPrecipitation";
-import WaterVolumeLegend from "../WaterVolumeLegend";
-import PrecipitationProba from "../PrecipitationProba";
+// import RealPrecipitation from "../RealPrecipitation";
 
 const IrrigationContent = (props) => {
   const { isConnected } = props;
@@ -18,7 +18,7 @@ const IrrigationContent = (props) => {
 
   return (
     <>
-      {isConnected ? (
+      {!isConnected ? (
         <ConfigModalContainer theme="blue" />
       ) : (
         <>
@@ -30,23 +30,23 @@ const IrrigationContent = (props) => {
             </Form.Item>
           </Form>
           <Row gutter={16}>
-            <Col span={16}>
+            <Col span={24}>
               <IrrigationLines />
             </Col>
-            <Col span={8}>
+            {/* <Col span={8}>
               <RealPrecipitation />
-            </Col>
+            </Col> */}
           </Row>
           <Row gutter={16}>
             <Col span={8}>
-              <WaterVolumeLegend />
+              <WaterVolumeLegendContainer />
             </Col>
             <Col span={8}>
-              <IrrigationSwitch />
+              <IrrigationSwitchContainer />
             </Col>
-            <Col span={8}>
-              <PrecipitationProba />
-            </Col>
+            {/* <Col span={8}>
+              <PrecipitationProbaContainer />
+            </Col> */}
           </Row>
         </>
       )}
@@ -56,7 +56,6 @@ const IrrigationContent = (props) => {
 
 IrrigationContent.propTypes = {
   isConnected: PropTypes.bool,
-  predictionList: PropTypes.arrayOf(PropTypes.array),
   onDisconnect: PropTypes.func,
 };
 

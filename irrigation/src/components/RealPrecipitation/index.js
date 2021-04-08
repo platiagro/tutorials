@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
 import { Col, Row, Typography } from "antd";
 
-import MicroclimateSensor from "../MicroclimateSensor";
+import MicroclimateSensorContainer from "../../containers/MicroclimateSensorContainer";
 
 const { Text } = Typography;
 
@@ -13,26 +14,25 @@ const RealPrecipitation = () => {
       <Text strong>Precipitação real</Text>
       <br/>
       <Row gutter={[16, 16]}>
-        <Col span={12}>
-          <MicroclimateSensor name={"M1"} />
+        <Col span={6}>
+          <MicroclimateSensorContainer name={"M1"} />
         </Col>
-        <Col span={12}>
-          <MicroclimateSensor name={"M2"} />
+        <Col span={6} offset={3}>
+          <MicroclimateSensorContainer name={"M2"} />
         </Col>
       </Row>
       <Row gutter={[16, 16]}>
-        <Col span={12}>
-          <MicroclimateSensor name={"M3"} />
+        <Col span={6}>
+          <MicroclimateSensorContainer name={"M3"} />
         </Col>
-        <Col span={12}>
-          <MicroclimateSensor name={"M4"} />
+        <Col span={6} offset={3}>
+          <MicroclimateSensorContainer name={"M4"} />
         </Col>
       </Row>
     </>
   );
 };
 
-RealPrecipitation.propTypes = {
-};
+RealPrecipitation.propTypes = {};
 
 export default RealPrecipitation;

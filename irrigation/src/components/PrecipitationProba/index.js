@@ -1,10 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
+import "./style.scss";
 
-import { Col, Row, Typography } from "antd";
+import { Button, Col, Row, Typography } from "antd";
 
 const { Text } = Typography;
 
-const PrecipitationProba = () => {
+const PrecipitationProba = (props) => {
+  const { value } = props;
   return (
     <>
       <Row>
@@ -14,7 +17,9 @@ const PrecipitationProba = () => {
       </Row>
       <Row>
         <Col>
-          TODO
+        <Button shape="circle" className="score">
+          {value}
+        </Button>
         </Col>
       </Row>
     </>
@@ -22,6 +27,7 @@ const PrecipitationProba = () => {
 };
 
 PrecipitationProba.propTypes = {
+  value: PropTypes.number,
 };
 
 export default PrecipitationProba;

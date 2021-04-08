@@ -3,86 +3,86 @@ import "./style.scss";
 
 import { Col, Row } from "antd";
 
-import IrrigationSystem from "../IrrigationSystem";
-import MicroclimateSensor from "../MicroclimateSensor";
+import SprinklerContainer from "../../containers/SprinklerContainer";
+import MicroclimateSensorContainer from "../../containers/MicroclimateSensorContainer";
 
 const IrrigationLines = () => {
   return (
-    <div style={{margin: "40px 0"}}>
+    <div className="irrigation-field">
       <Row className="irrigation-line" justify="space-around" gutter={[0, 16]}>
         <Col flex="none">
-          <IrrigationSystem volume={3} />
+          <SprinklerContainer index={0} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={6} />
+          <SprinklerContainer index={1} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={8} />
+          <SprinklerContainer index={2} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={11} />
+          <SprinklerContainer index={3} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={15} />
+          <SprinklerContainer index={4} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={18} />
+          <SprinklerContainer index={5} />
         </Col>
       </Row>
       <Row justify="center" gutter={[16, 16]}>
-        <Col span={4}>
-          <MicroclimateSensor name="M1" />
+        <Col span={3}>
+          <MicroclimateSensorContainer name="M1" />
         </Col>
-        <Col span={4}>
-          <MicroclimateSensor name="M2" />
+        <Col span={3} offset={12}>
+          <MicroclimateSensorContainer name="M2" />
         </Col>
       </Row>
       <Row className="irrigation-line" justify="space-around" gutter={[0, 16]}>
         <Col flex="none">
-          <IrrigationSystem volume={3} />
+          <SprinklerContainer index={6} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={6} />
+          <SprinklerContainer index={7} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={8} />
+        <SprinklerContainer index={8} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={11} />
+          <SprinklerContainer index={9} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={15} />
+          <SprinklerContainer index={10} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={18} />
+          <SprinklerContainer index={11} />
         </Col>
       </Row>
       <Row justify="center" gutter={[16, 16]}>
-        <Col span={4}>
-          <MicroclimateSensor name="M3" />
+        <Col span={3}>
+          <MicroclimateSensorContainer name="M3" />
         </Col>
-        <Col span={4}>
-          <MicroclimateSensor name="M4" />
+        <Col span={3} offset={6}>
+          <MicroclimateSensorContainer name="M4" />
         </Col>
       </Row>
       <Row className="irrigation-line" justify="space-around" gutter={[0, 16]}>
         <Col flex="none">
-          <IrrigationSystem volume={3} />
+          <SprinklerContainer index={12} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={6} />
+          <SprinklerContainer index={13} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={8} />
+          <SprinklerContainer index={14} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={11} />
+          <SprinklerContainer index={15} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={15} />
+          <SprinklerContainer index={16} />
         </Col>
         <Col flex="none">
-          <IrrigationSystem volume={18} />
+          <SprinklerContainer index={17} />
         </Col>
       </Row>
     </div>

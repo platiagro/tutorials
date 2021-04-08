@@ -15,18 +15,16 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
   return {
     isConnected: state.isConnected,
-    predictionList: state.predictionList,
   };
 };
 
 const IrrigationContainer = (props) => {
-  const { isConnected, predictionList } = props;
+  const { isConnected } = props;
   const { handleDisconnect } = props;
 
   return (
     <IrrigationContent
       isConnected={isConnected}
-      predictionList={predictionList}
       onDisconnect={handleDisconnect}
     />
   );

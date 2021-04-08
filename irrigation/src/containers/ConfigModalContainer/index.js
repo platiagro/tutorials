@@ -7,29 +7,25 @@ import { setConfig } from '../../store/actions';
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleSubmit: (url, sensor, machine) =>
-      dispatch(setConfig(url, sensor, machine)),
+    handleSubmit: (url) =>
+      dispatch(setConfig(url)),
   };
 };
 
 const mapStateToProps = (state) => {
   return {
     url: state.url,
-    sensor: state.sensor,
-    machine: state.machine,
   };
 };
 
 const ConfigModalContainer = (props) => {
-  const { url, sensor, machine, theme } = props;
+  const { url, theme } = props;
   const { handleSubmit } = props;
 
   return (
     <ConfigModal
       theme={theme}
       url={url}
-      sensor={sensor}
-      machine={machine}
       onSubmit={handleSubmit}
     />
   );

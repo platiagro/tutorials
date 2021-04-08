@@ -35,16 +35,28 @@ export const setConfig = (url) => (dispatch) => {
   };
 };
 
-const onSensorMessage = (dispatch, message) => {
+const onSensorMessage = (dispatch, message, sprinkler) => {
   dispatch({
     type: actionTypes.SET_SENSOR_DATA,
     data: message.attrs,
+    sprinkler: sprinkler,
   });
 };
 
-const onModelMessage = (dispatch, message) => {
+const onModelMessage = (dispatch, message, sprinkler) => {
+  const predictionKey = Object.keys(message.attrs).find(k => k.endsWith("prediction"));
+  const data = message.attrs;
+  data["score"] = message.attrs[predictionKey];
   dispatch({
-    type: actionTypes.ADD_PREDICTION,
-    data: message.attrs,
+    type: actionTypes.SET_SPRINKLER_DATA,
+    data: data,
+    sprinkler: sprinkler,
   });
+};
+
+export const setIrrigationMinimum = (minimum) => {
+  return {
+    type: actionTypes.SET_IRRIGATION_MINIMUM,
+    minimum: minimum,
+  };
 };
