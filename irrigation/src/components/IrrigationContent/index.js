@@ -7,7 +7,7 @@ import { Button, Col, Form, Row } from "antd";
 import ConfigModalContainer from "../../containers/ConfigModalContainer";
 import IrrigationSwitchContainer from "../../containers/IrrigationSwitchContainer";
 import WaterVolumeLegendContainer from "../../containers/WaterVolumeLegendContainer";
-// import PrecipitationProbaContainer from "../../containers/PrecipitationProbaContainer";
+import PrecipitationProbaContainer from "../../containers/PrecipitationProbaContainer";
 
 import IrrigationLines from "../IrrigationLines";
 // import RealPrecipitation from "../RealPrecipitation";
@@ -44,9 +44,9 @@ const IrrigationContent = (props) => {
             <Col span={8}>
               <IrrigationSwitchContainer />
             </Col>
-            {/* <Col span={8}>
+            <Col span={8}>
               <PrecipitationProbaContainer />
-            </Col> */}
+            </Col>
           </Row>
         </>
       )}

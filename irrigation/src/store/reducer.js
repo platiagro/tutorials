@@ -12,7 +12,9 @@ const initialState = {
   sensorData: Array.from(Array(sprinklers.length), () => new Array(0)),
   predictionData: Array.from(Array(sprinklers.length), () => new Array(0)),
 
-  precipitationData: [0.0, 0.0, 0.0, 0.0],
+  precipitationData: [null, null, null, null],
+  insolationData: [null, null, null, null],
+  humidityData: [null, null, null, null],
 
   irrigationMinimum: 5,
 
@@ -75,11 +77,19 @@ const reducer = (state = initialState, action = undefined) => {
       const precipitationData = state.precipitationData.map((data, i) =>
         (i === microclimateSensorIndex) ? action.data.Precipitacao : data
       );
+      const insolationData = state.insolationData.map((data, i) =>
+        (i === microclimateSensorIndex) ? action.data.Insolacao : data
+      );
+      const humidityData = state.humidityData.map((data, i) =>
+        (i === microclimateSensorIndex) ? action.data.UmidadeAr : data
+      );
       const precipitationProba = action.data.ProbabilidadePrecipitacao;
       return {
         ...state,
         sensorData: sensorData,
         precipitationData: precipitationData,
+        insolationData: insolationData,
+        humidityData: humidityData,
         precipitationProba: precipitationProba,
       };
 

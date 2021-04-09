@@ -7,6 +7,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     name: ownProps.name,
     precipitationData: state.precipitationData,
+    insolationData: state.insolationData,
+    humidityData: state.humidityData,
   };
 };
 
@@ -18,12 +20,17 @@ const nameToIndex = {
 };
 
 const MicroclimateSensorContainer = (props) => {
-  const { name, precipitationData } = props;
+  const { name, precipitationData, insolationData, humidityData } = props;
 
   const index = nameToIndex[name];
 
   return (
-    <MicroclimateSensor name={name} value={precipitationData[index]} />
+    <MicroclimateSensor
+      name={name}
+      precipitation={precipitationData[index]}
+      insolation={insolationData[index]}
+      humidity={humidityData[index]}
+    />
   );
 };
 

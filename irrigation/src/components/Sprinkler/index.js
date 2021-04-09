@@ -7,6 +7,8 @@ import logoIrrigacao2 from "../../assets/logoIrrigacao2.png";
 import logoIrrigacao3 from "../../assets/logoIrrigacao3.png";
 import logoIrrigacao4 from "../../assets/logoIrrigacao4.png";
 
+import { Tooltip } from "antd";
+
 const Sprinkler = (props) => {
   const { volume, irrigationMinimum } = props;
 
@@ -22,19 +24,27 @@ const Sprinkler = (props) => {
     imageSrc = logoIrrigacao3;
   }
 
+  const volumeFormatted = volume.toFixed(2).replace(".", ",");
+
   return (
-    <div style={{display: "flex", flexDirection: "column"}}>
-      <img
-        src={imageSrc}
-        alt="desenho de um irrigador (sprinkler)"
-        style={{alignSelf: "center", height: "40px", width: "32px"}}
-      />
-      {volume !== 0 ? (
-        <strong style={{alignSelf: "center"}}>{volume.toFixed(2).replace(".", ",")}L</strong>
-      ) : (
-        <strong>&nbsp;</strong>
-      )}
-    </div>
+    <Tooltip title={(
+      <>
+        Irrigador<br/>vazão: {volumeFormatted}L
+      </>
+      )}>
+      <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+        <img
+          src={imageSrc}
+          alt="desenho de um irrigador (sprinkler)"
+          style={{height: "40px", width: "32px"}}
+        />
+        {volume !== 0 ? (
+          <strong>{volumeFormatted}L</strong>
+        ) : (
+          <strong>&nbsp;</strong>
+        )}
+      </div>
+    </Tooltip>
   );
 };
 

@@ -30,7 +30,11 @@ const connect = async (
     console.log(`Message from ${sprinkler} (sprinkler)`);
     onModelMessage(dispatch, sprinklerMessage, sprinkler);
 
-    i++;
+    if (i < data.length) {
+      i++;
+    } else {
+      i = 0;
+    }
   }, 2000);
 };
 

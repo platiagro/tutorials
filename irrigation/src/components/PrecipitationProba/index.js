@@ -12,13 +12,13 @@ const PrecipitationProba = (props) => {
     <>
       <Row>
         <Col>
-          <Text strong>Probabilidade de precipitação</Text>
+          <Text strong>Previsão do tempo</Text>
         </Col>
       </Row>
       <Row>
         <Col>
-        <Button shape="circle" className="score">
-          {value}
+        <Button>
+          {value * 100}% de chance de precipitação
         </Button>
         </Col>
       </Row>
