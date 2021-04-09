@@ -15,19 +15,19 @@ const MicroclimateSensor = (props) => {
     <Tooltip title={(
       <>
         Sensor de microclima
-        {precipitation && (
+        {precipitation != null && (
           <>
             <br/>
-            precipitação: {precipitationFormatted}L
+            precipitação: {precipitationFormatted}
           </>
         )}
-        {insolation && (
+        {insolation != null && (
           <>
             <br/>
             insolação: {insolation}
           </>
         )}
-        {humidity && (
+        {humidity != null && (
           <>
             <br/>
             umidade do ar: {humidity}
