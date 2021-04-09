@@ -31,7 +31,15 @@ const IrrigationContent = (props) => {
           </Form>
           <Row gutter={16}>
             <Col span={24}>
-              <IrrigationLines />
+              <div className="white-box no-padding" style={{marginTop: "40px"}}>
+                <div className="white-box-header">
+                  Linhas de irrigação
+                </div>
+
+                <div className="white-box-content">
+                  <IrrigationLines />
+                </div>
+              </div>
             </Col>
             {/* <Col span={8}>
               <RealPrecipitation />
@@ -39,13 +47,37 @@ const IrrigationContent = (props) => {
           </Row>
           <Row gutter={16}>
             <Col span={8}>
-              <WaterVolumeLegendContainer />
+              <div className="white-box no-padding" style={{marginTop: "40px", height: 200}}>
+                <div className="white-box-header">
+                  Legenda | <span className="blueish">Volume de água</span>
+                </div>
+
+                <div className="white-box-content">
+                  <WaterVolumeLegendContainer />
+                </div>
+              </div>
             </Col>
             <Col span={8}>
-              <IrrigationSwitchContainer />
+              <div className="white-box no-padding" style={{marginTop: "40px", height: 200}}>
+                <div className="white-box-header">
+                  Quantidade mínima para acionar o regador
+                </div>
+
+                <div className="white-box-content">
+                  <IrrigationSwitchContainer />
+                </div>
+              </div>
             </Col>
             <Col span={8}>
-              <PrecipitationProbaContainer />
+              <div className="white-box no-padding" style={{marginTop: "40px", height: 200}}>
+                <div className="white-box-header">
+                  Previsão do tempo
+                </div>
+
+                <div className="white-box-content">
+                  <PrecipitationProbaContainer />
+                </div>
+              </div>
             </Col>
           </Row>
         </>

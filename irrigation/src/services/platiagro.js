@@ -21,13 +21,13 @@ const connect = async (
     const sensorMessage = { attrs: d };
     const sprinkler = i % 18;
 
-    console.log(`Message from ${sprinkler} (sensor)`);
+    console.log(`Message from ${sprinkler} (sensor); ${i} of ${data.length}`);
     onSensorMessage(dispatch, sensorMessage, sprinkler);
 
     const predictions = await getPredictions(url, d);
     const sprinklerMessage = { attrs: predictions };
 
-    console.log(`Message from ${sprinkler} (sprinkler)`);
+    console.log(`Message from ${sprinkler} (sprinkler); ${i} of ${data.length}`);
     onModelMessage(dispatch, sprinklerMessage, sprinkler);
 
     if (i < data.length) {

@@ -1,9 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Slider, Typography } from "antd";
-
-const { Text } = Typography;
+import { Slider } from "antd";
 
 const marks = {
   0: {
@@ -50,7 +48,6 @@ const IrrigationSwitch = (props) => {
 
   return (
     <>
-      <Text strong>Quantidade mínima para acionar o regador</Text>
       <br/>
       <Slider
         value={irrigationMinimum}

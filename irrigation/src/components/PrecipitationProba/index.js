@@ -2,19 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./style.scss";
 
-import { Button, Col, Row, Typography } from "antd";
-
-const { Text } = Typography;
+import { Button, Col, Row } from "antd";
 
 const PrecipitationProba = (props) => {
   const { value } = props;
   return (
     <>
-      <Row>
-        <Col>
-          <Text strong>Previsão do tempo</Text>
-        </Col>
-      </Row>
       <Row>
         <Col>
         <Button>

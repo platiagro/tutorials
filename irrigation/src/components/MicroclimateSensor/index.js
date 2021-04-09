@@ -39,11 +39,8 @@ const MicroclimateSensor = (props) => {
         <img
           src={microclimateSensor}
           alt="Desenho de um sensor de microclima"
-          style={{height: "96px", width: "96px"}}
+          style={{height: "60px", width: "32px"}}
         />
-        {precipitation && (
-          <strong>{precipitationFormatted}L</strong>
-        )}
       </div>
     </Tooltip>
   );
