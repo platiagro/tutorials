@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "https://platiagro.github.io/tutorials/irrigation/static/css/main.38547c9c.chunk.css",
-    "main.js": "https://platiagro.github.io/tutorials/irrigation/static/js/main.31dfef4a.chunk.js",
-    "main.js.map": "https://platiagro.github.io/tutorials/irrigation/static/js/main.31dfef4a.chunk.js.map",
+    "main.css": "https://platiagro.github.io/tutorials/irrigation/static/css/main.15b789b0.chunk.css",
+    "main.js": "https://platiagro.github.io/tutorials/irrigation/static/js/main.7f7ce231.chunk.js",
+    "main.js.map": "https://platiagro.github.io/tutorials/irrigation/static/js/main.7f7ce231.chunk.js.map",
     "runtime-main.js": "https://platiagro.github.io/tutorials/irrigation/static/js/runtime-main.70f7f565.js",
     "runtime-main.js.map": "https://platiagro.github.io/tutorials/irrigation/static/js/runtime-main.70f7f565.js.map",
     "static/css/2.42ec2a3e.chunk.css": "https://platiagro.github.io/tutorials/irrigation/static/css/2.42ec2a3e.chunk.css",
     "static/js/2.eb521a98.chunk.js": "https://platiagro.github.io/tutorials/irrigation/static/js/2.eb521a98.chunk.js",
     "static/js/2.eb521a98.chunk.js.map": "https://platiagro.github.io/tutorials/irrigation/static/js/2.eb521a98.chunk.js.map",
     "index.html": "https://platiagro.github.io/tutorials/irrigation/index.html",
-    "precache-manifest.8c221dc618dbdc5d25cf4f293e0b7a92.js": "https://platiagro.github.io/tutorials/irrigation/precache-manifest.8c221dc618dbdc5d25cf4f293e0b7a92.js",
+    "precache-manifest.77da016b784a9609c3a473a9042e4f54.js": "https://platiagro.github.io/tutorials/irrigation/precache-manifest.77da016b784a9609c3a473a9042e4f54.js",
     "service-worker.js": "https://platiagro.github.io/tutorials/irrigation/service-worker.js",
     "static/css/2.42ec2a3e.chunk.css.map": "https://platiagro.github.io/tutorials/irrigation/static/css/2.42ec2a3e.chunk.css.map",
-    "static/css/main.38547c9c.chunk.css.map": "https://platiagro.github.io/tutorials/irrigation/static/css/main.38547c9c.chunk.css.map",
+    "static/css/main.15b789b0.chunk.css.map": "https://platiagro.github.io/tutorials/irrigation/static/css/main.15b789b0.chunk.css.map",
     "static/js/2.eb521a98.chunk.js.LICENSE.txt": "https://platiagro.github.io/tutorials/irrigation/static/js/2.eb521a98.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.70f7f565.js",
     "static/css/2.42ec2a3e.chunk.css",
     "static/js/2.eb521a98.chunk.js",
-    "static/css/main.38547c9c.chunk.css",
-    "static/js/main.31dfef4a.chunk.js"
+    "static/css/main.15b789b0.chunk.css",
+    "static/js/main.7f7ce231.chunk.js"
   ]
 }
