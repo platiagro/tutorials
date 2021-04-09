@@ -39,7 +39,7 @@ const MicroclimateSensor = (props) => {
         <img
           src={microclimateSensor}
           alt="Desenho de um sensor de microclima"
-          style={{height: "60px", width: "32px"}}
+          style={{height: "75px", width: "75px"}}
         />
       </div>
     </Tooltip>
