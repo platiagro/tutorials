@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://platiagro.github.io/tutorials/machine-failure/precache-manifest.d2c2885932b654b1c9179a76101a7157.js"
+  "https://platiagro.github.io/tutorials/machine-failure/precache-manifest.dcb53edf698c81d3a8fe9c937233c72c.js"
 );
 
 self.addEventListener('message', (event) => {
