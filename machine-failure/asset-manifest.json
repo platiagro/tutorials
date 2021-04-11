@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://platiagro.github.io/tutorials/machine-failure/static/css/main.a5868bd7.chunk.css",
+    "main.css": "https://platiagro.github.io/tutorials/machine-failure/static/css/main.01284c78.chunk.css",
     "main.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/main.0e9efc3e.chunk.js",
     "main.js.map": "https://platiagro.github.io/tutorials/machine-failure/static/js/main.0e9efc3e.chunk.js.map",
     "runtime-main.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/runtime-main.adaf232b.js",
@@ -9,17 +9,17 @@
     "static/js/2.516c047a.chunk.js": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.516c047a.chunk.js",
     "static/js/2.516c047a.chunk.js.map": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.516c047a.chunk.js.map",
     "index.html": "https://platiagro.github.io/tutorials/machine-failure/index.html",
-    "precache-manifest.831ed59045963490adc4373b7a56dea5.js": "https://platiagro.github.io/tutorials/machine-failure/precache-manifest.831ed59045963490adc4373b7a56dea5.js",
+    "precache-manifest.d2c2885932b654b1c9179a76101a7157.js": "https://platiagro.github.io/tutorials/machine-failure/precache-manifest.d2c2885932b654b1c9179a76101a7157.js",
     "service-worker.js": "https://platiagro.github.io/tutorials/machine-failure/service-worker.js",
     "static/css/2.42ec2a3e.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure/static/css/2.42ec2a3e.chunk.css.map",
-    "static/css/main.a5868bd7.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure/static/css/main.a5868bd7.chunk.css.map",
+    "static/css/main.01284c78.chunk.css.map": "https://platiagro.github.io/tutorials/machine-failure/static/css/main.01284c78.chunk.css.map",
     "static/js/2.516c047a.chunk.js.LICENSE.txt": "https://platiagro.github.io/tutorials/machine-failure/static/js/2.516c047a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.adaf232b.js",
     "static/css/2.42ec2a3e.chunk.css",
     "static/js/2.516c047a.chunk.js",
-    "static/css/main.a5868bd7.chunk.css",
+    "static/css/main.01284c78.chunk.css",
     "static/js/main.0e9efc3e.chunk.js"
   ]
 }
