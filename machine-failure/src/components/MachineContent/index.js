@@ -43,7 +43,7 @@ const MachineContent = (props) => {
           </Form>
           <Row gutter={16}>
             <Col span={6}>
-              <div className="white-box no-padding">
+              <div className="white-box no-padding" style={{marginTop: "40px"}}>
                 <div className="white-box-header">
                   Máquina | <span className="blue">{machine}</span>
                 </div>
@@ -61,7 +61,7 @@ const MachineContent = (props) => {
               </div>
             </Col>
             <Col span={18}>
-              <div className="white-box no-padding">
+              <div className="white-box no-padding" style={{marginTop: "40px"}}>
                 <div className="white-box-header">
                   Medidas de vibração | <span className="blue">{machine}</span>
                 </div>
