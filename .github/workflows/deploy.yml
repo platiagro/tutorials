@@ -131,6 +131,8 @@ jobs:
         mv automl-regressor dist/codelabs/
         mv cv-mtcnn-face-detection dist/codelabs/
         mv cv-ocr dist/codelabs/
+        mv cv-autokeras-autocv dist/codelabs/
+        mv cv-fast-autocv dist/codelabs/
         mv default-yolo dist/codelabs/
         mv descriptive-analysis dist/codelabs/
         mv feature-tools dist/codelabs/
