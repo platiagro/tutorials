@@ -68,6 +68,8 @@ jobs:
         claat export codelabs/platiagro-components/automl-regressor.md
         claat export codelabs/platiagro-components/cv-mtcnn-face-detection.md
         claat export codelabs/platiagro-components/cv-ocr.md
+        claat export codelabs/platiagro-components/cv-autokeras-autocv.md
+        claat export codelabs/platiagro-components/cv-fast-autocv.md
         claat export codelabs/platiagro-components/default-yolo.md
         claat export codelabs/platiagro-components/descriptive-analysis.md
         claat export codelabs/platiagro-components/feature-tools.md
@@ -131,6 +133,8 @@ jobs:
         mv automl-regressor dist/codelabs/
         mv cv-mtcnn-face-detection dist/codelabs/
         mv cv-ocr dist/codelabs/
+        mv cv-autokeras-autocv dist/codelabs/
+        mv cv-fast-autocv dist/codelabs/
         mv default-yolo dist/codelabs/
         mv descriptive-analysis dist/codelabs/
         mv feature-tools dist/codelabs/
