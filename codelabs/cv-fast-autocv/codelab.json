@@ -4,11 +4,11 @@
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2021-05-07T12:35:09Z",
-  "id": "mlp-classifier",
+  "id": "cv-fast-autocv",
   "duration": 0,
-  "title": "Classificador MLP",
-  "summary": "Classificador MLP",
-  "source": "codelabs/platiagro-components/mlp-classifier.md",
+  "title": "Fast Auto Computer Vision",
+  "summary": "Fast Auto Computer Vision",
+  "source": "codelabs/platiagro-components/cv-fast-autocv.md",
   "theme": "",
   "status": [
     "published"
@@ -20,5 +20,5 @@
     "web"
   ],
   "feedback": "https://github.com/platiagro/tutorials",
-  "url": "mlp-classifier"
+  "url": "cv-fast-autocv"
 }

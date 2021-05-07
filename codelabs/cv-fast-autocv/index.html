@@ -1,0 +1,81 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Fast Auto Computer Vision</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="cv-fast-autocv"
+                  title="Fast Auto Computer Vision"
+                  environment="web"
+                  feedback-link="https://github.com/platiagro/tutorials">
+    
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Este componente utiliza a biblioteca <a href="https://pytorch.org/" target="_blank">Pytorch</a> para fazer Fine-Tuning das arquiteturas ResNet18, ResNet50 e VGG16 para a tarefa de classificação de imagens utilizando quatro conjuntos de políticas genéricas pré-definidas pelo artigo <a href="https://arxiv.org/pdf/1905.00397.pdf" target="_blank">Fast AutoAugment</a> nos conjuntos de dados <a href="https://image-net.org/" target="_blank">ImageNet</a>, <a href="https://www.cs.toronto.edu/~kriz/cifar.html" target="_blank">CIFAR-10</a> e <a href="http://ufldl.stanford.edu/housenumbers/" target="_blank">SVHN</a>.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente um arquivo .zip contendo as pastas &#34;train&#34;, &#34;test&#34; e &#34;val&#34;. Estas três pastas devem conter uma pasta por classe existente no conjunto de dados com as imagens da respectiva classe que serão utilizadas para treino, teste e validação.</p>
+<p>Além disso, deve-se fornecer na raiz do arquivo .zip um arquivo dataset.csv, contendo as colunas &#34;image_path&#34;, &#34;target&#34; e &#34;subset&#34;, onde:</p>
+<ul>
+<li>image_path: caminho para o arquivo de imagem.</li>
+<li>target: resposta esperada da predição, caso exista.</li>
+<li>subset: conjunto ao qual a amostra faz parte, pode ser &#34;train&#34;, &#34;test&#34;, e &#34;val&#34;.</li>
+</ul>
+<p>Parâmetros</p>
+<p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>arch_list</strong>: <code>string</code>, {<code>[&#34;resnet18&#34;, &#34;resnet50&#34;, &#34;vgg16&#34;]</code>}, padrão: <code>[&#34;resnet18&#34;, &#34;resnet50&#34;, &#34;vgg16&#34;]</code>. <br><em>Nome das arquiteturas que deseja utilizar na busca em forma de lista.</em></li>
+<li><strong>aug_polices</strong>: <code>string</code>, {<code>[&#34;fa_reduced_cifar10&#34;, &#34;fa_resnet50_rimagenet&#34;, &#34;fa_reduced_svhn&#34;]</code>}, padrão: <code>[&#34;fa_reduced_cifar10&#34;, &#34;fa_resnet50_rimagenet&#34;, &#34;fa_reduced_svhn&#34;]</code>.<br><em>Conjuntos de polices disponíveis para escolha.</em></li>
+<li><strong>top_predictions</strong>: <code>integer</code>, padrão: <code>1</code>.<br><em>Define quantas predições se quer ter de resposta para uma predição realizada pela rede. Valor máximo é igual ao número total de classes</em></li>
+<li><strong>batch</strong>: <code>integer</code>, padrão: <code>8</code>.<br><em>Quantas imagens serão enviadas por vez para a rede. Números altos consomem muita memória RAM.</em></li>
+<li><strong>epochs</strong>: <code>integer</code>, padrão: <code>10</code>.<br><em>Número de épocas. Esse número será utilizado para cada combinação de arquitetura e conjunto de políticas.</em></li>
+<li><strong>lr</strong>: <code>float</code>, padrão: <code>0.001</code>.<br><em>Learning rate para o treinamento.</em></li>
+<li><strong>gamma</strong>: <code>float</code>, padrão: <code>0.1</code>.<br><em> Gamma utilizado para otimização da descida do gradiente.</em></li>
+<li><strong>step_size</strong>: <code>integer</code>, padrão: <code>7</code> .<br><em>Tamanho do passo utilizado na descida do gradiente.</em></li>
+<li><strong>momentum</strong>: <code>float</code>, padrão: <code>0.1</code>.<br><em>Momento utilizado para otimização da descida do gradiente.</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário a observar se a opção de arquitetura e conjunto de políticas encontrados performam bem no conjunto de teste fornecido através da geração dos gráficos de treinamento dos modelos, da matriz de confusão do relatório de classificação.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Os retornos são o índice da classe predita, seu nome e a probabilidade associada a predição.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
