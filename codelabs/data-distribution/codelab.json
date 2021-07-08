@@ -4,11 +4,11 @@
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
   "updated": "2021-07-08T23:18:38Z",
-  "id": "automl-regressor",
+  "id": "data-distribution",
   "duration": 0,
-  "title": "Regressor AutoML",
-  "summary": "Regressor AutoML",
-  "source": "codelabs/platiagro-components/automl-regressor.md",
+  "title": "Distribuição dos Dados",
+  "summary": "Distribuição dos Dados",
+  "source": "codelabs/platiagro-components/data-distribution.md",
   "theme": "",
   "status": [
     "published"
@@ -20,5 +20,5 @@
     "web"
   ],
   "feedback": "https://github.com/platiagro/tutorials",
-  "url": "automl-regressor"
+  "url": "data-distribution"
 }
