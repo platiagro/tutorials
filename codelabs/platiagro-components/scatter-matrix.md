@@ -39,3 +39,10 @@ O retorno durante a experimentação ajuda o usuário a analisar como os atribut
 1. Scatter Matrix. <br> <em>Os gráficos gerados pelo componente representam como os dados da tabela estão relacionados entre pares de atributos, além disso, quando coloridos por um atributo alvo. Cada ponto nos gráficos representa um ponto da tabela de dados, e nos eixos horizontais e verticais seus valores, e os atributos a qual faz referência.</em>
 
 <img src="img/visualization/scatter_matrix.png" width="800">
+
+<br>
+
+**Dicas para interpretação:**
+<br><br>
+<em>Uma maneira de interpretar esses gráficos é analisar quão correlacionados dois atributos são, para isso precisamos identificar padrões. Veja no retângulo em roxo (1.), em que observamos que quanto maior é o valor do atributo ```PetalLengthCM```, também é maior o valor do atributo ```SepalLengthCM```.</em><br><br>
+<em>Além disso, selecionar um atributo para colorir os dados também nos permite entender como os dados podem se agrupar de diferentes formas de acordo com um par de atributos. Por exemplo no círculo em roxo (2.), observamos que há uma região onde todos os pontos percencem à ```Species``` (aributo alvo) Iris-setosa, já no círculo roxo (3.), há uma nuvem com mais de uma ```Species```.</em>
