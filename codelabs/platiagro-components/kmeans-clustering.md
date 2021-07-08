@@ -17,6 +17,8 @@ feedback link: https://github.com/platiagro/tutorials
 Este é um componente que treina um modelo K-Means usando [Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html). <br>
 Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado.Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.
 
+A tarefa de clusterização é ultil nos cenários onde espera-se descobrir se o dataset poderia ser agrupado em grupos com caracteristicas semelhantes. Através do gráfico de "Distribuição dos Dados de Teste" é possivel observar os grupos(ou clusters).
+
 
 ## Entrada esperada
 
@@ -54,7 +56,9 @@ As métricas de performance tem o propósito de ajudar o usuário a avaliar a pe
 
 ## Retorno esperado na experimentação
 
-1. Dados de teste<br> <em> Apresenta a distribuição dos dados de teste considerando as duas características mais relevantes para o modelo.</em>
+1. Dados de teste<br> 
+
+<em> Apresenta a distribuição dos dados de teste e as cores os dividem nos grupos encontrados. Nos eixos está quais são as combinações lineares das freatures que melhor identifica e separa os grupos. </em>
 <img src="img/clustering/clustering_data_kmeans.png" width="400">
 
 1. Tabela dos dados<br> <em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em>
