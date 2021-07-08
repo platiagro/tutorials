@@ -78,7 +78,7 @@ O retorno durante a experimentação ajuda o usuário a analisar tanto métricas
 1. Dados de teste<br> <em> Apresenta a distribuição dos dados de teste considerando as duas características mais relevantes para o modelo e o rótulo.</em>
 <img src="img/regression/regression_data.png" width="400">
 
-1. Distribuição do erro na regressão<br> <em>Apresenta a distribuição do erro na regressão como uma estimativa de densidade do kernel.</em>
+1. Distribuição do erro na regressão<br> <em>Apresenta a distribuição do erro na regressão como uma estimativa de densidade do kernel. Significa que 95% dos erros estão abaixo da linha azul continua e 70% deles se encontram dentro da faixa vermelha. No eixo "Estimativa de densidade do kernel" pode-se entender que há mais erros daquela magnetude, olhar eixo "Erro obtido", para valores maiores de estimativa de densidade.</em>
 <img src="img/regression/regression_error.png" width="400">
 
 1. Distribuição do rótulo<br> <em>Apresenta a diferença entre o resultado observado e os valores preditos.</em>
