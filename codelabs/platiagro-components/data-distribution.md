@@ -43,5 +43,5 @@ O retorno durante a experimentação ajuda o usuário a analisar como os valores
     1. Atributo 1 <br>
     <img src="img/visualization/data_distribution_01.png" width="800">
 
-    1. Atributo 2 <br>
+    2. Atributo 2 <br>
     <img src="img/visualization/data_distribution_02.png" width="800">
