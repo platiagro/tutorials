@@ -88,7 +88,7 @@ O retorno durante a experimentação ajuda o usuário a analisar tanto métricas
 1. Dados de teste<br> <em> Apresenta a distribuição dos dados de teste considerando as duas características mais relevantes para o modelo.</em>
 <img src="img/classification/classification_data.png" width="400">
 
-1. Matriz de confusão<br> <em>Apresenta a matriz de confusão. É possível obsersar relações entre os acertos e erros das cada classe. </em>
+1. Matriz de confusão<br> <em>Apresenta a matriz de confusão. Cada linha representa uma classe e cada coluna representa a classe predita pelo modelo. Assim, é possível observar relações entre os acertos e erros para cada classe. Na diagonal temos o caso em que a classe pretida acertou a classe real.</em>
 <img src="img/classification/confusion_matrix.png" width="350">
 
 1. Métricas comuns<br> <em>Apresenta métricas comuns utilizadas para avaliar modelos de classificação, como por exemplo: precision e recall.</em>
