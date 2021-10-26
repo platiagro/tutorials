@@ -17,7 +17,7 @@ feedback link: https://github.com/platiagro/tutorials
 Utilização de modelos do tipo [MarianMT](https://huggingface.co/transformers/model_doc/marian.html) para tradução.
 
 * Neste exemplo a tradução é feita do português para o francês, mas ela pode ser feita em qualquer um dos pares de idiomas disponíveis no componente.
-* As métricas computada são o [BLEU](https://en.wikipedia.org/wiki/BLEU) e o [ROUGUE](https://en.wikipedia.org/wiki/ROUGE_(metric)).
+* As métricas computadas são o [BLEU](https://en.wikipedia.org/wiki/BLEU) e o [ROUGUE](https://en.wikipedia.org/wiki/ROUGE_(metric)).
 
 
 ## Entrada esperada
@@ -46,7 +46,7 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 <em>Idioma dos dados de saída. Deve ser um idioma diferente do Idioma Fonte.</em>
 
 - **Dispositivo**: `string`, {`"cuda"`, `"cpu"`}, padrão: `"cuda"` <span style="color:red">(Obrigatório)</span>.<br>
-<em>Tipo de dispositivo para efetuar as traduções. Caso selecionado a opção `"cuda"` e ela não estiver disponível na máquinal, automaticamente será transferido para `"cpu"`.</em>
+<em>Tipo de dispositivo para efetuar as traduções. Caso selecionado a opção `"cuda"` e ela não estiver disponível na máquina, automaticamente será transferido para `"cpu"`.</em>
 
 - **Batch Size**: `integer`, padrão: `4` <span style="color:red">(Obrigatório)</span>.<br>
 <em>Tamanho dos lotes de dados para tradução.</em>
