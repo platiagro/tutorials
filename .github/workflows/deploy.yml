@@ -97,6 +97,10 @@ jobs:
         claat export codelabs/platiagro-components/isolation-forest-clustering.md
         claat export codelabs/platiagro-components/scatter-matrix.md
         claat export codelabs/platiagro-components/data-distribution.md
+        claat export codelabs/platiagro-components/translator.md
+        claat export codelabs/platiagro-components/chunker.md
+        claat export codelabs/platiagro-components/reader.md
+        claat export codelabs/platiagro-components/retriever.md
 
     - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
       run: |
@@ -164,6 +168,10 @@ jobs:
         mv isolation-forest-clustering dist/codelabs/
         mv scatter-matrix dist/codelabs/
         mv data-distribution dist/codelabs/
+        mv translator dist/codelabs/
+        mv chunker dist/codelabs/
+        mv reader dist/codelabs/
+        mv retriever dist/codelabs/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
