@@ -46,7 +46,7 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 - **Coluna de avaliação**: `string` <span>(Opcional)</span>.<br>
 <em>Esta coluna será utilizada para avaliar as respostas produzidas por cada pergunta, deve conter a indicação do contexto esperado para o Retriever. É uma coluna opcional, mas caso preenchido deve ser também preenchida uma coluna de identificação dos contextos.</em>
 
-- **Coluna de identidicação dos Contextos**: `string` <span>(Opcional)</span>.<br>
+- **Coluna de identificação dos Contextos**: `string` <span>(Opcional)</span>.<br>
 <em>Esta coluna será utilizada para identificar os contextos caso seja informado uma coluna de avaliação.</em>
 
 - **Dispositivo**: `string`, {`"cuda"`, `"cpu"`}, padrão: `"cuda"` <span style="color:red">(Obrigatório)</span>.<br>

@@ -45,7 +45,7 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 <em>Tamanho da sobreposição das janelas criadas pelo Chunker.</em>
 
 - **Replicar Dados**: `string`, {`"sim"`, `"não"`}, padrão: `"sim"` <span style="color:red">(Obrigatório)</span>.<br>
-<em>Optando por replicar os dados, para cada chunk criado a partir de um campo de texto de uma linha da tabela, todos os dados dessa linha serão replicados de acordo com a quantidade de chunks produzidos.</em>
+<em>Optando por replicar os dados, para cada chunk criado a partir de um campo de texto de uma linha da tabela, todos os dados desta linha serão replicados de acordo com a quantidade de chunks produzidos.</em>
 
 ## Retorno esperado na experimentação
 
