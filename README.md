@@ -5,7 +5,7 @@
 ## Adding a New Tutorial
 
 Create a New Markdown File at `codelabs/` (eg. my-new-tutorial.md).<br>
-Tutorials are organized in 3 folders/categories: `platiagro-introduction`, `platiagro-tasks`, and `machine-learning`.
+Tutorials are organized in 3 folders/categories: `platiagro-getting-started`, `platiagro-tasks`, and `machine-learning`.
 
 Every markdown file starts with the details of the tutorial:
 
@@ -36,3 +36,10 @@ You can learn more about codelab formatting at their docs: https://github.com/go
 
 The tutorials website (https://platiagro.github.io/tutorials/) was copied from this repository https://github.com/googlecodelabs/tools/tree/main/site and customized for PlatIAgro.<br>
 Every commit to the branch `master` triggers a CI/CD pipeline which updates the docs.
+
+## Tutorials Applications (Dashboards)
+
+- Machine Failure: https://platiagro.github.io/tutorials/machine-failure/
+- Machine Failure with dojot: https://platiagro.github.io/tutorials/machine-failure-dojot/
+- Fruits prices :https://platiagro.github.io/tutorials/fruit-prices/
+- Irrigation: https://platiagro.github.io/tutorials/irrigation/
