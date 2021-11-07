@@ -25,6 +25,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Code review tips
+      uses: machine-learning-apps/pr-comment@master
+      if: ${{ github.event_name == 'pull_request' && github.event.action == 'opened' }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        path: CODE-REVIEW.md
+
     - name: Download claat and Add to Path
       run: |
         mkdir -p $GITHUB_WORKSPACE/bin
@@ -34,17 +42,10 @@ jobs:
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
-    - name: Build - Codelabs Site 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
-      run: |
-        yarn
-        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials
-
     - name: Build - Codelabs 🔧
       run: |
-        rm dist/codelabs
         mkdir -p dist/codelabs
-        cd dist/codelabs
-        find ../../codelabs | grep .md$ | xargs -L1 claat export
+        find codelabs | grep .md$ | xargs -L1 claat export
 
     - name: Build - Machine Failure WebApp  🔧
       run: |
@@ -81,6 +82,11 @@ jobs:
         mv build ../dist/irrigation
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/irrigation/
+
+    - name: Build - Codelabs Site 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
+      run: |
+        yarn
+        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
