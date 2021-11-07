@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-07T16:15:14Z",
+  "id": "kmeans-clustering",
+  "duration": 0,
+  "title": "Clusterização Kmeans",
+  "summary": "Clusterização Kmeans",
+  "source": "../../codelabs/platiagro-tasks/kmeans-clustering.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "platiagro-tasks",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "kmeans-clustering"
+}

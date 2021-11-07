@@ -1,0 +1,82 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Pré Seleção</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="pre-selection"
+                  title="Pré Seleção"
+                  environment="web"
+                  feedback-link="https://github.com/platiagro/tutorials">
+    
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Este componente remove atributos de acordo com os seguintes critérios:</p>
+<ul>
+<li>Variabilidade próximo de 0;<br></li>
+<li>Alta correlação entre si;<br></li>
+<li>Lida com NaN e valores faltantes.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos, categóricos ou de data. A tabela deve ser de um dos seguintes tipos: Comma-separated values (.csv) ou Excel (.xls, .xlsx).</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>Atributo alvo</strong>: <code>feature</code>.<br><em>Esse valor será utilizado para garantir que o alvo não seja removido.</em></li>
+<li><strong>Limiar de correlação</strong>: <code>float</code>, padrão: <code>0.9</code>.<br><em>Atributos com correlação maior que o limiar serão removidos.</em></li>
+<li><strong>Limiar de threshold</strong>: <code>float</code>, padrão: <code>0.0</code>.<br> Atributos com variância menor que o limiar serão removidos.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:</p>
+<ol type="1">
+<li>Tabela dos dados<br> <em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em><img style="width: 800.00px" src="img/13ed870aa5e3607e.png"></li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Dados com as colunas filtradas de acordo com variabilidade, alta correlação, e valores faltantes.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

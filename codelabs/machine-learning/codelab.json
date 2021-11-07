@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-07T16:15:14Z",
+  "id": "machine-learning",
+  "duration": 0,
+  "title": "Introdução à Aprendizado de Máquina",
+  "summary": "Introdução à Aprendizado de Máquina",
+  "source": "../../codelabs/machine-learning/machine-learning.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "machine-learning",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "machine-learning"
+}

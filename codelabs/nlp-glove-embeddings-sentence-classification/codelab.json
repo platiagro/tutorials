@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-07T16:15:14Z",
+  "id": "nlp-glove-embeddings-sentence-classification",
+  "duration": 0,
+  "title": "Classificador de sentenças utilizando Glove Embeddings Bags",
+  "summary": "Classificador de sentenças utilizando Glove Embeddings Bags",
+  "source": "../../codelabs/platiagro-tasks/nlp-glove-embeddings-sentence-classification.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "platiagro-tasks",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "nlp-glove-embeddings-sentence-classification"
+}

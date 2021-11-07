@@ -1,0 +1,102 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>AutoKeras Auto Computer Vision</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="cv-autokeras-autocv"
+                  title="AutoKeras Auto Computer Vision"
+                  environment="web"
+                  feedback-link="https://github.com/platiagro/tutorials">
+    
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Este componente utiliza a biblioteca <a href="https://autokeras.com/" target="_blank">AutoKeras</a></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente um arquivo .zip contendo as pastas &#34;train&#34;, &#34;test&#34; e &#34;val&#34;. Estas três pastas devem conter uma pasta por classe existente no conjunto de dados com as imagens da respectiva classe que serão utilizadas para treino, teste e validação.</p>
+<p>Além disso, deve-se fornecer na raiz do arquivo .zip um arquivo dataset.csv, contendo as colunas &#34;image_path&#34;, &#34;target&#34; e &#34;subset&#34;, onde:</p>
+<ul>
+<li>image_path: caminho para o arquivo de imagem.</li>
+<li>target: resposta esperada da predição, caso exista.</li>
+<li>subset: conjunto ao qual a amostra faz parte, pode ser &#34;train&#34;, &#34;test&#34;, e &#34;val&#34;.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>num_epochs</strong>: <code>integer</code>, padrão: <code>16</code>.<br><em>Número de épocas para executar em cada tentativa de configuração. Deve ser maior ou igual a 2.</em></li>
+<li><strong>trials</strong>: <code>integer</code>, padrão: <code>5</code>.<br><em>Quantidade de tentativas de configuração a ser testada.</em></li>
+<li><strong>batch_size</strong>: <code>integer</code>, padrão: <code>8</code>.<br><em>Quantas imagens serão enviadas por vez para a rede. Números altos consomem muita memória RAM</em></li>
+<li><strong>target_size</strong>: <code>integer</code>, padrão: <code>256</code>.<br><em>Tamanho da imagem de entrada das redes. A imagem será quadrada.</em></li>
+<li><strong>brightness_range</strong>: <code>float</code>, padrão: <code>None</code>.<br><em>Faixa para escolher o valor da mudança de brilho.</em></li>
+<li><strong>channel_shift_range</strong>: <code>float</code>, padrão: <code>0.0</code>.<br><em>Faixa para mudanças aleatórias dos canais.</em></li>
+<li><strong>cval</strong>: <code>float</code>, padrão: <code>0.0</code>.<br><em>Valor usado para pontos fora dos limites quando fill_mode = &#34;constant&#34;</em></li>
+<li><strong>data_format</strong>: <code>string</code>, {<code>["channels_first", "channels_last"]</code>}, padrão: <code>channels_last</code>.<br><em>Formato dos dados da imagem. </em></li>
+<li><strong>dtype</strong>: <code>string</code>, padrão: <code>float32</code>.<br><em>Tipo para usar nos arrays gerados.</em></li>
+<li><strong>featurewise_center</strong>: <code>bool</code>, padrão: <code>False</code>.<br><em>Faz a média igual a zero em todo o dataset em termos de features.</em></li>
+<li><strong>featurewise_std_normalization</strong>: <code>bool</code>, padrão: <code>False</code>.<br><em>Divide entradas pelo desvio padrão (std) do dataset em termos de features.</em></li>
+<li><strong>fill_mode</strong>: <code>string</code>, {<code>["constant", "nearest", "reflect", "wrap"]</code>}, padrão: <code>nearest</code>.<br><em>Algoritmo usado para preencher regiões caso necessário.</em></li>
+<li><strong>horizontal_flip</strong>: <code>bool</code>, padrão: <code>False</code>.<br><em>Aumentação] Aplica inversão horizontal nas entragas aleatoriamente.</em></li>
+<li><strong>preprocessing_function</strong>: <code>string</code>, padrão: <code>None</code>.<br><em>Funções que serão aplicadas em cada entrada. A função irá rodar após a imagem ser aumentada e redimensionada.</em></li>
+<li><strong>rescale</strong>: <code>float</code>, padrão: <code>1./255</code>.<br><em>Fator de re-escala. Se None ou 0, nenhuma re-escala será aplicada, caso contrário cada data será multiplicado pelo valor especificado.</em></li>
+<li><strong>rotation_range</strong>: <code>integer</code>, padrão: <code>0</code>.<br><em>Faixa de graus para rotações aletórias.</em></li>
+<li><strong>samplewise_center</strong>: <code>bool</code>, padrão: <code>False</code>.<br><em>Define cada média de amostra para 0.</em></li>
+<li><strong>samplewise_std_normalization</strong>: <code>bool</code>, padrão: <code>False</code>.<br><em>Divide cada entrada por seu desvio padrão.</em></li>
+<li><strong>shear_range</strong>: <code>float</code>, padrão: <code>0.0</code>.<br><em>Intensidade de corte (Ângulo de corte na direção anti-horária em graus).</em></li>
+<li><strong>vertical_flip</strong>: <code>bool</code>, padrão: <code>False</code>.<br><em>Aplica inversão vertical nas entragas aleatoriamente.</em></li>
+<li><strong>zca_whitening</strong>: <code>bool</code>, padrão: <code>False</code>.<br><em>Aplica clareamento ZCA.</em></li>
+<li><strong>zca_epsilon</strong>: <code>float</code>, padrão: <code>1e-6</code>.<br><em>Valor de epsilon para clareamento ZCA</em></li>
+<li><strong>zoom_range</strong>: <code>float</code>, padrão: <code>0.0</code>.<br><em>Faixa para zoom aleatório. Float ou intervalo do tipo [menor, maior].</em></li>
+<li><strong>height_shift_range</strong>: <code>float</code>, padrão: <code>0.0</code>.<br><em>Float, 1-D array-like ou integer.</em></li>
+<li><strong>width_shift_range</strong>: <code>float</code>, padrão: <code>0.0</code>.<br><em>Float, 1-D array-like ou integer</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário observar se o melhor modelo encontrado pelo AutoKeras desempenhou bem através do relatório de classificação e da matriz de confusão obtidos usando o conjunto de teste.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Os retornos são o nome da classe predita e a probabilidade associada a predição.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

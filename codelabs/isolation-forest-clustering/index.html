@@ -1,0 +1,68 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Detecção de Anomalias por Isolation Forest</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="isolation-forest-clustering"
+                  title="Detecção de Anomalias por Isolation Forest"
+                  environment="web"
+                  feedback-link="https://github.com/platiagro/tutorials">
+    
+      <google-codelab-step label="Função do componente" duration="0">
+        <p> Este é um componente que treina um modelo Isolation Forest usando <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html" target="_blank">Scikit-learn</a>. <br> Scikit-learn é uma biblioteca open source de machine learning que suporta apredizado supervisionado e não supervisionado. Também provê várias ferramentas para ajustes de modelos, pré-processamento de dados, seleção e avaliação de modelos, além de outras funcionalidades.   </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p> Espera-se como entrada para o componente uma tabela com colunas que representam valores numéricos, categóricos ou de data. Os valores de data devem ser removidos ou selecionados para codificação ordinal para que o modelo consiga processá-los. A tabela deve ser de um dos seguintes tipos: Comma-separated values (.csv) ou Excel (.xls, .xlsx).   </p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p> A seguir são listados todos os parâmetros utilizados pelo componente:  </p>
+<ul>
+<li><strong>Quantidade máxima de características</strong>: <code>float</code>, padrão: <code>"auto"</code>.<br><em>O número de características máximo a serem retiradas dos dados para treinar cada estimador de base.   </em></li>
+<li><strong>Contaminação</strong>: <code>float</code>, padrão: <code>0.1</code>.<br><em>A quantidade de contaminação do conjunto de dados, ou seja, a proporção de outliers no conjunto de dados.   </em></li>
+<li><strong>Quantidade máxima de amostras</strong>: <code>float</code>, padrão: <code>1.0</code>.<br><em>O número de amostras máximo a serem retiradas dos dados para treinar cada estimador de base.   </em></li>
+<li><strong>Gráficos a serem ignorados</strong>: <code>string</code>, {<code>"Dados de Teste"</code>, <code>"Tabelas de Dados"</code>}.<br><em>Considerando a quantidade de gráficos que são retornados ao executar a experimentação, o usuário pode selecionar quais ele não deseja visualizar.   </em>  Métricas de performance    As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.  </li>
+</ul>
+<ol type="1">
+<li>Pontuação de anomalia: considerando que o modelo faz a predição da anomalia, ela mesma é utilizada para avaliar o modelo.     Retorno esperado na experimentação    As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.  </li>
+<li>Dados de teste<br> <em> Apresenta a distribuição dos dados de teste considerando as duas características mais relevantes para o modelo.</em><img style="width: 400.00px" src="img/28645c893d7a01b9.png">  </li>
+<li>Tabela dos dados<br> <em>Apresenta visualização dos dados após o treinamento do modelo com a variável resposta e dados sobre o modelo.</em><img style="width: 800.00px" src="img/13ed870aa5e3607e.png">     Retorno esperado na implantação    Tabela com os valores preditos de anomalia.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

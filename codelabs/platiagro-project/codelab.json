@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-07T16:15:14Z",
+  "id": "platiagro-project",
+  "duration": 17,
+  "title": "Meus Projetos",
+  "summary": "Meus Projetos",
+  "source": "../../codelabs/platiagro-introduction/platiagro-project.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "platiagro-introduction",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/platiagro",
+  "url": "platiagro-project"
+}
