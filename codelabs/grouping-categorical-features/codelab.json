@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-07T18:31:17Z",
+  "id": "grouping-categorical-features",
+  "duration": 0,
+  "title": "Agrupamento de Features Categóricas",
+  "summary": "Agrupamento de Features Categóricas",
+  "source": "../codelabs/platiagro-tasks/grouping-categorical-features.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "platiagro-tasks",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "grouping-categorical-features"
+}

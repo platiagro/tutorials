@@ -1,0 +1,109 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Meus Projetos</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="platiagro-project"
+                  title="Meus Projetos"
+                  environment="web"
+                  feedback-link="https://github.com/platiagro/platiagro">
+    
+      <google-codelab-step label="Introdução" duration="2">
+        <p class="image-container"><img alt="Página Meus Projetos" src="img/16a5e589caf9079b.png"></p>
+<p><strong>Descrição:</strong> Na página &#34;Meus Projetos&#34;, será apresentado uma lista com todos os projetos existentes do usuário. As informações dos projetos estarão divididas  em cinco colunas: Nome do Projeto, Descrição, Tags, Última modificação e Ação. Caso o usuário não possua nenhum projeto, a página será apresentada em branco.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Iniciando um Projeto" duration="5">
+        <p>Para iniciar um novo projeto, o usuário deverá clicar no botão &#34;Novo Projeto&#34;.</p>
+<h2 is-upgraded>Criar Projeto</h2>
+<ul>
+<li>Para dar início a um novo projeto, o usuário deverá clicar no botão &#34;Novo Projeto&#34;, ou o botão &#34;+ Novo&#34;, localizado acima da lista de projetos;</li>
+</ul>
+<p class="image-container"><img alt="Página Meus Projetos" src="img/957f09650b366bd1.png"></p>
+<ul>
+<li>Ao clicar no botão, será aberto um modal onde o usuário poderá informar o nome e a descrição do Projeto;</li>
+<li>O campo Nome do Projeto, já deve vir preenchido e destacado com: Novo projeto;</li>
+<li>Quando confirmar a operação clicando no botão Criar, o usuário será direcionado a página do projeto, e será exibida uma mensagem de sucesso no topo da página informando que o projeto foi criado;</li>
+<li>Quando confirmar a operação clicando na tecla Enter, o usuário será direcionado a página do projeto, e será exibida uma mensagem de sucesso no topo da página informando que o projeto foi criado, e o usuário será direcionado a página do Projeto, onde irá escolher se deseja iniciar uma &#34;Experimentação&#34; ou uma &#34;Pré-Implantação&#34;;</li>
+<li>Quando o usuário clicar no botão Cancelar, o modal deve ser resetado e fechado;</li>
+<li>Quando o usuário clicar no botão Fechar, o modal deve ser resetado e fechado;</li>
+<li>Quando o usuário clicar na tecla ESC, o modal deve ser resetado e fechado;</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Alterar nome e descrição do Projeto" duration="5">
+        <p>Alterar nome e descrição do projeto. A descrição é um campo opcional.</p>
+<h2 is-upgraded>Alterar nome do Projeto</h2>
+<ul>
+<li>Após criar o projeto, o usuário será direcionado a página do  projeto criado;</li>
+<li>Quando selecionar o botão Editar - ícone lápis - ao lado do nome do projeto, será aberto um modal, o nome do projeto estará em destaque;</li>
+<li>O usuário poderá alterar o nome e a descrição do projeto;</li>
+<li>Quando o usuário editar o nome do projeto e a descrição, e selecionar o botão Confirmar, então o modal será fechado e as alterações serão feitas;</li>
+<li>Quando o usuário editar o nome do projeto e a descrição, e clicar na tecla Enter, então o modal será fechado e as alterações serão feitas;</li>
+<li>Quando o usuário selecionar o botão Cancelar, o modal deve ser resetado e fechado, e nenhum alteração deve ser realizada;</li>
+<li>Quando o usuário selecionar o botão Fechar (X), o modal deve ser resetado e fechado, e nenhum alteração deve ser realizada;</li>
+<li>Quando o usuário clicar na tecla Esc, o modal deve ser resetado e fechado e nenhum alteração deve ser realizada;</li>
+<li>Para alterar o nome de um projeto já existente na lista de projetos, basta selecionar o projeto e executar o passo 2.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Excluir Projeto" duration="5">
+        <p>Operação &#34;Excluir&#34; na página Projeto.</p>
+<h2 is-upgraded>Excluir</h2>
+<ol type="1">
+<li>Após criar o projeto, o usuário será direcionado a página do projeto criado</li>
+<li>Ao selecionar o botão &#34;Excluir&#34; - ícone Lixeira - localizado ao lado do botão &#34;Novo Fluxo&#34;, será exibido um pop-up com a seguinte mensagem: &#34;Você tem certeza que deseja excluir esse Projeto?&#34;</li>
+<li>O usuário irá confirmar a operação, e o projeto será excluído.</li>
+</ol>
+<h2 is-upgraded>Excluir Projeto da lista de projetos</h2>
+<ul>
+<li>O usuário irá selecionar um projeto da lista de projetos, o qual ficará destacado</li>
+<li>Na coluna ação irá selecionar a opção &#34;Excluir&#34; A seguinte mensagem é exibida: &#34;Você tem certeza que deseja excluir esse Projeto?</li>
+<li>O usuário confirma, e o projeto será removido da lista</li>
+</ul>
+<h2 is-upgraded>Excluir N Projetos</h2>
+<ul>
+<li>O usuário irá selecionar mais de um projeto da lista de projetos</li>
+<li>E selecionar o botão &#34;Excluir selecionados&#34;</li>
+<li>A seguinte mensagem é exibida: &#34;Excluir projetos selecionados</li>
+<li>O usuário confirma, e os projetos serão removidos da lista</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

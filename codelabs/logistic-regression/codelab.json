@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-07T18:31:17Z",
+  "id": "logistic-regression",
+  "duration": 0,
+  "title": "Regressão Logística",
+  "summary": "Regressão Logística",
+  "source": "../codelabs/platiagro-tasks/logistic-regression.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "platiagro-tasks",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "logistic-regression"
+}

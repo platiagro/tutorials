@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-07T18:31:17Z",
+  "id": "normalizer",
+  "duration": 0,
+  "title": "Normalizador",
+  "summary": "Normalizador",
+  "source": "../codelabs/platiagro-tasks/normalizer.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "platiagro-tasks",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "normalizer"
+}
