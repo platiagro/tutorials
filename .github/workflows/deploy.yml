@@ -34,8 +34,14 @@ jobs:
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
+    - name: Build - Codelabs Site 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
+      run: |
+        yarn
+        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials
+
     - name: Build - Codelabs 🔧
       run: |
+        rm dist/codelabs
         mkdir -p dist/codelabs
         cd dist/codelabs
         find ../../codelabs | grep .md$ | xargs -L1 claat export
@@ -45,6 +51,7 @@ jobs:
         cd machine-failure
         yarn
         yarn build
+        mv machine-failure/build dist/machine-failure
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure/
 
@@ -53,6 +60,7 @@ jobs:
         cd machine-failure-dojot
         yarn
         yarn build
+        mv machine-failure-dojot/build dist/machine-failure-dojot
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure-dojot/
 
@@ -61,6 +69,7 @@ jobs:
         cd fruit-prices
         yarn
         yarn build
+        mv fruit-prices/build dist/fruit-prices
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/fruit-prices/
 
@@ -69,13 +78,9 @@ jobs:
         cd irrigation
         yarn
         yarn build
+        mv irrigation/build dist/irrigation
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/irrigation/
-
-    - name: Codelabs Site - Build 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
-      run: |
-        yarn
-        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
