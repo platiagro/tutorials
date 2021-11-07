@@ -5,6 +5,11 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
     steps:
 
     - name: PlatIAgro - Checkout 🛎️
@@ -12,20 +17,27 @@ jobs:
       with:
         persist-credentials: false
 
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+
     - name: Download claat and Add to Path
       run: |
         mkdir -p $GITHUB_WORKSPACE/bin
-        wget -O $GITHUB_WORKSPACE/bin/claat https://github.com/googlecodelabs/tools/releases/download/v2.2.0/claat-linux-amd64
+        wget -O $GITHUB_WORKSPACE/bin/claat https://github.com/googlecodelabs/tools/releases/download/v2.2.4/claat-linux-amd64
         echo "::add-path::$GITHUB_WORKSPACE/bin"
         chmod +x $GITHUB_WORKSPACE/bin/claat
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
-    - name: PlatIAgro Introduction - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-introduction' folder.
+    - name: Build - Codelabs 🔧
       run: |
-        claat export codelabs/platiagro-introduction/codelab.md
+        mkdir -p dist/codelabs
+        cd dist/codelabs
+        find ../../codelabs | grep .md$ | xargs -L1 claat export
 
-    - name: Machine Failure - Build 🔧 # This example project is built using yarn and outputs the result to the 'build' folder.
+    - name: Build - Machine Failure WebApp  🔧
       run: |
         cd machine-failure
         yarn
@@ -33,7 +45,7 @@ jobs:
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure/
 
-    - name: Machine Failure Dojot - Build 🔧 # This example project is built using yarn and outputs the result to the 'build' folder.
+    - name: Build - Machine Failure Dojot WebApp 🔧
       run: |
         cd machine-failure-dojot
         yarn
@@ -41,7 +53,7 @@ jobs:
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure-dojot/
 
-    - name: Fruit Prices - Build 🔧 # This example project is built using yarn and outputs the result to the 'build' folder.
+    - name: Build - Fruit Prices WebApp 🔧
       run: |
         cd fruit-prices
         yarn
@@ -49,7 +61,7 @@ jobs:
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/fruit-prices/
 
-    - name: Irrigation - Build 🔧 # This example project is built using yarn and outputs the result to the 'build' folder.
+    - name: Build - Irrigation WebApp 🔧
       run: |
         cd irrigation
         yarn
@@ -57,113 +69,10 @@ jobs:
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/irrigation/
 
-    - name: PlatIAgro Tasks - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
-      run: |
-        claat export codelabs/platiagro-tasks/codelab.md
-
-    - name: PlatIAgro Components - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-components' folder.
-      run: |
-
-        claat export codelabs/platiagro-components/automl-classifier.md
-        claat export codelabs/platiagro-components/automl-regressor.md
-        claat export codelabs/platiagro-components/cv-mtcnn-face-detection.md
-        claat export codelabs/platiagro-components/cv-ocr.md
-        claat export codelabs/platiagro-components/cv-autokeras-autocv.md
-        claat export codelabs/platiagro-components/cv-fast-autocv.md
-        claat export codelabs/platiagro-components/default-yolo.md
-        claat export codelabs/platiagro-components/descriptive-analysis.md
-        claat export codelabs/platiagro-components/feature-tools.md
-        claat export codelabs/platiagro-components/filter-selection.md
-        claat export codelabs/platiagro-components/grouping-categorical-features.md
-        claat export codelabs/platiagro-components/imputer.md
-        claat export codelabs/platiagro-components/linear-regression.md
-        claat export codelabs/platiagro-components/logistic-regression.md
-        claat export codelabs/platiagro-components/mlp-classifier.md
-        claat export codelabs/platiagro-components/mlp-regressor.md
-        claat export codelabs/platiagro-components/nlp-marianmt-translator.md
-        claat export codelabs/platiagro-components/nlp-text-pre-processor.md
-        claat export codelabs/platiagro-components/normalizer.md
-        claat export codelabs/platiagro-components/pre-selection.md
-        claat export codelabs/platiagro-components/random-forest-classifier.md
-        claat export codelabs/platiagro-components/random-forest-regressor.md
-        claat export codelabs/platiagro-components/rfe-selector.md
-        claat export codelabs/platiagro-components/robust-scaler.md
-        claat export codelabs/platiagro-components/simulated-annealing.md
-        claat export codelabs/platiagro-components/transformation-graph.md
-        claat export codelabs/platiagro-components/variance-threshold.md
-        claat export codelabs/platiagro-components/svr.md
-        claat export codelabs/platiagro-components/svc.md
-        claat export codelabs/platiagro-components/kmeans-clustering.md
-        claat export codelabs/platiagro-components/isolation-forest-clustering.md
-        claat export codelabs/platiagro-components/scatter-matrix.md
-        claat export codelabs/platiagro-components/data-distribution.md
-
-    - name: PlatIAgro Tutorial Projeto - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
-      run: |
-        claat export codelabs/Tutorial-projeto-experimento/Projeto.md
-
-    - name: PlatIAgro Tutorial Experimento - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-tasks' folder.
-      run: |
-        claat export codelabs/Tutorial-projeto-experimento/Experimento.md
-
-    - name: PlatIAgro Tutorial Aprendizado de Maquina - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-aprendizado-maquina' folder.
-      run: |
-        claat export codelabs/aprendizado-maquina/codelab.md
-
-    - name: PlatIAgro Tutorial Dojot - Build 🔧 # This example project is built using claat and outputs the result to the 'platiagro-dojot' folder.
-      run: |
-        claat export codelabs/platiagro-dojot/codelab.md
-
     - name: Codelabs Site - Build 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
       run: |
         yarn
         ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials
-        rm dist/codelabs
-        mkdir -p dist/codelabs
-        mv platiagro-introduction dist/codelabs/
-        mv machine-failure/build dist/machine-failure
-        mv platiagro-dojot dist/codelabs/
-        mv machine-failure-dojot/build dist/machine-failure-dojot
-        mv fruit-prices/build dist/fruit-prices
-        mv irrigation/build dist/irrigation
-        mv platiagro-tasks dist/codelabs/
-        mv projeto-tutorial-platiago dist/codelabs/
-        mv tutorial-experimento-platiagro dist/codelabs/
-        mv aprendizado-maquina dist/codelabs/
-
-        mv automl-classifier dist/codelabs/
-        mv automl-regressor dist/codelabs/
-        mv cv-mtcnn-face-detection dist/codelabs/
-        mv cv-ocr dist/codelabs/
-        mv cv-autokeras-autocv dist/codelabs/
-        mv cv-fast-autocv dist/codelabs/
-        mv default-yolo dist/codelabs/
-        mv descriptive-analysis dist/codelabs/
-        mv feature-tools dist/codelabs/
-        mv filter-selection dist/codelabs/
-        mv grouping-categorical-features dist/codelabs/
-        mv imputer dist/codelabs/
-        mv linear-regression dist/codelabs/
-        mv logistic-regression dist/codelabs/
-        mv mlp-classifier dist/codelabs/
-        mv mlp-regressor dist/codelabs/
-        mv nlp-marianmt-translator dist/codelabs/
-        mv nlp-text-pre-processor dist/codelabs/
-        mv normalizer dist/codelabs/
-        mv pre-selection dist/codelabs/
-        mv random-forest-classifier dist/codelabs/
-        mv random-forest-regressor dist/codelabs/
-        mv rfe-selector dist/codelabs/
-        mv robust-scaler dist/codelabs/
-        mv simulated-annealing dist/codelabs/
-        mv transformation-graph dist/codelabs/
-        mv variance-threshold dist/codelabs/
-        mv svr dist/codelabs/
-        mv svc dist/codelabs/
-        mv kmeans-clustering dist/codelabs/
-        mv isolation-forest-clustering dist/codelabs/
-        mv scatter-matrix dist/codelabs/
-        mv data-distribution dist/codelabs/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
