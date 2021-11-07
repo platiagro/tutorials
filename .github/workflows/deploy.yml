@@ -43,12 +43,17 @@ jobs:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
 
     - name: Build - Codelabs 🔧
+      id: codelabs
       run: |
-        mkdir -p dist/codelabs
-        find codelabs | grep .md$ | xargs -L1 claat export
+        mkdir -p codelabs-html
+        cd codelabs-html
+        find ../codelabs | grep .md$ | xargs -L1 claat export
+        CODELAB_DIRS=$(ls)
+        echo ::set-output name=CODELAB_DIRS::${CODELAB_DIRS}
 
     - name: Build - Machine Failure WebApp  🔧
       run: |
+        mkdir -p dist
         cd machine-failure
         yarn
         yarn build
@@ -58,6 +63,7 @@ jobs:
 
     - name: Build - Machine Failure Dojot WebApp 🔧
       run: |
+        mkdir -p dist
         cd machine-failure-dojot
         yarn
         yarn build
@@ -67,6 +73,7 @@ jobs:
 
     - name: Build - Fruit Prices WebApp 🔧
       run: |
+        mkdir -p dist
         cd fruit-prices
         yarn
         yarn build
@@ -76,6 +83,7 @@ jobs:
 
     - name: Build - Irrigation WebApp 🔧
       run: |
+        mkdir -p dist
         cd irrigation
         yarn
         yarn build
@@ -83,10 +91,14 @@ jobs:
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/irrigation/
 
-    - name: Build - Codelabs Site 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
+    - name: Build - Tutorials Site 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
       run: |
         yarn
         ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials
+        rm -rf dist/codelabs
+        mkdir -p dist/codelabs
+        cd codelabs-html
+        mv ${{ steps.codelabs.outputs.CODELAB_DIRS }} ../dist/codelabs/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
