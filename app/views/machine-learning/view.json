@@ -1,0 +1,10 @@
+{
+  "title": "Aprendizado de Máquina",
+  "description": "Os tutoriais apresentam uma introdução ao aprendizado de máquina, considerando a taxonomia simplificada e algumas características dos dados utilizados na PlatIAgro.",
+  "logoUrl": "/images/logo.png",
+  "tags": ["machine-learning"],
+  "exclude": [
+    ".*-about$",
+    "^lang-.*"
+  ]
+}

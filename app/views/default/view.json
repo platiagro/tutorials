@@ -1,6 +1,6 @@
 {
   "title": "Tutoriais da PlatIAgro",
-  "description": "Codelabs provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.",
+  "description": "Os tutoriais oferecem um guia passo-a-passo para que você conheça a PlatIAgro. Eles abordam uma variedade de temas, tais como: fluxos de experimentação, visualização de resultados, criação de tarefas, implantação de modelos e predição em tempo-real.",
   "tags": [],
   "categories": [],
   "exclude": [
