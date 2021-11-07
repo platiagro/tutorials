@@ -51,7 +51,7 @@ jobs:
         cd machine-failure
         yarn
         yarn build
-        mv machine-failure/build dist/machine-failure
+        mv build ../dist/machine-failure
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure/
 
@@ -60,7 +60,7 @@ jobs:
         cd machine-failure-dojot
         yarn
         yarn build
-        mv machine-failure-dojot/build dist/machine-failure-dojot
+        mv build ../dist/machine-failure-dojot
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/machine-failure-dojot/
 
@@ -69,7 +69,7 @@ jobs:
         cd fruit-prices
         yarn
         yarn build
-        mv fruit-prices/build dist/fruit-prices
+        mv build ../dist/fruit-prices
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/fruit-prices/
 
@@ -78,7 +78,7 @@ jobs:
         cd irrigation
         yarn
         yarn build
-        mv irrigation/build dist/irrigation
+        mv build ../dist/irrigation
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/irrigation/
 
