@@ -1,7 +1,7 @@
 {
   "title": "Tarefas Nativas da PlatIAgro",
   "description": "A PlatIAgro possui diversas tarefas nativas para Engenharia de dados, Modelagem e Visualização de Dados. Os tutorais explicam com detalhes cada tarefa: aplicações, configurações e parâmetros.",
-  "logoUrl": "/images/logo.png",
+  "logoUrl": "/images/logo-colorful.png",
   "tags": ["tasks"],
   "exclude": [
     ".*-about$",

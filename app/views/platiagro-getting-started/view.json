@@ -1,7 +1,7 @@
 {
   "title": "Introdução à PlatIAgro",
   "description": "Os tutoriais introduzem a PlatIAgro como uma plataforma para desenvolver e implantar aplicações de Inteligência Artificial e Aprendizado de Máquina.",
-  "logoUrl": "/images/logo.png",
+  "logoUrl": "/images/logo-colorful.png",
   "tags": ["getting-started"],
   "exclude": [
     ".*-about$",
