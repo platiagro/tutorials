@@ -5,7 +5,7 @@ categories: platiagro
 environments: Web
 status: Published
 feedback link: https://github.com/platiagro/tutorials
-tags: platiagro-introduction
+tags: platiagro-getting-started
 
 # Criação de Tarefas
 
