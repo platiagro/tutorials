@@ -1,9 +1,10 @@
 ## Dicas para revisão de código
 
 ### Codelabs
-- Corrigir erros de ortografia.
-- Usar imagens/vídeos sempre que possível.
-- ...
+- Procure por erros de português (gramática, sintaxe e semântica).
+- Para tarefas/componentes descreva com clareza os dados de entrada e saída.
+- Para tarefas/componentes descreva as principais etapas e exiba as tabelas, gráficos etc
+- Use imagens e vídeos sempre que possível.
 
 ### Commits
 - Título (1a linha do commit): apresentar resumo do que foi alterado/adicionado/removido.
