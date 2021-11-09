@@ -3,12 +3,12 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2021-11-09T11:22:45Z",
+  "updated": "2021-11-09T11:34:53Z",
   "id": "reader",
   "duration": 0,
   "title": "Reader",
   "summary": "Reader",
-  "source": "../codelabs/platiagro-components/reader.md",
+  "source": "../codelabs/platiagro-tasks/reader.md",
   "theme": "",
   "status": [
     "published"
@@ -17,6 +17,7 @@
     "platiagro"
   ],
   "tags": [
+    "platiagro-tasks",
     "web"
   ],
   "feedback": "https://github.com/platiagro/tutorials",
