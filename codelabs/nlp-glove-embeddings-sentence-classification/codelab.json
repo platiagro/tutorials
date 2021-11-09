@@ -3,7 +3,7 @@
   "format": "html",
   "prefix": "https://storage.googleapis.com",
   "mainga": "UA-49880327-14",
-  "updated": "2021-11-09T16:34:51Z",
+  "updated": "2021-11-09T16:55:51Z",
   "id": "nlp-glove-embeddings-sentence-classification",
   "duration": 0,
   "title": "Classificador de sentenças utilizando Glove Embeddings Bags",
