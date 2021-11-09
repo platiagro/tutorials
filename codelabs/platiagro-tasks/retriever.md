@@ -5,6 +5,7 @@ categories: platiagro
 environments: Web
 status: Published
 feedback link: https://github.com/platiagro/tutorials
+tags: platiagro-tasks
 
 
 ![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
