@@ -678,7 +678,7 @@ const viewFuncs = {
       const date = d.getUTCDate();
       const year = d.getFullYear();
 
-      return ` ${date} ${month}, ${year}`;
+      return `${date} ${month} ${year}`;
     }
   },
 

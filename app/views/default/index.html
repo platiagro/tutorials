@@ -116,7 +116,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <header id="banner" {% if view.id != 'default' -%}down{%- else %}down$="[[_toBoolean(selectedFilter)]]"{%- endif %}>
       <div class="site-width">
         {% if view.id == 'default' %}
-        <h2 class="banner-title">Bem-vindo aos tutoriais da PlatIAgro!</h2>
+        <h2 class="banner-title">Bem-vindo aos Tutoriais da PlatIAgro!</h2>
         <div class="banner-description"
              data-filter-selected$="{% raw %}[[_toBoolean(selectedFilter)]]{% endraw %}">
           <p class="banner-info">
@@ -152,6 +152,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <paper-tab>Duração</paper-tab>
           </paper-tabs>
         </div>
+
+        {% if view.id == 'default' && views|length > 1 %}
+        <paper-dropdown-menu
+          label="Escolha uma categoria"
+          class="dropdown-filter"
+          no-label-float
+          noink no-animations
+        >
+          <paper-listbox
+            id="eventList"
+            slot="dropdown-content"
+            class="dropdown-content"
+          >
+            {%- for view in views -%}
+              {%- if view.id != 'default' && !view.hidden -%}
+                <a href="/{{view.url}}/" tabindex="-1">
+                  <paper-item>{{view.title}}</paper-item>
+                </a>
+              {%- endif -%}
+            {%- endfor %}
+          </paper-listbox>
+        </paper-dropdown-menu>
+        {% endif %}
 
         {%- if showcats -%}
         <paper-dropdown-menu

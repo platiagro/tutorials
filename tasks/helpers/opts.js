@@ -54,7 +54,7 @@ exports.postcss = () => {
         'bb >= 10',
       ],
     }),
-    cssdeclarationsorter({ order: 'alphabetical' }),
+    cssdeclarationsorter({ order: 'alphabetically' }),
     cssnano(),
   ];
 };
