@@ -1,0 +1,25 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-09T16:34:51Z",
+  "id": "chunker",
+  "duration": 0,
+  "title": "Chunker",
+  "summary": "Chunker",
+  "source": "../codelabs/platiagro-tasks/chunker.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "platiagro-tasks",
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "chunker"
+}

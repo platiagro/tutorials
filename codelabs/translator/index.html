@@ -1,0 +1,119 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Tradutor</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="translator"
+                  title="Tradutor"
+                  environment="web"
+                  feedback-link="https://github.com/platiagro/tutorials">
+    
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>Utilização de modelos do tipo <a href="https://huggingface.co/transformers/model_doc/marian.html" target="_blank">MarianMT</a> para tradução.</p>
+<ul>
+<li>Neste exemplo a tradução é feita do português para o francês, mas ela pode ser feita em qualquer um dos pares de idiomas disponíveis no componente.</li>
+<li>As métricas computadas são o <a href="https://en.wikipedia.org/wiki/BLEU" target="_blank">BLEU</a> e o <a href="https://en.wikipedia.org/wiki/ROUGE_%28metric%29" target="_blank">ROUGE</a>.</li>
+</ul>
+<aside class="warning"><p>Este componente utiliza recursos da internet, portanto é importante estar conectado à rede para que este componente funcione corretamente.</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com uma coluna de interesse para tradução, em que cada campo corresponde a um texto que será traduzido.</p>
+<p class="image-container"><img style="width: 800.00px" src="img/aef153999e747dd0.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>Coluna para aplicar o Tradutor</strong>: <code>string</code> (Obrigatório).<br><em>Esta coluna será utilizada para traduzir os textos. Deve ser uma coluna existente do dataset.</em></li>
+<li><strong>Coluna para salvar os textos traduzidos</strong>: <code>string</code> (Obrigatório).<br><em>Esta coluna será utilizada para salvar as traduções dos textos. Deve ser uma coluna inexistente do dataset.</em></li>
+<li><strong>Coluna para avaliar os textos traduzidos</strong>: <code>string</code> (Opcional).<br><em>Esta coluna será utilizada para avaliar as traduções dos textos. É uma coluna opcional.</em></li>
+<li><strong>Idioma Fonte</strong>: <code>string</code>, {<code>"africâner"</code>, <code>"alemão"</code>, <code>"árabe"</code>, <code>"catalão"</code>, <code>"chinês"</code>, <code>"dinamarquês"</code>, <code>"espanhol"</code>, <code>"francês"</code>, <code>"frísio"</code>, <code>"holandês"</code>, <code>"híndi"</code>, <code>"inglês"</code>, <code>"islandês"</code>, <code>"italiano"</code>, <code>"japonês"</code>, <code>"latim"</code>, <code>"norueguês"</code>, <code>"português"</code>, <code>"romeno"</code>, <code>"sueco"</code>, <code>"zulu"</code>}, padrão: <code>"português"</code> (Obrigatório).<br><em>Idioma dos dados de entrada.</em></li>
+<li><strong>Idioma Alvo</strong>: <code>string</code>, {<code>"africâner"</code>, <code>"alemão"</code>, <code>"árabe"</code>, <code>"catalão"</code>, <code>"chinês"</code>, <code>"dinamarquês"</code>, <code>"espanhol"</code>, <code>"francês"</code>, <code>"frísio"</code>, <code>"holandês"</code>, <code>"híndi"</code>, <code>"inglês"</code>, <code>"islandês"</code>, <code>"italiano"</code>, <code>"japonês"</code>, <code>"latim"</code>, <code>"norueguês"</code>, <code>"português"</code>, <code>"romeno"</code>, <code>"sueco"</code>, <code>"zulu"</code>}, padrão: <code>"inglês"</code> (Obrigatório).<br><em>Idioma dos dados de saída. Deve ser um idioma diferente do Idioma Fonte.</em></li>
+<li><strong>Dispositivo</strong>: <code>string</code>, {<code>"cuda"</code>, <code>"cpu"</code>}, padrão: <code>"cuda"</code> (Obrigatório).<br><em>Tipo de dispositivo para efetuar as traduções. Caso selecionado a opção </em><em><code>"cuda"</code></em><em> e ela não estiver disponível na máquina, automaticamente será transferido para </em><em><code>"cpu"</code></em><em>.</em></li>
+<li><strong>Batch Size</strong>: <code>integer</code>, padrão: <code>4</code> (Obrigatório).<br><em>Tamanho dos lotes de dados para tradução.</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Métricas de performance" duration="0">
+        <p>As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.</p>
+<ol type="1">
+<li><a href="https://en.wikipedia.org/wiki/BLEU" target="_blank">BLEU</a>: A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência</li>
+<li><a href="https://en.wikipedia.org/wiki/ROUGE_%28metric%29" target="_blank">ROUGE</a>-L: A métrica ROUGE (cujo nome provém de Recall-Oriented Understudy for Gisting Evaluation) identifica a co-ocorrência das substrings mais longas definidas por n-gramas entre as sentenças alvo geradas automaticamente e um conjunto de textos de referência.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:</p>
+<ol type="1">
+<li>Dataframe com o texto de entrada, texto de referência (opcional) e o texto traduzido.</li>
+</ol>
+<p class="image-container"><img style="width: 800.00px" src="img/bf2d3bc5d4453036.png"></p>
+<ol type="1">
+<li>Uma tabela com a pontuação obtida para cada texto pelas métricas BLEU e ROUGE-L caso seja informado a coluna de avaliação.</li>
+</ol>
+<p class="image-container"><img style="width: 300.00px" src="img/743d591fd9514d6a.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada na implantação" duration="0">
+        <p>Na implantação, espera-se uma requisição do tipo <code>POST</code> com os dados em formato <code>JSON</code>, com os campos <code>ndarray</code> e <code>names</code> seguindo a mesma estrutura dos dados utilizados na experimentação, em que <code>ndarray</code> refere-se aos valores, e <code>names</code> aos nomes das colunas de entrada. Um exemplo de uso seria:</p>
+<pre><code language="language-bash" class="language-bash">$ curl --header &#34;Content-Type: application/json&#34; https://URL-DO-MODELO-IMPLANTADO -d &#34;{&#34;data&#34;:{&#34;ndarray&#34;:[[1, &#34;A bola é um objeto utilizado para lazer e em diversos desportos.&#34;]], &#34;names&#34;: [&#34;index&#34;, &#34;text&#34;]}}&#34;
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Espera-se como retorno um objeto <code>JSON</code> contendo os campos <code>ndarray</code> e <code>names</code>, referentes ao array de valores produzidos e ao nome das colunas após a aplicação. Um exemplo de saída seria:</p>
+<pre><code language="language-json" class="language-json">{
+    &#34;data&#34;:
+        {
+            &#34;ndarray&#34;:[[1, &#34;A bola é um objeto utilizado para lazer e em diversos desportos.&#34;, &#34;Le ballon est un objet utilisé pour les loisirs et dans divers sports.&#34;]], 
+            &#34;names&#34;: [&#34;index&#34;, &#34;text&#34;, &#34;translated_text&#34;]
+        }
+}
+</code></pre>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
