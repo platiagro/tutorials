@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "https://platiagro.github.io/tutorials/fruit-prices/static/css/main.10560329.chunk.css",
+    "main.js": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.ceed3200.chunk.js",
+    "main.js.map": "https://platiagro.github.io/tutorials/fruit-prices/static/js/main.ceed3200.chunk.js.map",
+    "runtime-main.js": "https://platiagro.github.io/tutorials/fruit-prices/static/js/runtime-main.9faecf91.js",
+    "runtime-main.js.map": "https://platiagro.github.io/tutorials/fruit-prices/static/js/runtime-main.9faecf91.js.map",
+    "static/css/2.42ec2a3e.chunk.css": "https://platiagro.github.io/tutorials/fruit-prices/static/css/2.42ec2a3e.chunk.css",
+    "static/js/2.d207170b.chunk.js": "https://platiagro.github.io/tutorials/fruit-prices/static/js/2.d207170b.chunk.js",
+    "static/js/2.d207170b.chunk.js.map": "https://platiagro.github.io/tutorials/fruit-prices/static/js/2.d207170b.chunk.js.map",
+    "index.html": "https://platiagro.github.io/tutorials/fruit-prices/index.html",
+    "precache-manifest.87914e4e0fe109c629c4628b2bfc1d7f.js": "https://platiagro.github.io/tutorials/fruit-prices/precache-manifest.87914e4e0fe109c629c4628b2bfc1d7f.js",
+    "service-worker.js": "https://platiagro.github.io/tutorials/fruit-prices/service-worker.js",
+    "static/css/2.42ec2a3e.chunk.css.map": "https://platiagro.github.io/tutorials/fruit-prices/static/css/2.42ec2a3e.chunk.css.map",
+    "static/css/main.10560329.chunk.css.map": "https://platiagro.github.io/tutorials/fruit-prices/static/css/main.10560329.chunk.css.map",
+    "static/js/2.d207170b.chunk.js.LICENSE.txt": "https://platiagro.github.io/tutorials/fruit-prices/static/js/2.d207170b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9faecf91.js",
+    "static/css/2.42ec2a3e.chunk.css",
+    "static/js/2.d207170b.chunk.js",
+    "static/css/main.10560329.chunk.css",
+    "static/js/main.ceed3200.chunk.js"
+  ]
+}
