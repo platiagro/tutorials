@@ -7,10 +7,6 @@ status: Published
 feedback link: https://github.com/platiagro/tutorials
 tags: platiagro-tasks
 
-
-![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
-
-
 # Tradutor
 
 ## Função do componente
@@ -18,8 +14,10 @@ tags: platiagro-tasks
 Utilização de modelos do tipo [MarianMT](https://huggingface.co/transformers/model_doc/marian.html) para tradução.
 
 * Neste exemplo a tradução é feita do português para o francês, mas ela pode ser feita em qualquer um dos pares de idiomas disponíveis no componente.
-* As métricas computadas são o [BLEU](https://en.wikipedia.org/wiki/BLEU) e o [ROUGUE](https://en.wikipedia.org/wiki/ROUGE_(metric)).
+* As métricas computadas são o [BLEU](https://en.wikipedia.org/wiki/BLEU) e o [ROUGE](https://en.wikipedia.org/wiki/ROUGE_%28metric%29).
 
+Negative
+: Este componente utiliza recursos da internet, portanto é importante estar conectado à rede para que este componente funcione corretamente.
 
 ## Entrada esperada
 
@@ -57,9 +55,9 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 
 As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.
 
-1. BLEU: A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência
+1. [BLEU](https://en.wikipedia.org/wiki/BLEU): A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência
 
-2. ROUGUE-L: A métrica ROUGUE (cujo nome provém de Recall-Oriented Understudy for Gisting Evaluation) identifica a co-ocorrência das substrings mais longas definidas por n-gramas entre as sentenças alvo geradas automaticamente e um conjunto de textos de referência.
+2. [ROUGE](https://en.wikipedia.org/wiki/ROUGE_%28metric%29)-L: A métrica ROUGE (cujo nome provém de Recall-Oriented Understudy for Gisting Evaluation) identifica a co-ocorrência das substrings mais longas definidas por n-gramas entre as sentenças alvo geradas automaticamente e um conjunto de textos de referência.
 
 
 ## Retorno esperado na experimentação
@@ -70,10 +68,28 @@ O retorno durante a experimentação ajuda o usuário a analisar tanto métricas
 
 <img src="img/translator/output_dataset.png" width="800">
 
-2. Uma tabela com a pontuação obtida para cada texto pelas métricas BLEU e ROUGUE-L caso seja informado a coluna de avaliação.
+2. Uma tabela com a pontuação obtida para cada texto pelas métricas BLEU e ROUGE-L caso seja informado a coluna de avaliação.
 
 <img src="img/translator/metrics.png" width="300">
 
+## Entrada esperada na implantação
+
+Na implantação, espera-se uma requisição do tipo `POST` com os dados em formato `JSON`, com os campos `ndarray` e `names` seguindo a mesma estrutura dos dados utilizados na experimentação, em que `ndarray` refere-se aos valores, e `names` aos nomes das colunas de entrada. Um exemplo de uso seria:
+
+```bash
+$ curl --header "Content-Type: application/json" https://URL-DO-MODELO-IMPLANTADO -d "{"data":{"ndarray":[[1, "A bola é um objeto utilizado para lazer e em diversos desportos."]], "names": ["index", "text"]}}"
+```
+
 ## Retorno esperado na implantação
 
-Espera-se como retorno numpy arrays contendo a mesma estrutura dos dados de entrada com uma coluna extra correspondente aos textos traduzidos.
+Espera-se como retorno um objeto `JSON` contendo os campos `ndarray` e `names`, referentes ao array de valores produzidos e ao nome das colunas após a aplicação. Um exemplo de saída seria:
+
+```json
+{
+    "data":
+        {
+            "ndarray":[[1, "A bola é um objeto utilizado para lazer e em diversos desportos.", "Le ballon est un objet utilisé pour les loisirs et dans divers sports."]], 
+            "names": ["index", "text", "translated_text"]
+        }
+}
+```

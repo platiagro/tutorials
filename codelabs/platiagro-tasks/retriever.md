@@ -7,10 +7,6 @@ status: Published
 feedback link: https://github.com/platiagro/tutorials
 tags: platiagro-tasks
 
-
-![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
-
-
 # Retriever
 
 ## Função do componente
@@ -19,8 +15,9 @@ O objetivo deste componente é elencar a probabilidade de um conjunto de context
 
 * Neste exemplo são feitas duas perguntas distintas para dois contextos distintos.
 * A métrica computada é o [MRR](https://en.wikipedia.org/wiki/Mean_reciprocal_rank).
-* Observação: Este componente utiliza recursos da internet, portanto é importante estar conectado à rede para que este componente funcione corretamente.
 
+Negative
+: Este componente utiliza recursos da internet, portanto é importante estar conectado à rede para que este componente funcione corretamente.
 
 ## Entrada esperada
 
@@ -61,7 +58,7 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 
 As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.
 
-1. MRR: A métrica MRR (cujo nome provém de Mean Reciprocal Rank) mede a precisão da ordenação dos contextos mais prováveis de conterem a resposta de uma determinada pergunta. Comumente a notação é dada por MRR@`rank`, em que `rank` é o número N de contextos que serão elencados.
+1. [MRR](https://en.wikipedia.org/wiki/Mean_reciprocal_rank): A métrica MRR (cujo nome provém de Mean Reciprocal Rank) mede a precisão da ordenação dos contextos mais prováveis de conterem a resposta de uma determinada pergunta. Comumente a notação é dada por MRR@`rank`, em que `rank` é o número N de contextos que serão elencados.
 
 ## Retorno esperado na experimentação
 
@@ -75,6 +72,27 @@ O retorno durante a experimentação ajuda o usuário a analisar tanto métricas
 
 <img src="img/retriever/metrics.png" width="300">
 
+## Entrada esperada na implantação
+
+Na implantação, espera-se uma requisição do tipo `POST` com os dados em formato `JSON`, com os campos `ndarray` e `names` seguindo a mesma estrutura dos dados utilizados na experimentação, em que `ndarray` refere-se aos valores, e `names` aos nomes das colunas de entrada. Um exemplo de uso seria:
+
+```bash
+$ curl --header "Content-Type: application/json" https://URL-DO-MODELO-IMPLANTADO -d "{"data":{"ndarray":[[1, "A bola é um objeto esférico utilizado para lazer e em diversos desportos.", "Qual é o formato da bola?"], [1, "A bola é um objeto esférico utilizado para lazer e em diversos desportos.", "Quando foi assinado o Tratado de Versalhes?"]], "names": ["index", "text", "question"]}}"
+```
+
 ## Retorno esperado na implantação
 
-Espera-se como retorno numpy arrays contendo a mesma estrutura dos dados de entrada com duas colunas extras correspondentes às respostas produzidas e suas respectivas pontuações.
+Espera-se como retorno um objeto `JSON` contendo os campos `ndarray` e `names`, referentes ao array de valores produzidos e ao nome das colunas após a aplicação. Um exemplo de saída seria:
+
+```json
+{
+    "data":
+        {
+            "ndarray":[
+                [1, "A bola é um objeto esférico utilizado para lazer e em diversos desportos.", "Qual é o formato da bola?", 0.754],
+                [1, "A bola é um objeto esférico utilizado para lazer e em diversos desportos.", "Quando foi assinado o Tratado de Versalhes?", 0.246]
+            ], 
+            "names": ["index", "text", "question", "retriever_score"]
+        }
+}
+```

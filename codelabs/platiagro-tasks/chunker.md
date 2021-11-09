@@ -7,17 +7,13 @@ status: Published
 feedback link: https://github.com/platiagro/tutorials
 tags: platiagro-tasks
 
-
-![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
-
-
 # Chunker
 
 ## Função do componente
 
 Separação de textos em partes menores, mantendo uma porção de sobreposição.
 
-* Neste exemplo a aplicação do Chunker é feita separando as expressões considerando as palavras, mas também pode ser realizada considerando períodos.
+* Neste exemplo a aplicação do Chunker é feita separando as expressões considerando as palavras, mas também pode ser realizada considerando períodos. Os períodos (usualmente limitados ao ponto final `.`) são definidos pela aplicação do [NLTK](https://www.nltk.org/api/nltk.tokenize.html), que é uma biblioteca de linguagem natural.
 * No exemplo são considerados os parâmetros `Chunk Size` e `Chunk Overlap` sendo 10 e 4, respectivamente.
 
 ## Entrada esperada
@@ -60,6 +56,24 @@ O retorno durante a experimentação ajuda o usuário a analisar tanto métricas
 
 <img src="img/chunker/output_dataset_2.png" width="800">
 
+## Entrada esperada na implantação
+
+Na implantação, espera-se uma requisição do tipo `POST` com os dados em formato `JSON`, com os campos `ndarray` e `names` seguindo a mesma estrutura dos dados utilizados na experimentação, em que `ndarray` refere-se aos valores, e `names` aos nomes das colunas de entrada. Um exemplo de uso seria:
+
+```bash
+$ curl --header "Content-Type: application/json" https://URL-DO-MODELO-IMPLANTADO -d "{"data":{"ndarray":[[1, "A bola é um objeto utilizado para lazer e em diversos desportos."]], "names": ["index", "text"]}}"
+```
+
 ## Retorno esperado na implantação
 
-Espera-se como retorno numpy arrays contendo a mesma estrutura dos dados de entrada com uma coluna extra correspondente aos chunks produzidos.
+Espera-se como retorno um objeto `JSON` contendo os campos `ndarray` e `names`, referentes ao array de valores produzidos e ao nome das colunas após a aplicação. Um exemplo de saída seria:
+
+```json
+{
+    "data":
+        {
+            "ndarray":[[1, "A bola é um objeto utilizado para lazer e em diversos desportos.", "A bola é um objeto utilizado para "], [1, "A bola é um objeto utilizado para lazer e em diversos desportos.", "lazer e em diversos desportos."]], 
+            "names": ["index", "text", "text_chunks"]
+        }
+}
+```

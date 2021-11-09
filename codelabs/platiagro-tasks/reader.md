@@ -7,10 +7,6 @@ status: Published
 feedback link: https://github.com/platiagro/tutorials
 tags: platiagro-tasks
 
-
-![Logotipo da PlatIAgro: possui o desenho de duas folhas verdes, uma delas é formada por linhas e pontos, como um gráfico estatístico](img/logo.png)
-
-
 # Reader
 
 ## Função do componente
@@ -18,9 +14,10 @@ tags: platiagro-tasks
 Este componente utiliza um modelo de QA (Pergunta e Resposta) pré-treinado em Português com o dataset SQuAD v1.1, é um modelo de domínio público disponível em [Hugging Face](https://huggingface.co/pierreguillou/bert-large-cased-squad-v1.1-portuguese). Seu objetivo é encontrar a resposta de uma ou mais perguntas de acordo com uma lista de contextos distintos.
 
 * Neste exemplo são feitas duas perguntas distintas para dois contextos distintos.
-* As métricas computadas são o [BLEU](https://en.wikipedia.org/wiki/BLEU) e o [ROUGUE](https://en.wikipedia.org/wiki/ROUGE_(metric)).
-* Observação: Este componente utiliza recursos da internet, portanto é importante estar conectado à rede para que este componente funcione corretamente.
+* As métricas computadas são o [BLEU](https://en.wikipedia.org/wiki/BLEU) e o [ROUGE](https://en.wikipedia.org/wiki/ROUGE_%28metric%29).
 
+Negative
+: Este componente utiliza recursos da internet, portanto é importante estar conectado à rede para que este componente funcione corretamente.
 
 ## Entrada esperada
 
@@ -58,9 +55,9 @@ A seguir são listados todos os parâmetros utilizados pelo componente:
 
 As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.
 
-1. BLEU: A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência
+1. [BLEU](https://en.wikipedia.org/wiki/BLEU): A métrica BLEU (cujo nome provém de BiLingual Evaluation Understudy) mede a precisão dos n-gramas das sentenças alvo geradas automaticamente em relação a um conjunto de textos de referência
 
-2. ROUGUE-L: A métrica ROUGUE (cujo nome provém de Recall-Oriented Understudy for Gisting Evaluation) identifica a co-ocorrência das substrings mais longas definidas por n-gramas entre as sentenças alvo geradas automaticamente e um conjunto de textos de referência.
+2. [ROUGE](https://en.wikipedia.org/wiki/ROUGE_%28metric%29)-L: A métrica ROUGE (cujo nome provém de Recall-Oriented Understudy for Gisting Evaluation) identifica a co-ocorrência das substrings mais longas definidas por n-gramas entre as sentenças alvo geradas automaticamente e um conjunto de textos de referência.
 
 
 ## Retorno esperado na experimentação
@@ -75,10 +72,28 @@ O retorno durante a experimentação ajuda o usuário a analisar tanto métricas
 
 <img src="img/reader/output_dataset_2.png" width="800">
 
-3. Uma tabela com a pontuação obtida para cada texto pelas métricas BLEU e ROUGUE-L caso seja informado a coluna de avaliação.
+3. Uma tabela com a pontuação obtida para cada texto pelas métricas BLEU e ROUGE-L caso seja informado a coluna de avaliação.
 
 <img src="img/reader/metrics.png" width="300">
 
+## Entrada esperada na implantação
+
+Na implantação, espera-se uma requisição do tipo `POST` com os dados em formato `JSON`, com os campos `ndarray` e `names` seguindo a mesma estrutura dos dados utilizados na experimentação, em que `ndarray` refere-se aos valores, e `names` aos nomes das colunas de entrada. Um exemplo de uso seria:
+
+```bash
+$ curl --header "Content-Type: application/json" https://URL-DO-MODELO-IMPLANTADO -d "{"data":{"ndarray":[[1, "A bola é um objeto esférico utilizado para lazer e em diversos desportos.", "Qual é o formato da bola?"]], "names": ["index", "text", "question"]}}"
+```
+
 ## Retorno esperado na implantação
 
-Espera-se como retorno numpy arrays contendo a mesma estrutura dos dados de entrada com duas colunas extras correspondentes às respostas produzidas e suas respectivas pontuações.
+Espera-se como retorno um objeto `JSON` contendo os campos `ndarray` e `names`, referentes ao array de valores produzidos e ao nome das colunas após a aplicação. Um exemplo de saída seria:
+
+```json
+{
+    "data":
+        {
+            "ndarray":[[1, "A bola é um objeto esférico utilizado para lazer e em diversos desportos.", "Qual é o formato da bola?", "esférico", 0.754]], 
+            "names": ["index", "text", "question", "answer", "answer_score"]
+        }
+}
+```
