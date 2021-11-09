@@ -51,6 +51,15 @@ jobs:
         CODELAB_DIRS=$(ls)
         echo ::set-output name=CODELAB_DIRS::${CODELAB_DIRS}
 
+    - name: Build - Tutorials Site 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
+      run: |
+        yarn
+        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials --codelabs-dir codelabs-html/
+        rm -rf dist/codelabs
+        mkdir -p dist/codelabs
+        cd codelabs-html
+        mv ${{ steps.codelabs.outputs.CODELAB_DIRS }} ../dist/codelabs/
+
     - name: Build - Machine Failure WebApp  🔧
       run: |
         mkdir -p dist
@@ -90,15 +99,6 @@ jobs:
         mv build ../dist/irrigation
       env:
         PUBLIC_URL: https://platiagro.github.io/tutorials/irrigation/
-
-    - name: Build - Tutorials Site 🔧 # This example project is built using gulp and outputs the result to the 'dist' folder.
-      run: |
-        yarn
-        ./node_modules/.bin/gulp dist --base-url https://platiagro.github.io/tutorials --codelabs-dir codelabs-html/
-        rm -rf dist/codelabs
-        mkdir -p dist/codelabs
-        cd codelabs-html
-        mv ${{ steps.codelabs.outputs.CODELAB_DIRS }} ../dist/codelabs/
 
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
