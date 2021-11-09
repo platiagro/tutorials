@@ -30,7 +30,7 @@
       <google-codelab-step label="Função do componente" duration="0">
         <p>Separação de textos em partes menores, mantendo uma porção de sobreposição.</p>
 <ul>
-<li>Neste exemplo a aplicação do Chunker é feita separando as expressões considerando as palavras, mas também pode ser realizada considerando períodos.</li>
+<li>Neste exemplo a aplicação do Chunker é feita separando as expressões considerando as palavras, mas também pode ser realizada considerando períodos. Os períodos (usualmente limitados ao ponto final <code>.</code>) são definidos pela aplicação do <a href="https://www.nltk.org/api/nltk.tokenize.html" target="_blank">NLTK</a>, que é uma biblioteca de linguagem natural.</li>
 <li>No exemplo são considerados os parâmetros <code>Chunk Size</code> e <code>Chunk Overlap</code> sendo 10 e 4, respectivamente.</li>
 </ul>
 
@@ -72,8 +72,24 @@
 
       </google-codelab-step>
     
+      <google-codelab-step label="Entrada esperada na implantação" duration="0">
+        <p>Na implantação, espera-se uma requisição do tipo <code>POST</code> com os dados em formato <code>JSON</code>, com os campos <code>ndarray</code> e <code>names</code> seguindo a mesma estrutura dos dados utilizados na experimentação, em que <code>ndarray</code> refere-se aos valores, e <code>names</code> aos nomes das colunas de entrada. Um exemplo de uso seria:</p>
+<pre><code language="language-bash" class="language-bash">$ curl --header &#34;Content-Type: application/json&#34; https://URL-DO-MODELO-IMPLANTADO -d &#34;{&#34;data&#34;:{&#34;ndarray&#34;:[[1, &#34;A bola é um objeto utilizado para lazer e em diversos desportos.&#34;]], &#34;names&#34;: [&#34;index&#34;, &#34;text&#34;]}}&#34;
+</code></pre>
+
+
+      </google-codelab-step>
+    
       <google-codelab-step label="Retorno esperado na implantação" duration="0">
-        <p>Espera-se como retorno numpy arrays contendo a mesma estrutura dos dados de entrada com uma coluna extra correspondente aos chunks produzidos.</p>
+        <p>Espera-se como retorno um objeto <code>JSON</code> contendo os campos <code>ndarray</code> e <code>names</code>, referentes ao array de valores produzidos e ao nome das colunas após a aplicação. Um exemplo de saída seria:</p>
+<pre><code language="language-json" class="language-json">{
+    &#34;data&#34;:
+        {
+            &#34;ndarray&#34;:[[1, &#34;A bola é um objeto utilizado para lazer e em diversos desportos.&#34;, &#34;A bola é um objeto utilizado para &#34;], [1, &#34;A bola é um objeto utilizado para lazer e em diversos desportos.&#34;, &#34;lazer e em diversos desportos.&#34;]], 
+            &#34;names&#34;: [&#34;index&#34;, &#34;text&#34;, &#34;text_chunks&#34;]
+        }
+}
+</code></pre>
 
 
       </google-codelab-step>
