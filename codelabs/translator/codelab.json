@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-11-09T11:22:45Z",
+  "id": "translator",
+  "duration": 0,
+  "title": "Tradutor",
+  "summary": "Translator",
+  "source": "../codelabs/platiagro-components/translator.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "platiagro"
+  ],
+  "tags": [
+    "web"
+  ],
+  "feedback": "https://github.com/platiagro/tutorials",
+  "url": "translator"
+}

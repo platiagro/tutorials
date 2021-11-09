@@ -1,0 +1,102 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Retriever</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="retriever"
+                  title="Retriever"
+                  environment="web"
+                  feedback-link="https://github.com/platiagro/tutorials">
+    
+      <google-codelab-step label="Função do componente" duration="0">
+        <p>O objetivo deste componente é elencar a probabilidade de um conjunto de contextos conter a resposta a uma dada pergunta. Este componente utiliza diferentes modelos de similaridade entre textos para a sua inferência.</p>
+<ul>
+<li>Neste exemplo são feitas duas perguntas distintas para dois contextos distintos.</li>
+<li>A métrica computada é o <a href="https://en.wikipedia.org/wiki/Mean_reciprocal_rank" target="_blank">MRR</a>.</li>
+<li>Observação: Este componente utiliza recursos da internet, portanto é importante estar conectado à rede para que este componente funcione corretamente.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Entrada esperada" duration="0">
+        <p>Espera-se como entrada para o componente uma tabela com uma coluna de contextos para a aplicação do Retriever e uma coluna com as perguntas para serem aplicadas aos contextos.</p>
+<p class="image-container"><img style="width: 800.00px" src="img/2e3c0fdadeb6af55.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Parâmetros" duration="0">
+        <p>A seguir são listados todos os parâmetros utilizados pelo componente:</p>
+<ul>
+<li><strong>Coluna dos contextos</strong>: <code>string</code> (Obrigatório).<br><em>Esta coluna será utilizada para ler os contextos e aplicar o Retriever.</em></li>
+<li><strong>Coluna das perguntas</strong>: <code>string</code> (Obrigatório).<br><em>Esta coluna será utilizada para identificar as perguntas a serem aplicadas aos contextos.</em></li>
+<li><strong>Top N contextos</strong>: <code>integer</code> (Obrigatório).<br><em>O número máximo de contextos para elencar por pergunta. Os contextos elencados correspondem aos que obtiveram melhor pontuação do Retriever.</em></li>
+<li><strong>Coluna da pontuação das respostas</strong>: <code>string</code> (Obrigatório).<br><em>Esta coluna será utilizada para salvar a pontuação dos N contextos selecionados de cada pergunta.</em></li>
+<li><strong>Coluna de avaliação</strong>: <code>string</code> (Opcional).<br><em>Esta coluna será utilizada para avaliar as respostas produzidas por cada pergunta, deve conter a indicação do contexto esperado para o Retriever. É uma coluna opcional, mas caso preenchido deve ser também preenchida uma coluna de identificação dos contextos.</em></li>
+<li><strong>Coluna de identificação dos Contextos</strong>: <code>string</code> (Opcional).<br><em>Esta coluna será utilizada para identificar os contextos caso seja informado uma coluna de avaliação.</em></li>
+<li><strong>Dispositivo</strong>: <code>string</code>, {<code>"cuda"</code>, <code>"cpu"</code>}, padrão: <code>"cuda"</code> (Obrigatório).<br><em>Tipo de dispositivo para efetuar as inferências. Caso selecionado a opção </em><em><code>"cuda"</code></em><em> e ela não estiver disponível na máquina, automaticamente será transferido para </em><em><code>"cpu"</code></em><em>.</em></li>
+<li><strong>Modelo do Retriever</strong>: <code>string</code>, {<code>"paraphrase_multilingual"</code>, <code>"bm25"</code>, <code>"tf_idf"</code>, <code>"word2vec"</code>}, padrão: <code>"paraphrase_multilingual"</code> (Obrigatório).<br><em>Modelo para a inferência do Retriever.</em></li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Métricas de performance" duration="0">
+        <p>As métricas de performance tem o propósito de ajudar o usuário a avaliar a performance do modelo. Essas métricas variam de acordo com o tipo de problema, tal como: classificação, regressão, agrupamento, entre outros.</p>
+<ol type="1">
+<li>MRR: A métrica MRR (cujo nome provém de Mean Reciprocal Rank) mede a precisão da ordenação dos contextos mais prováveis de conterem a resposta de uma determinada pergunta. Comumente a notação é dada por MRR@<code>rank</code>, em que <code>rank</code> é o número N de contextos que serão elencados.</li>
+</ol>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na experimentação" duration="0">
+        <p>O retorno durante a experimentação ajuda o usuário a analisar tanto métricas distintas de forma visual, como a distribuição dos dados e os dados brutos ao final da execução. Sendo assim, é possível visualizar diversos retornos para este componente como os listados a seguir:</p>
+<ol type="1">
+<li>Dataframe com os dados de entrada e a coluna ordenada pela pontuação calculada por cada par contexto e pergunta.</li>
+</ol>
+<p class="image-container"><img style="width: 800.00px" src="img/ab751b7b0bec8e97.png"></p>
+<ol type="1">
+<li>Uma tabela com a pontuação obtida para cada texto pela métrica MRR caso seja informado a coluna de avaliação.</li>
+</ol>
+<p class="image-container"><img style="width: 300.00px" src="img/1cb1bffe39821950.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Retorno esperado na implantação" duration="0">
+        <p>Espera-se como retorno numpy arrays contendo a mesma estrutura dos dados de entrada com duas colunas extras correspondentes às respostas produzidas e suas respectivas pontuações.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
