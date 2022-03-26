@@ -38,7 +38,7 @@
     "jshint-stylish": "^2.2.1",
     "lodash.template": "^4.5.0",
     "merge-stream": "^2.0.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "open": "^7.0.4",
     "path": "^0.12.7",
     "postcss-syntax": "^0.36.2",
